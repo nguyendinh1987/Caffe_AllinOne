@@ -1,5 +1,5 @@
 # Caffe_with_updated_functions
-This is a modified version of caffe which includes a lot of additional functions supporting for FCNN, video loader, data agumentation and so on. Some of modifications are inheritated from other developer in github (Thank for sharing)
+This is a modified version of caffe which includes a lot of additional functions supporting for FCNN, video loader, data agumentation and so on. Some of modifications are inheritated from other developers in github (Thank for sharing)
 ## Targets:
 - Add FRCNN layers
 - Add Video loader layers
