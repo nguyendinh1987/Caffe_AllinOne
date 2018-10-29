@@ -24,6 +24,5 @@ This is a modified version of caffe which includes a lot of additional functions
 
 - Add on-fly data argumentation  
   [Source 1](https://github.com/yjxiong/caffe) Modified function:  
-  void DataTransformer<Dtype>::Transform(const Datum& datum,  
-                                       Dtype* transformed_data)
+  void DataTransformer<Dtype>::Transform(const Datum& datum, Dtype* transformed_data)  
   [Source 2](https://github.com/kevinlin311tw/caffe-augmentation) (have not verified yet)  
