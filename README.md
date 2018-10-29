@@ -6,16 +6,17 @@ This is a modified version of caffe which includes a lot of additional functions
 - Add on-fly data argumentation for improving training process
 - Add YoLo implementation
 - Add SSD implementation
+- continue
 
 ## Modified
-- Add FRCNN layers (see folder FRCNN in src/ and include/)
-  [Source](https://github.com/D-X-Y/caffe-faster-rcnn/tree/dev)
-  Modified:  caffe.proto and add FRCNN folder into src/caffe and include/caffe
+- Add FRCNN layers (see folder FRCNN in src/ and include/)  
+  [Source](https://github.com/D-X-Y/caffe-faster-rcnn/tree/dev)  
+  Modified:  caffe.proto and add FRCNN folder into src/caffe and include/caffe  
 	                           add api folder into src and include
-- Add Video loader layers (for implementing DSN and TSN networks)
-  [Source](https://github.com/D-X-Y/caffe-faster-rcnn/tree/dev)
-  Modified: caffe.proto and add ACTION_REC folder into src/caffe and include/caffe
+- Add Video loader layers (for implementing DSN and TSN networks)  
+  [Source](https://github.com/D-X-Y/caffe-faster-rcnn/tree/dev)  
+  Modified: caffe.proto and add ACTION_REC folder into src/caffe and include/caffe  
 
-- Add on-fly data argumentation
-  [Source 1](https://github.com/D-X-Y/caffe-faster-rcnn/tree/dev)
-  [Source 2](https://github.com/kevinlin311tw/caffe-augmentation) (have not upgraded yet)
+- Add on-fly data argumentation  
+  [Source 1](https://github.com/D-X-Y/caffe-faster-rcnn/tree/dev)  
+  [Source 2](https://github.com/kevinlin311tw/caffe-augmentation) (have not upgraded yet)  
