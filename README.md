@@ -4,8 +4,8 @@ This is a modified version of caffe which includes a lot of additional functions
 - Add FRCNN layers
 - Add Video loader layers
 - Add on-fly data argumentation for improving training process
-- Add YoLo implementation
-- Add SSD implementation
+- Add YoLo implementation (planing)
+- Add SSD implementation (planing)
 - continue
 
 ## Modified
