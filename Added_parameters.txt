@@ -1,0 +1,13 @@
+- Faster RCNN: source (https://github.com/D-X-Y/caffe-faster-rcnn/tree/dev)
+  Modified: caffe.proto and add FRCNN folder into src/caffe and include/caffe
+	                    add api folder into src and include
+
+- Video Layer: source (https://github.com/D-X-Y/caffe-faster-rcnn/tree/dev) --> for DSN/TSN network
+  Modified: caffe.proto and add ACTION_REC folder into src/caffe and include/caffe
+
+- Data argumentation: source(https://github.com/kevinlin311tw/caffe-augmentation)
+  Modified files: caffe.proto and data_transformer.cpp
+
+- BNlayer: source (https://github.com/yjxiong/caffe)
+  Modified: caffe.proto and add BN_LAYER folder into src/caffe and include/caffe
+
