@@ -30,4 +30,7 @@ This is a modified version of caffe which includes a lot of additional functions
 ## How to install
 - Check "Dependencies_installation_guide" to install dependent libraries of caffe
 - Move to project folder and run:  
-  <span style="color:red;"> >> mkdir build && cd build && cmake .. </span>
+  >> mkdir build && cd build && cmake ..  
+  >> make -j12  
+  >> make install  
+- All distributed packaged is in /build/install. Give this directory to your any package finding function to look for your caffe lib  
