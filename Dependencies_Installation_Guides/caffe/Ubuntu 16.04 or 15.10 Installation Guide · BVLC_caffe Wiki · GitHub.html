@@ -1,0 +1,955 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+  <link rel="dns-prefetch" href="https://assets-cdn.github.com/">
+  <link rel="dns-prefetch" href="https://avatars0.githubusercontent.com/">
+  <link rel="dns-prefetch" href="https://avatars1.githubusercontent.com/">
+  <link rel="dns-prefetch" href="https://avatars2.githubusercontent.com/">
+  <link rel="dns-prefetch" href="https://avatars3.githubusercontent.com/">
+  <link rel="dns-prefetch" href="https://github-cloud.s3.amazonaws.com/">
+  <link rel="dns-prefetch" href="https://user-images.githubusercontent.com/">
+
+
+
+  <link crossorigin="anonymous" media="all" integrity="sha512-qQ+v+W1uJYfDMrQ/cwCVI+AGTsn1yi4rCU6KX45obe52BoF+WiHNeQ11u63iJA05vyivY57xNbhAsyK4/j1ZIQ==" rel="stylesheet" href="Ubuntu%2016.04%20or%2015.10%20Installation%20Guide%20%C2%B7%20BVLC_caffe%20Wiki%20%C2%B7%20GitHub_files/frameworks-01356238c65ce56a395237b592b58668.css">
+  <link crossorigin="anonymous" media="all" integrity="sha512-JyQ1QSXT2NEMbHdi9TB1lyzH4KEHsPng+aZliiNcyIsOmvi9QnoRpJrMyt6YlRHHgM9dMnUQ0Co1yaFbdWDLWQ==" rel="stylesheet" href="Ubuntu%2016.04%20or%2015.10%20Installation%20Guide%20%C2%B7%20BVLC_caffe%20Wiki%20%C2%B7%20GitHub_files/github-a63e899a1fc5bd5aec41380f0f0f8aad.css">
+  
+  
+  <link crossorigin="anonymous" media="all" integrity="sha512-2jE+5s+6LV2ckEshC+YTwb0A/IhES9iLMcwfkkybRMMGemXcEjAx8wdd2ZbbVr1dYBJt+fkCaR+UvXiybFr/sA==" rel="stylesheet" href="Ubuntu%2016.04%20or%2015.10%20Installation%20Guide%20%C2%B7%20BVLC_caffe%20Wiki%20%C2%B7%20GitHub_files/site-99075769314a73391cea9aa2907a29f9.css">
+  
+
+  <meta name="viewport" content="width=device-width">
+  
+  <title>Ubuntu 16.04 or 15.10 Installation Guide · BVLC/caffe Wiki · GitHub</title>
+    <meta name="description" content="Caffe: a fast open framework for deep learning.">
+    <link rel="search" type="application/opensearchdescription+xml" href="https://github.com/opensearch.xml" title="GitHub">
+  <link rel="fluid-icon" href="https://github.com/fluidicon.png" title="GitHub">
+  <meta property="fb:app_id" content="1401488693436528">
+
+    
+    <meta property="og:image" content="https://avatars2.githubusercontent.com/u/6182163?s=400&amp;v=4"><meta property="og:site_name" content="GitHub"><meta property="og:type" content="object"><meta property="og:title" content="BVLC/caffe"><meta property="og:url" content="https://github.com/BVLC/caffe"><meta property="og:description" content="caffe - Caffe: a fast open framework for deep learning.">
+
+  <link rel="assets" href="https://assets-cdn.github.com/">
+  
+  <meta name="pjax-timeout" content="1000">
+  
+  <meta name="request-id" content="0B81:1154:FCF9FE:16957D6:5B6A62FB" data-pjax-transient="">
+
+
+  
+
+  <meta name="selected-link" value="repo_wiki" data-pjax-transient="">
+
+    <meta name="google-site-verification" content="KT5gs8h0wvaagLKAVWq8bbeNwnZZK1r1XQysX3xurLU">
+  <meta name="google-site-verification" content="ZzhVyEFwb7w3e0-uOTltm8Jsck2F5StVihD0exw2fsA">
+  <meta name="google-site-verification" content="GXs5KoUUkNCoaAZn7wPN-t01Pywp9M3sEjnt_3_ZWPc">
+    <meta name="google-analytics" content="UA-3769691-2">
+
+<meta name="octolytics-host" content="collector.githubapp.com"><meta name="octolytics-app-id" content="github"><meta name="octolytics-event-url" content="https://collector.githubapp.com/github-external/browser_event"><meta name="octolytics-dimension-request_id" content="0B81:1154:FCF9FE:16957D6:5B6A62FB"><meta name="octolytics-dimension-region_edge" content="ap-southeast-1"><meta name="octolytics-dimension-region_render" content="iad">
+<meta name="analytics-location" content="/&lt;user-name&gt;/&lt;repo-name&gt;/wiki/show" data-pjax-transient="true">
+
+
+
+
+<meta class="js-ga-set" name="dimension1" content="Logged Out">
+
+
+  
+
+      <meta name="hostname" content="github.com">
+    <meta name="user-login" content="">
+
+      <meta name="expected-hostname" content="github.com">
+    <meta name="js-proxy-site-detection-payload" content="ZjliYTgzOTcyZjA1MjRjOGUzMTIwOWM4YmQwOTA4NTc0MDA2MjA4YmFmZWMxY2ZkZTM3OGEzNjc3OTA2YjM0OHx7InJlbW90ZV9hZGRyZXNzIjoiMTkyLjEyMi4xMzEuMTI1IiwicmVxdWVzdF9pZCI6IjBCODE6MTE1NDpGQ0Y5RkU6MTY5NTdENjo1QjZBNjJGQiIsInRpbWVzdGFtcCI6MTUzMzY5ODgxMSwiaG9zdCI6ImdpdGh1Yi5jb20ifQ==">
+
+    <meta name="enabled-features" content="DASHBOARD_V2_LAYOUT_OPT_IN,EXPLORE_DISCOVER_REPOSITORIES,UNIVERSE_BANNER,FREE_TRIALS,MARKETPLACE_INSIGHTS,MARKETPLACE_PLAN_RESTRICTION_EDITOR,MARKETPLACE_SEARCH,MARKETPLACE_INSIGHTS_CONVERSION_PERCENTAGES">
+
+  <meta name="html-safe-nonce" content="1a4254062b599e18f541f373b460e9b2e107205c">
+
+  <meta http-equiv="x-pjax-version" content="00b80f8dacc8265079e0eedcd99a139a">
+  
+
+      <link href="https://github.com/BVLC/caffe/commits/master.atom" rel="alternate" title="Recent Commits to caffe:master" type="application/atom+xml">
+
+  <meta name="go-import" content="github.com/BVLC/caffe git https://github.com/BVLC/caffe.git">
+
+  <meta name="octolytics-dimension-user_id" content="6182163"><meta name="octolytics-dimension-user_login" content="BVLC"><meta name="octolytics-dimension-repository_id" content="12791642"><meta name="octolytics-dimension-repository_nwo" content="BVLC/caffe"><meta name="octolytics-dimension-repository_public" content="true"><meta name="octolytics-dimension-repository_is_fork" content="false"><meta name="octolytics-dimension-repository_network_root_id" content="12791642"><meta name="octolytics-dimension-repository_network_root_nwo" content="BVLC/caffe"><meta name="octolytics-dimension-repository_explore_github_marketplace_ci_cta_shown" content="false">
+
+
+
+
+  <meta name="browser-stats-url" content="https://api.github.com/_private/browser/stats">
+
+  <meta name="browser-errors-url" content="https://api.github.com/_private/browser/errors">
+
+  <link rel="mask-icon" href="https://assets-cdn.github.com/pinned-octocat.svg" color="#000000">
+  <link rel="icon" type="image/x-icon" class="js-site-favicon" href="https://assets-cdn.github.com/favicon.ico">
+
+<meta name="theme-color" content="#1e2327">
+
+
+
+<link rel="manifest" href="https://github.com/manifest.json" crossorigin="use-credentials">
+
+  </head>
+
+  <body class="logged-out env-production page-responsive min-width-0">
+    
+
+  <div class="position-relative js-header-wrapper ">
+    <a href="#start-of-content" tabindex="1" class="px-2 py-4 bg-blue text-white show-on-focus js-skip-to-content">Skip to content</a>
+    <div id="js-pjax-loader-bar" class="pjax-loader-bar"><div class="progress"></div></div>
+
+    
+    
+    
+
+
+
+        
+
+
+  <header class="Header header-logged-out js-details-container Details position-relative f4 py-3" role="banner" data-ga-load="(Logged out) Header, view, experiment:site_header_dropdowns; group:control">
+    <div class="container-lg d-lg-flex p-responsive">
+      <div class="d-flex flex-justify-between flex-items-center">
+        <a class="header-logo-invertocat my-0" href="https://github.com/" aria-label="Homepage" data-ga-click="(Logged out) Header, go to homepage, icon:logo-wordmark; experiment:site_header_dropdowns; group:control">
+          <svg height="32" class="octicon octicon-mark-github" viewBox="0 0 16 16" version="1.1" width="32" aria-hidden="true"><path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"></path></svg>
+        </a>
+
+
+            <div class="d-lg-none css-truncate css-truncate-target width-fit p-2">
+              
+              <svg class="octicon octicon-repo" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9H3V8h1v1zm0-3H3v1h1V6zm0-2H3v1h1V4zm0-2H3v1h1V2zm8-1v12c0 .55-.45 1-1 1H6v2l-1.5-1.5L3 16v-2H1c-.55 0-1-.45-1-1V1c0-.55.45-1 1-1h10c.55 0 1 .45 1 1zm-1 10H1v2h2v-1h3v1h5v-2zm0-10H2v9h9V1z"></path></svg>
+    <strong><a class="text-white" href="https://github.com/BVLC">BVLC</a></strong>
+    /
+    <strong><a class="text-white" href="https://github.com/BVLC/caffe">caffe</a></strong>
+
+
+            </div>
+
+          <button class="btn-link d-lg-none mt-1 js-details-target" type="button" aria-label="Toggle navigation" aria-expanded="false">
+            <svg height="24" class="octicon octicon-three-bars text-white" viewBox="0 0 12 16" version="1.1" width="18" aria-hidden="true"><path fill-rule="evenodd" d="M11.41 9H.59C0 9 0 8.59 0 8c0-.59 0-1 .59-1H11.4c.59 0 .59.41.59 1 0 .59 0 1-.59 1h.01zm0-4H.59C0 5 0 4.59 0 4c0-.59 0-1 .59-1H11.4c.59 0 .59.41.59 1 0 .59 0 1-.59 1h.01zM.59 11H11.4c.59 0 .59.41.59 1 0 .59 0 1-.59 1H.59C0 13 0 12.59 0 12c0-.59 0-1 .59-1z"></path></svg>
+          </button>
+      </div>
+
+      <div class="HeaderMenu d-lg-flex flex-justify-between flex-auto">
+          <nav class="mt-3 mt-lg-0">
+            <ul class="d-lg-flex list-style-none">
+                <li class="ml-lg-2">
+                  <a class="js-selected-navigation-item HeaderNavlink px-0 py-3 py-lg-2 m-0" data-ga-click="Header, click, Nav menu - item:features; experiment:site_header_dropdowns; group:control" data-selected-links="/features /features/project-management /features/code-review /features/project-management /features/integrations /features" href="https://github.com/features">
+                    Features
+</a>                </li>
+                <li class="ml-lg-4">
+                  <a class="js-selected-navigation-item HeaderNavlink px-0 py-3 py-lg-2 m-0" data-ga-click="Header, click, Nav menu - item:business; experiment:site_header_dropdowns; group:control" data-selected-links="/business /business/security /business/customers /business" href="https://github.com/business">
+                    Business
+</a>                </li>
+
+                <li class="ml-lg-4">
+                  <a class="js-selected-navigation-item HeaderNavlink px-0 py-3 py-lg-2 m-0" data-ga-click="Header, click, Nav menu - item:explore; experiment:site_header_dropdowns; group:control" data-selected-links="/explore /trending /trending/developers /integrations /integrations/feature/code /integrations/feature/collaborate /integrations/feature/ship showcases showcases_search showcases_landing /explore" href="https://github.com/explore">
+                    Explore
+</a>                </li>
+
+                <li class="ml-lg-4">
+                      <a class="js-selected-navigation-item HeaderNavlink px-0 py-3 py-lg-2 m-0" data-ga-click="Header, click, Nav menu - item:marketplace; experiment:site_header_dropdowns; group:control" data-selected-links=" /marketplace" href="https://github.com/marketplace">
+                        Marketplace
+</a>                </li>
+                <li class="ml-lg-4">
+                  <a class="js-selected-navigation-item HeaderNavlink px-0 py-3 py-lg-2 m-0" data-ga-click="Header, click, Nav menu - item:pricing; experiment:site_header_dropdowns; group:control" data-selected-links="/pricing /pricing/developer /pricing/team /pricing/business-hosted /pricing/business-enterprise /pricing" href="https://github.com/pricing">
+                    Pricing
+</a>                </li>
+            </ul>
+          </nav>
+
+        <div class="d-lg-flex">
+            <div class="d-lg-flex flex-items-center mr-lg-3">
+              <div class="header-search scoped-search site-scoped-search js-site-search position-relative js-jump-to" role="search combobox" aria-owns="jump-to-results" aria-label="Search or jump to" aria-haspopup="listbox" aria-expanded="true">
+  <div class="position-relative">
+    <!-- '"` --><!-- </textarea></xmp> --><form class="js-site-search-form" data-scope-type="Repository" data-scope-id="12791642" data-scoped-search-url="/BVLC/caffe/search" data-unscoped-search-url="/search" action="/BVLC/caffe/search" accept-charset="UTF-8" method="get"><input name="utf8" value="✓" type="hidden">
+      <label class="form-control header-search-wrapper header-search-wrapper-jump-to position-relative d-flex flex-justify-between flex-items-center js-chromeless-input-container">
+        <input class="form-control header-search-input jump-to-field js-jump-to-field js-site-search-focus js-site-search-field is-clearable" data-hotkey="s,/" name="q" placeholder="Search" data-unscoped-placeholder="Search GitHub" data-scoped-placeholder="Search" autocapitalize="off" aria-autocomplete="list" aria-controls="jump-to-results" data-jump-to-suggestions-path="/_graphql/GetSuggestedNavigationDestinations#csrf-token=j1rvIARq4OL5h3Y7+u5fWLdW4HkIaEd4jrjpITU45EqSvOeD//SrrxHKDY/s2oJFNGf9UlmLm+KdmdNz4p9m5g==" spellcheck="false" autocomplete="off" type="text">
+          <input class="js-site-search-type-field" name="type" type="hidden">
+            <img src="Ubuntu%2016.04%20or%2015.10%20Installation%20Guide%20%C2%B7%20BVLC_caffe%20Wiki%20%C2%B7%20GitHub_files/search-shortcut-hint.svg" alt="" class="mr-2 header-search-key-slash">
+
+            <div class="Box position-absolute overflow-hidden d-none jump-to-suggestions js-jump-to-suggestions-container">
+              <ul class="d-none js-jump-to-suggestions-template-container">
+                <li class="d-flex flex-justify-start flex-items-center p-0 f5 navigation-item js-navigation-item">
+                  <a tabindex="-1" class="no-underline d-flex flex-auto flex-items-center p-2 jump-to-suggestions-path js-jump-to-suggestion-path js-navigation-open" href="">
+                    <div class="jump-to-octicon js-jump-to-octicon mr-2 text-center d-none"></div>
+                    <img class="avatar mr-2 flex-shrink-0 js-jump-to-suggestion-avatar" alt="" aria-label="Team" src="" width="28" height="28">
+
+                    <div class="jump-to-suggestion-name js-jump-to-suggestion-name flex-auto overflow-hidden text-left no-wrap css-truncate css-truncate-target">
+                    </div>
+
+                    <div class="border rounded-1 flex-shrink-0 bg-gray px-1 text-gray-light ml-1 f6 d-none js-jump-to-badge-search">
+                      <span class="js-jump-to-badge-search-text-default d-none" aria-label="in this repository">
+                        In this repository
+                      </span>
+                      <span class="js-jump-to-badge-search-text-global d-none" aria-label="in all of GitHub">
+                        All GitHub
+                      </span>
+                      <span aria-hidden="true" class="d-inline-block ml-1 v-align-middle">↵</span>
+                    </div>
+
+                    <div aria-hidden="true" class="border rounded-1 flex-shrink-0 bg-gray px-1 text-gray-light ml-1 f6 d-none d-on-nav-focus js-jump-to-badge-jump">
+                      Jump to
+                      <span class="d-inline-block ml-1 v-align-middle">↵</span>
+                    </div>
+                  </a>
+                </li>
+                <svg height="16" width="16" class="octicon octicon-repo flex-shrink-0 js-jump-to-repo-octicon-template" title="Repository" aria-label="Repository" viewBox="0 0 12 16" version="1.1" role="img"><path fill-rule="evenodd" d="M4 9H3V8h1v1zm0-3H3v1h1V6zm0-2H3v1h1V4zm0-2H3v1h1V2zm8-1v12c0 .55-.45 1-1 1H6v2l-1.5-1.5L3 16v-2H1c-.55 0-1-.45-1-1V1c0-.55.45-1 1-1h10c.55 0 1 .45 1 1zm-1 10H1v2h2v-1h3v1h5v-2zm0-10H2v9h9V1z"></path></svg>
+                <svg height="16" width="16" class="octicon octicon-project flex-shrink-0 js-jump-to-project-octicon-template" title="Project" aria-label="Project" viewBox="0 0 15 16" version="1.1" role="img"><path fill-rule="evenodd" d="M10 12h3V2h-3v10zm-4-2h3V2H6v8zm-4 4h3V2H2v12zm-1 1h13V1H1v14zM14 0H1a1 1 0 0 0-1 1v14a1 1 0 0 0 1 1h13a1 1 0 0 0 1-1V1a1 1 0 0 0-1-1z"></path></svg>
+                <svg height="16" width="16" class="octicon octicon-search flex-shrink-0 js-jump-to-search-octicon-template" title="Search" aria-label="Search" viewBox="0 0 16 16" version="1.1" role="img"><path fill-rule="evenodd" d="M15.7 13.3l-3.81-3.83A5.93 5.93 0 0 0 13 6c0-3.31-2.69-6-6-6S1 2.69 1 6s2.69 6 6 6c1.3 0 2.48-.41 3.47-1.11l3.83 3.81c.19.2.45.3.7.3.25 0 .52-.09.7-.3a.996.996 0 0 0 0-1.41v.01zM7 10.7c-2.59 0-4.7-2.11-4.7-4.7 0-2.59 2.11-4.7 4.7-4.7 2.59 0 4.7 2.11 4.7 4.7 0 2.59-2.11 4.7-4.7 4.7z"></path></svg>
+              </ul>
+              <ul class="d-none js-jump-to-no-results-template-container">
+                <li class="d-flex flex-justify-center flex-items-center p-3 f5 d-none">
+                  <span class="text-gray">No suggested jump to results</span>
+                </li>
+              </ul>
+
+              <ul id="jump-to-results" class="js-navigation-container jump-to-suggestions-results-container js-jump-to-suggestions-results-container">
+                <li class="d-flex flex-justify-center flex-items-center p-0 f5">
+                  <img src="Ubuntu%2016.04%20or%2015.10%20Installation%20Guide%20%C2%B7%20BVLC_caffe%20Wiki%20%C2%B7%20GitHub_files/octocat-spinner-128.gif" alt="Octocat Spinner Icon" class="m-2" width="28">
+                </li>
+              </ul>
+            </div>
+      </label>
+</form>  </div>
+</div>
+
+            </div>
+
+          <span class="d-block d-lg-inline-block">
+              <div class="HeaderNavlink px-0 py-2 m-0">
+                <a class="text-bold text-white no-underline" href="https://github.com/login?return_to=%2FBVLC%2Fcaffe%2Fwiki%2FUbuntu-16.04-or-15.10-Installation-Guide" data-ga-click="(Logged out) Header, clicked Sign in, text:sign-in; experiment:site_header_dropdowns; group:control">Sign in</a>
+                  <span class="text-gray">or</span>
+                  <a class="text-bold text-white no-underline" href="https://github.com/join?source=experiment-header-control-repo" data-ga-click="(Logged out) Header, clicked Sign up, text:sign-up; experiment:site_header_dropdowns; group:control">Sign up</a>
+              </div>
+          </span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  </div>
+
+  <div id="start-of-content" class="show-on-focus"></div>
+
+    <div id="js-flash-container">
+
+
+</div>
+
+
+
+  <div role="main" class="application-main ">
+        <div itemscope="" itemtype="http://schema.org/SoftwareSourceCode" class="">
+    <div id="js-repo-pjax-container" data-pjax-container="">
+      
+
+
+
+  
+
+
+
+  <div class="pagehead repohead instapaper_ignore readability-menu experiment-repo-nav pt-0 pt-lg-3 ">
+    <div class="repohead-details-container clearfix container-lg p-responsive d-none d-lg-block">
+
+      <ul class="pagehead-actions">
+  <li>
+      <a href="https://github.com/login?return_to=%2FBVLC%2Fcaffe" class="btn btn-sm btn-with-count tooltipped tooltipped-n" aria-label="You must be signed in to watch a repository" rel="nofollow">
+    <svg class="octicon octicon-eye v-align-text-bottom" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M8.06 2C3 2 0 8 0 8s3 6 8.06 6C13 14 16 8 16 8s-3-6-7.94-6zM8 12c-2.2 0-4-1.78-4-4 0-2.2 1.8-4 4-4 2.22 0 4 1.8 4 4 0 2.22-1.78 4-4 4zm2-4c0 1.11-.89 2-2 2-1.11 0-2-.89-2-2 0-1.11.89-2 2-2 1.11 0 2 .89 2 2z"></path></svg>
+    Watch
+  </a>
+  <a class="social-count" href="https://github.com/BVLC/caffe/watchers" aria-label="2224 users are watching this repository">
+    2,224
+  </a>
+
+  </li>
+
+  <li>
+      <a href="https://github.com/login?return_to=%2FBVLC%2Fcaffe" class="btn btn-sm btn-with-count tooltipped tooltipped-n" aria-label="You must be signed in to star a repository" rel="nofollow">
+    <svg class="octicon octicon-star v-align-text-bottom" viewBox="0 0 14 16" version="1.1" width="14" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M14 6l-4.9-.64L7 1 4.9 5.36 0 6l3.6 3.26L2.67 14 7 11.67 11.33 14l-.93-4.74L14 6z"></path></svg>
+    Star
+  </a>
+
+    <a class="social-count js-social-count" href="https://github.com/BVLC/caffe/stargazers" aria-label="25108 users starred this repository">
+      25,108
+    </a>
+
+  </li>
+
+  <li>
+      <a href="https://github.com/login?return_to=%2FBVLC%2Fcaffe" class="btn btn-sm btn-with-count tooltipped tooltipped-n" aria-label="You must be signed in to fork a repository" rel="nofollow">
+        <svg class="octicon octicon-repo-forked v-align-text-bottom" viewBox="0 0 10 16" version="1.1" width="10" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M8 1a1.993 1.993 0 0 0-1 3.72V6L5 8 3 6V4.72A1.993 1.993 0 0 0 2 1a1.993 1.993 0 0 0-1 3.72V6.5l3 3v1.78A1.993 1.993 0 0 0 5 15a1.993 1.993 0 0 0 1-3.72V9.5l3-3V4.72A1.993 1.993 0 0 0 8 1zM2 4.2C1.34 4.2.8 3.65.8 3c0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2zm3 10c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2zm3-10c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2z"></path></svg>
+        Fork
+      </a>
+
+    <a href="https://github.com/BVLC/caffe/network/members" class="social-count" aria-label="15368 users forked this repository">
+      15,368
+    </a>
+  </li>
+</ul>
+
+      <h1 class="public ">
+  <svg class="octicon octicon-repo" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9H3V8h1v1zm0-3H3v1h1V6zm0-2H3v1h1V4zm0-2H3v1h1V2zm8-1v12c0 .55-.45 1-1 1H6v2l-1.5-1.5L3 16v-2H1c-.55 0-1-.45-1-1V1c0-.55.45-1 1-1h10c.55 0 1 .45 1 1zm-1 10H1v2h2v-1h3v1h5v-2zm0-10H2v9h9V1z"></path></svg>
+  <span class="author" itemprop="author"><a class="url fn" rel="author" href="https://github.com/BVLC">BVLC</a></span><!--
+--><span class="path-divider">/</span><!--
+--><strong itemprop="name"><a data-pjax="#js-repo-pjax-container" href="https://github.com/BVLC/caffe">caffe</a></strong>
+
+</h1>
+
+    </div>
+    
+<nav class="reponav js-repo-nav js-sidenav-container-pjax container-lg p-responsive d-none d-lg-block" itemscope="" itemtype="http://schema.org/BreadcrumbList" role="navigation" data-pjax="#js-repo-pjax-container">
+
+  <span itemscope="" itemtype="http://schema.org/ListItem" itemprop="itemListElement">
+    <a class="js-selected-navigation-item reponav-item" itemprop="url" data-hotkey="g c" data-selected-links="repo_source repo_downloads repo_commits repo_releases repo_tags repo_branches repo_packages /BVLC/caffe" href="https://github.com/BVLC/caffe">
+      <svg class="octicon octicon-code" viewBox="0 0 14 16" version="1.1" width="14" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M9.5 3L8 4.5 11.5 8 8 11.5 9.5 13 14 8 9.5 3zm-5 0L0 8l4.5 5L6 11.5 2.5 8 6 4.5 4.5 3z"></path></svg>
+      <span itemprop="name">Code</span>
+      <meta itemprop="position" content="1">
+</a>  </span>
+
+    <span itemscope="" itemtype="http://schema.org/ListItem" itemprop="itemListElement">
+      <a itemprop="url" data-hotkey="g i" class="js-selected-navigation-item reponav-item" data-selected-links="repo_issues repo_labels repo_milestones /BVLC/caffe/issues" href="https://github.com/BVLC/caffe/issues">
+        <svg class="octicon octicon-issue-opened" viewBox="0 0 14 16" version="1.1" width="14" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7 2.3c3.14 0 5.7 2.56 5.7 5.7s-2.56 5.7-5.7 5.7A5.71 5.71 0 0 1 1.3 8c0-3.14 2.56-5.7 5.7-5.7zM7 1C3.14 1 0 4.14 0 8s3.14 7 7 7 7-3.14 7-7-3.14-7-7-7zm1 3H6v5h2V4zm0 6H6v2h2v-2z"></path></svg>
+        <span itemprop="name">Issues</span>
+        <span class="Counter">622</span>
+        <meta itemprop="position" content="2">
+</a>    </span>
+
+  <span itemscope="" itemtype="http://schema.org/ListItem" itemprop="itemListElement">
+    <a data-hotkey="g p" itemprop="url" class="js-selected-navigation-item reponav-item" data-selected-links="repo_pulls checks /BVLC/caffe/pulls" href="https://github.com/BVLC/caffe/pulls">
+      <svg class="octicon octicon-git-pull-request" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M11 11.28V5c-.03-.78-.34-1.47-.94-2.06C9.46 2.35 8.78 2.03 8 2H7V0L4 3l3 3V4h1c.27.02.48.11.69.31.21.2.3.42.31.69v6.28A1.993 1.993 0 0 0 10 15a1.993 1.993 0 0 0 1-3.72zm-1 2.92c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2zM4 3c0-1.11-.89-2-2-2a1.993 1.993 0 0 0-1 3.72v6.56A1.993 1.993 0 0 0 2 15a1.993 1.993 0 0 0 1-3.72V4.72c.59-.34 1-.98 1-1.72zm-.8 10c0 .66-.55 1.2-1.2 1.2-.65 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2zM2 4.2C1.34 4.2.8 3.65.8 3c0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2z"></path></svg>
+      <span itemprop="name">Pull requests</span>
+      <span class="Counter">251</span>
+      <meta itemprop="position" content="3">
+</a>  </span>
+
+    <a data-hotkey="g b" class="js-selected-navigation-item reponav-item" data-selected-links="repo_projects new_repo_project repo_project /BVLC/caffe/projects" href="https://github.com/BVLC/caffe/projects">
+      <svg class="octicon octicon-project" viewBox="0 0 15 16" version="1.1" width="15" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M10 12h3V2h-3v10zm-4-2h3V2H6v8zm-4 4h3V2H2v12zm-1 1h13V1H1v14zM14 0H1a1 1 0 0 0-1 1v14a1 1 0 0 0 1 1h13a1 1 0 0 0 1-1V1a1 1 0 0 0-1-1z"></path></svg>
+      Projects
+      <span class="Counter">0</span>
+</a>
+
+    <a class="js-selected-navigation-item selected reponav-item" data-hotkey="g w" data-selected-links="repo_wiki /BVLC/caffe/wiki" href="https://github.com/BVLC/caffe/wiki">
+      <svg class="octicon octicon-book" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M3 5h4v1H3V5zm0 3h4V7H3v1zm0 2h4V9H3v1zm11-5h-4v1h4V5zm0 2h-4v1h4V7zm0 2h-4v1h4V9zm2-6v9c0 .55-.45 1-1 1H9.5l-1 1-1-1H2c-.55 0-1-.45-1-1V3c0-.55.45-1 1-1h5.5l1 1 1-1H15c.55 0 1 .45 1 1zm-8 .5L7.5 3H2v9h6V3.5zm7-.5H9.5l-.5.5V12h6V3z"></path></svg>
+      Wiki
+</a>
+
+  <a class="js-selected-navigation-item reponav-item" data-selected-links="repo_graphs repo_contributors dependency_graph pulse /BVLC/caffe/pulse" href="https://github.com/BVLC/caffe/pulse">
+    <svg class="octicon octicon-graph" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M16 14v1H0V0h1v14h15zM5 13H3V8h2v5zm4 0H7V3h2v10zm4 0h-2V6h2v7z"></path></svg>
+    Insights
+</a>
+
+</nav>
+
+  <div class="reponav-wrapper reponav-small d-lg-none">
+  <nav class="reponav js-reponav text-center no-wrap" itemscope="" itemtype="http://schema.org/BreadcrumbList">
+
+    <span itemscope="" itemtype="http://schema.org/ListItem" itemprop="itemListElement">
+      <a class="js-selected-navigation-item reponav-item" itemprop="url" data-selected-links="repo_source repo_downloads repo_commits repo_releases repo_tags repo_branches repo_packages /BVLC/caffe" href="https://github.com/BVLC/caffe">
+        <span itemprop="name">Code</span>
+        <meta itemprop="position" content="1">
+</a>    </span>
+
+      <span itemscope="" itemtype="http://schema.org/ListItem" itemprop="itemListElement">
+        <a itemprop="url" class="js-selected-navigation-item reponav-item" data-selected-links="repo_issues repo_labels repo_milestones /BVLC/caffe/issues" href="https://github.com/BVLC/caffe/issues">
+          <span itemprop="name">Issues</span>
+          <span class="Counter">622</span>
+          <meta itemprop="position" content="2">
+</a>      </span>
+
+    <span itemscope="" itemtype="http://schema.org/ListItem" itemprop="itemListElement">
+      <a itemprop="url" class="js-selected-navigation-item reponav-item" data-selected-links="repo_pulls checks /BVLC/caffe/pulls" href="https://github.com/BVLC/caffe/pulls">
+        <span itemprop="name">Pull requests</span>
+        <span class="Counter">251</span>
+        <meta itemprop="position" content="3">
+</a>    </span>
+
+    <span itemscope="" itemtype="http://schema.org/ListItem" itemprop="itemListElement">
+      <a itemprop="url" class="js-selected-navigation-item reponav-item" data-selected-links="repo_projects new_repo_project repo_project /BVLC/caffe/projects" href="https://github.com/BVLC/caffe/projects">
+        <span itemprop="name">Projects</span>
+        <span class="Counter">0</span>
+        <meta itemprop="position" content="4">
+</a>    </span>
+
+      <span itemscope="" itemtype="http://schema.org/ListItem" itemprop="itemListElement">
+        <a itemprop="url" class="js-selected-navigation-item selected reponav-item" data-selected-links="repo_wiki /BVLC/caffe/wiki" href="https://github.com/BVLC/caffe/wiki">
+          <span itemprop="name">Wiki</span>
+          <meta itemprop="position" content="5">
+</a>      </span>
+
+    <a class="js-selected-navigation-item reponav-item" data-selected-links="pulse /BVLC/caffe/pulse" href="https://github.com/BVLC/caffe/pulse">
+      Pulse
+</a>
+  </nav>
+</div>
+
+
+  </div>
+
+<div class="container-lg new-discussion-timeline experiment-repo-nav  p-responsive">
+  <div class="repository-content ">
+
+    
+  <div id="wiki-wrapper" class="page">
+      <div class="signup-prompt-bg rounded-1">
+      <div class="signup-prompt p-4 text-center mb-4 rounded-1">
+        <div class="position-relative">
+          <!-- '"` --><!-- </textarea></xmp> --><form action="/site/dismiss_signup_prompt" accept-charset="UTF-8" method="post"><input name="utf8" value="✓" type="hidden"><input name="authenticity_token" value="LZUDJuPH2sOhxOGhXDwy1Dz1TXqCt/cbRmcKvaKWLASlAM9cKiBrRItsy1ggHXFc1YD44veLiUGb1ICl5hy+aA==" type="hidden">
+            <button type="submit" class="position-absolute top-0 right-0 btn-link link-gray" data-ga-click="(Logged out) Sign up prompt, clicked Dismiss, text:dismiss">
+              Dismiss
+            </button>
+</form>          <h3 class="pt-2">Join GitHub today</h3>
+          <p class="col-6 mx-auto">GitHub is home to over 28 million 
+developers working together to host and review code, manage projects, 
+and build software together.</p>
+          <a class="btn btn-primary" href="https://github.com/join?source=prompt-wiki-show" data-ga-click="(Logged out) Sign up prompt, clicked Sign up, text:sign-up">Sign up</a>
+        </div>
+      </div>
+    </div>
+
+
+  <div class="d-flex flex-column flex-md-row gh-header">
+    <h1 class="flex-auto min-width-0 mb-2 mb-md-0 mr-0 mr-md-2 gh-header-title instapaper_title">Ubuntu 16.04 or 15.10 Installation Guide</h1>
+
+      <div class="mt-0 mt-lg-1 flex-shrink-0 gh-header-actions">
+        <a href="#wiki-pages-box" class="d-md-none ">Jump to bottom</a>
+
+      </div>
+  </div>
+
+    <div class="mt-2 mt-md-1 pb-3 gh-header-meta">
+      WEN Xin edited this page <relative-time datetime="2017-11-28T01:20:47Z" title="Nov 28, 2017, 9:20 AM GMT+8">on Nov 28, 2017</relative-time>
+      ·
+      <a href="https://github.com/BVLC/caffe/wiki/Ubuntu-16.04-or-15.10-Installation-Guide/_history" class="muted-link">
+        80 revisions
+      </a>
+    </div>
+
+  <div id="wiki-content" class="d-flex flex-column flex-md-row">
+    <div id="wiki-body" class="mt-4 flex-auto min-width-0 gollum-markdown-content instapaper_body">
+        <div class="markdown-body">
+          <p>The following guide includes the how-to instructions for 
+the installation of BVLC/Caffe on Ubuntu 16.04 with Cuda Toolkit 8.0, 
+CUDNN 5.1 library and OpenCV version 2 or 3. (A small record remains 
+from the previous tutorial for Ubuntu 15.10 with the Cuda Toolkit 7.5, 
+but that part will not be updated any further.) This guide also covers 
+the KUbuntu distribution and the related distributions.</p>
+<p>Execute these commands first:</p>
+<pre><code>sudo apt-get update
+
+sudo apt-get upgrade
+
+sudo apt-get install -y build-essential cmake git pkg-config
+
+sudo apt-get install -y libprotobuf-dev libleveldb-dev libsnappy-dev libhdf5-serial-dev protobuf-compiler
+
+sudo apt-get install -y libatlas-base-dev 
+
+sudo apt-get install -y --no-install-recommends libboost-all-dev
+
+sudo apt-get install -y libgflags-dev libgoogle-glog-dev liblmdb-dev
+</code></pre>
+<h1>
+<a id="user-content-python-general" class="anchor" href="#python-general" aria-hidden="true"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>(Python general)</h1>
+<pre><code>sudo apt-get install -y python-pip
+</code></pre>
+<h1>
+<a id="user-content-python-27-development-files" class="anchor" href="#python-27-development-files" aria-hidden="true"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>(Python 2.7 development files)</h1>
+<pre><code>sudo apt-get install -y python-dev
+sudo apt-get install -y python-numpy python-scipy
+</code></pre>
+<h1>
+<a id="user-content-or-python-35-development-files" class="anchor" href="#or-python-35-development-files" aria-hidden="true"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>(or, Python 3.5 development files)</h1>
+<pre><code>sudo apt-get install -y python3-dev
+sudo apt-get install -y python3-numpy python3-scipy
+</code></pre>
+<h1>
+<a id="user-content-opencv-24" class="anchor" href="#opencv-24" aria-hidden="true"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>(OpenCV 2.4)</h1>
+<pre><code>sudo apt-get install -y libopencv-dev
+</code></pre>
+<p>(or, OpenCV 3.2 - see the instructions below)
+If you own an NVIDIA graphics card, see the instructions for the 
+installation of NVIDIA Graphics Driver, Cuda Toolkit and CUDNN library 
+at the end of this document, or by clicking <a href="https://github.com/BVLC/caffe/wiki/Ubuntu-16.04-or-15.10-Installation-Guide#the-gpu-support-prerequisites">https://github.com/BVLC/caffe/wiki/Ubuntu-16.04-or-15.10-Installation-Guide#the-gpu-support-prerequisites</a>.</p>
+<p>For the instructions on how to use the OpenCV version 3.2, please see <a href="https://github.com/BVLC/caffe/wiki/OpenCV-3.2-Installation-Guide-on-Ubuntu-16.04">https://github.com/BVLC/caffe/wiki/OpenCV-3.2-Installation-Guide-on-Ubuntu-16.04</a></p>
+<p>The configuration settings will differ for OpenCV 3.2 as you can see 
+above, but here we continue with the basic settings that imply the 
+version 2.x.</p>
+<p>Go to the <a href="https://github.com/BVLC/caffe">https://github.com/BVLC/caffe</a> and download the zip archive. Unpack it to <code>~/bin/</code>
+ or any other location. Enter the caffe-master directory in the terminal
+ window. Note that only the version 1.0RC5 compiles well at this moment,
+ so download the 1.0RC5 version from <a href="https://github.com/BVLC/caffe/archive/rc5.zip">https://github.com/BVLC/caffe/archive/rc5.zip</a>. If you download the 1.0 version from <a href="https://github.com/BVLC/caffe/archive/1.0.zip">https://github.com/BVLC/caffe/archive/1.0.zip</a>, you need to edit the file <code>/src/caffe/util/blocking_queue.cpp</code>. After the line 89, add the new line that contains the following:</p>
+<pre><code>template class BlockingQueue&lt;Datum*&gt;;
+</code></pre>
+<p>Copy the Makefile.config.example to Makefile.config like this:</p>
+<pre><code>cp Makefile.config.example Makefile.config
+</code></pre>
+<p>and open it for editing (with a text editor). I use the kate editor 
+for this purpose, so the command that I execute goes as follows. You 
+first need to install the kate editor with:</p>
+<pre><code>sudo apt-get install kate
+</code></pre>
+<p>and then you can edit the configuration file with:</p>
+<pre><code>kate ./Makefile.config &amp;
+</code></pre>
+<p>The following line in the configuration file tells the program to use CPU only for the computations.</p>
+<pre><code>CPU_ONLY := 1
+</code></pre>
+<p>CPU_ONLY option is enabled for a computer without any NVIDIA graphics
+ card and it is typical for the installation of Caffe inside the typical
+ virtual machine. (Notice that there is a special type of virtual 
+machine inside the Ubuntu host machine that can access the physical 
+NVIDIA graphics card directly. See <a href="https://github.com/NVIDIA/nvidia-docker">https://github.com/NVIDIA/nvidia-docker</a>)</p>
+<p>The default option value is to use GPU and CPU computation. Change 
+the line if needed, by commenting it out (# CPU_ONLY := 1) if you have 
+an NVIDIA graphics card with the proprietary driver, CUDA toolkit and 
+CUDNN installed. Jump to the end of this guide to read about how to 
+install the GPU support prerequisites.</p>
+<p>The Makefile.config should contain the following lines, so find them and fill them in.</p>
+<pre><code>PYTHON_INCLUDE := /usr/include/python2.7 /usr/lib/python2.7/dist-packages/numpy/core/include
+</code></pre>
+<p>(for some Ubuntu 16.04 users, the path may be different)</p>
+<pre><code>PYTHON_INCLUDE := /usr/include/python2.7 /usr/local/lib/python2.7/dist-packages/numpy/core/include  
+WITH_PYTHON_LAYER := 1  
+INCLUDE_DIRS := $(PYTHON_INCLUDE) /usr/local/include /usr/include/hdf5/serial  
+LIBRARY_DIRS := $(PYTHON_LIB) /usr/local/lib /usr/lib /usr/lib/x86_64-linux-gnu /usr/lib/x86_64-linux-gnu/hdf5/serial  
+</code></pre>
+<p>(For ways to create an isolated Python environment, explore the topic of virtual environments here: <a href="http://docs.python-guide.org/en/latest/dev/virtualenvs/" rel="nofollow">http://docs.python-guide.org/en/latest/dev/virtualenvs/</a>)</p>
+<p>If your CUDA is 8.0, find this in Makefile.config..</p>
+<pre><code>CUDA_DIR := /usr/local/cuda
+</code></pre>
+<p>And replace it with this..</p>
+<pre><code>CUDA_DIR := /usr/local/cuda-8.0
+</code></pre>
+<p>Now lets continue with the instructions for the Ubuntu 15.10 first, followed by the instructions for Ubuntu 16.04 users.</p>
+<p>Execute the additional commands:</p>
+<pre><code>find . -type f -exec sed -i -e 's^"hdf5.h"^"hdf5/serial/hdf5.h"^g' -e 's^"hdf5_hl.h"^"hdf5/serial/hdf5_hl.h"^g' '{}' \;
+</code></pre>
+<pre><code>cd /usr/lib/x86_64-linux-gnu
+
+sudo ln -s libhdf5_serial.so.8.0.2 libhdf5.so
+
+sudo ln -s libhdf5_serial_hl.so.8.0.2 libhdf5_hl.so
+</code></pre>
+<p>The above commands are no longer needed on Ubuntu 16.04 after a 
+certain system update. If your Ubuntu 16.04 still needs this step to be 
+performed, take the following considerations.</p>
+<p>The file versions for libhdf5_serial.so and libhdf5_serial_hl.so are 
+different and so the last two lines will need to be altered. Visit <code>/usr/lib/x86_64-linux-gnu/</code> and list the relevant contents of that directory by using the command such as <code>ls -l | grep hdf5</code>. The versions of libhdf5 that need to be linked to are 10.1.0 and 10.0.2 respectively:</p>
+<pre><code>find . -type f -exec sed -i -e 's^"hdf5.h"^"hdf5/serial/hdf5.h"^g' -e 's^"hdf5_hl.h"^"hdf5/serial/hdf5_hl.h"^g' '{}' \;
+</code></pre>
+<pre><code>cd /usr/lib/x86_64-linux-gnu
+
+sudo ln -s libhdf5_serial.so.10.1.0 libhdf5.so
+
+sudo ln -s libhdf5_serial_hl.so.10.0.2 libhdf5_hl.so 
+</code></pre>
+<p>Now for both platforms lets return to the unpacked Caffe directory caffe-master and enter these commands:</p>
+<pre><code>cd python
+</code></pre>
+<pre><code>for req in $(cat requirements.txt); do pip install $req; done
+</code></pre>
+<p>NOTE: If the Ubuntu operating system was updated, perhaps the Python 
+layer needs to be updated and recompiled, because the Python module no 
+longer works. Perform this step again in that case.</p>
+<pre><code>for req in $(cat requirements.txt); do pip install $req; done  
+</code></pre>
+<p>In case of any problems, try:</p>
+<pre><code>for req in $(cat requirements.txt); do sudo -H pip install $req --upgrade; done
+</code></pre>
+<p>The default Python version is 2. You can edit the Makefile.conf to 
+enable the Python 3, but this will fail during the linking phase: 
+boost_python3 cannot be found on Ubuntu 16.04. Instead, this file should
+ be <code>/usr/lib/x86_64-linux-gnu/libboost_python-py35.so.1.58.0</code>. This requires further testing.</p>
+<p>The next step is to build Caffe:</p>
+<pre><code>cd ..
+</code></pre>
+<p>(now you are in caffe-master directory)</p>
+<p>The build process will fail in Ubuntu 16.04. Edit the Makefile with an editor such as</p>
+<pre><code>kate ./Makefile
+</code></pre>
+<p>and replace this line:</p>
+<pre><code>NVCCFLAGS += -ccbin=$(CXX) -Xcompiler -fPIC $(COMMON_FLAGS)
+</code></pre>
+<p>with the following line</p>
+<pre><code>NVCCFLAGS += -D_FORCE_INLINES -ccbin=$(CXX) -Xcompiler -fPIC $(COMMON_FLAGS)
+</code></pre>
+<p>Also, open the file CMakeLists.txt and add the following line:</p>
+<pre><code># ---[ Includes
+set(${CMAKE_CXX_FLAGS} "-D_FORCE_INLINES ${CMAKE_CXX_FLAGS}")
+</code></pre>
+<p>(See the discussion at: <a href="https://github.com/BVLC/caffe/issues/4046">https://github.com/BVLC/caffe/issues/4046</a>)</p>
+<p>When compiling with OpenCV 3.0 or errors show 
+imread,imencode,imdecode or VideoCapture open your Makefile with some 
+text editor, add opencv_imgcodecs behind.</p>
+<pre><code> LIBRARIES += glog gflags protobuf leveldb snappy \
+  lmdb boost_system boost_filesystem hdf5_hl hdf5 m \
+  opencv_core opencv_highgui opencv_imgproc opencv_imgcodecs opencv_videoio
+</code></pre>
+<p>(See the discussion at: <a href="https://github.com/BVLC/caffe/issues/1276">https://github.com/BVLC/caffe/issues/1276</a>)</p>
+<p>Then</p>
+<pre><code>make all
+make test
+make runtest
+make pycaffe      -should be finished already, so you can omit this one
+make distribute
+</code></pre>
+<p>Note that the build process can be sped up by appending -j 
+$(($(nproc) + 1)) to the above commands, which distributes the build 
+across the available processors on your system. For example:</p>
+<pre><code>make all
+</code></pre>
+<p>can become</p>
+<pre><code>make all -j $(($(nproc) + 1))
+</code></pre>
+<p>In order to make the Python work with Caffe, open the file <code>~/.bashrc</code> for editing in your favorite text editor. There, add the following line at the end of file:</p>
+<pre><code>export PYTHONPATH=/path/to/caffe-master/python:$PYTHONPATH
+</code></pre>
+<p>You can also execute that same line immediately in the terminal as a command for immediate effects, or in general execute:</p>
+<pre><code>source ~/.bashrc 
+</code></pre>
+<p>In order to use the Caffe binaries, libraries, or include files, they
+ need to be reachable through the search path, so one solution is to 
+copy them into their respective directories: from the distribute 
+directory to the <code>/usr/bin</code> or <code>/usr/lib or /usr/include</code>.</p>
+<p>The binary models can be download with the following script. In caffe-master directory,</p>
+<pre><code>cd scripts
+./download_model_binary.py ../models/bvlc_alexnet/
+./download_model_binary.py ../models/bvlc_googlenet/
+./download_model_binary.py ../models/bvlc_reference_caffenet/
+./download_model_binary.py ../models/bvlc_reference_rcnn_ilsvrc13/
+./download_model_binary.py ../models/finetune_flickr_style/
+</code></pre>
+<p>For more models, see <a href="https://github.com/BVLC/caffe/wiki/Model-Zoo">https://github.com/BVLC/caffe/wiki/Model-Zoo</a>
+ *
+For most Linux programs compiled from source, you can attempt to build a
+ package that can be installed and uninstalled with a single click.</p>
+<pre><code>sudo apt-get install checkinstall
+</code></pre>
+<p>Now, when you execute the:</p>
+<pre><code>sudo checkinstall
+</code></pre>
+<p>and fill out a form with some easy questions, you will have the 
+package made automatically. However, this uses the command "make 
+install" in the background, which will fail, because the Caffe project 
+does not have the target "install" configured in the Makefile.</p>
+<p>The GPU support prerequisites</p>
+<p>In Ubuntu desktop, enable the use of proprietary drivers in the 
+Software &amp; Updates Center for your desktop and install the NVIDIA 
+graphics driver from the main Ubuntu package repository. See <a href="https://help.ubuntu.com/community/BinaryDriverHowto/Nvidia" rel="nofollow">https://help.ubuntu.com/community/BinaryDriverHowto/Nvidia</a></p>
+<p>Discover which driver number you need with:</p>
+<pre><code>sudo ubuntu-drivers devices
+</code></pre>
+<p>The LATEST version of Cuda Toolkit 8.0 is available from the NVIDIA 
+website. Download the Cuda Toolkit 8.0 network installer and the CUDNN 
+5.1 package from the NVIDIA site, after registering and filling out the 
+forms. <a href="https://developer.nvidia.com/cuda-downloads" rel="nofollow">https://developer.nvidia.com/cuda-downloads</a></p>
+<p>Install the Cuda Toolkit 8.0 package manually in the terminal as instructed at the website. For example:</p>
+<pre><code>sudo apt-get update &amp;&amp; sudo apt-get install wget -y --no-install-recommends
+wget "http://developer.download.nvidia.com/compute/cuda/repos/ubuntu1604/x86_64/cuda-repo-ubuntu1604_8.0.61-1_amd64.deb"
+sudo dpkg -i cuda-repo-ubuntu1604_8.0.61-1_amd64.deb
+sudo apt-get update
+sudo apt-get install cuda
+</code></pre>
+<p>Download and install the archive that contains the CUDNN library from <a href="https://developer.nvidia.com/cudnn" rel="nofollow">https://developer.nvidia.com/cudnn</a>.</p>
+<p>Put all the downloaded and unpacked CUDNN files manually starting 
+with the search path directory where the CUDA toolkit is, each file in 
+its own respective directory. That directory could be <code>/usr/local/cuda</code> or <code>/usr</code> if you installed Cuda 7.5 from the Ubuntu repository.</p>
+<p>Example: the unpacked directory content should be copied from <code>/lib64</code> directory in the downloaded archive to <code>/usr/lib/x86_64-linux-gnu/</code> and from <code>/include</code> directory to <code>/usr/include/</code>.</p>
+<pre><code>CUDNN_URL="http://developer.download.nvidia.com/compute/redist/cudnn/v5.1/cudnn-8.0-linux-x64-v5.1.tgz"
+wget ${CUDNN_URL}
+sudo tar -xzf cudnn-8.0-linux-x64-v5.1.tgz -C /usr/local
+rm cudnn-8.0-linux-x64-v5.1.tgz &amp;&amp; sudo ldconfig
+</code></pre>
+<p>In Kubuntu 16.04, you also need to enable the use of proprietary 
+drivers (in System Settings -&gt; Driver Manager). The previous best 
+option was to use the Muon package manager for all software 
+installations. There, you can find the NVIDIA driver and the Cuda 
+Toolkit 7.5 package. (Thus far, Cuda Toolkit 8.0 has not appeared in 
+this package manager.) The packages are given through the standard 
+Canonical and Canonical Partners software sources (repositories). You 
+need to install the Muon manager itself with the following command:</p>
+<pre><code>sudo apt-get install muon
+</code></pre>
+<p>You can check your Ubuntu environment variables after the reboot, by executing the command:</p>
+<pre><code>export
+</code></pre>
+<p>Edit the Makefile.config in Caffe directory accordingly (as described
+ in the config file itself) and recompile the Caffe to support the GPU 
+computation. To recompile, first execute make clean.</p>
+<p>Test the Caffe framework with DeepDream project</p>
+<p>A fun way to try the Caffe framework for python is to use it in the 
+DeepDream project. Visit the following site for specific source code: <a href="https://github.com/google/deepdream">https://github.com/google/deepdream</a> One of the trained neural networks used in this procedure, can be found here: <a href="http://places.csail.mit.edu/model/googlenet_places205.tar.gz" rel="nofollow">http://places.csail.mit.edu/model/googlenet_places205.tar.gz</a> Before you begin, you need to prepare the Ubuntu 16.04 system for the use of IPython and Jupyter. For these instructions, see: <a href="https://www.digitalocean.com/community/tutorials/how-to-set-up-a-jupyter-notebook-to-run-ipython-on-ubuntu-16-04" rel="nofollow">https://www.digitalocean.com/community/tutorials/how-to-set-up-a-jupyter-notebook-to-run-ipython-on-ubuntu-16-04</a></p>
+<p>Then, you can add Python 2 and Python 3 kernels for the execution of 
+IPython Notebooks (usually with the command ipython notebook filename).</p>
+<pre><code>python2 -m pip install ipykernel
+python2 -m ipykernel install --user
+</code></pre>
+<pre><code>python3 -m pip install ipykernel
+python3 -m ipykernel install --user```
+</code></pre>
+
+        </div>
+
+        <div id="wiki-footer" class="mt-5 mb-0 wiki-footer gollum-markdown-content">
+          <div class="Box Box--condensed bg-gray box-shadow">
+            <div class="Box-body  markdown-body">
+              <p>how to install segnet after this</p>
+
+            </div>
+          </div>
+        </div>
+    </div>
+
+    <div id="wiki-rightbar" class="mt-4 ml-md-6 flex-shrink-0 width-full wiki-rightbar">
+      <div id="wiki-pages-box" class="mb-4 wiki-pages-box js-wiki-pages-box" role="navigation">
+        
+<div class="Box Box--condensed box-shadow">
+  <div class="Box-header js-wiki-toggle-collapse" style="cursor: pointer">
+    <h3 class="Box-title">
+      <svg class="octicon octicon-triangle-down js-wiki-sidebar-toggle-display" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M0 5l6 6 6-6H0z"></path></svg>
+      <svg class="octicon octicon-triangle-right js-wiki-sidebar-toggle-display d-none" viewBox="0 0 6 16" version="1.1" width="6" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M0 14l6-6-6-6v12z"></path></svg>
+      Pages <span class="Counter Counter--gray">39</span>
+    </h3>
+  </div>
+  <div class=" js-wiki-sidebar-toggle-display">
+      <div class="filter-bar">
+        <input id="wiki-pages-filter" class="form-control input-sm input-block js-filterable-field" placeholder="Find a Page…" aria-label="Find a Page…" type="text">
+      </div>
+
+    <ul class="m-0 p-0 list-style-none" data-filterable-for="wiki-pages-filter" data-filterable-type="substring">
+        <li class="Box-row">
+          <strong><a class="d-block" href="https://github.com/BVLC/caffe/wiki">Home</a></strong>
+        </li>
+        <li class="Box-row">
+          <strong><a class="d-block" href="https://github.com/BVLC/caffe/wiki/AWS-EC2-GPU-enabled-Caffe-AMI">AWS EC2 GPU enabled Caffe AMI</a></strong>
+        </li>
+        <li class="Box-row">
+          <strong><a class="d-block" href="https://github.com/BVLC/caffe/wiki/Borrowing-Weights-from-a-Pretrained-Network">Borrowing Weights from a Pretrained Network</a></strong>
+        </li>
+        <li class="Box-row">
+          <strong><a class="d-block" href="https://github.com/BVLC/caffe/wiki/Caffe-installing-script-for-ubuntu-16.04---support-Cuda-8">Caffe installing script for ubuntu 16.04   support Cuda 8</a></strong>
+        </li>
+        <li class="Box-row">
+          <strong><a class="d-block" href="https://github.com/BVLC/caffe/wiki/Caffe-on-EC2-Ubuntu-14.04-Cuda-7">Caffe on EC2 Ubuntu 14.04 Cuda 7</a></strong>
+        </li>
+        <li class="Box-row">
+          <strong><a class="d-block" href="https://github.com/BVLC/caffe/wiki/Caffe-Output:-.caffemodel-.solverstate">Caffe Output: .caffemodel .solverstate</a></strong>
+        </li>
+        <li class="Box-row">
+          <strong><a class="d-block" href="https://github.com/BVLC/caffe/wiki/Commonly-encountered-build-issues">Commonly encountered build issues</a></strong>
+        </li>
+        <li class="Box-row">
+          <strong><a class="d-block" href="https://github.com/BVLC/caffe/wiki/Contributing">Contributing</a></strong>
+        </li>
+        <li class="Box-row">
+          <strong><a class="d-block" href="https://github.com/BVLC/caffe/wiki/Development">Development</a></strong>
+        </li>
+        <li class="Box-row">
+          <strong><a class="d-block" href="https://github.com/BVLC/caffe/wiki/Excluding-Layers:-Train-and-Test-Phase">Excluding Layers: Train and Test Phase</a></strong>
+        </li>
+        <li class="Box-row">
+          <strong><a class="d-block" href="https://github.com/BVLC/caffe/wiki/Faster-Caffe-Training">Faster Caffe Training</a></strong>
+        </li>
+        <li class="Box-row">
+          <strong><a class="d-block" href="https://github.com/BVLC/caffe/wiki/Fine-Tuning-or-Training-Certain-Layers-Exclusively">Fine Tuning or Training Certain Layers Exclusively</a></strong>
+        </li>
+        <li class="Box-row">
+          <strong><a class="d-block" href="https://github.com/BVLC/caffe/wiki/GeForce-GTX-1080,---CUDA-8.0,---Ubuntu-16.04,---Caffe">GeForce GTX 1080,   CUDA 8.0,   Ubuntu 16.04,   Caffe</a></strong>
+        </li>
+        <li class="Box-row">
+          <strong><a class="d-block" href="https://github.com/BVLC/caffe/wiki/IDE---Nvidia%E2%80%99s-Eclipse-Nsight">IDE   Nvidia’s Eclipse Nsight</a></strong>
+        </li>
+        <li class="Box-row">
+          <strong><a class="d-block" href="https://github.com/BVLC/caffe/wiki/Image-Format:-BGR-not-RGB">Image Format: BGR not RGB</a></strong>
+        </li>
+        <li class="Box-row wiki-more-pages">
+          <strong><a class="d-block" href="https://github.com/BVLC/caffe/wiki/Install-Caffe-on-EC2-from-scratch-(Ubuntu,-CUDA-7,-cuDNN-3)">Install Caffe on EC2 from scratch (Ubuntu, CUDA 7, cuDNN 3)</a></strong>
+        </li>
+        <li class="Box-row wiki-more-pages">
+          <strong><a class="d-block" href="https://github.com/BVLC/caffe/wiki/Installation">Installation</a></strong>
+        </li>
+        <li class="Box-row wiki-more-pages">
+          <strong><a class="d-block" href="https://github.com/BVLC/caffe/wiki/Installation-(OSX)">Installation (OSX)</a></strong>
+        </li>
+        <li class="Box-row wiki-more-pages">
+          <strong><a class="d-block" href="https://github.com/BVLC/caffe/wiki/Linking-Caffe-with-BLIS">Linking Caffe with BLIS</a></strong>
+        </li>
+        <li class="Box-row wiki-more-pages">
+          <strong><a class="d-block" href="https://github.com/BVLC/caffe/wiki/Making-Prototxt-Nets-with-Python">Making Prototxt Nets with Python</a></strong>
+        </li>
+        <li class="Box-row wiki-more-pages">
+          <strong><a class="d-block" href="https://github.com/BVLC/caffe/wiki/Model-Zoo">Model Zoo</a></strong>
+        </li>
+        <li class="Box-row wiki-more-pages">
+          <strong><a class="d-block" href="https://github.com/BVLC/caffe/wiki/Models-accuracy-on-ImageNet-2012-val">Models accuracy on ImageNet 2012 val</a></strong>
+        </li>
+        <li class="Box-row wiki-more-pages">
+          <strong><a class="d-block" href="https://github.com/BVLC/caffe/wiki/Models-accuracy-on-ImageNet-2012-val.">Models accuracy on ImageNet 2012 val.</a></strong>
+        </li>
+        <li class="Box-row wiki-more-pages">
+          <strong><a class="d-block" href="https://github.com/BVLC/caffe/wiki/OpenCV-3.2-Installation-Guide-on-Ubuntu-16.04">OpenCV 3.2 Installation Guide on Ubuntu 16.04</a></strong>
+        </li>
+        <li class="Box-row wiki-more-pages">
+          <strong><a class="d-block" href="https://github.com/BVLC/caffe/wiki/OpenCV-3.3-Installation-Guide-on-Ubuntu-16.04">OpenCV 3.3 Installation Guide on Ubuntu 16.04</a></strong>
+        </li>
+        <li class="Box-row wiki-more-pages">
+          <strong><a class="d-block" href="https://github.com/BVLC/caffe/wiki/Python-Layer-Unit-Tests">Python Layer Unit Tests</a></strong>
+        </li>
+        <li class="Box-row wiki-more-pages">
+          <strong><a class="d-block" href="https://github.com/BVLC/caffe/wiki/Related-Projects">Related Projects</a></strong>
+        </li>
+        <li class="Box-row wiki-more-pages">
+          <strong><a class="d-block" href="https://github.com/BVLC/caffe/wiki/Reporting-Bugs-and-Other-Issues">Reporting Bugs and Other Issues</a></strong>
+        </li>
+        <li class="Box-row wiki-more-pages">
+          <strong><a class="d-block" href="https://github.com/BVLC/caffe/wiki/Simple-Example:-Sin-Layer">Simple Example: Sin Layer</a></strong>
+        </li>
+        <li class="Box-row wiki-more-pages">
+          <strong><a class="d-block" href="https://github.com/BVLC/caffe/wiki/Solver-Prototxt">Solver Prototxt</a></strong>
+        </li>
+        <li class="Box-row wiki-more-pages">
+          <strong><a class="d-block" href="https://github.com/BVLC/caffe/wiki/The-Data-Layer">The Data Layer</a></strong>
+        </li>
+        <li class="Box-row wiki-more-pages">
+          <strong><a class="d-block" href="https://github.com/BVLC/caffe/wiki/The-Datum-Object">The Datum Object</a></strong>
+        </li>
+        <li class="Box-row wiki-more-pages">
+          <strong><a class="d-block" href="https://github.com/BVLC/caffe/wiki/Training-and-Resuming">Training and Resuming</a></strong>
+        </li>
+        <li class="Box-row wiki-more-pages">
+          <strong><a class="d-block" href="https://github.com/BVLC/caffe/wiki/Ubuntu-14.04-ec2-instance">Ubuntu 14.04 ec2 instance</a></strong>
+        </li>
+        <li class="Box-row wiki-more-pages">
+          <strong><a class="d-block" href="https://github.com/BVLC/caffe/wiki/Ubuntu-14.04-VirtualBox-VM">Ubuntu 14.04 VirtualBox VM</a></strong>
+        </li>
+        <li class="Box-row wiki-more-pages">
+          <strong><a class="d-block" href="https://github.com/BVLC/caffe/wiki/Ubuntu-16.04-Installation-Guide">Ubuntu 16.04 Installation Guide</a></strong>
+        </li>
+        <li class="Box-row wiki-more-pages">
+          <strong><a class="d-block" href="https://github.com/BVLC/caffe/wiki/Ubuntu-16.04-or-15.10-Installation-Guide">Ubuntu 16.04 or 15.10 Installation Guide</a></strong>
+        </li>
+        <li class="Box-row wiki-more-pages">
+          <strong><a class="d-block" href="https://github.com/BVLC/caffe/wiki/Using-a-Trained-Network:-Deploy">Using a Trained Network: Deploy</a></strong>
+        </li>
+        <li class="Box-row wiki-more-pages">
+          <strong><a class="d-block" href="https://github.com/BVLC/caffe/wiki/Working-with-Blobs">Working with Blobs</a></strong>
+        </li>
+        <li class="Box-row wiki-more-pages-link">
+          <button type="button" class="f6 mx-auto btn-link muted-link js-wiki-more-pages-link">
+            Show 24 more pages…
+          </button>
+        </li>
+    </ul>
+  </div>
+</div>
+
+      </div>
+
+
+      <h5 class="mt-0 mb-2">Clone this wiki locally</h5>
+      <div class="width-full input-group">
+        <input id="wiki-clone-url" class="form-control input-sm text-small text-gray input-monospace js-url-field" aria-label="Clone URL for this wiki" value="https://github.com/BVLC/caffe.wiki.git" readonly="readonly" type="text">
+        <span class="input-group-button">
+          <clipboard-copy for="wiki-clone-url" aria-label="Copy to clipboard" class="btn btn-sm zeroclipboard-button" tabindex="0" role="button">
+            <svg class="octicon octicon-clippy" viewBox="0 0 14 16" version="1.1" width="14" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M2 13h4v1H2v-1zm5-6H2v1h5V7zm2 3V8l-3 3 3 3v-2h5v-2H9zM4.5 9H2v1h2.5V9zM2 12h2.5v-1H2v1zm9 1h1v2c-.02.28-.11.52-.3.7-.19.18-.42.28-.7.3H1c-.55 0-1-.45-1-1V4c0-.55.45-1 1-1h3c0-1.11.89-2 2-2 1.11 0 2 .89 2 2h3c.55 0 1 .45 1 1v5h-1V6H1v9h10v-2zM2 5h8c0-.55-.45-1-1-1H8c-.55 0-1-.45-1-1s-.45-1-1-1-1 .45-1 1-.45 1-1 1H3c-.55 0-1 .45-1 1z"></path></svg>
+          </clipboard-copy>
+        </span>
+      </div>
+
+
+    </div>
+  </div>
+
+  </div>
+  <div class="modal-backdrop js-touch-events"></div>
+</div>
+
+
+    </div>
+  </div>
+
+  </div>
+
+        
+<div class="footer container-lg p-responsive" role="contentinfo">
+  <div class="position-relative d-flex flex-row-reverse flex-lg-row flex-wrap flex-lg-nowrap flex-justify-center flex-lg-justify-between pt-6 pb-2 mt-6 f6 text-gray border-top border-gray-light ">
+    <ul class="list-style-none d-flex flex-wrap col-12 col-lg-5 flex-justify-center flex-lg-justify-start mb-2 mb-lg-0">
+      <li class="mr-3">© 2018 <span title="0.19811s from unicorn-2568592559-2s5zc">GitHub</span>, Inc.</li>
+        <li class="mr-3"><a data-ga-click="Footer, go to terms, text:terms" href="https://github.com/site/terms">Terms</a></li>
+        <li class="mr-3"><a data-ga-click="Footer, go to privacy, text:privacy" href="https://github.com/site/privacy">Privacy</a></li>
+        <li class="mr-3"><a href="https://help.github.com/articles/github-security/" data-ga-click="Footer, go to security, text:security">Security</a></li>
+        <li class="mr-3"><a href="https://status.github.com/" data-ga-click="Footer, go to status, text:status">Status</a></li>
+        <li><a data-ga-click="Footer, go to help, text:help" href="https://help.github.com/">Help</a></li>
+    </ul>
+
+    <a aria-label="Homepage" title="GitHub" class="footer-octicon" href="https://github.com/">
+      <svg height="24" class="octicon octicon-mark-github" viewBox="0 0 16 16" version="1.1" width="24" aria-hidden="true"><path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"></path></svg>
+</a>
+   <ul class="list-style-none d-flex flex-wrap col-12 col-lg-5 flex-justify-center flex-lg-justify-end mb-2 mb-lg-0">
+        <li class="mr-3"><a data-ga-click="Footer, go to contact, text:contact" href="https://github.com/contact">Contact GitHub</a></li>
+      <li class="mr-3"><a href="https://developer.github.com/" data-ga-click="Footer, go to api, text:api">API</a></li>
+      <li class="mr-3"><a href="https://training.github.com/" data-ga-click="Footer, go to training, text:training">Training</a></li>
+      <li class="mr-3"><a href="https://shop.github.com/" data-ga-click="Footer, go to shop, text:shop">Shop</a></li>
+        <li class="mr-3"><a href="https://blog.github.com/" data-ga-click="Footer, go to blog, text:blog">Blog</a></li>
+        <li><a data-ga-click="Footer, go to about, text:about" href="https://github.com/about">About</a></li>
+
+    </ul>
+  </div>
+  <div class="d-flex flex-justify-center pb-6">
+    <span class="f6 text-gray-light"></span>
+  </div>
+</div>
+
+
+
+  <div id="ajax-error-message" class="ajax-error-message flash flash-error">
+    <svg class="octicon octicon-alert" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M8.893 1.5c-.183-.31-.52-.5-.887-.5s-.703.19-.886.5L.138 13.499a.98.98 0 0 0 0 1.001c.193.31.53.501.886.501h13.964c.367 0 .704-.19.877-.5a1.03 1.03 0 0 0 .01-1.002L8.893 1.5zm.133 11.497H6.987v-2.003h2.039v2.003zm0-3.004H6.987V5.987h2.039v4.006z"></path></svg>
+    <button type="button" class="flash-close js-ajax-error-dismiss" aria-label="Dismiss error">
+      <svg class="octicon octicon-x" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.48 8l3.75 3.75-1.48 1.48L6 9.48l-3.75 3.75-1.48-1.48L4.52 8 .77 4.25l1.48-1.48L6 6.52l3.75-3.75 1.48 1.48L7.48 8z"></path></svg>
+    </button>
+    You can’t perform that action at this time.
+  </div>
+
+
+    <script crossorigin="anonymous" integrity="sha512-2VdGgXQE8W5ONZ4OsrbEo/noennUZaqXkevD9R8juTHiCsjT0HFTTF6MoBfySUc8G+eFqUcDgd7v+CAu8Gjxlg==" type="application/javascript" src="Ubuntu%2016.04%20or%2015.10%20Installation%20Guide%20%C2%B7%20BVLC_caffe%20Wiki%20%C2%B7%20GitHub_files/compat-f849c975b0ffaa01d6ca305e48417d08.js"></script>
+    <script crossorigin="anonymous" integrity="sha512-KzMN78fl7zl9khU8sHnDTAaEOs8IyidbN0kN5dcsEMnFAhDD3SueLZN/Cgd4v2+BUolauU3VbjbBe5d0eA9DfQ==" type="application/javascript" src="Ubuntu%2016.04%20or%2015.10%20Installation%20Guide%20%C2%B7%20BVLC_caffe%20Wiki%20%C2%B7%20GitHub_files/frameworks-edf16da922b28a7eed43ab4f51c61f11.js"></script>
+    
+    <script crossorigin="anonymous" async="async" integrity="sha512-AoUaT5vhqS9Qm9JeuQRnU/DFQn4Mj/L3Iq5RFf/tJEInlPJznpIZhILyo2MrvLU2TCWXXI1UTnCr2Y6dtkdHRA==" type="application/javascript" src="Ubuntu%2016.04%20or%2015.10%20Installation%20Guide%20%C2%B7%20BVLC_caffe%20Wiki%20%C2%B7%20GitHub_files/github-110240165d3e293fbdfe38ee85f293e5.js"></script>
+    
+      <script crossorigin="anonymous" integrity="sha512-yQuM9no7WFl0u7TkjjubbjoA41Xb2XMGpbA5STB9+1ONST22kvdpeWQrKcaUF5Ni9h3oR+l4j03SF0cAaPaBqw==" type="application/javascript" src="Ubuntu%2016.04%20or%2015.10%20Installation%20Guide%20%C2%B7%20BVLC_caffe%20Wiki%20%C2%B7%20GitHub_files/wiki-09622727135c647b58677f58718121a3.js"></script>
+
+    
+  <div class="js-stale-session-flash stale-session-flash flash flash-warn flash-banner d-none">
+    <svg class="octicon octicon-alert" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M8.893 1.5c-.183-.31-.52-.5-.887-.5s-.703.19-.886.5L.138 13.499a.98.98 0 0 0 0 1.001c.193.31.53.501.886.501h13.964c.367 0 .704-.19.877-.5a1.03 1.03 0 0 0 .01-1.002L8.893 1.5zm.133 11.497H6.987v-2.003h2.039v2.003zm0-3.004H6.987V5.987h2.039v4.006z"></path></svg>
+    <span class="signed-in-tab-flash">You signed in with another tab or window. <a href="">Reload</a> to refresh your session.</span>
+    <span class="signed-out-tab-flash">You signed out in another tab or window. <a href="">Reload</a> to refresh your session.</span>
+  </div>
+  <div class="facebox" id="facebox" style="display:none;">
+  <div class="facebox-popup">
+    <div class="facebox-content" role="dialog" aria-labelledby="facebox-header" aria-describedby="facebox-description">
+    </div>
+    <button type="button" class="facebox-close js-facebox-close" aria-label="Close modal">
+      <svg class="octicon octicon-x" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.48 8l3.75 3.75-1.48 1.48L6 9.48l-3.75 3.75-1.48-1.48L4.52 8 .77 4.25l1.48-1.48L6 6.52l3.75-3.75 1.48 1.48L7.48 8z"></path></svg>
+    </button>
+  </div>
+</div>
+
+  <div class="Popover js-hovercard-content position-absolute" style="display: none; outline: none;" tabindex="0">
+  <div class="Popover-message Popover-message--bottom-left Popover-message--large Box box-shadow-large" style="width:360px;">
+  </div>
+</div>
+
+<div id="hovercard-aria-description" class="sr-only">
+  Press h to open a hovercard with more details.
+</div>
+
+
+  
+
+
+</div></body></html>
