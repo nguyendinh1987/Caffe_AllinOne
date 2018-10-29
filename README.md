@@ -30,4 +30,4 @@ This is a modified version of caffe which includes a lot of additional functions
 ## How to install
 - Check "Dependencies_installation_guide" to install dependent libraries of caffe
 - Move to project folder and run:  
-<span style="color:brown"> >> mkdir build && cd build && cmake .. </span>
+  <span style="color:brown;"> >> mkdir build && cd build && cmake .. </span>
