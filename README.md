@@ -26,3 +26,8 @@ This is a modified version of caffe which includes a lot of additional functions
   [Source 1](https://github.com/yjxiong/caffe) Modified function:  
   void DataTransformer<Dtype>::Transform(const Datum& datum, Dtype* transformed_data)  
   [Source 2](https://github.com/kevinlin311tw/caffe-augmentation) (have not verified yet)  
+
+## How to install
+- Check "Dependencies_installation_guide" to install dependent libraries of caffe
+- Move to project folder and run:  
+<span style="color:brown"> >> mkdir build && cd build && cmake .. </span>
