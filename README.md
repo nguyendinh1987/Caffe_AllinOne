@@ -3,6 +3,7 @@ This is a modified version of caffe which includes a lot of additional functions
 ## Targets:
 - Add FRCNN layers
 - Add Video loader layers
+- Add BN Layer
 - Add on-fly data argumentation for improving training process
 - Add YoLo implementation (planing)
 - Add SSD implementation (planing)
@@ -17,6 +18,10 @@ This is a modified version of caffe which includes a lot of additional functions
   [Source](https://github.com/D-X-Y/caffe-faster-rcnn/tree/dev)  
   Modified: caffe.proto and add ACTION_REC folder into src/caffe and include/caffe  
 
+- Add BN layer    
+  [Source](https://github.com/yjxiong/caffe)     
+  Modified: caffe.proto and add BN_LAYER folder into src/caffe and include/caffe  
+
 - Add on-fly data argumentation  
-  [Source 1](https://github.com/D-X-Y/caffe-faster-rcnn/tree/dev)  
-  [Source 2](https://github.com/kevinlin311tw/caffe-augmentation) (have not upgraded yet)  
+  [Source 1](https://github.com/yjxiong/caffe)  
+  [Source 2](https://github.com/kevinlin311tw/caffe-augmentation) (have not verified yet)  
