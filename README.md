@@ -1,5 +1,5 @@
 # Caffe_with_updated_functions
-This is a modified version of caffe which includes a lot of additional functions supporting for FCNN, video loader, data agumentation and so on. Some of modifications are inheritated from other developer in github (Thank for sharing)
+This is a modified version of caffe which includes a lot of additional functions supporting for FCNN, video loader, data agumentation and so on. Some of modifications are inheritated from other developers in github (Thank for sharing)
 ## Targets:
 - Add FRCNN layers
 - Add Video loader layers
@@ -26,3 +26,11 @@ This is a modified version of caffe which includes a lot of additional functions
   [Source 1](https://github.com/yjxiong/caffe) Modified function:  
   void DataTransformer<Dtype>::Transform(const Datum& datum, Dtype* transformed_data)  
   [Source 2](https://github.com/kevinlin311tw/caffe-augmentation) (have not verified yet)  
+
+## How to install
+- Check "Dependencies_installation_guide" to install dependent libraries of caffe
+- Move to project folder and run:  
+  >> mkdir build && cd build && cmake ..  
+  >> make -j12  
+  >> make install  
+- All distributed packaged is in /build/install. Give this directory to your any package finding function to look for your caffe lib  
