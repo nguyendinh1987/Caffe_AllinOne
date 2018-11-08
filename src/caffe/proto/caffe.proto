@@ -578,6 +578,15 @@ message TransformationParameter {
   optional int32 upper_size = 23;
   optional int32 upper_height = 24;
   optional int32 upper_width = 25;
+
+  // Dinh -- input normalization
+  optional bool normalize_input = 26 [default = false];
+  optional bool global_normalize = 27 [default = true];
+  optional bool on_fly_mean = 28 [default = false];
+  optional bool global_mean = 29 [default = true];
+
+  // Dinh -- on-fly image augmentation
+  optional bool add_noise = 30 [default = false];
 }
 
 // Message that stores parameters shared by loss layers

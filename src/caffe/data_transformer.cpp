@@ -8,6 +8,7 @@
 
 #include <string>
 #include <vector>
+#include <iostream>
 
 #include "caffe/data_transformer.hpp"
 #include "caffe/util/io.hpp"
@@ -44,7 +45,20 @@ DataTransformer<Dtype>::DataTransformer(const TransformationParameter& param,
       mean_values_.push_back(param_.mean_value(c));
     }
   }
-
+  // Dinh-------------
+  // check if we want to use normalize_input
+  if (param_.normalize_input() || param_.on_fly_mean()) {
+    if (param_.mean_value_size() > 0){
+      LOG(INFO)<<"The fixed mean values will be changed. Need to turn false for"
+               <<" 'normalize_input' or 'on_fly_mean'"
+               <<" if you want to use your mean values";
+      LOG(INFO)<<" Press any key to continue";
+      getchar();
+    }
+    if (mean_values_.size()==0)
+      mean_values_.push_back(0);//To activate has_mean_value variable
+  }
+  //------------------------
   //From (1)
   //////////
   //load multiscale info
@@ -896,15 +910,109 @@ void DataTransformer<Dtype>::Transform(const cv::Mat& cv_img,
 
   CHECK(cv_img.depth() == CV_8U) << "Image data type must be unsigned byte";
 
-  const Dtype scale = param_.scale();
+  // const Dtype scale = param_.scale();
+  Dtype scale = param_.scale(); // to change scale later if normalize_input is set
   const bool do_mirror = param_.mirror() && Rand(2);
+
   const bool has_mean_file = param_.has_mean_file();
   const bool has_mean_values = mean_values_.size() > 0;
-
+  // Dinh -----
+  const bool do_normalize_input = param_.normalize_input();
+  vector<Dtype> scales;
+  //-----------
   CHECK_GT(img_channels, 0);
   CHECK_GE(img_height, crop_size);
   CHECK_GE(img_width, crop_size);
+  // From (2) -------------------------------------------------------------
+  // Smooth Filtering
+  if (param_.smooth_filtering()) {
+    // LOG(INFO)<< "Doing smoothing image";
+    int smooth_param1 = 3;
+    int apply_smooth = Rand(2);
+  	int smooth_type = Rand(4); // see opencv_util.hpp
+	  smooth_param1 = 3 + 2*(Rand(1));
+    switch(smooth_type){
+      case 0:
+        // cv::smooth(cv_img, cv_img, smooth_type, smooth_param1);
+        cv::GaussianBlur(cv_img, cv_img, cv::Size(smooth_param1,smooth_param1),0);
+        break;
+      case 1:
+        cv::blur(cv_img, cv_img, cv::Size(smooth_param1,smooth_param1));
+        break;
+      case 2:
+        cv::medianBlur(cv_img, cv_img, smooth_param1);
+        break;
+      case 3:
+        cv::boxFilter(cv_img, cv_img, -1, cv::Size(smooth_param1*2,smooth_param1*2));
+        break;
+    }
+    if (param_.display() && phase_ == TRAIN){
+        cv::imshow("Smooth Filtering", cv_img);
+        cv::waitKey(0);
+    }
+  }
+  // Contrast and Brightness Adjuestment
+  if (param_.contrast_adjustment()) {
+    int apply_contrast = Rand(2);
+    if (apply_contrast){
+      cv::RNG rng;
+      float alpha = 1, beta = 0;
+      float min_alpha = 0.8, max_alpha = 1.2;
+      alpha = rng.uniform(min_alpha, max_alpha);
+      beta = (float)(Rand(6));
+      // flip sign
+      if ( Rand(2) ) beta = - beta;
+        cv_img.convertTo(cv_img, -1 , alpha, beta);
+      if (param_.display() && phase_ == TRAIN){
+          cv::imshow("contrast_adjustment", cv_img);
+          cv::waitKey(0);
+      }
+    }
+  }
 
+  // // Rotation
+  // if (param_.rotation_angle_interval()!=1) {
+    
+  //   const float rotation_angle_interval = param_.rotation_angle_interval();  
+  //   int interval = 360/rotation_angle_interval;
+  //   int apply_rotation = Rand(interval);
+    
+  //   if (apply_rotation){
+  //     cv::Mat dst;
+  //     cv::Size dsize = cv::Size(cv_cropped_img.cols*1.5,cv_cropped_img.rows*1.5);
+  //     cv::Mat resize_img = cv::Mat(dsize,cv_img.type());
+  //     cv::resize(cv_cropped_img, resize_img, dsize);
+
+  //     cv::Point2f pt(resize_img.cols/2., resize_img.rows/2.);    
+  //     float rotation_degree = apply_rotation*rotation_angle_interval;
+  //     cv::Mat r = getRotationMatrix2D(pt, rotation_degree, 1.0);
+  //     warpAffine(resize_img, dst, r, cv::Size(resize_img.cols, resize_img.rows));
+
+  //     cv::Rect myROI(resize_img.cols/6, resize_img.rows/6, cv_cropped_img.cols, cv_cropped_img.rows);
+  //     cv::Mat crop_after_rotate = dst(myROI);
+  //     crop_after_rotate.copyTo(cv_img);
+      
+  //     if (display && phase_ == TRAIN)
+  //         cv::imshow("Final", cv_img);
+  //   }
+  // }
+
+  // Dinh: Add noise
+  if (param_.add_noise()){
+    int apply_add_noise = Rand(2);
+    if (apply_add_noise){
+      // cv::RNG rng;
+      Dtype m_NoiseStdDev=10;//rng.uniform(0, 20);;
+      cv::Mat noise(cv_img.size(),cv_img.type());
+      randn(noise,0,m_NoiseStdDev);
+      cv_img += noise;
+      if (param_.display() && phase_ == TRAIN){
+          cv::imshow("add_noise", cv_img);
+          cv::waitKey(0);
+      }
+    }
+  }
+  //---------------------------------------------------------------------------------
   Dtype* mean = NULL;
   if (has_mean_file) {
     CHECK_EQ(img_channels, data_mean_.channels());
@@ -945,6 +1053,111 @@ void DataTransformer<Dtype>::Transform(const cv::Mat& cv_img,
   }
 
   CHECK(cv_cropped_img.data);
+  //Dinh ---
+  if (param_.on_fly_mean()){
+    vector<Dtype> mean_img;
+    for (int c = 0; c < img_channels; ++c){
+      mean_img.push_back(0);
+    }
+    for (int h = 0; h < height; ++h){
+      const uchar* ptr = cv_cropped_img.ptr<uchar>(h);
+      int img_index = 0;
+      for (int w = 0; w < width; ++w)
+        for (int c = 0; c < img_channels; ++c){
+          Dtype pixel = static_cast<Dtype>(ptr[img_index++]);
+          mean_img[c] += pixel;
+        }
+    }
+    for (int c = 0; c < img_channels; ++c){
+      mean_img[c] /= height * width;
+    }
+    if (param_.global_mean()){
+      Dtype global_mean = 0;
+      for (int c = 0; c < img_channels; ++c){
+        global_mean += mean_img[c]/img_channels;
+      }
+      for (int c = 0; c < img_channels; ++c){
+        mean_img[c] = global_mean;
+      }
+    }
+    //reset mean_values_ vector
+    for (int c = 1; c < img_channels; ++c){
+      mean_values_[c] = mean_img[c];
+    }
+  }
+  if (do_normalize_input){
+      //Dinh--------------------------------
+    // substruct mean and divide std:
+    // mean_values = mean of whole image
+    // scale = 1/std; std of whole image
+    // param: normalize_input: true
+    // const bool do_normalize_input = param_.normalize_input();
+    // Also adding four lines from 47-50 in this programe, a line at 1028
+    ///-----------------------------------
+    // Get mean and assign to mean_value_
+    vector<Dtype> mean_img;
+    for (int c = 0; c < img_channels; ++c){
+      mean_img.push_back(0);
+    }
+    for (int h = 0; h < height; ++h){
+      const uchar* ptr = cv_cropped_img.ptr<uchar>(h);
+      int img_index = 0;
+      for (int w = 0; w < width; ++w)
+        for (int c = 0; c < img_channels; ++c){
+          Dtype pixel = static_cast<Dtype>(ptr[img_index++]);
+          mean_img[c] += pixel;
+        }
+    }
+    for (int c = 0; c < img_channels; ++c){
+      mean_img[c] /= height * width;
+    }
+    if (param_.global_normalize()){
+      Dtype global_mean = 0;
+      for (int c = 0; c < img_channels; ++c){
+        global_mean += mean_img[c]/img_channels;
+      }
+      for (int c = 0; c < img_channels; ++c){
+        mean_img[c] = global_mean;
+      }
+    }
+    //reset mean_values_ vector
+    for (int c = 1; c < img_channels; ++c){
+      mean_values_[c] = mean_img[c];
+    }
+    // Get std and assign to scale
+    vector<Dtype> var;
+    for (int c = 0; c < img_channels; ++c){
+      var.push_back(0);
+    }    
+    for (int h = 0; h < height; ++h){
+      const uchar* ptr = cv_cropped_img.ptr<uchar>(h);
+      int img_index = 0;
+      for (int w = 0; w < width; ++w)
+        for (int c = 0; c < img_channels; ++c){
+          Dtype pixel = static_cast<Dtype>(ptr[img_index++]);
+          var[c] += (pixel - mean_img[c]) * (pixel - mean_img[c]);
+        }
+    }
+    for (int c = 0; c < img_channels; ++c){
+      var[c] /= height * width;
+      if (!param_.global_normalize()){
+        scales.push_back(1/sqrt(var[c] + 0.00000001));
+      }
+    }
+    if (param_.global_normalize()){
+      Dtype global_var = 0;
+      for (int c = 0; c < img_channels; ++c){
+        global_var += var[c]/img_channels;
+      }
+      global_var = 1/sqrt(global_var + 0.00000001);
+      for (int c = 0; c < img_channels; ++c){
+        scales.push_back(global_var);
+      }
+    }
+
+    // LOG(INFO) << "mean_img: "<<mean_img<<" scale: "<<scale;    
+    //------------------------------------
+  }
 
   Dtype* transformed_data = transformed_blob->mutable_cpu_data();
   int top_index;
@@ -966,6 +1179,9 @@ void DataTransformer<Dtype>::Transform(const cv::Mat& cv_img,
             (pixel - mean[mean_index]) * scale;
         } else {
           if (has_mean_values) {
+            // Dinh-----
+            if (do_normalize_input) scale = scales[c];
+            //----------
             transformed_data[top_index] =
               (pixel - mean_values_[c]) * scale;
           } else {
