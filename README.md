@@ -25,8 +25,9 @@ This is a modified version of caffe which includes a lot of additional functions
 - Add on-fly data argumentation  
   [Source 1](https://github.com/yjxiong/caffe) Modified function:  
   void DataTransformer<Dtype>::Transform(const Datum& datum, Dtype* transformed_data)  
-  [Source 2](https://github.com/kevinlin311tw/caffe-augmentation) (have not verified yet)  
-
+  [Source 2](https://github.com/kevinlin311tw/caffe-augmentation) Add "contrast_adjustment, smooth_filtering"  
+  Other augmentation: Add noise  
+  Modified function: void DataTransformer::Transform(const cv::Mat& cv_img, Blob* transformed_blob)
 ## How to install
 - Check "Dependencies_installation_guide" to install dependent libraries of caffe
 - Move to project folder and run:  
