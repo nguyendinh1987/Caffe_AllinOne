@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/saa4/Caffe_with_updated_functions
+CMAKE_SOURCE_DIR = /home/kakadinh/caffe_variances/Caffe_with_updated_functions
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/saa4/Caffe_with_updated_functions/build
+CMAKE_BINARY_DIR = /home/kakadinh/caffe_variances/Caffe_with_updated_functions/build
 
 # Include any dependencies generated for this target.
 include tools/CMakeFiles/compute_image_mean.dir/depend.make
@@ -59,16 +59,16 @@ include tools/CMakeFiles/compute_image_mean.dir/flags.make
 
 tools/CMakeFiles/compute_image_mean.dir/compute_image_mean.cpp.o: tools/CMakeFiles/compute_image_mean.dir/flags.make
 tools/CMakeFiles/compute_image_mean.dir/compute_image_mean.cpp.o: ../tools/compute_image_mean.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/saa4/Caffe_with_updated_functions/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object tools/CMakeFiles/compute_image_mean.dir/compute_image_mean.cpp.o"
-	cd /home/saa4/Caffe_with_updated_functions/build/tools && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/compute_image_mean.dir/compute_image_mean.cpp.o -c /home/saa4/Caffe_with_updated_functions/tools/compute_image_mean.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kakadinh/caffe_variances/Caffe_with_updated_functions/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object tools/CMakeFiles/compute_image_mean.dir/compute_image_mean.cpp.o"
+	cd /home/kakadinh/caffe_variances/Caffe_with_updated_functions/build/tools && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/compute_image_mean.dir/compute_image_mean.cpp.o -c /home/kakadinh/caffe_variances/Caffe_with_updated_functions/tools/compute_image_mean.cpp
 
 tools/CMakeFiles/compute_image_mean.dir/compute_image_mean.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/compute_image_mean.dir/compute_image_mean.cpp.i"
-	cd /home/saa4/Caffe_with_updated_functions/build/tools && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/saa4/Caffe_with_updated_functions/tools/compute_image_mean.cpp > CMakeFiles/compute_image_mean.dir/compute_image_mean.cpp.i
+	cd /home/kakadinh/caffe_variances/Caffe_with_updated_functions/build/tools && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kakadinh/caffe_variances/Caffe_with_updated_functions/tools/compute_image_mean.cpp > CMakeFiles/compute_image_mean.dir/compute_image_mean.cpp.i
 
 tools/CMakeFiles/compute_image_mean.dir/compute_image_mean.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/compute_image_mean.dir/compute_image_mean.cpp.s"
-	cd /home/saa4/Caffe_with_updated_functions/build/tools && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/saa4/Caffe_with_updated_functions/tools/compute_image_mean.cpp -o CMakeFiles/compute_image_mean.dir/compute_image_mean.cpp.s
+	cd /home/kakadinh/caffe_variances/Caffe_with_updated_functions/build/tools && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kakadinh/caffe_variances/Caffe_with_updated_functions/tools/compute_image_mean.cpp -o CMakeFiles/compute_image_mean.dir/compute_image_mean.cpp.s
 
 tools/CMakeFiles/compute_image_mean.dir/compute_image_mean.cpp.o.requires:
 
@@ -122,7 +122,7 @@ tools/compute_image_mean: /usr/lib/x86_64-linux-gnu/libleveldb.so
 tools/compute_image_mean: /usr/local/cuda/lib64/libcudart.so
 tools/compute_image_mean: /usr/local/cuda/lib64/libcurand.so
 tools/compute_image_mean: /usr/local/cuda/lib64/libcublas.so
-tools/compute_image_mean: /usr/lib/x86_64-linux-gnu/libcudnn.so
+tools/compute_image_mean: /usr/local/cuda/lib64/libcudnn.so
 tools/compute_image_mean: /usr/local/lib/libopencv_highgui.so.2.4.13
 tools/compute_image_mean: /usr/local/lib/libopencv_imgproc.so.2.4.13
 tools/compute_image_mean: /usr/local/lib/libopencv_core.so.2.4.13
@@ -135,8 +135,8 @@ tools/compute_image_mean: /usr/lib/libcblas.so
 tools/compute_image_mean: /usr/lib/libatlas.so
 tools/compute_image_mean: /usr/lib/x86_64-linux-gnu/libboost_python.so
 tools/compute_image_mean: tools/CMakeFiles/compute_image_mean.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/saa4/Caffe_with_updated_functions/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable compute_image_mean"
-	cd /home/saa4/Caffe_with_updated_functions/build/tools && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/compute_image_mean.dir/link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/kakadinh/caffe_variances/Caffe_with_updated_functions/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable compute_image_mean"
+	cd /home/kakadinh/caffe_variances/Caffe_with_updated_functions/build/tools && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/compute_image_mean.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 tools/CMakeFiles/compute_image_mean.dir/build: tools/compute_image_mean
@@ -148,10 +148,10 @@ tools/CMakeFiles/compute_image_mean.dir/requires: tools/CMakeFiles/compute_image
 .PHONY : tools/CMakeFiles/compute_image_mean.dir/requires
 
 tools/CMakeFiles/compute_image_mean.dir/clean:
-	cd /home/saa4/Caffe_with_updated_functions/build/tools && $(CMAKE_COMMAND) -P CMakeFiles/compute_image_mean.dir/cmake_clean.cmake
+	cd /home/kakadinh/caffe_variances/Caffe_with_updated_functions/build/tools && $(CMAKE_COMMAND) -P CMakeFiles/compute_image_mean.dir/cmake_clean.cmake
 .PHONY : tools/CMakeFiles/compute_image_mean.dir/clean
 
 tools/CMakeFiles/compute_image_mean.dir/depend:
-	cd /home/saa4/Caffe_with_updated_functions/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/saa4/Caffe_with_updated_functions /home/saa4/Caffe_with_updated_functions/tools /home/saa4/Caffe_with_updated_functions/build /home/saa4/Caffe_with_updated_functions/build/tools /home/saa4/Caffe_with_updated_functions/build/tools/CMakeFiles/compute_image_mean.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/kakadinh/caffe_variances/Caffe_with_updated_functions/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/kakadinh/caffe_variances/Caffe_with_updated_functions /home/kakadinh/caffe_variances/Caffe_with_updated_functions/tools /home/kakadinh/caffe_variances/Caffe_with_updated_functions/build /home/kakadinh/caffe_variances/Caffe_with_updated_functions/build/tools /home/kakadinh/caffe_variances/Caffe_with_updated_functions/build/tools/CMakeFiles/compute_image_mean.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : tools/CMakeFiles/compute_image_mean.dir/depend
 

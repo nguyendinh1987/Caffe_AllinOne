@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/saa4/Caffe_with_updated_functions
+CMAKE_SOURCE_DIR = /home/kakadinh/caffe_variances/Caffe_with_updated_functions
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/saa4/Caffe_with_updated_functions/build
+CMAKE_BINARY_DIR = /home/kakadinh/caffe_variances/Caffe_with_updated_functions/build
 
 # Utility rule file for runtest.
 
@@ -54,7 +54,7 @@ CMAKE_BINARY_DIR = /home/saa4/Caffe_with_updated_functions/build
 include src/caffe/test/CMakeFiles/runtest.dir/progress.make
 
 src/caffe/test/CMakeFiles/runtest:
-	cd /home/saa4/Caffe_with_updated_functions && /home/saa4/Caffe_with_updated_functions/build/test/test.testbin --gtest_shuffle
+	cd /home/kakadinh/caffe_variances/Caffe_with_updated_functions && /home/kakadinh/caffe_variances/Caffe_with_updated_functions/build/test/test.testbin --gtest_shuffle
 
 runtest: src/caffe/test/CMakeFiles/runtest
 runtest: src/caffe/test/CMakeFiles/runtest.dir/build.make
@@ -67,10 +67,10 @@ src/caffe/test/CMakeFiles/runtest.dir/build: runtest
 .PHONY : src/caffe/test/CMakeFiles/runtest.dir/build
 
 src/caffe/test/CMakeFiles/runtest.dir/clean:
-	cd /home/saa4/Caffe_with_updated_functions/build/src/caffe/test && $(CMAKE_COMMAND) -P CMakeFiles/runtest.dir/cmake_clean.cmake
+	cd /home/kakadinh/caffe_variances/Caffe_with_updated_functions/build/src/caffe/test && $(CMAKE_COMMAND) -P CMakeFiles/runtest.dir/cmake_clean.cmake
 .PHONY : src/caffe/test/CMakeFiles/runtest.dir/clean
 
 src/caffe/test/CMakeFiles/runtest.dir/depend:
-	cd /home/saa4/Caffe_with_updated_functions/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/saa4/Caffe_with_updated_functions /home/saa4/Caffe_with_updated_functions/src/caffe/test /home/saa4/Caffe_with_updated_functions/build /home/saa4/Caffe_with_updated_functions/build/src/caffe/test /home/saa4/Caffe_with_updated_functions/build/src/caffe/test/CMakeFiles/runtest.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/kakadinh/caffe_variances/Caffe_with_updated_functions/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/kakadinh/caffe_variances/Caffe_with_updated_functions /home/kakadinh/caffe_variances/Caffe_with_updated_functions/src/caffe/test /home/kakadinh/caffe_variances/Caffe_with_updated_functions/build /home/kakadinh/caffe_variances/Caffe_with_updated_functions/build/src/caffe/test /home/kakadinh/caffe_variances/Caffe_with_updated_functions/build/src/caffe/test/CMakeFiles/runtest.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : src/caffe/test/CMakeFiles/runtest.dir/depend
 

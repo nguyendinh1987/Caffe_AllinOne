@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/saa4/Caffe_with_updated_functions
+CMAKE_SOURCE_DIR = /home/kakadinh/caffe_variances/Caffe_with_updated_functions
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/saa4/Caffe_with_updated_functions/build
+CMAKE_BINARY_DIR = /home/kakadinh/caffe_variances/Caffe_with_updated_functions/build
 
 # Utility rule file for lint.
 
@@ -54,7 +54,7 @@ CMAKE_BINARY_DIR = /home/saa4/Caffe_with_updated_functions/build
 include CMakeFiles/lint.dir/progress.make
 
 CMakeFiles/lint:
-	/usr/bin/cmake -P /home/saa4/Caffe_with_updated_functions/cmake/lint.cmake
+	/usr/bin/cmake -P /home/kakadinh/caffe_variances/Caffe_with_updated_functions/cmake/lint.cmake
 
 lint: CMakeFiles/lint
 lint: CMakeFiles/lint.dir/build.make
@@ -71,6 +71,6 @@ CMakeFiles/lint.dir/clean:
 .PHONY : CMakeFiles/lint.dir/clean
 
 CMakeFiles/lint.dir/depend:
-	cd /home/saa4/Caffe_with_updated_functions/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/saa4/Caffe_with_updated_functions /home/saa4/Caffe_with_updated_functions /home/saa4/Caffe_with_updated_functions/build /home/saa4/Caffe_with_updated_functions/build /home/saa4/Caffe_with_updated_functions/build/CMakeFiles/lint.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/kakadinh/caffe_variances/Caffe_with_updated_functions/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/kakadinh/caffe_variances/Caffe_with_updated_functions /home/kakadinh/caffe_variances/Caffe_with_updated_functions /home/kakadinh/caffe_variances/Caffe_with_updated_functions/build /home/kakadinh/caffe_variances/Caffe_with_updated_functions/build /home/kakadinh/caffe_variances/Caffe_with_updated_functions/build/CMakeFiles/lint.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/lint.dir/depend
 

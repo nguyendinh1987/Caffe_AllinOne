@@ -1,13 +1,13 @@
-if(NOT EXISTS "/home/saa4/Caffe_with_updated_functions/build/install_manifest.txt")
-  message(FATAL_ERROR "Cannot find install manifest: /home/saa4/Caffe_with_updated_functions/build/install_manifest.txt")
-endif(NOT EXISTS "/home/saa4/Caffe_with_updated_functions/build/install_manifest.txt")
+if(NOT EXISTS "/home/kakadinh/caffe_variances/Caffe_with_updated_functions/build/install_manifest.txt")
+  message(FATAL_ERROR "Cannot find install manifest: /home/kakadinh/caffe_variances/Caffe_with_updated_functions/build/install_manifest.txt")
+endif(NOT EXISTS "/home/kakadinh/caffe_variances/Caffe_with_updated_functions/build/install_manifest.txt")
 
 if (NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set (CMAKE_INSTALL_PREFIX "/home/saa4/Caffe_with_updated_functions/build/install")
+  set (CMAKE_INSTALL_PREFIX "/home/kakadinh/caffe_variances/Caffe_with_updated_functions/build/install")
 endif ()
  message(${CMAKE_INSTALL_PREFIX})
 
-file(READ "/home/saa4/Caffe_with_updated_functions/build/install_manifest.txt" files)
+file(READ "/home/kakadinh/caffe_variances/Caffe_with_updated_functions/build/install_manifest.txt" files)
 string(REGEX REPLACE "\n" ";" files "${files}")
 foreach(file ${files})
   message(STATUS "Uninstalling $ENV{DESTDIR}${file}")

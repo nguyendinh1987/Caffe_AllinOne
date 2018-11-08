@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/saa4/Caffe_with_updated_functions
+CMAKE_SOURCE_DIR = /home/kakadinh/caffe_variances/Caffe_with_updated_functions
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/saa4/Caffe_with_updated_functions/build
+CMAKE_BINARY_DIR = /home/kakadinh/caffe_variances/Caffe_with_updated_functions/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -113,8 +113,8 @@ install/local/fast: install/local
 
 # Special rule for the target edit_cache
 edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake cache editor..."
-	/usr/bin/cmake-gui -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
+	/usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -124,14 +124,14 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/saa4/Caffe_with_updated_functions/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/saa4/Caffe_with_updated_functions/build/CMakeFiles /home/saa4/Caffe_with_updated_functions/build/src/api/FRCNN/CMakeFiles/progress.marks
-	cd /home/saa4/Caffe_with_updated_functions/build && $(MAKE) -f CMakeFiles/Makefile2 src/api/FRCNN/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/saa4/Caffe_with_updated_functions/build/CMakeFiles 0
+	cd /home/kakadinh/caffe_variances/Caffe_with_updated_functions/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/kakadinh/caffe_variances/Caffe_with_updated_functions/build/CMakeFiles /home/kakadinh/caffe_variances/Caffe_with_updated_functions/build/src/api/FRCNN/CMakeFiles/progress.marks
+	cd /home/kakadinh/caffe_variances/Caffe_with_updated_functions/build && $(MAKE) -f CMakeFiles/Makefile2 src/api/FRCNN/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kakadinh/caffe_variances/Caffe_with_updated_functions/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/saa4/Caffe_with_updated_functions/build && $(MAKE) -f CMakeFiles/Makefile2 src/api/FRCNN/clean
+	cd /home/kakadinh/caffe_variances/Caffe_with_updated_functions/build && $(MAKE) -f CMakeFiles/Makefile2 src/api/FRCNN/clean
 .PHONY : clean
 
 # The main clean target
@@ -141,22 +141,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/saa4/Caffe_with_updated_functions/build && $(MAKE) -f CMakeFiles/Makefile2 src/api/FRCNN/preinstall
+	cd /home/kakadinh/caffe_variances/Caffe_with_updated_functions/build && $(MAKE) -f CMakeFiles/Makefile2 src/api/FRCNN/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/saa4/Caffe_with_updated_functions/build && $(MAKE) -f CMakeFiles/Makefile2 src/api/FRCNN/preinstall
+	cd /home/kakadinh/caffe_variances/Caffe_with_updated_functions/build && $(MAKE) -f CMakeFiles/Makefile2 src/api/FRCNN/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/saa4/Caffe_with_updated_functions/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/kakadinh/caffe_variances/Caffe_with_updated_functions/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 src/api/FRCNN/CMakeFiles/FRCNN_api.dir/rule:
-	cd /home/saa4/Caffe_with_updated_functions/build && $(MAKE) -f CMakeFiles/Makefile2 src/api/FRCNN/CMakeFiles/FRCNN_api.dir/rule
+	cd /home/kakadinh/caffe_variances/Caffe_with_updated_functions/build && $(MAKE) -f CMakeFiles/Makefile2 src/api/FRCNN/CMakeFiles/FRCNN_api.dir/rule
 .PHONY : src/api/FRCNN/CMakeFiles/FRCNN_api.dir/rule
 
 # Convenience name for target.
@@ -166,7 +166,7 @@ FRCNN_api: src/api/FRCNN/CMakeFiles/FRCNN_api.dir/rule
 
 # fast build rule for target.
 FRCNN_api/fast:
-	cd /home/saa4/Caffe_with_updated_functions/build && $(MAKE) -f src/api/FRCNN/CMakeFiles/FRCNN_api.dir/build.make src/api/FRCNN/CMakeFiles/FRCNN_api.dir/build
+	cd /home/kakadinh/caffe_variances/Caffe_with_updated_functions/build && $(MAKE) -f src/api/FRCNN/CMakeFiles/FRCNN_api.dir/build.make src/api/FRCNN/CMakeFiles/FRCNN_api.dir/build
 .PHONY : FRCNN_api/fast
 
 frcnn_api.o: frcnn_api.cpp.o
@@ -175,7 +175,7 @@ frcnn_api.o: frcnn_api.cpp.o
 
 # target to build an object file
 frcnn_api.cpp.o:
-	cd /home/saa4/Caffe_with_updated_functions/build && $(MAKE) -f src/api/FRCNN/CMakeFiles/FRCNN_api.dir/build.make src/api/FRCNN/CMakeFiles/FRCNN_api.dir/frcnn_api.cpp.o
+	cd /home/kakadinh/caffe_variances/Caffe_with_updated_functions/build && $(MAKE) -f src/api/FRCNN/CMakeFiles/FRCNN_api.dir/build.make src/api/FRCNN/CMakeFiles/FRCNN_api.dir/frcnn_api.cpp.o
 .PHONY : frcnn_api.cpp.o
 
 frcnn_api.i: frcnn_api.cpp.i
@@ -184,7 +184,7 @@ frcnn_api.i: frcnn_api.cpp.i
 
 # target to preprocess a source file
 frcnn_api.cpp.i:
-	cd /home/saa4/Caffe_with_updated_functions/build && $(MAKE) -f src/api/FRCNN/CMakeFiles/FRCNN_api.dir/build.make src/api/FRCNN/CMakeFiles/FRCNN_api.dir/frcnn_api.cpp.i
+	cd /home/kakadinh/caffe_variances/Caffe_with_updated_functions/build && $(MAKE) -f src/api/FRCNN/CMakeFiles/FRCNN_api.dir/build.make src/api/FRCNN/CMakeFiles/FRCNN_api.dir/frcnn_api.cpp.i
 .PHONY : frcnn_api.cpp.i
 
 frcnn_api.s: frcnn_api.cpp.s
@@ -193,7 +193,7 @@ frcnn_api.s: frcnn_api.cpp.s
 
 # target to generate assembly for a file
 frcnn_api.cpp.s:
-	cd /home/saa4/Caffe_with_updated_functions/build && $(MAKE) -f src/api/FRCNN/CMakeFiles/FRCNN_api.dir/build.make src/api/FRCNN/CMakeFiles/FRCNN_api.dir/frcnn_api.cpp.s
+	cd /home/kakadinh/caffe_variances/Caffe_with_updated_functions/build && $(MAKE) -f src/api/FRCNN/CMakeFiles/FRCNN_api.dir/build.make src/api/FRCNN/CMakeFiles/FRCNN_api.dir/frcnn_api.cpp.s
 .PHONY : frcnn_api.cpp.s
 
 rpn_api.o: rpn_api.cpp.o
@@ -202,7 +202,7 @@ rpn_api.o: rpn_api.cpp.o
 
 # target to build an object file
 rpn_api.cpp.o:
-	cd /home/saa4/Caffe_with_updated_functions/build && $(MAKE) -f src/api/FRCNN/CMakeFiles/FRCNN_api.dir/build.make src/api/FRCNN/CMakeFiles/FRCNN_api.dir/rpn_api.cpp.o
+	cd /home/kakadinh/caffe_variances/Caffe_with_updated_functions/build && $(MAKE) -f src/api/FRCNN/CMakeFiles/FRCNN_api.dir/build.make src/api/FRCNN/CMakeFiles/FRCNN_api.dir/rpn_api.cpp.o
 .PHONY : rpn_api.cpp.o
 
 rpn_api.i: rpn_api.cpp.i
@@ -211,7 +211,7 @@ rpn_api.i: rpn_api.cpp.i
 
 # target to preprocess a source file
 rpn_api.cpp.i:
-	cd /home/saa4/Caffe_with_updated_functions/build && $(MAKE) -f src/api/FRCNN/CMakeFiles/FRCNN_api.dir/build.make src/api/FRCNN/CMakeFiles/FRCNN_api.dir/rpn_api.cpp.i
+	cd /home/kakadinh/caffe_variances/Caffe_with_updated_functions/build && $(MAKE) -f src/api/FRCNN/CMakeFiles/FRCNN_api.dir/build.make src/api/FRCNN/CMakeFiles/FRCNN_api.dir/rpn_api.cpp.i
 .PHONY : rpn_api.cpp.i
 
 rpn_api.s: rpn_api.cpp.s
@@ -220,7 +220,7 @@ rpn_api.s: rpn_api.cpp.s
 
 # target to generate assembly for a file
 rpn_api.cpp.s:
-	cd /home/saa4/Caffe_with_updated_functions/build && $(MAKE) -f src/api/FRCNN/CMakeFiles/FRCNN_api.dir/build.make src/api/FRCNN/CMakeFiles/FRCNN_api.dir/rpn_api.cpp.s
+	cd /home/kakadinh/caffe_variances/Caffe_with_updated_functions/build && $(MAKE) -f src/api/FRCNN/CMakeFiles/FRCNN_api.dir/build.make src/api/FRCNN/CMakeFiles/FRCNN_api.dir/rpn_api.cpp.s
 .PHONY : rpn_api.cpp.s
 
 # Help Target
@@ -253,6 +253,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/saa4/Caffe_with_updated_functions/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/kakadinh/caffe_variances/Caffe_with_updated_functions/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

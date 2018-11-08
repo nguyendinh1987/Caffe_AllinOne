@@ -6,9 +6,9 @@
 
 #IncludeRegexTransform: 
 
-/home/saa4/Caffe_with_updated_functions/build/include/caffe/proto/caffe.pb.cc
+/home/kakadinh/caffe_variances/Caffe_with_updated_functions/build/include/caffe/proto/caffe.pb.cc
 caffe.pb.h
-/home/saa4/Caffe_with_updated_functions/build/include/caffe/proto/caffe.pb.h
+/home/kakadinh/caffe_variances/Caffe_with_updated_functions/build/include/caffe/proto/caffe.pb.h
 algorithm
 -
 google/protobuf/stubs/common.h
@@ -30,9 +30,9 @@ google/protobuf/reflection_ops.h
 google/protobuf/wire_format.h
 -
 third_party/protobuf/version.h
-/home/saa4/Caffe_with_updated_functions/build/include/caffe/proto/third_party/protobuf/version.h
+/home/kakadinh/caffe_variances/Caffe_with_updated_functions/build/include/caffe/proto/third_party/protobuf/version.h
 
-/home/saa4/Caffe_with_updated_functions/build/include/caffe/proto/caffe.pb.h
+/home/kakadinh/caffe_variances/Caffe_with_updated_functions/build/include/caffe/proto/caffe.pb.h
 string
 -
 google/protobuf/stubs/common.h

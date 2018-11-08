@@ -6,5 +6,5 @@ CXX_FLAGS =  -fPIC -Wall -Wno-sign-compare -Wno-uninitialized -std=c++11 -O3 -DN
 
 CXX_DEFINES = -DCAFFE_VERSION=1.0.0 -DUSE_CUDNN -DUSE_HDF5 -DUSE_LEVELDB -DUSE_LMDB -DUSE_OPENCV
 
-CXX_INCLUDES = -I/home/saa4/Caffe_with_updated_functions/build/include -isystem /usr/include/hdf5/serial -I/usr/local/include/opencv -I/usr/local/include -I/home/saa4/Caffe_with_updated_functions/build -I/usr/local/cuda/include -I/usr/include/atlas -I/home/saa4/Caffe_with_updated_functions/include 
+CXX_INCLUDES = -I/home/kakadinh/caffe_variances/Caffe_with_updated_functions/build/include -isystem /usr/include/hdf5/serial -I/usr/local/include/opencv-2.4.13/opencv -I/usr/local/include/opencv-2.4.13 -I/home/kakadinh/caffe_variances/Caffe_with_updated_functions/build -I/usr/local/include -I/usr/local/cuda/include -I/usr/include/atlas -I/home/kakadinh/caffe_variances/Caffe_with_updated_functions/include 
 

@@ -1,8 +1,8 @@
-# Install script for directory: /home/saa4/Caffe_with_updated_functions
+# Install script for directory: /home/kakadinh/caffe_variances/Caffe_with_updated_functions
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/saa4/Caffe_with_updated_functions/build/install")
+  set(CMAKE_INSTALL_PREFIX "/home/kakadinh/caffe_variances/Caffe_with_updated_functions/build/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -33,14 +33,14 @@ if(NOT DEFINED CMAKE_INSTALL_SO_NO_EXE)
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/Caffe" TYPE FILE FILES "/home/saa4/Caffe_with_updated_functions/build/cmake/CaffeConfig.cmake")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/Caffe" TYPE FILE FILES "/home/kakadinh/caffe_variances/Caffe_with_updated_functions/build/cmake/CaffeConfig.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/Caffe/CaffeTargets.cmake")
     file(DIFFERENT EXPORT_FILE_CHANGED FILES
          "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/Caffe/CaffeTargets.cmake"
-         "/home/saa4/Caffe_with_updated_functions/build/CMakeFiles/Export/share/Caffe/CaffeTargets.cmake")
+         "/home/kakadinh/caffe_variances/Caffe_with_updated_functions/build/CMakeFiles/Export/share/Caffe/CaffeTargets.cmake")
     if(EXPORT_FILE_CHANGED)
       file(GLOB OLD_CONFIG_FILES "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/Caffe/CaffeTargets-*.cmake")
       if(OLD_CONFIG_FILES)
@@ -49,22 +49,22 @@ if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspeci
       endif()
     endif()
   endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/Caffe" TYPE FILE FILES "/home/saa4/Caffe_with_updated_functions/build/CMakeFiles/Export/share/Caffe/CaffeTargets.cmake")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/Caffe" TYPE FILE FILES "/home/kakadinh/caffe_variances/Caffe_with_updated_functions/build/CMakeFiles/Export/share/Caffe/CaffeTargets.cmake")
   if("${CMAKE_INSTALL_CONFIG_NAME}" MATCHES "^([Rr][Ee][Ll][Ee][Aa][Ss][Ee])$")
-    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/Caffe" TYPE FILE FILES "/home/saa4/Caffe_with_updated_functions/build/CMakeFiles/Export/share/Caffe/CaffeTargets-release.cmake")
+    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/Caffe" TYPE FILE FILES "/home/kakadinh/caffe_variances/Caffe_with_updated_functions/build/CMakeFiles/Export/share/Caffe/CaffeTargets-release.cmake")
   endif()
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/home/saa4/Caffe_with_updated_functions/build/src/gtest/cmake_install.cmake")
-  include("/home/saa4/Caffe_with_updated_functions/build/src/caffe/cmake_install.cmake")
-  include("/home/saa4/Caffe_with_updated_functions/build/tools/cmake_install.cmake")
-  include("/home/saa4/Caffe_with_updated_functions/build/examples/cmake_install.cmake")
-  include("/home/saa4/Caffe_with_updated_functions/build/python/cmake_install.cmake")
-  include("/home/saa4/Caffe_with_updated_functions/build/matlab/cmake_install.cmake")
-  include("/home/saa4/Caffe_with_updated_functions/build/docs/cmake_install.cmake")
-  include("/home/saa4/Caffe_with_updated_functions/build/src/api/FRCNN/cmake_install.cmake")
+  include("/home/kakadinh/caffe_variances/Caffe_with_updated_functions/build/src/gtest/cmake_install.cmake")
+  include("/home/kakadinh/caffe_variances/Caffe_with_updated_functions/build/src/caffe/cmake_install.cmake")
+  include("/home/kakadinh/caffe_variances/Caffe_with_updated_functions/build/tools/cmake_install.cmake")
+  include("/home/kakadinh/caffe_variances/Caffe_with_updated_functions/build/examples/cmake_install.cmake")
+  include("/home/kakadinh/caffe_variances/Caffe_with_updated_functions/build/python/cmake_install.cmake")
+  include("/home/kakadinh/caffe_variances/Caffe_with_updated_functions/build/matlab/cmake_install.cmake")
+  include("/home/kakadinh/caffe_variances/Caffe_with_updated_functions/build/docs/cmake_install.cmake")
+  include("/home/kakadinh/caffe_variances/Caffe_with_updated_functions/build/src/api/FRCNN/cmake_install.cmake")
 
 endif()
 
@@ -76,5 +76,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/saa4/Caffe_with_updated_functions/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/kakadinh/caffe_variances/Caffe_with_updated_functions/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

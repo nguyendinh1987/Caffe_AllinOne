@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/saa4/Caffe_with_updated_functions
+CMAKE_SOURCE_DIR = /home/kakadinh/caffe_variances/Caffe_with_updated_functions
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/saa4/Caffe_with_updated_functions/build
+CMAKE_BINARY_DIR = /home/kakadinh/caffe_variances/Caffe_with_updated_functions/build
 
 # Include any dependencies generated for this target.
 include src/api/FRCNN/CMakeFiles/FRCNN_api.dir/depend.make
@@ -59,16 +59,16 @@ include src/api/FRCNN/CMakeFiles/FRCNN_api.dir/flags.make
 
 src/api/FRCNN/CMakeFiles/FRCNN_api.dir/frcnn_api.cpp.o: src/api/FRCNN/CMakeFiles/FRCNN_api.dir/flags.make
 src/api/FRCNN/CMakeFiles/FRCNN_api.dir/frcnn_api.cpp.o: ../src/api/FRCNN/frcnn_api.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/saa4/Caffe_with_updated_functions/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object src/api/FRCNN/CMakeFiles/FRCNN_api.dir/frcnn_api.cpp.o"
-	cd /home/saa4/Caffe_with_updated_functions/build/src/api/FRCNN && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/FRCNN_api.dir/frcnn_api.cpp.o -c /home/saa4/Caffe_with_updated_functions/src/api/FRCNN/frcnn_api.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kakadinh/caffe_variances/Caffe_with_updated_functions/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object src/api/FRCNN/CMakeFiles/FRCNN_api.dir/frcnn_api.cpp.o"
+	cd /home/kakadinh/caffe_variances/Caffe_with_updated_functions/build/src/api/FRCNN && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/FRCNN_api.dir/frcnn_api.cpp.o -c /home/kakadinh/caffe_variances/Caffe_with_updated_functions/src/api/FRCNN/frcnn_api.cpp
 
 src/api/FRCNN/CMakeFiles/FRCNN_api.dir/frcnn_api.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/FRCNN_api.dir/frcnn_api.cpp.i"
-	cd /home/saa4/Caffe_with_updated_functions/build/src/api/FRCNN && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/saa4/Caffe_with_updated_functions/src/api/FRCNN/frcnn_api.cpp > CMakeFiles/FRCNN_api.dir/frcnn_api.cpp.i
+	cd /home/kakadinh/caffe_variances/Caffe_with_updated_functions/build/src/api/FRCNN && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kakadinh/caffe_variances/Caffe_with_updated_functions/src/api/FRCNN/frcnn_api.cpp > CMakeFiles/FRCNN_api.dir/frcnn_api.cpp.i
 
 src/api/FRCNN/CMakeFiles/FRCNN_api.dir/frcnn_api.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/FRCNN_api.dir/frcnn_api.cpp.s"
-	cd /home/saa4/Caffe_with_updated_functions/build/src/api/FRCNN && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/saa4/Caffe_with_updated_functions/src/api/FRCNN/frcnn_api.cpp -o CMakeFiles/FRCNN_api.dir/frcnn_api.cpp.s
+	cd /home/kakadinh/caffe_variances/Caffe_with_updated_functions/build/src/api/FRCNN && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kakadinh/caffe_variances/Caffe_with_updated_functions/src/api/FRCNN/frcnn_api.cpp -o CMakeFiles/FRCNN_api.dir/frcnn_api.cpp.s
 
 src/api/FRCNN/CMakeFiles/FRCNN_api.dir/frcnn_api.cpp.o.requires:
 
@@ -83,16 +83,16 @@ src/api/FRCNN/CMakeFiles/FRCNN_api.dir/frcnn_api.cpp.o.provides.build: src/api/F
 
 src/api/FRCNN/CMakeFiles/FRCNN_api.dir/rpn_api.cpp.o: src/api/FRCNN/CMakeFiles/FRCNN_api.dir/flags.make
 src/api/FRCNN/CMakeFiles/FRCNN_api.dir/rpn_api.cpp.o: ../src/api/FRCNN/rpn_api.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/saa4/Caffe_with_updated_functions/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object src/api/FRCNN/CMakeFiles/FRCNN_api.dir/rpn_api.cpp.o"
-	cd /home/saa4/Caffe_with_updated_functions/build/src/api/FRCNN && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/FRCNN_api.dir/rpn_api.cpp.o -c /home/saa4/Caffe_with_updated_functions/src/api/FRCNN/rpn_api.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kakadinh/caffe_variances/Caffe_with_updated_functions/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object src/api/FRCNN/CMakeFiles/FRCNN_api.dir/rpn_api.cpp.o"
+	cd /home/kakadinh/caffe_variances/Caffe_with_updated_functions/build/src/api/FRCNN && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/FRCNN_api.dir/rpn_api.cpp.o -c /home/kakadinh/caffe_variances/Caffe_with_updated_functions/src/api/FRCNN/rpn_api.cpp
 
 src/api/FRCNN/CMakeFiles/FRCNN_api.dir/rpn_api.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/FRCNN_api.dir/rpn_api.cpp.i"
-	cd /home/saa4/Caffe_with_updated_functions/build/src/api/FRCNN && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/saa4/Caffe_with_updated_functions/src/api/FRCNN/rpn_api.cpp > CMakeFiles/FRCNN_api.dir/rpn_api.cpp.i
+	cd /home/kakadinh/caffe_variances/Caffe_with_updated_functions/build/src/api/FRCNN && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kakadinh/caffe_variances/Caffe_with_updated_functions/src/api/FRCNN/rpn_api.cpp > CMakeFiles/FRCNN_api.dir/rpn_api.cpp.i
 
 src/api/FRCNN/CMakeFiles/FRCNN_api.dir/rpn_api.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/FRCNN_api.dir/rpn_api.cpp.s"
-	cd /home/saa4/Caffe_with_updated_functions/build/src/api/FRCNN && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/saa4/Caffe_with_updated_functions/src/api/FRCNN/rpn_api.cpp -o CMakeFiles/FRCNN_api.dir/rpn_api.cpp.s
+	cd /home/kakadinh/caffe_variances/Caffe_with_updated_functions/build/src/api/FRCNN && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kakadinh/caffe_variances/Caffe_with_updated_functions/src/api/FRCNN/rpn_api.cpp -o CMakeFiles/FRCNN_api.dir/rpn_api.cpp.s
 
 src/api/FRCNN/CMakeFiles/FRCNN_api.dir/rpn_api.cpp.o.requires:
 
@@ -148,7 +148,7 @@ src/api/FRCNN/libFRCNN_api.so: /usr/lib/x86_64-linux-gnu/libleveldb.so
 src/api/FRCNN/libFRCNN_api.so: /usr/local/cuda/lib64/libcudart.so
 src/api/FRCNN/libFRCNN_api.so: /usr/local/cuda/lib64/libcurand.so
 src/api/FRCNN/libFRCNN_api.so: /usr/local/cuda/lib64/libcublas.so
-src/api/FRCNN/libFRCNN_api.so: /usr/lib/x86_64-linux-gnu/libcudnn.so
+src/api/FRCNN/libFRCNN_api.so: /usr/local/cuda/lib64/libcudnn.so
 src/api/FRCNN/libFRCNN_api.so: /usr/local/lib/libopencv_highgui.so.2.4.13
 src/api/FRCNN/libFRCNN_api.so: /usr/local/lib/libopencv_imgproc.so.2.4.13
 src/api/FRCNN/libFRCNN_api.so: /usr/local/lib/libopencv_core.so.2.4.13
@@ -161,8 +161,8 @@ src/api/FRCNN/libFRCNN_api.so: /usr/lib/libcblas.so
 src/api/FRCNN/libFRCNN_api.so: /usr/lib/libatlas.so
 src/api/FRCNN/libFRCNN_api.so: /usr/lib/x86_64-linux-gnu/libboost_python.so
 src/api/FRCNN/libFRCNN_api.so: src/api/FRCNN/CMakeFiles/FRCNN_api.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/saa4/Caffe_with_updated_functions/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX shared library libFRCNN_api.so"
-	cd /home/saa4/Caffe_with_updated_functions/build/src/api/FRCNN && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/FRCNN_api.dir/link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/kakadinh/caffe_variances/Caffe_with_updated_functions/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX shared library libFRCNN_api.so"
+	cd /home/kakadinh/caffe_variances/Caffe_with_updated_functions/build/src/api/FRCNN && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/FRCNN_api.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 src/api/FRCNN/CMakeFiles/FRCNN_api.dir/build: src/api/FRCNN/libFRCNN_api.so
@@ -175,10 +175,10 @@ src/api/FRCNN/CMakeFiles/FRCNN_api.dir/requires: src/api/FRCNN/CMakeFiles/FRCNN_
 .PHONY : src/api/FRCNN/CMakeFiles/FRCNN_api.dir/requires
 
 src/api/FRCNN/CMakeFiles/FRCNN_api.dir/clean:
-	cd /home/saa4/Caffe_with_updated_functions/build/src/api/FRCNN && $(CMAKE_COMMAND) -P CMakeFiles/FRCNN_api.dir/cmake_clean.cmake
+	cd /home/kakadinh/caffe_variances/Caffe_with_updated_functions/build/src/api/FRCNN && $(CMAKE_COMMAND) -P CMakeFiles/FRCNN_api.dir/cmake_clean.cmake
 .PHONY : src/api/FRCNN/CMakeFiles/FRCNN_api.dir/clean
 
 src/api/FRCNN/CMakeFiles/FRCNN_api.dir/depend:
-	cd /home/saa4/Caffe_with_updated_functions/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/saa4/Caffe_with_updated_functions /home/saa4/Caffe_with_updated_functions/src/api/FRCNN /home/saa4/Caffe_with_updated_functions/build /home/saa4/Caffe_with_updated_functions/build/src/api/FRCNN /home/saa4/Caffe_with_updated_functions/build/src/api/FRCNN/CMakeFiles/FRCNN_api.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/kakadinh/caffe_variances/Caffe_with_updated_functions/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/kakadinh/caffe_variances/Caffe_with_updated_functions /home/kakadinh/caffe_variances/Caffe_with_updated_functions/src/api/FRCNN /home/kakadinh/caffe_variances/Caffe_with_updated_functions/build /home/kakadinh/caffe_variances/Caffe_with_updated_functions/build/src/api/FRCNN /home/kakadinh/caffe_variances/Caffe_with_updated_functions/build/src/api/FRCNN/CMakeFiles/FRCNN_api.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : src/api/FRCNN/CMakeFiles/FRCNN_api.dir/depend
 

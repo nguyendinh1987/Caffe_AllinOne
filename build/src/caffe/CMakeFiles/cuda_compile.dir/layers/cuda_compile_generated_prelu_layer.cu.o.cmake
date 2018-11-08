@@ -56,28 +56,28 @@ endif()
 
 # Set these up as variables to make reading the generated file easier
 set(CMAKE_COMMAND "/usr/bin/cmake") # path
-set(source_file "/home/saa4/Caffe_with_updated_functions/src/caffe/layers/prelu_layer.cu") # path
-set(NVCC_generated_dependency_file "/home/saa4/Caffe_with_updated_functions/build/src/caffe/CMakeFiles/cuda_compile.dir/layers/cuda_compile_generated_prelu_layer.cu.o.NVCC-depend") # path
-set(cmake_dependency_file "/home/saa4/Caffe_with_updated_functions/build/src/caffe/CMakeFiles/cuda_compile.dir/layers/cuda_compile_generated_prelu_layer.cu.o.depend") # path
+set(source_file "/home/kakadinh/caffe_variances/Caffe_with_updated_functions/src/caffe/layers/prelu_layer.cu") # path
+set(NVCC_generated_dependency_file "/home/kakadinh/caffe_variances/Caffe_with_updated_functions/build/src/caffe/CMakeFiles/cuda_compile.dir/layers/cuda_compile_generated_prelu_layer.cu.o.NVCC-depend") # path
+set(cmake_dependency_file "/home/kakadinh/caffe_variances/Caffe_with_updated_functions/build/src/caffe/CMakeFiles/cuda_compile.dir/layers/cuda_compile_generated_prelu_layer.cu.o.depend") # path
 set(CUDA_make2cmake "/usr/share/cmake-3.5/Modules/FindCUDA/make2cmake.cmake") # path
 set(CUDA_parse_cubin "/usr/share/cmake-3.5/Modules/FindCUDA/parse_cubin.cmake") # path
 set(build_cubin OFF) # bool
 set(CUDA_HOST_COMPILER "/usr/bin/cc") # path
 # We won't actually use these variables for now, but we need to set this, in
 # order to force this file to be run again if it changes.
-set(generated_file_path "/home/saa4/Caffe_with_updated_functions/build/src/caffe/CMakeFiles/cuda_compile.dir/layers/.") # path
-set(generated_file_internal "/home/saa4/Caffe_with_updated_functions/build/src/caffe/CMakeFiles/cuda_compile.dir/layers/./cuda_compile_generated_prelu_layer.cu.o") # path
-set(generated_cubin_file_internal "/home/saa4/Caffe_with_updated_functions/build/src/caffe/CMakeFiles/cuda_compile.dir/layers/./cuda_compile_generated_prelu_layer.cu.o.cubin.txt") # path
+set(generated_file_path "/home/kakadinh/caffe_variances/Caffe_with_updated_functions/build/src/caffe/CMakeFiles/cuda_compile.dir/layers/.") # path
+set(generated_file_internal "/home/kakadinh/caffe_variances/Caffe_with_updated_functions/build/src/caffe/CMakeFiles/cuda_compile.dir/layers/./cuda_compile_generated_prelu_layer.cu.o") # path
+set(generated_cubin_file_internal "/home/kakadinh/caffe_variances/Caffe_with_updated_functions/build/src/caffe/CMakeFiles/cuda_compile.dir/layers/./cuda_compile_generated_prelu_layer.cu.o.cubin.txt") # path
 
 set(CUDA_NVCC_EXECUTABLE "/usr/local/cuda/bin/nvcc") # path
-set(CUDA_NVCC_FLAGS -gencode;arch=compute_60,code=sm_60;-Xcudafe;--diag_suppress=cc_clobber_ignored;-Xcudafe;--diag_suppress=integer_sign_change;-Xcudafe;--diag_suppress=useless_using_declaration;-Xcudafe;--diag_suppress=set_but_not_used;-DUSE_LMDB;-DUSE_LEVELDB;-DUSE_CUDNN;-DUSE_OPENCV;-DWITH_PYTHON_LAYER;-Xcompiler;-fPIC ;; ) # list
+set(CUDA_NVCC_FLAGS -gencode;arch=compute_35,code=sm_35;-gencode;arch=compute_20,code=sm_21;-Xcudafe;--diag_suppress=cc_clobber_ignored;-Xcudafe;--diag_suppress=integer_sign_change;-Xcudafe;--diag_suppress=useless_using_declaration;-Xcudafe;--diag_suppress=set_but_not_used;-DUSE_LMDB;-DUSE_LEVELDB;-DUSE_CUDNN;-DUSE_OPENCV;-DWITH_PYTHON_LAYER;-Xcompiler;-fPIC ;; ) # list
 # Build specific configuration flags
 set(CUDA_NVCC_FLAGS_DEBUG  ; )
 set(CUDA_NVCC_FLAGS_RELEASE  ; )
 set(CUDA_NVCC_FLAGS_MINSIZEREL  ; )
 set(CUDA_NVCC_FLAGS_RELWITHDEBINFO  ; )
 set(nvcc_flags -m64;-DCAFFE_VERSION=1.0.0;-DUSE_HDF5) # list
-set(CUDA_NVCC_INCLUDE_ARGS "-I/home/saa4/Caffe_with_updated_functions/include;-I/home/saa4/Caffe_with_updated_functions/src;-I/usr/include;-I/usr/include;-I/usr/include;-I/usr/local/include;-I/usr/include/hdf5/serial;-I/usr/include;-I/usr/include;-I/usr/include;-I/usr/local/cuda/include;-I/usr/include;-I/usr/local/include/opencv;-I/usr/local/include;-I/usr/include;-I/usr/include/atlas;-I/usr/include/python2.7;-I/usr/local/lib/python2.7/dist-packages/numpy/core/include;-I/usr/include;-I/usr/local/cuda/include/thrust/system/cuda/detail;-I/usr/local/cuda/include;-I/home/saa4/Caffe_with_updated_functions/build/include;-I/usr/include/hdf5/serial;-I/usr/local/include/opencv;-I/usr/local/include;-I/home/saa4/Caffe_with_updated_functions/build") # list (needs to be in quotes to handle spaces properly).
+set(CUDA_NVCC_INCLUDE_ARGS "-I/home/kakadinh/caffe_variances/Caffe_with_updated_functions/include;-I/home/kakadinh/caffe_variances/Caffe_with_updated_functions/src;-I/usr/include;-I/usr/include;-I/usr/include;-I/usr/local/include;-I/usr/include/hdf5/serial;-I/usr/include;-I/usr/include;-I/usr/include;-I/usr/local/cuda/include;-I/usr/local/cuda/include;-I/usr/local/include/opencv-2.4.13/opencv;-I/usr/local/include/opencv-2.4.13;-I/usr/include;-I/usr/include/atlas;-I/usr/include/python2.7;-I/usr/local/lib/python2.7/dist-packages/numpy/core/include;-I/usr/include;-I/usr/local/cuda/include/thrust/system/cuda/detail;-I/usr/local/cuda/include;-I/home/kakadinh/caffe_variances/Caffe_with_updated_functions/build/include;-I/usr/include/hdf5/serial;-I/usr/local/include/opencv-2.4.13/opencv;-I/usr/local/include/opencv-2.4.13;-I/home/kakadinh/caffe_variances/Caffe_with_updated_functions/build") # list (needs to be in quotes to handle spaces properly).
 set(format_flag "-c") # string
 set(cuda_language_flag ) # list
 

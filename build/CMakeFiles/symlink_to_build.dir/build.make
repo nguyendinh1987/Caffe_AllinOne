@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/saa4/Caffe_with_updated_functions
+CMAKE_SOURCE_DIR = /home/kakadinh/caffe_variances/Caffe_with_updated_functions
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/saa4/Caffe_with_updated_functions/build
+CMAKE_BINARY_DIR = /home/kakadinh/caffe_variances/Caffe_with_updated_functions/build
 
 # Utility rule file for symlink_to_build.
 
@@ -54,8 +54,8 @@ CMAKE_BINARY_DIR = /home/saa4/Caffe_with_updated_functions/build
 include CMakeFiles/symlink_to_build.dir/progress.make
 
 CMakeFiles/symlink_to_build:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/saa4/Caffe_with_updated_functions/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Adding symlink: <caffe_root>/build -> /home/saa4/Caffe_with_updated_functions/build"
-	ln -sf /home/saa4/Caffe_with_updated_functions/build /home/saa4/Caffe_with_updated_functions/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/kakadinh/caffe_variances/Caffe_with_updated_functions/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Adding symlink: <caffe_root>/build -> /home/kakadinh/caffe_variances/Caffe_with_updated_functions/build"
+	ln -sf /home/kakadinh/caffe_variances/Caffe_with_updated_functions/build /home/kakadinh/caffe_variances/Caffe_with_updated_functions/build
 
 symlink_to_build: CMakeFiles/symlink_to_build
 symlink_to_build: CMakeFiles/symlink_to_build.dir/build.make
@@ -72,6 +72,6 @@ CMakeFiles/symlink_to_build.dir/clean:
 .PHONY : CMakeFiles/symlink_to_build.dir/clean
 
 CMakeFiles/symlink_to_build.dir/depend:
-	cd /home/saa4/Caffe_with_updated_functions/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/saa4/Caffe_with_updated_functions /home/saa4/Caffe_with_updated_functions /home/saa4/Caffe_with_updated_functions/build /home/saa4/Caffe_with_updated_functions/build /home/saa4/Caffe_with_updated_functions/build/CMakeFiles/symlink_to_build.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/kakadinh/caffe_variances/Caffe_with_updated_functions/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/kakadinh/caffe_variances/Caffe_with_updated_functions /home/kakadinh/caffe_variances/Caffe_with_updated_functions /home/kakadinh/caffe_variances/Caffe_with_updated_functions/build /home/kakadinh/caffe_variances/Caffe_with_updated_functions/build /home/kakadinh/caffe_variances/Caffe_with_updated_functions/build/CMakeFiles/symlink_to_build.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/symlink_to_build.dir/depend
 

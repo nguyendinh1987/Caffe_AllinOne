@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/saa4/Caffe_with_updated_functions
+CMAKE_SOURCE_DIR = /home/kakadinh/caffe_variances/Caffe_with_updated_functions
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/saa4/Caffe_with_updated_functions/build
+CMAKE_BINARY_DIR = /home/kakadinh/caffe_variances/Caffe_with_updated_functions/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -81,8 +81,8 @@ rebuild_cache/fast: rebuild_cache
 
 # Special rule for the target edit_cache
 edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake cache editor..."
-	/usr/bin/cmake-gui -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
+	/usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -124,14 +124,14 @@ install/local/fast: install/local
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/saa4/Caffe_with_updated_functions/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/saa4/Caffe_with_updated_functions/build/CMakeFiles /home/saa4/Caffe_with_updated_functions/build/tools/CMakeFiles/progress.marks
-	cd /home/saa4/Caffe_with_updated_functions/build && $(MAKE) -f CMakeFiles/Makefile2 tools/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/saa4/Caffe_with_updated_functions/build/CMakeFiles 0
+	cd /home/kakadinh/caffe_variances/Caffe_with_updated_functions/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/kakadinh/caffe_variances/Caffe_with_updated_functions/build/CMakeFiles /home/kakadinh/caffe_variances/Caffe_with_updated_functions/build/tools/CMakeFiles/progress.marks
+	cd /home/kakadinh/caffe_variances/Caffe_with_updated_functions/build && $(MAKE) -f CMakeFiles/Makefile2 tools/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kakadinh/caffe_variances/Caffe_with_updated_functions/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/saa4/Caffe_with_updated_functions/build && $(MAKE) -f CMakeFiles/Makefile2 tools/clean
+	cd /home/kakadinh/caffe_variances/Caffe_with_updated_functions/build && $(MAKE) -f CMakeFiles/Makefile2 tools/clean
 .PHONY : clean
 
 # The main clean target
@@ -141,67 +141,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/saa4/Caffe_with_updated_functions/build && $(MAKE) -f CMakeFiles/Makefile2 tools/preinstall
+	cd /home/kakadinh/caffe_variances/Caffe_with_updated_functions/build && $(MAKE) -f CMakeFiles/Makefile2 tools/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/saa4/Caffe_with_updated_functions/build && $(MAKE) -f CMakeFiles/Makefile2 tools/preinstall
+	cd /home/kakadinh/caffe_variances/Caffe_with_updated_functions/build && $(MAKE) -f CMakeFiles/Makefile2 tools/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/saa4/Caffe_with_updated_functions/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/kakadinh/caffe_variances/Caffe_with_updated_functions/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
-tools/CMakeFiles/extract_features.dir/rule:
-	cd /home/saa4/Caffe_with_updated_functions/build && $(MAKE) -f CMakeFiles/Makefile2 tools/CMakeFiles/extract_features.dir/rule
-.PHONY : tools/CMakeFiles/extract_features.dir/rule
-
-# Convenience name for target.
-extract_features: tools/CMakeFiles/extract_features.dir/rule
-
-.PHONY : extract_features
-
-# fast build rule for target.
-extract_features/fast:
-	cd /home/saa4/Caffe_with_updated_functions/build && $(MAKE) -f tools/CMakeFiles/extract_features.dir/build.make tools/CMakeFiles/extract_features.dir/build
-.PHONY : extract_features/fast
-
-# Convenience name for target.
-tools/CMakeFiles/upgrade_net_proto_text.dir/rule:
-	cd /home/saa4/Caffe_with_updated_functions/build && $(MAKE) -f CMakeFiles/Makefile2 tools/CMakeFiles/upgrade_net_proto_text.dir/rule
-.PHONY : tools/CMakeFiles/upgrade_net_proto_text.dir/rule
-
-# Convenience name for target.
-upgrade_net_proto_text: tools/CMakeFiles/upgrade_net_proto_text.dir/rule
-
-.PHONY : upgrade_net_proto_text
-
-# fast build rule for target.
-upgrade_net_proto_text/fast:
-	cd /home/saa4/Caffe_with_updated_functions/build && $(MAKE) -f tools/CMakeFiles/upgrade_net_proto_text.dir/build.make tools/CMakeFiles/upgrade_net_proto_text.dir/build
-.PHONY : upgrade_net_proto_text/fast
-
-# Convenience name for target.
-tools/CMakeFiles/compute_image_mean.dir/rule:
-	cd /home/saa4/Caffe_with_updated_functions/build && $(MAKE) -f CMakeFiles/Makefile2 tools/CMakeFiles/compute_image_mean.dir/rule
-.PHONY : tools/CMakeFiles/compute_image_mean.dir/rule
-
-# Convenience name for target.
-compute_image_mean: tools/CMakeFiles/compute_image_mean.dir/rule
-
-.PHONY : compute_image_mean
-
-# fast build rule for target.
-compute_image_mean/fast:
-	cd /home/saa4/Caffe_with_updated_functions/build && $(MAKE) -f tools/CMakeFiles/compute_image_mean.dir/build.make tools/CMakeFiles/compute_image_mean.dir/build
-.PHONY : compute_image_mean/fast
-
-# Convenience name for target.
 tools/CMakeFiles/convert_imageset.dir/rule:
-	cd /home/saa4/Caffe_with_updated_functions/build && $(MAKE) -f CMakeFiles/Makefile2 tools/CMakeFiles/convert_imageset.dir/rule
+	cd /home/kakadinh/caffe_variances/Caffe_with_updated_functions/build && $(MAKE) -f CMakeFiles/Makefile2 tools/CMakeFiles/convert_imageset.dir/rule
 .PHONY : tools/CMakeFiles/convert_imageset.dir/rule
 
 # Convenience name for target.
@@ -211,12 +166,12 @@ convert_imageset: tools/CMakeFiles/convert_imageset.dir/rule
 
 # fast build rule for target.
 convert_imageset/fast:
-	cd /home/saa4/Caffe_with_updated_functions/build && $(MAKE) -f tools/CMakeFiles/convert_imageset.dir/build.make tools/CMakeFiles/convert_imageset.dir/build
+	cd /home/kakadinh/caffe_variances/Caffe_with_updated_functions/build && $(MAKE) -f tools/CMakeFiles/convert_imageset.dir/build.make tools/CMakeFiles/convert_imageset.dir/build
 .PHONY : convert_imageset/fast
 
 # Convenience name for target.
 tools/CMakeFiles/upgrade_net_proto_binary.dir/rule:
-	cd /home/saa4/Caffe_with_updated_functions/build && $(MAKE) -f CMakeFiles/Makefile2 tools/CMakeFiles/upgrade_net_proto_binary.dir/rule
+	cd /home/kakadinh/caffe_variances/Caffe_with_updated_functions/build && $(MAKE) -f CMakeFiles/Makefile2 tools/CMakeFiles/upgrade_net_proto_binary.dir/rule
 .PHONY : tools/CMakeFiles/upgrade_net_proto_binary.dir/rule
 
 # Convenience name for target.
@@ -226,12 +181,27 @@ upgrade_net_proto_binary: tools/CMakeFiles/upgrade_net_proto_binary.dir/rule
 
 # fast build rule for target.
 upgrade_net_proto_binary/fast:
-	cd /home/saa4/Caffe_with_updated_functions/build && $(MAKE) -f tools/CMakeFiles/upgrade_net_proto_binary.dir/build.make tools/CMakeFiles/upgrade_net_proto_binary.dir/build
+	cd /home/kakadinh/caffe_variances/Caffe_with_updated_functions/build && $(MAKE) -f tools/CMakeFiles/upgrade_net_proto_binary.dir/build.make tools/CMakeFiles/upgrade_net_proto_binary.dir/build
 .PHONY : upgrade_net_proto_binary/fast
 
 # Convenience name for target.
+tools/CMakeFiles/compute_image_mean.dir/rule:
+	cd /home/kakadinh/caffe_variances/Caffe_with_updated_functions/build && $(MAKE) -f CMakeFiles/Makefile2 tools/CMakeFiles/compute_image_mean.dir/rule
+.PHONY : tools/CMakeFiles/compute_image_mean.dir/rule
+
+# Convenience name for target.
+compute_image_mean: tools/CMakeFiles/compute_image_mean.dir/rule
+
+.PHONY : compute_image_mean
+
+# fast build rule for target.
+compute_image_mean/fast:
+	cd /home/kakadinh/caffe_variances/Caffe_with_updated_functions/build && $(MAKE) -f tools/CMakeFiles/compute_image_mean.dir/build.make tools/CMakeFiles/compute_image_mean.dir/build
+.PHONY : compute_image_mean/fast
+
+# Convenience name for target.
 tools/CMakeFiles/caffe.bin.dir/rule:
-	cd /home/saa4/Caffe_with_updated_functions/build && $(MAKE) -f CMakeFiles/Makefile2 tools/CMakeFiles/caffe.bin.dir/rule
+	cd /home/kakadinh/caffe_variances/Caffe_with_updated_functions/build && $(MAKE) -f CMakeFiles/Makefile2 tools/CMakeFiles/caffe.bin.dir/rule
 .PHONY : tools/CMakeFiles/caffe.bin.dir/rule
 
 # Convenience name for target.
@@ -241,12 +211,42 @@ caffe.bin: tools/CMakeFiles/caffe.bin.dir/rule
 
 # fast build rule for target.
 caffe.bin/fast:
-	cd /home/saa4/Caffe_with_updated_functions/build && $(MAKE) -f tools/CMakeFiles/caffe.bin.dir/build.make tools/CMakeFiles/caffe.bin.dir/build
+	cd /home/kakadinh/caffe_variances/Caffe_with_updated_functions/build && $(MAKE) -f tools/CMakeFiles/caffe.bin.dir/build.make tools/CMakeFiles/caffe.bin.dir/build
 .PHONY : caffe.bin/fast
 
 # Convenience name for target.
+tools/CMakeFiles/extract_features.dir/rule:
+	cd /home/kakadinh/caffe_variances/Caffe_with_updated_functions/build && $(MAKE) -f CMakeFiles/Makefile2 tools/CMakeFiles/extract_features.dir/rule
+.PHONY : tools/CMakeFiles/extract_features.dir/rule
+
+# Convenience name for target.
+extract_features: tools/CMakeFiles/extract_features.dir/rule
+
+.PHONY : extract_features
+
+# fast build rule for target.
+extract_features/fast:
+	cd /home/kakadinh/caffe_variances/Caffe_with_updated_functions/build && $(MAKE) -f tools/CMakeFiles/extract_features.dir/build.make tools/CMakeFiles/extract_features.dir/build
+.PHONY : extract_features/fast
+
+# Convenience name for target.
+tools/CMakeFiles/upgrade_net_proto_text.dir/rule:
+	cd /home/kakadinh/caffe_variances/Caffe_with_updated_functions/build && $(MAKE) -f CMakeFiles/Makefile2 tools/CMakeFiles/upgrade_net_proto_text.dir/rule
+.PHONY : tools/CMakeFiles/upgrade_net_proto_text.dir/rule
+
+# Convenience name for target.
+upgrade_net_proto_text: tools/CMakeFiles/upgrade_net_proto_text.dir/rule
+
+.PHONY : upgrade_net_proto_text
+
+# fast build rule for target.
+upgrade_net_proto_text/fast:
+	cd /home/kakadinh/caffe_variances/Caffe_with_updated_functions/build && $(MAKE) -f tools/CMakeFiles/upgrade_net_proto_text.dir/build.make tools/CMakeFiles/upgrade_net_proto_text.dir/build
+.PHONY : upgrade_net_proto_text/fast
+
+# Convenience name for target.
 tools/CMakeFiles/upgrade_solver_proto_text.dir/rule:
-	cd /home/saa4/Caffe_with_updated_functions/build && $(MAKE) -f CMakeFiles/Makefile2 tools/CMakeFiles/upgrade_solver_proto_text.dir/rule
+	cd /home/kakadinh/caffe_variances/Caffe_with_updated_functions/build && $(MAKE) -f CMakeFiles/Makefile2 tools/CMakeFiles/upgrade_solver_proto_text.dir/rule
 .PHONY : tools/CMakeFiles/upgrade_solver_proto_text.dir/rule
 
 # Convenience name for target.
@@ -256,7 +256,7 @@ upgrade_solver_proto_text: tools/CMakeFiles/upgrade_solver_proto_text.dir/rule
 
 # fast build rule for target.
 upgrade_solver_proto_text/fast:
-	cd /home/saa4/Caffe_with_updated_functions/build && $(MAKE) -f tools/CMakeFiles/upgrade_solver_proto_text.dir/build.make tools/CMakeFiles/upgrade_solver_proto_text.dir/build
+	cd /home/kakadinh/caffe_variances/Caffe_with_updated_functions/build && $(MAKE) -f tools/CMakeFiles/upgrade_solver_proto_text.dir/build.make tools/CMakeFiles/upgrade_solver_proto_text.dir/build
 .PHONY : upgrade_solver_proto_text/fast
 
 caffe.o: caffe.cpp.o
@@ -265,7 +265,7 @@ caffe.o: caffe.cpp.o
 
 # target to build an object file
 caffe.cpp.o:
-	cd /home/saa4/Caffe_with_updated_functions/build && $(MAKE) -f tools/CMakeFiles/caffe.bin.dir/build.make tools/CMakeFiles/caffe.bin.dir/caffe.cpp.o
+	cd /home/kakadinh/caffe_variances/Caffe_with_updated_functions/build && $(MAKE) -f tools/CMakeFiles/caffe.bin.dir/build.make tools/CMakeFiles/caffe.bin.dir/caffe.cpp.o
 .PHONY : caffe.cpp.o
 
 caffe.i: caffe.cpp.i
@@ -274,7 +274,7 @@ caffe.i: caffe.cpp.i
 
 # target to preprocess a source file
 caffe.cpp.i:
-	cd /home/saa4/Caffe_with_updated_functions/build && $(MAKE) -f tools/CMakeFiles/caffe.bin.dir/build.make tools/CMakeFiles/caffe.bin.dir/caffe.cpp.i
+	cd /home/kakadinh/caffe_variances/Caffe_with_updated_functions/build && $(MAKE) -f tools/CMakeFiles/caffe.bin.dir/build.make tools/CMakeFiles/caffe.bin.dir/caffe.cpp.i
 .PHONY : caffe.cpp.i
 
 caffe.s: caffe.cpp.s
@@ -283,7 +283,7 @@ caffe.s: caffe.cpp.s
 
 # target to generate assembly for a file
 caffe.cpp.s:
-	cd /home/saa4/Caffe_with_updated_functions/build && $(MAKE) -f tools/CMakeFiles/caffe.bin.dir/build.make tools/CMakeFiles/caffe.bin.dir/caffe.cpp.s
+	cd /home/kakadinh/caffe_variances/Caffe_with_updated_functions/build && $(MAKE) -f tools/CMakeFiles/caffe.bin.dir/build.make tools/CMakeFiles/caffe.bin.dir/caffe.cpp.s
 .PHONY : caffe.cpp.s
 
 compute_image_mean.o: compute_image_mean.cpp.o
@@ -292,7 +292,7 @@ compute_image_mean.o: compute_image_mean.cpp.o
 
 # target to build an object file
 compute_image_mean.cpp.o:
-	cd /home/saa4/Caffe_with_updated_functions/build && $(MAKE) -f tools/CMakeFiles/compute_image_mean.dir/build.make tools/CMakeFiles/compute_image_mean.dir/compute_image_mean.cpp.o
+	cd /home/kakadinh/caffe_variances/Caffe_with_updated_functions/build && $(MAKE) -f tools/CMakeFiles/compute_image_mean.dir/build.make tools/CMakeFiles/compute_image_mean.dir/compute_image_mean.cpp.o
 .PHONY : compute_image_mean.cpp.o
 
 compute_image_mean.i: compute_image_mean.cpp.i
@@ -301,7 +301,7 @@ compute_image_mean.i: compute_image_mean.cpp.i
 
 # target to preprocess a source file
 compute_image_mean.cpp.i:
-	cd /home/saa4/Caffe_with_updated_functions/build && $(MAKE) -f tools/CMakeFiles/compute_image_mean.dir/build.make tools/CMakeFiles/compute_image_mean.dir/compute_image_mean.cpp.i
+	cd /home/kakadinh/caffe_variances/Caffe_with_updated_functions/build && $(MAKE) -f tools/CMakeFiles/compute_image_mean.dir/build.make tools/CMakeFiles/compute_image_mean.dir/compute_image_mean.cpp.i
 .PHONY : compute_image_mean.cpp.i
 
 compute_image_mean.s: compute_image_mean.cpp.s
@@ -310,7 +310,7 @@ compute_image_mean.s: compute_image_mean.cpp.s
 
 # target to generate assembly for a file
 compute_image_mean.cpp.s:
-	cd /home/saa4/Caffe_with_updated_functions/build && $(MAKE) -f tools/CMakeFiles/compute_image_mean.dir/build.make tools/CMakeFiles/compute_image_mean.dir/compute_image_mean.cpp.s
+	cd /home/kakadinh/caffe_variances/Caffe_with_updated_functions/build && $(MAKE) -f tools/CMakeFiles/compute_image_mean.dir/build.make tools/CMakeFiles/compute_image_mean.dir/compute_image_mean.cpp.s
 .PHONY : compute_image_mean.cpp.s
 
 convert_imageset.o: convert_imageset.cpp.o
@@ -319,7 +319,7 @@ convert_imageset.o: convert_imageset.cpp.o
 
 # target to build an object file
 convert_imageset.cpp.o:
-	cd /home/saa4/Caffe_with_updated_functions/build && $(MAKE) -f tools/CMakeFiles/convert_imageset.dir/build.make tools/CMakeFiles/convert_imageset.dir/convert_imageset.cpp.o
+	cd /home/kakadinh/caffe_variances/Caffe_with_updated_functions/build && $(MAKE) -f tools/CMakeFiles/convert_imageset.dir/build.make tools/CMakeFiles/convert_imageset.dir/convert_imageset.cpp.o
 .PHONY : convert_imageset.cpp.o
 
 convert_imageset.i: convert_imageset.cpp.i
@@ -328,7 +328,7 @@ convert_imageset.i: convert_imageset.cpp.i
 
 # target to preprocess a source file
 convert_imageset.cpp.i:
-	cd /home/saa4/Caffe_with_updated_functions/build && $(MAKE) -f tools/CMakeFiles/convert_imageset.dir/build.make tools/CMakeFiles/convert_imageset.dir/convert_imageset.cpp.i
+	cd /home/kakadinh/caffe_variances/Caffe_with_updated_functions/build && $(MAKE) -f tools/CMakeFiles/convert_imageset.dir/build.make tools/CMakeFiles/convert_imageset.dir/convert_imageset.cpp.i
 .PHONY : convert_imageset.cpp.i
 
 convert_imageset.s: convert_imageset.cpp.s
@@ -337,7 +337,7 @@ convert_imageset.s: convert_imageset.cpp.s
 
 # target to generate assembly for a file
 convert_imageset.cpp.s:
-	cd /home/saa4/Caffe_with_updated_functions/build && $(MAKE) -f tools/CMakeFiles/convert_imageset.dir/build.make tools/CMakeFiles/convert_imageset.dir/convert_imageset.cpp.s
+	cd /home/kakadinh/caffe_variances/Caffe_with_updated_functions/build && $(MAKE) -f tools/CMakeFiles/convert_imageset.dir/build.make tools/CMakeFiles/convert_imageset.dir/convert_imageset.cpp.s
 .PHONY : convert_imageset.cpp.s
 
 extract_features.o: extract_features.cpp.o
@@ -346,7 +346,7 @@ extract_features.o: extract_features.cpp.o
 
 # target to build an object file
 extract_features.cpp.o:
-	cd /home/saa4/Caffe_with_updated_functions/build && $(MAKE) -f tools/CMakeFiles/extract_features.dir/build.make tools/CMakeFiles/extract_features.dir/extract_features.cpp.o
+	cd /home/kakadinh/caffe_variances/Caffe_with_updated_functions/build && $(MAKE) -f tools/CMakeFiles/extract_features.dir/build.make tools/CMakeFiles/extract_features.dir/extract_features.cpp.o
 .PHONY : extract_features.cpp.o
 
 extract_features.i: extract_features.cpp.i
@@ -355,7 +355,7 @@ extract_features.i: extract_features.cpp.i
 
 # target to preprocess a source file
 extract_features.cpp.i:
-	cd /home/saa4/Caffe_with_updated_functions/build && $(MAKE) -f tools/CMakeFiles/extract_features.dir/build.make tools/CMakeFiles/extract_features.dir/extract_features.cpp.i
+	cd /home/kakadinh/caffe_variances/Caffe_with_updated_functions/build && $(MAKE) -f tools/CMakeFiles/extract_features.dir/build.make tools/CMakeFiles/extract_features.dir/extract_features.cpp.i
 .PHONY : extract_features.cpp.i
 
 extract_features.s: extract_features.cpp.s
@@ -364,7 +364,7 @@ extract_features.s: extract_features.cpp.s
 
 # target to generate assembly for a file
 extract_features.cpp.s:
-	cd /home/saa4/Caffe_with_updated_functions/build && $(MAKE) -f tools/CMakeFiles/extract_features.dir/build.make tools/CMakeFiles/extract_features.dir/extract_features.cpp.s
+	cd /home/kakadinh/caffe_variances/Caffe_with_updated_functions/build && $(MAKE) -f tools/CMakeFiles/extract_features.dir/build.make tools/CMakeFiles/extract_features.dir/extract_features.cpp.s
 .PHONY : extract_features.cpp.s
 
 upgrade_net_proto_binary.o: upgrade_net_proto_binary.cpp.o
@@ -373,7 +373,7 @@ upgrade_net_proto_binary.o: upgrade_net_proto_binary.cpp.o
 
 # target to build an object file
 upgrade_net_proto_binary.cpp.o:
-	cd /home/saa4/Caffe_with_updated_functions/build && $(MAKE) -f tools/CMakeFiles/upgrade_net_proto_binary.dir/build.make tools/CMakeFiles/upgrade_net_proto_binary.dir/upgrade_net_proto_binary.cpp.o
+	cd /home/kakadinh/caffe_variances/Caffe_with_updated_functions/build && $(MAKE) -f tools/CMakeFiles/upgrade_net_proto_binary.dir/build.make tools/CMakeFiles/upgrade_net_proto_binary.dir/upgrade_net_proto_binary.cpp.o
 .PHONY : upgrade_net_proto_binary.cpp.o
 
 upgrade_net_proto_binary.i: upgrade_net_proto_binary.cpp.i
@@ -382,7 +382,7 @@ upgrade_net_proto_binary.i: upgrade_net_proto_binary.cpp.i
 
 # target to preprocess a source file
 upgrade_net_proto_binary.cpp.i:
-	cd /home/saa4/Caffe_with_updated_functions/build && $(MAKE) -f tools/CMakeFiles/upgrade_net_proto_binary.dir/build.make tools/CMakeFiles/upgrade_net_proto_binary.dir/upgrade_net_proto_binary.cpp.i
+	cd /home/kakadinh/caffe_variances/Caffe_with_updated_functions/build && $(MAKE) -f tools/CMakeFiles/upgrade_net_proto_binary.dir/build.make tools/CMakeFiles/upgrade_net_proto_binary.dir/upgrade_net_proto_binary.cpp.i
 .PHONY : upgrade_net_proto_binary.cpp.i
 
 upgrade_net_proto_binary.s: upgrade_net_proto_binary.cpp.s
@@ -391,7 +391,7 @@ upgrade_net_proto_binary.s: upgrade_net_proto_binary.cpp.s
 
 # target to generate assembly for a file
 upgrade_net_proto_binary.cpp.s:
-	cd /home/saa4/Caffe_with_updated_functions/build && $(MAKE) -f tools/CMakeFiles/upgrade_net_proto_binary.dir/build.make tools/CMakeFiles/upgrade_net_proto_binary.dir/upgrade_net_proto_binary.cpp.s
+	cd /home/kakadinh/caffe_variances/Caffe_with_updated_functions/build && $(MAKE) -f tools/CMakeFiles/upgrade_net_proto_binary.dir/build.make tools/CMakeFiles/upgrade_net_proto_binary.dir/upgrade_net_proto_binary.cpp.s
 .PHONY : upgrade_net_proto_binary.cpp.s
 
 upgrade_net_proto_text.o: upgrade_net_proto_text.cpp.o
@@ -400,7 +400,7 @@ upgrade_net_proto_text.o: upgrade_net_proto_text.cpp.o
 
 # target to build an object file
 upgrade_net_proto_text.cpp.o:
-	cd /home/saa4/Caffe_with_updated_functions/build && $(MAKE) -f tools/CMakeFiles/upgrade_net_proto_text.dir/build.make tools/CMakeFiles/upgrade_net_proto_text.dir/upgrade_net_proto_text.cpp.o
+	cd /home/kakadinh/caffe_variances/Caffe_with_updated_functions/build && $(MAKE) -f tools/CMakeFiles/upgrade_net_proto_text.dir/build.make tools/CMakeFiles/upgrade_net_proto_text.dir/upgrade_net_proto_text.cpp.o
 .PHONY : upgrade_net_proto_text.cpp.o
 
 upgrade_net_proto_text.i: upgrade_net_proto_text.cpp.i
@@ -409,7 +409,7 @@ upgrade_net_proto_text.i: upgrade_net_proto_text.cpp.i
 
 # target to preprocess a source file
 upgrade_net_proto_text.cpp.i:
-	cd /home/saa4/Caffe_with_updated_functions/build && $(MAKE) -f tools/CMakeFiles/upgrade_net_proto_text.dir/build.make tools/CMakeFiles/upgrade_net_proto_text.dir/upgrade_net_proto_text.cpp.i
+	cd /home/kakadinh/caffe_variances/Caffe_with_updated_functions/build && $(MAKE) -f tools/CMakeFiles/upgrade_net_proto_text.dir/build.make tools/CMakeFiles/upgrade_net_proto_text.dir/upgrade_net_proto_text.cpp.i
 .PHONY : upgrade_net_proto_text.cpp.i
 
 upgrade_net_proto_text.s: upgrade_net_proto_text.cpp.s
@@ -418,7 +418,7 @@ upgrade_net_proto_text.s: upgrade_net_proto_text.cpp.s
 
 # target to generate assembly for a file
 upgrade_net_proto_text.cpp.s:
-	cd /home/saa4/Caffe_with_updated_functions/build && $(MAKE) -f tools/CMakeFiles/upgrade_net_proto_text.dir/build.make tools/CMakeFiles/upgrade_net_proto_text.dir/upgrade_net_proto_text.cpp.s
+	cd /home/kakadinh/caffe_variances/Caffe_with_updated_functions/build && $(MAKE) -f tools/CMakeFiles/upgrade_net_proto_text.dir/build.make tools/CMakeFiles/upgrade_net_proto_text.dir/upgrade_net_proto_text.cpp.s
 .PHONY : upgrade_net_proto_text.cpp.s
 
 upgrade_solver_proto_text.o: upgrade_solver_proto_text.cpp.o
@@ -427,7 +427,7 @@ upgrade_solver_proto_text.o: upgrade_solver_proto_text.cpp.o
 
 # target to build an object file
 upgrade_solver_proto_text.cpp.o:
-	cd /home/saa4/Caffe_with_updated_functions/build && $(MAKE) -f tools/CMakeFiles/upgrade_solver_proto_text.dir/build.make tools/CMakeFiles/upgrade_solver_proto_text.dir/upgrade_solver_proto_text.cpp.o
+	cd /home/kakadinh/caffe_variances/Caffe_with_updated_functions/build && $(MAKE) -f tools/CMakeFiles/upgrade_solver_proto_text.dir/build.make tools/CMakeFiles/upgrade_solver_proto_text.dir/upgrade_solver_proto_text.cpp.o
 .PHONY : upgrade_solver_proto_text.cpp.o
 
 upgrade_solver_proto_text.i: upgrade_solver_proto_text.cpp.i
@@ -436,7 +436,7 @@ upgrade_solver_proto_text.i: upgrade_solver_proto_text.cpp.i
 
 # target to preprocess a source file
 upgrade_solver_proto_text.cpp.i:
-	cd /home/saa4/Caffe_with_updated_functions/build && $(MAKE) -f tools/CMakeFiles/upgrade_solver_proto_text.dir/build.make tools/CMakeFiles/upgrade_solver_proto_text.dir/upgrade_solver_proto_text.cpp.i
+	cd /home/kakadinh/caffe_variances/Caffe_with_updated_functions/build && $(MAKE) -f tools/CMakeFiles/upgrade_solver_proto_text.dir/build.make tools/CMakeFiles/upgrade_solver_proto_text.dir/upgrade_solver_proto_text.cpp.i
 .PHONY : upgrade_solver_proto_text.cpp.i
 
 upgrade_solver_proto_text.s: upgrade_solver_proto_text.cpp.s
@@ -445,7 +445,7 @@ upgrade_solver_proto_text.s: upgrade_solver_proto_text.cpp.s
 
 # target to generate assembly for a file
 upgrade_solver_proto_text.cpp.s:
-	cd /home/saa4/Caffe_with_updated_functions/build && $(MAKE) -f tools/CMakeFiles/upgrade_solver_proto_text.dir/build.make tools/CMakeFiles/upgrade_solver_proto_text.dir/upgrade_solver_proto_text.cpp.s
+	cd /home/kakadinh/caffe_variances/Caffe_with_updated_functions/build && $(MAKE) -f tools/CMakeFiles/upgrade_solver_proto_text.dir/build.make tools/CMakeFiles/upgrade_solver_proto_text.dir/upgrade_solver_proto_text.cpp.s
 .PHONY : upgrade_solver_proto_text.cpp.s
 
 # Help Target
@@ -456,13 +456,13 @@ help:
 	@echo "... depend"
 	@echo "... install"
 	@echo "... rebuild_cache"
-	@echo "... extract_features"
-	@echo "... upgrade_net_proto_text"
-	@echo "... compute_image_mean"
 	@echo "... convert_imageset"
 	@echo "... upgrade_net_proto_binary"
+	@echo "... compute_image_mean"
 	@echo "... caffe.bin"
 	@echo "... edit_cache"
+	@echo "... extract_features"
+	@echo "... upgrade_net_proto_text"
 	@echo "... list_install_components"
 	@echo "... install/strip"
 	@echo "... upgrade_solver_proto_text"
@@ -499,6 +499,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/saa4/Caffe_with_updated_functions/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/kakadinh/caffe_variances/Caffe_with_updated_functions/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

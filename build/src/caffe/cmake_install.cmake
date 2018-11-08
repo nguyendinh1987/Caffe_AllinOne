@@ -1,8 +1,8 @@
-# Install script for directory: /home/saa4/Caffe_with_updated_functions/src/caffe
+# Install script for directory: /home/kakadinh/caffe_variances/Caffe_with_updated_functions/src/caffe
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/saa4/Caffe_with_updated_functions/build/install")
+  set(CMAKE_INSTALL_PREFIX "/home/kakadinh/caffe_variances/Caffe_with_updated_functions/build/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -33,11 +33,11 @@ if(NOT DEFINED CMAKE_INSTALL_SO_NO_EXE)
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include" TYPE DIRECTORY FILES "/home/saa4/Caffe_with_updated_functions/include/caffe")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include" TYPE DIRECTORY FILES "/home/kakadinh/caffe_variances/Caffe_with_updated_functions/include/caffe")
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/caffe/proto" TYPE FILE FILES "/home/saa4/Caffe_with_updated_functions/build/include/caffe/proto/caffe.pb.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/caffe/proto" TYPE FILE FILES "/home/kakadinh/caffe_variances/Caffe_with_updated_functions/build/include/caffe/proto/caffe.pb.h")
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
@@ -49,12 +49,12 @@ if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspeci
        NOT IS_SYMLINK "${file}")
       file(RPATH_CHECK
            FILE "${file}"
-           RPATH "/home/saa4/Caffe_with_updated_functions/build/install/lib:/usr/lib/x86_64-linux-gnu/hdf5/serial/lib:/usr/local/cuda/lib64:/usr/local/lib")
+           RPATH "/home/kakadinh/caffe_variances/Caffe_with_updated_functions/build/install/lib:/usr/lib/x86_64-linux-gnu/hdf5/serial/lib:/usr/local/cuda/lib64:/usr/local/lib")
     endif()
   endforeach()
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE SHARED_LIBRARY FILES
-    "/home/saa4/Caffe_with_updated_functions/build/lib/libcaffe.so.1.0.0"
-    "/home/saa4/Caffe_with_updated_functions/build/lib/libcaffe.so"
+    "/home/kakadinh/caffe_variances/Caffe_with_updated_functions/build/lib/libcaffe.so.1.0.0"
+    "/home/kakadinh/caffe_variances/Caffe_with_updated_functions/build/lib/libcaffe.so"
     )
   foreach(file
       "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libcaffe.so.1.0.0"
@@ -64,8 +64,8 @@ if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspeci
        NOT IS_SYMLINK "${file}")
       file(RPATH_CHANGE
            FILE "${file}"
-           OLD_RPATH "/usr/lib/x86_64-linux-gnu/hdf5/serial/lib:/usr/local/cuda/lib64:/usr/local/lib::::::::::::::::::::::::::::::::::::::::::::::::::::::::::"
-           NEW_RPATH "/home/saa4/Caffe_with_updated_functions/build/install/lib:/usr/lib/x86_64-linux-gnu/hdf5/serial/lib:/usr/local/cuda/lib64:/usr/local/lib")
+           OLD_RPATH "/usr/lib/x86_64-linux-gnu/hdf5/serial/lib:/usr/local/cuda/lib64:/usr/local/lib::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::"
+           NEW_RPATH "/home/kakadinh/caffe_variances/Caffe_with_updated_functions/build/install/lib:/usr/lib/x86_64-linux-gnu/hdf5/serial/lib:/usr/local/cuda/lib64:/usr/local/lib")
       if(CMAKE_INSTALL_DO_STRIP)
         execute_process(COMMAND "/usr/bin/strip" "${file}")
       endif()
@@ -74,19 +74,19 @@ if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspeci
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE STATIC_LIBRARY FILES "/home/saa4/Caffe_with_updated_functions/build/lib/libcaffeproto.a")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE STATIC_LIBRARY FILES "/home/kakadinh/caffe_variances/Caffe_with_updated_functions/build/lib/libcaffeproto.a")
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/python/caffe/proto" TYPE PROGRAM FILES
-    "/home/saa4/Caffe_with_updated_functions/build/include/caffe/proto/caffe_pb2.py"
-    "/home/saa4/Caffe_with_updated_functions/build/__init__.py"
+    "/home/kakadinh/caffe_variances/Caffe_with_updated_functions/build/include/caffe/proto/caffe_pb2.py"
+    "/home/kakadinh/caffe_variances/Caffe_with_updated_functions/build/__init__.py"
     )
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/home/saa4/Caffe_with_updated_functions/build/src/caffe/test/cmake_install.cmake")
+  include("/home/kakadinh/caffe_variances/Caffe_with_updated_functions/build/src/caffe/test/cmake_install.cmake")
 
 endif()
 

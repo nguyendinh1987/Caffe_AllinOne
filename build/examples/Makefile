@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/saa4/Caffe_with_updated_functions
+CMAKE_SOURCE_DIR = /home/kakadinh/caffe_variances/Caffe_with_updated_functions
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/saa4/Caffe_with_updated_functions/build
+CMAKE_BINARY_DIR = /home/kakadinh/caffe_variances/Caffe_with_updated_functions/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -67,6 +67,28 @@ install/fast: preinstall/fast
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
 	/usr/bin/cmake -P cmake_install.cmake
 .PHONY : install/fast
+
+# Special rule for the target rebuild_cache
+rebuild_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
+	/usr/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+.PHONY : rebuild_cache
+
+# Special rule for the target rebuild_cache
+rebuild_cache/fast: rebuild_cache
+
+.PHONY : rebuild_cache/fast
+
+# Special rule for the target edit_cache
+edit_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
+	/usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+.PHONY : edit_cache
+
+# Special rule for the target edit_cache
+edit_cache/fast: edit_cache
+
+.PHONY : edit_cache/fast
 
 # Special rule for the target install/local
 install/local: preinstall
@@ -100,38 +122,16 @@ install/strip/fast: install/strip
 
 .PHONY : install/strip/fast
 
-# Special rule for the target rebuild_cache
-rebuild_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/usr/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
-.PHONY : rebuild_cache
-
-# Special rule for the target rebuild_cache
-rebuild_cache/fast: rebuild_cache
-
-.PHONY : rebuild_cache/fast
-
-# Special rule for the target edit_cache
-edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake cache editor..."
-	/usr/bin/cmake-gui -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
-.PHONY : edit_cache
-
-# Special rule for the target edit_cache
-edit_cache/fast: edit_cache
-
-.PHONY : edit_cache/fast
-
 # The main all target
 all: cmake_check_build_system
-	cd /home/saa4/Caffe_with_updated_functions/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/saa4/Caffe_with_updated_functions/build/CMakeFiles /home/saa4/Caffe_with_updated_functions/build/examples/CMakeFiles/progress.marks
-	cd /home/saa4/Caffe_with_updated_functions/build && $(MAKE) -f CMakeFiles/Makefile2 examples/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/saa4/Caffe_with_updated_functions/build/CMakeFiles 0
+	cd /home/kakadinh/caffe_variances/Caffe_with_updated_functions/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/kakadinh/caffe_variances/Caffe_with_updated_functions/build/CMakeFiles /home/kakadinh/caffe_variances/Caffe_with_updated_functions/build/examples/CMakeFiles/progress.marks
+	cd /home/kakadinh/caffe_variances/Caffe_with_updated_functions/build && $(MAKE) -f CMakeFiles/Makefile2 examples/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kakadinh/caffe_variances/Caffe_with_updated_functions/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/saa4/Caffe_with_updated_functions/build && $(MAKE) -f CMakeFiles/Makefile2 examples/clean
+	cd /home/kakadinh/caffe_variances/Caffe_with_updated_functions/build && $(MAKE) -f CMakeFiles/Makefile2 examples/clean
 .PHONY : clean
 
 # The main clean target
@@ -141,127 +141,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/saa4/Caffe_with_updated_functions/build && $(MAKE) -f CMakeFiles/Makefile2 examples/preinstall
+	cd /home/kakadinh/caffe_variances/Caffe_with_updated_functions/build && $(MAKE) -f CMakeFiles/Makefile2 examples/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/saa4/Caffe_with_updated_functions/build && $(MAKE) -f CMakeFiles/Makefile2 examples/preinstall
+	cd /home/kakadinh/caffe_variances/Caffe_with_updated_functions/build && $(MAKE) -f CMakeFiles/Makefile2 examples/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/saa4/Caffe_with_updated_functions/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/kakadinh/caffe_variances/Caffe_with_updated_functions/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
-examples/CMakeFiles/loc_test_frcnn.dir/rule:
-	cd /home/saa4/Caffe_with_updated_functions/build && $(MAKE) -f CMakeFiles/Makefile2 examples/CMakeFiles/loc_test_frcnn.dir/rule
-.PHONY : examples/CMakeFiles/loc_test_frcnn.dir/rule
-
-# Convenience name for target.
-loc_test_frcnn: examples/CMakeFiles/loc_test_frcnn.dir/rule
-
-.PHONY : loc_test_frcnn
-
-# fast build rule for target.
-loc_test_frcnn/fast:
-	cd /home/saa4/Caffe_with_updated_functions/build && $(MAKE) -f examples/CMakeFiles/loc_test_frcnn.dir/build.make examples/CMakeFiles/loc_test_frcnn.dir/build
-.PHONY : loc_test_frcnn/fast
-
-# Convenience name for target.
-examples/CMakeFiles/loc_merge_frcnn.dir/rule:
-	cd /home/saa4/Caffe_with_updated_functions/build && $(MAKE) -f CMakeFiles/Makefile2 examples/CMakeFiles/loc_merge_frcnn.dir/rule
-.PHONY : examples/CMakeFiles/loc_merge_frcnn.dir/rule
-
-# Convenience name for target.
-loc_merge_frcnn: examples/CMakeFiles/loc_merge_frcnn.dir/rule
-
-.PHONY : loc_merge_frcnn
-
-# fast build rule for target.
-loc_merge_frcnn/fast:
-	cd /home/saa4/Caffe_with_updated_functions/build && $(MAKE) -f examples/CMakeFiles/loc_merge_frcnn.dir/build.make examples/CMakeFiles/loc_merge_frcnn.dir/build
-.PHONY : loc_merge_frcnn/fast
-
-# Convenience name for target.
-examples/CMakeFiles/test_rpn.dir/rule:
-	cd /home/saa4/Caffe_with_updated_functions/build && $(MAKE) -f CMakeFiles/Makefile2 examples/CMakeFiles/test_rpn.dir/rule
-.PHONY : examples/CMakeFiles/test_rpn.dir/rule
-
-# Convenience name for target.
-test_rpn: examples/CMakeFiles/test_rpn.dir/rule
-
-.PHONY : test_rpn
-
-# fast build rule for target.
-test_rpn/fast:
-	cd /home/saa4/Caffe_with_updated_functions/build && $(MAKE) -f examples/CMakeFiles/test_rpn.dir/build.make examples/CMakeFiles/test_rpn.dir/build
-.PHONY : test_rpn/fast
-
-# Convenience name for target.
-examples/CMakeFiles/demo_frcnn_api.dir/rule:
-	cd /home/saa4/Caffe_with_updated_functions/build && $(MAKE) -f CMakeFiles/Makefile2 examples/CMakeFiles/demo_frcnn_api.dir/rule
-.PHONY : examples/CMakeFiles/demo_frcnn_api.dir/rule
-
-# Convenience name for target.
-demo_frcnn_api: examples/CMakeFiles/demo_frcnn_api.dir/rule
-
-.PHONY : demo_frcnn_api
-
-# fast build rule for target.
-demo_frcnn_api/fast:
-	cd /home/saa4/Caffe_with_updated_functions/build && $(MAKE) -f examples/CMakeFiles/demo_frcnn_api.dir/build.make examples/CMakeFiles/demo_frcnn_api.dir/build
-.PHONY : demo_frcnn_api/fast
-
-# Convenience name for target.
-examples/CMakeFiles/truth_test_frcnn.dir/rule:
-	cd /home/saa4/Caffe_with_updated_functions/build && $(MAKE) -f CMakeFiles/Makefile2 examples/CMakeFiles/truth_test_frcnn.dir/rule
-.PHONY : examples/CMakeFiles/truth_test_frcnn.dir/rule
-
-# Convenience name for target.
-truth_test_frcnn: examples/CMakeFiles/truth_test_frcnn.dir/rule
-
-.PHONY : truth_test_frcnn
-
-# fast build rule for target.
-truth_test_frcnn/fast:
-	cd /home/saa4/Caffe_with_updated_functions/build && $(MAKE) -f examples/CMakeFiles/truth_test_frcnn.dir/build.make examples/CMakeFiles/truth_test_frcnn.dir/build
-.PHONY : truth_test_frcnn/fast
-
-# Convenience name for target.
-examples/CMakeFiles/classification.dir/rule:
-	cd /home/saa4/Caffe_with_updated_functions/build && $(MAKE) -f CMakeFiles/Makefile2 examples/CMakeFiles/classification.dir/rule
-.PHONY : examples/CMakeFiles/classification.dir/rule
-
-# Convenience name for target.
-classification: examples/CMakeFiles/classification.dir/rule
-
-.PHONY : classification
-
-# fast build rule for target.
-classification/fast:
-	cd /home/saa4/Caffe_with_updated_functions/build && $(MAKE) -f examples/CMakeFiles/classification.dir/build.make examples/CMakeFiles/classification.dir/build
-.PHONY : classification/fast
-
-# Convenience name for target.
-examples/CMakeFiles/convert_mnist_siamese_data.dir/rule:
-	cd /home/saa4/Caffe_with_updated_functions/build && $(MAKE) -f CMakeFiles/Makefile2 examples/CMakeFiles/convert_mnist_siamese_data.dir/rule
-.PHONY : examples/CMakeFiles/convert_mnist_siamese_data.dir/rule
-
-# Convenience name for target.
-convert_mnist_siamese_data: examples/CMakeFiles/convert_mnist_siamese_data.dir/rule
-
-.PHONY : convert_mnist_siamese_data
-
-# fast build rule for target.
-convert_mnist_siamese_data/fast:
-	cd /home/saa4/Caffe_with_updated_functions/build && $(MAKE) -f examples/CMakeFiles/convert_mnist_siamese_data.dir/build.make examples/CMakeFiles/convert_mnist_siamese_data.dir/build
-.PHONY : convert_mnist_siamese_data/fast
-
-# Convenience name for target.
 examples/CMakeFiles/test_frcnn.dir/rule:
-	cd /home/saa4/Caffe_with_updated_functions/build && $(MAKE) -f CMakeFiles/Makefile2 examples/CMakeFiles/test_frcnn.dir/rule
+	cd /home/kakadinh/caffe_variances/Caffe_with_updated_functions/build && $(MAKE) -f CMakeFiles/Makefile2 examples/CMakeFiles/test_frcnn.dir/rule
 .PHONY : examples/CMakeFiles/test_frcnn.dir/rule
 
 # Convenience name for target.
@@ -271,27 +166,57 @@ test_frcnn: examples/CMakeFiles/test_frcnn.dir/rule
 
 # fast build rule for target.
 test_frcnn/fast:
-	cd /home/saa4/Caffe_with_updated_functions/build && $(MAKE) -f examples/CMakeFiles/test_frcnn.dir/build.make examples/CMakeFiles/test_frcnn.dir/build
+	cd /home/kakadinh/caffe_variances/Caffe_with_updated_functions/build && $(MAKE) -f examples/CMakeFiles/test_frcnn.dir/build.make examples/CMakeFiles/test_frcnn.dir/build
 .PHONY : test_frcnn/fast
 
 # Convenience name for target.
-examples/CMakeFiles/convert_cifar_data.dir/rule:
-	cd /home/saa4/Caffe_with_updated_functions/build && $(MAKE) -f CMakeFiles/Makefile2 examples/CMakeFiles/convert_cifar_data.dir/rule
-.PHONY : examples/CMakeFiles/convert_cifar_data.dir/rule
+examples/CMakeFiles/convert_mnist_siamese_data.dir/rule:
+	cd /home/kakadinh/caffe_variances/Caffe_with_updated_functions/build && $(MAKE) -f CMakeFiles/Makefile2 examples/CMakeFiles/convert_mnist_siamese_data.dir/rule
+.PHONY : examples/CMakeFiles/convert_mnist_siamese_data.dir/rule
 
 # Convenience name for target.
-convert_cifar_data: examples/CMakeFiles/convert_cifar_data.dir/rule
+convert_mnist_siamese_data: examples/CMakeFiles/convert_mnist_siamese_data.dir/rule
 
-.PHONY : convert_cifar_data
+.PHONY : convert_mnist_siamese_data
 
 # fast build rule for target.
-convert_cifar_data/fast:
-	cd /home/saa4/Caffe_with_updated_functions/build && $(MAKE) -f examples/CMakeFiles/convert_cifar_data.dir/build.make examples/CMakeFiles/convert_cifar_data.dir/build
-.PHONY : convert_cifar_data/fast
+convert_mnist_siamese_data/fast:
+	cd /home/kakadinh/caffe_variances/Caffe_with_updated_functions/build && $(MAKE) -f examples/CMakeFiles/convert_mnist_siamese_data.dir/build.make examples/CMakeFiles/convert_mnist_siamese_data.dir/build
+.PHONY : convert_mnist_siamese_data/fast
+
+# Convenience name for target.
+examples/CMakeFiles/classification.dir/rule:
+	cd /home/kakadinh/caffe_variances/Caffe_with_updated_functions/build && $(MAKE) -f CMakeFiles/Makefile2 examples/CMakeFiles/classification.dir/rule
+.PHONY : examples/CMakeFiles/classification.dir/rule
+
+# Convenience name for target.
+classification: examples/CMakeFiles/classification.dir/rule
+
+.PHONY : classification
+
+# fast build rule for target.
+classification/fast:
+	cd /home/kakadinh/caffe_variances/Caffe_with_updated_functions/build && $(MAKE) -f examples/CMakeFiles/classification.dir/build.make examples/CMakeFiles/classification.dir/build
+.PHONY : classification/fast
+
+# Convenience name for target.
+examples/CMakeFiles/truth_test_frcnn.dir/rule:
+	cd /home/kakadinh/caffe_variances/Caffe_with_updated_functions/build && $(MAKE) -f CMakeFiles/Makefile2 examples/CMakeFiles/truth_test_frcnn.dir/rule
+.PHONY : examples/CMakeFiles/truth_test_frcnn.dir/rule
+
+# Convenience name for target.
+truth_test_frcnn: examples/CMakeFiles/truth_test_frcnn.dir/rule
+
+.PHONY : truth_test_frcnn
+
+# fast build rule for target.
+truth_test_frcnn/fast:
+	cd /home/kakadinh/caffe_variances/Caffe_with_updated_functions/build && $(MAKE) -f examples/CMakeFiles/truth_test_frcnn.dir/build.make examples/CMakeFiles/truth_test_frcnn.dir/build
+.PHONY : truth_test_frcnn/fast
 
 # Convenience name for target.
 examples/CMakeFiles/convert_mnist_data.dir/rule:
-	cd /home/saa4/Caffe_with_updated_functions/build && $(MAKE) -f CMakeFiles/Makefile2 examples/CMakeFiles/convert_mnist_data.dir/rule
+	cd /home/kakadinh/caffe_variances/Caffe_with_updated_functions/build && $(MAKE) -f CMakeFiles/Makefile2 examples/CMakeFiles/convert_mnist_data.dir/rule
 .PHONY : examples/CMakeFiles/convert_mnist_data.dir/rule
 
 # Convenience name for target.
@@ -301,8 +226,83 @@ convert_mnist_data: examples/CMakeFiles/convert_mnist_data.dir/rule
 
 # fast build rule for target.
 convert_mnist_data/fast:
-	cd /home/saa4/Caffe_with_updated_functions/build && $(MAKE) -f examples/CMakeFiles/convert_mnist_data.dir/build.make examples/CMakeFiles/convert_mnist_data.dir/build
+	cd /home/kakadinh/caffe_variances/Caffe_with_updated_functions/build && $(MAKE) -f examples/CMakeFiles/convert_mnist_data.dir/build.make examples/CMakeFiles/convert_mnist_data.dir/build
 .PHONY : convert_mnist_data/fast
+
+# Convenience name for target.
+examples/CMakeFiles/loc_merge_frcnn.dir/rule:
+	cd /home/kakadinh/caffe_variances/Caffe_with_updated_functions/build && $(MAKE) -f CMakeFiles/Makefile2 examples/CMakeFiles/loc_merge_frcnn.dir/rule
+.PHONY : examples/CMakeFiles/loc_merge_frcnn.dir/rule
+
+# Convenience name for target.
+loc_merge_frcnn: examples/CMakeFiles/loc_merge_frcnn.dir/rule
+
+.PHONY : loc_merge_frcnn
+
+# fast build rule for target.
+loc_merge_frcnn/fast:
+	cd /home/kakadinh/caffe_variances/Caffe_with_updated_functions/build && $(MAKE) -f examples/CMakeFiles/loc_merge_frcnn.dir/build.make examples/CMakeFiles/loc_merge_frcnn.dir/build
+.PHONY : loc_merge_frcnn/fast
+
+# Convenience name for target.
+examples/CMakeFiles/loc_test_frcnn.dir/rule:
+	cd /home/kakadinh/caffe_variances/Caffe_with_updated_functions/build && $(MAKE) -f CMakeFiles/Makefile2 examples/CMakeFiles/loc_test_frcnn.dir/rule
+.PHONY : examples/CMakeFiles/loc_test_frcnn.dir/rule
+
+# Convenience name for target.
+loc_test_frcnn: examples/CMakeFiles/loc_test_frcnn.dir/rule
+
+.PHONY : loc_test_frcnn
+
+# fast build rule for target.
+loc_test_frcnn/fast:
+	cd /home/kakadinh/caffe_variances/Caffe_with_updated_functions/build && $(MAKE) -f examples/CMakeFiles/loc_test_frcnn.dir/build.make examples/CMakeFiles/loc_test_frcnn.dir/build
+.PHONY : loc_test_frcnn/fast
+
+# Convenience name for target.
+examples/CMakeFiles/test_rpn.dir/rule:
+	cd /home/kakadinh/caffe_variances/Caffe_with_updated_functions/build && $(MAKE) -f CMakeFiles/Makefile2 examples/CMakeFiles/test_rpn.dir/rule
+.PHONY : examples/CMakeFiles/test_rpn.dir/rule
+
+# Convenience name for target.
+test_rpn: examples/CMakeFiles/test_rpn.dir/rule
+
+.PHONY : test_rpn
+
+# fast build rule for target.
+test_rpn/fast:
+	cd /home/kakadinh/caffe_variances/Caffe_with_updated_functions/build && $(MAKE) -f examples/CMakeFiles/test_rpn.dir/build.make examples/CMakeFiles/test_rpn.dir/build
+.PHONY : test_rpn/fast
+
+# Convenience name for target.
+examples/CMakeFiles/demo_frcnn_api.dir/rule:
+	cd /home/kakadinh/caffe_variances/Caffe_with_updated_functions/build && $(MAKE) -f CMakeFiles/Makefile2 examples/CMakeFiles/demo_frcnn_api.dir/rule
+.PHONY : examples/CMakeFiles/demo_frcnn_api.dir/rule
+
+# Convenience name for target.
+demo_frcnn_api: examples/CMakeFiles/demo_frcnn_api.dir/rule
+
+.PHONY : demo_frcnn_api
+
+# fast build rule for target.
+demo_frcnn_api/fast:
+	cd /home/kakadinh/caffe_variances/Caffe_with_updated_functions/build && $(MAKE) -f examples/CMakeFiles/demo_frcnn_api.dir/build.make examples/CMakeFiles/demo_frcnn_api.dir/build
+.PHONY : demo_frcnn_api/fast
+
+# Convenience name for target.
+examples/CMakeFiles/convert_cifar_data.dir/rule:
+	cd /home/kakadinh/caffe_variances/Caffe_with_updated_functions/build && $(MAKE) -f CMakeFiles/Makefile2 examples/CMakeFiles/convert_cifar_data.dir/rule
+.PHONY : examples/CMakeFiles/convert_cifar_data.dir/rule
+
+# Convenience name for target.
+convert_cifar_data: examples/CMakeFiles/convert_cifar_data.dir/rule
+
+.PHONY : convert_cifar_data
+
+# fast build rule for target.
+convert_cifar_data/fast:
+	cd /home/kakadinh/caffe_variances/Caffe_with_updated_functions/build && $(MAKE) -f examples/CMakeFiles/convert_cifar_data.dir/build.make examples/CMakeFiles/convert_cifar_data.dir/build
+.PHONY : convert_cifar_data/fast
 
 FRCNN/demo_frcnn_api.o: FRCNN/demo_frcnn_api.cpp.o
 
@@ -310,7 +310,7 @@ FRCNN/demo_frcnn_api.o: FRCNN/demo_frcnn_api.cpp.o
 
 # target to build an object file
 FRCNN/demo_frcnn_api.cpp.o:
-	cd /home/saa4/Caffe_with_updated_functions/build && $(MAKE) -f examples/CMakeFiles/demo_frcnn_api.dir/build.make examples/CMakeFiles/demo_frcnn_api.dir/FRCNN/demo_frcnn_api.cpp.o
+	cd /home/kakadinh/caffe_variances/Caffe_with_updated_functions/build && $(MAKE) -f examples/CMakeFiles/demo_frcnn_api.dir/build.make examples/CMakeFiles/demo_frcnn_api.dir/FRCNN/demo_frcnn_api.cpp.o
 .PHONY : FRCNN/demo_frcnn_api.cpp.o
 
 FRCNN/demo_frcnn_api.i: FRCNN/demo_frcnn_api.cpp.i
@@ -319,7 +319,7 @@ FRCNN/demo_frcnn_api.i: FRCNN/demo_frcnn_api.cpp.i
 
 # target to preprocess a source file
 FRCNN/demo_frcnn_api.cpp.i:
-	cd /home/saa4/Caffe_with_updated_functions/build && $(MAKE) -f examples/CMakeFiles/demo_frcnn_api.dir/build.make examples/CMakeFiles/demo_frcnn_api.dir/FRCNN/demo_frcnn_api.cpp.i
+	cd /home/kakadinh/caffe_variances/Caffe_with_updated_functions/build && $(MAKE) -f examples/CMakeFiles/demo_frcnn_api.dir/build.make examples/CMakeFiles/demo_frcnn_api.dir/FRCNN/demo_frcnn_api.cpp.i
 .PHONY : FRCNN/demo_frcnn_api.cpp.i
 
 FRCNN/demo_frcnn_api.s: FRCNN/demo_frcnn_api.cpp.s
@@ -328,7 +328,7 @@ FRCNN/demo_frcnn_api.s: FRCNN/demo_frcnn_api.cpp.s
 
 # target to generate assembly for a file
 FRCNN/demo_frcnn_api.cpp.s:
-	cd /home/saa4/Caffe_with_updated_functions/build && $(MAKE) -f examples/CMakeFiles/demo_frcnn_api.dir/build.make examples/CMakeFiles/demo_frcnn_api.dir/FRCNN/demo_frcnn_api.cpp.s
+	cd /home/kakadinh/caffe_variances/Caffe_with_updated_functions/build && $(MAKE) -f examples/CMakeFiles/demo_frcnn_api.dir/build.make examples/CMakeFiles/demo_frcnn_api.dir/FRCNN/demo_frcnn_api.cpp.s
 .PHONY : FRCNN/demo_frcnn_api.cpp.s
 
 FRCNN/loc_merge_frcnn.o: FRCNN/loc_merge_frcnn.cpp.o
@@ -337,7 +337,7 @@ FRCNN/loc_merge_frcnn.o: FRCNN/loc_merge_frcnn.cpp.o
 
 # target to build an object file
 FRCNN/loc_merge_frcnn.cpp.o:
-	cd /home/saa4/Caffe_with_updated_functions/build && $(MAKE) -f examples/CMakeFiles/loc_merge_frcnn.dir/build.make examples/CMakeFiles/loc_merge_frcnn.dir/FRCNN/loc_merge_frcnn.cpp.o
+	cd /home/kakadinh/caffe_variances/Caffe_with_updated_functions/build && $(MAKE) -f examples/CMakeFiles/loc_merge_frcnn.dir/build.make examples/CMakeFiles/loc_merge_frcnn.dir/FRCNN/loc_merge_frcnn.cpp.o
 .PHONY : FRCNN/loc_merge_frcnn.cpp.o
 
 FRCNN/loc_merge_frcnn.i: FRCNN/loc_merge_frcnn.cpp.i
@@ -346,7 +346,7 @@ FRCNN/loc_merge_frcnn.i: FRCNN/loc_merge_frcnn.cpp.i
 
 # target to preprocess a source file
 FRCNN/loc_merge_frcnn.cpp.i:
-	cd /home/saa4/Caffe_with_updated_functions/build && $(MAKE) -f examples/CMakeFiles/loc_merge_frcnn.dir/build.make examples/CMakeFiles/loc_merge_frcnn.dir/FRCNN/loc_merge_frcnn.cpp.i
+	cd /home/kakadinh/caffe_variances/Caffe_with_updated_functions/build && $(MAKE) -f examples/CMakeFiles/loc_merge_frcnn.dir/build.make examples/CMakeFiles/loc_merge_frcnn.dir/FRCNN/loc_merge_frcnn.cpp.i
 .PHONY : FRCNN/loc_merge_frcnn.cpp.i
 
 FRCNN/loc_merge_frcnn.s: FRCNN/loc_merge_frcnn.cpp.s
@@ -355,7 +355,7 @@ FRCNN/loc_merge_frcnn.s: FRCNN/loc_merge_frcnn.cpp.s
 
 # target to generate assembly for a file
 FRCNN/loc_merge_frcnn.cpp.s:
-	cd /home/saa4/Caffe_with_updated_functions/build && $(MAKE) -f examples/CMakeFiles/loc_merge_frcnn.dir/build.make examples/CMakeFiles/loc_merge_frcnn.dir/FRCNN/loc_merge_frcnn.cpp.s
+	cd /home/kakadinh/caffe_variances/Caffe_with_updated_functions/build && $(MAKE) -f examples/CMakeFiles/loc_merge_frcnn.dir/build.make examples/CMakeFiles/loc_merge_frcnn.dir/FRCNN/loc_merge_frcnn.cpp.s
 .PHONY : FRCNN/loc_merge_frcnn.cpp.s
 
 FRCNN/loc_test_frcnn.o: FRCNN/loc_test_frcnn.cpp.o
@@ -364,7 +364,7 @@ FRCNN/loc_test_frcnn.o: FRCNN/loc_test_frcnn.cpp.o
 
 # target to build an object file
 FRCNN/loc_test_frcnn.cpp.o:
-	cd /home/saa4/Caffe_with_updated_functions/build && $(MAKE) -f examples/CMakeFiles/loc_test_frcnn.dir/build.make examples/CMakeFiles/loc_test_frcnn.dir/FRCNN/loc_test_frcnn.cpp.o
+	cd /home/kakadinh/caffe_variances/Caffe_with_updated_functions/build && $(MAKE) -f examples/CMakeFiles/loc_test_frcnn.dir/build.make examples/CMakeFiles/loc_test_frcnn.dir/FRCNN/loc_test_frcnn.cpp.o
 .PHONY : FRCNN/loc_test_frcnn.cpp.o
 
 FRCNN/loc_test_frcnn.i: FRCNN/loc_test_frcnn.cpp.i
@@ -373,7 +373,7 @@ FRCNN/loc_test_frcnn.i: FRCNN/loc_test_frcnn.cpp.i
 
 # target to preprocess a source file
 FRCNN/loc_test_frcnn.cpp.i:
-	cd /home/saa4/Caffe_with_updated_functions/build && $(MAKE) -f examples/CMakeFiles/loc_test_frcnn.dir/build.make examples/CMakeFiles/loc_test_frcnn.dir/FRCNN/loc_test_frcnn.cpp.i
+	cd /home/kakadinh/caffe_variances/Caffe_with_updated_functions/build && $(MAKE) -f examples/CMakeFiles/loc_test_frcnn.dir/build.make examples/CMakeFiles/loc_test_frcnn.dir/FRCNN/loc_test_frcnn.cpp.i
 .PHONY : FRCNN/loc_test_frcnn.cpp.i
 
 FRCNN/loc_test_frcnn.s: FRCNN/loc_test_frcnn.cpp.s
@@ -382,7 +382,7 @@ FRCNN/loc_test_frcnn.s: FRCNN/loc_test_frcnn.cpp.s
 
 # target to generate assembly for a file
 FRCNN/loc_test_frcnn.cpp.s:
-	cd /home/saa4/Caffe_with_updated_functions/build && $(MAKE) -f examples/CMakeFiles/loc_test_frcnn.dir/build.make examples/CMakeFiles/loc_test_frcnn.dir/FRCNN/loc_test_frcnn.cpp.s
+	cd /home/kakadinh/caffe_variances/Caffe_with_updated_functions/build && $(MAKE) -f examples/CMakeFiles/loc_test_frcnn.dir/build.make examples/CMakeFiles/loc_test_frcnn.dir/FRCNN/loc_test_frcnn.cpp.s
 .PHONY : FRCNN/loc_test_frcnn.cpp.s
 
 FRCNN/test_frcnn.o: FRCNN/test_frcnn.cpp.o
@@ -391,7 +391,7 @@ FRCNN/test_frcnn.o: FRCNN/test_frcnn.cpp.o
 
 # target to build an object file
 FRCNN/test_frcnn.cpp.o:
-	cd /home/saa4/Caffe_with_updated_functions/build && $(MAKE) -f examples/CMakeFiles/test_frcnn.dir/build.make examples/CMakeFiles/test_frcnn.dir/FRCNN/test_frcnn.cpp.o
+	cd /home/kakadinh/caffe_variances/Caffe_with_updated_functions/build && $(MAKE) -f examples/CMakeFiles/test_frcnn.dir/build.make examples/CMakeFiles/test_frcnn.dir/FRCNN/test_frcnn.cpp.o
 .PHONY : FRCNN/test_frcnn.cpp.o
 
 FRCNN/test_frcnn.i: FRCNN/test_frcnn.cpp.i
@@ -400,7 +400,7 @@ FRCNN/test_frcnn.i: FRCNN/test_frcnn.cpp.i
 
 # target to preprocess a source file
 FRCNN/test_frcnn.cpp.i:
-	cd /home/saa4/Caffe_with_updated_functions/build && $(MAKE) -f examples/CMakeFiles/test_frcnn.dir/build.make examples/CMakeFiles/test_frcnn.dir/FRCNN/test_frcnn.cpp.i
+	cd /home/kakadinh/caffe_variances/Caffe_with_updated_functions/build && $(MAKE) -f examples/CMakeFiles/test_frcnn.dir/build.make examples/CMakeFiles/test_frcnn.dir/FRCNN/test_frcnn.cpp.i
 .PHONY : FRCNN/test_frcnn.cpp.i
 
 FRCNN/test_frcnn.s: FRCNN/test_frcnn.cpp.s
@@ -409,7 +409,7 @@ FRCNN/test_frcnn.s: FRCNN/test_frcnn.cpp.s
 
 # target to generate assembly for a file
 FRCNN/test_frcnn.cpp.s:
-	cd /home/saa4/Caffe_with_updated_functions/build && $(MAKE) -f examples/CMakeFiles/test_frcnn.dir/build.make examples/CMakeFiles/test_frcnn.dir/FRCNN/test_frcnn.cpp.s
+	cd /home/kakadinh/caffe_variances/Caffe_with_updated_functions/build && $(MAKE) -f examples/CMakeFiles/test_frcnn.dir/build.make examples/CMakeFiles/test_frcnn.dir/FRCNN/test_frcnn.cpp.s
 .PHONY : FRCNN/test_frcnn.cpp.s
 
 FRCNN/test_rpn.o: FRCNN/test_rpn.cpp.o
@@ -418,7 +418,7 @@ FRCNN/test_rpn.o: FRCNN/test_rpn.cpp.o
 
 # target to build an object file
 FRCNN/test_rpn.cpp.o:
-	cd /home/saa4/Caffe_with_updated_functions/build && $(MAKE) -f examples/CMakeFiles/test_rpn.dir/build.make examples/CMakeFiles/test_rpn.dir/FRCNN/test_rpn.cpp.o
+	cd /home/kakadinh/caffe_variances/Caffe_with_updated_functions/build && $(MAKE) -f examples/CMakeFiles/test_rpn.dir/build.make examples/CMakeFiles/test_rpn.dir/FRCNN/test_rpn.cpp.o
 .PHONY : FRCNN/test_rpn.cpp.o
 
 FRCNN/test_rpn.i: FRCNN/test_rpn.cpp.i
@@ -427,7 +427,7 @@ FRCNN/test_rpn.i: FRCNN/test_rpn.cpp.i
 
 # target to preprocess a source file
 FRCNN/test_rpn.cpp.i:
-	cd /home/saa4/Caffe_with_updated_functions/build && $(MAKE) -f examples/CMakeFiles/test_rpn.dir/build.make examples/CMakeFiles/test_rpn.dir/FRCNN/test_rpn.cpp.i
+	cd /home/kakadinh/caffe_variances/Caffe_with_updated_functions/build && $(MAKE) -f examples/CMakeFiles/test_rpn.dir/build.make examples/CMakeFiles/test_rpn.dir/FRCNN/test_rpn.cpp.i
 .PHONY : FRCNN/test_rpn.cpp.i
 
 FRCNN/test_rpn.s: FRCNN/test_rpn.cpp.s
@@ -436,7 +436,7 @@ FRCNN/test_rpn.s: FRCNN/test_rpn.cpp.s
 
 # target to generate assembly for a file
 FRCNN/test_rpn.cpp.s:
-	cd /home/saa4/Caffe_with_updated_functions/build && $(MAKE) -f examples/CMakeFiles/test_rpn.dir/build.make examples/CMakeFiles/test_rpn.dir/FRCNN/test_rpn.cpp.s
+	cd /home/kakadinh/caffe_variances/Caffe_with_updated_functions/build && $(MAKE) -f examples/CMakeFiles/test_rpn.dir/build.make examples/CMakeFiles/test_rpn.dir/FRCNN/test_rpn.cpp.s
 .PHONY : FRCNN/test_rpn.cpp.s
 
 FRCNN/truth_test_frcnn.o: FRCNN/truth_test_frcnn.cpp.o
@@ -445,7 +445,7 @@ FRCNN/truth_test_frcnn.o: FRCNN/truth_test_frcnn.cpp.o
 
 # target to build an object file
 FRCNN/truth_test_frcnn.cpp.o:
-	cd /home/saa4/Caffe_with_updated_functions/build && $(MAKE) -f examples/CMakeFiles/truth_test_frcnn.dir/build.make examples/CMakeFiles/truth_test_frcnn.dir/FRCNN/truth_test_frcnn.cpp.o
+	cd /home/kakadinh/caffe_variances/Caffe_with_updated_functions/build && $(MAKE) -f examples/CMakeFiles/truth_test_frcnn.dir/build.make examples/CMakeFiles/truth_test_frcnn.dir/FRCNN/truth_test_frcnn.cpp.o
 .PHONY : FRCNN/truth_test_frcnn.cpp.o
 
 FRCNN/truth_test_frcnn.i: FRCNN/truth_test_frcnn.cpp.i
@@ -454,7 +454,7 @@ FRCNN/truth_test_frcnn.i: FRCNN/truth_test_frcnn.cpp.i
 
 # target to preprocess a source file
 FRCNN/truth_test_frcnn.cpp.i:
-	cd /home/saa4/Caffe_with_updated_functions/build && $(MAKE) -f examples/CMakeFiles/truth_test_frcnn.dir/build.make examples/CMakeFiles/truth_test_frcnn.dir/FRCNN/truth_test_frcnn.cpp.i
+	cd /home/kakadinh/caffe_variances/Caffe_with_updated_functions/build && $(MAKE) -f examples/CMakeFiles/truth_test_frcnn.dir/build.make examples/CMakeFiles/truth_test_frcnn.dir/FRCNN/truth_test_frcnn.cpp.i
 .PHONY : FRCNN/truth_test_frcnn.cpp.i
 
 FRCNN/truth_test_frcnn.s: FRCNN/truth_test_frcnn.cpp.s
@@ -463,7 +463,7 @@ FRCNN/truth_test_frcnn.s: FRCNN/truth_test_frcnn.cpp.s
 
 # target to generate assembly for a file
 FRCNN/truth_test_frcnn.cpp.s:
-	cd /home/saa4/Caffe_with_updated_functions/build && $(MAKE) -f examples/CMakeFiles/truth_test_frcnn.dir/build.make examples/CMakeFiles/truth_test_frcnn.dir/FRCNN/truth_test_frcnn.cpp.s
+	cd /home/kakadinh/caffe_variances/Caffe_with_updated_functions/build && $(MAKE) -f examples/CMakeFiles/truth_test_frcnn.dir/build.make examples/CMakeFiles/truth_test_frcnn.dir/FRCNN/truth_test_frcnn.cpp.s
 .PHONY : FRCNN/truth_test_frcnn.cpp.s
 
 cifar10/convert_cifar_data.o: cifar10/convert_cifar_data.cpp.o
@@ -472,7 +472,7 @@ cifar10/convert_cifar_data.o: cifar10/convert_cifar_data.cpp.o
 
 # target to build an object file
 cifar10/convert_cifar_data.cpp.o:
-	cd /home/saa4/Caffe_with_updated_functions/build && $(MAKE) -f examples/CMakeFiles/convert_cifar_data.dir/build.make examples/CMakeFiles/convert_cifar_data.dir/cifar10/convert_cifar_data.cpp.o
+	cd /home/kakadinh/caffe_variances/Caffe_with_updated_functions/build && $(MAKE) -f examples/CMakeFiles/convert_cifar_data.dir/build.make examples/CMakeFiles/convert_cifar_data.dir/cifar10/convert_cifar_data.cpp.o
 .PHONY : cifar10/convert_cifar_data.cpp.o
 
 cifar10/convert_cifar_data.i: cifar10/convert_cifar_data.cpp.i
@@ -481,7 +481,7 @@ cifar10/convert_cifar_data.i: cifar10/convert_cifar_data.cpp.i
 
 # target to preprocess a source file
 cifar10/convert_cifar_data.cpp.i:
-	cd /home/saa4/Caffe_with_updated_functions/build && $(MAKE) -f examples/CMakeFiles/convert_cifar_data.dir/build.make examples/CMakeFiles/convert_cifar_data.dir/cifar10/convert_cifar_data.cpp.i
+	cd /home/kakadinh/caffe_variances/Caffe_with_updated_functions/build && $(MAKE) -f examples/CMakeFiles/convert_cifar_data.dir/build.make examples/CMakeFiles/convert_cifar_data.dir/cifar10/convert_cifar_data.cpp.i
 .PHONY : cifar10/convert_cifar_data.cpp.i
 
 cifar10/convert_cifar_data.s: cifar10/convert_cifar_data.cpp.s
@@ -490,7 +490,7 @@ cifar10/convert_cifar_data.s: cifar10/convert_cifar_data.cpp.s
 
 # target to generate assembly for a file
 cifar10/convert_cifar_data.cpp.s:
-	cd /home/saa4/Caffe_with_updated_functions/build && $(MAKE) -f examples/CMakeFiles/convert_cifar_data.dir/build.make examples/CMakeFiles/convert_cifar_data.dir/cifar10/convert_cifar_data.cpp.s
+	cd /home/kakadinh/caffe_variances/Caffe_with_updated_functions/build && $(MAKE) -f examples/CMakeFiles/convert_cifar_data.dir/build.make examples/CMakeFiles/convert_cifar_data.dir/cifar10/convert_cifar_data.cpp.s
 .PHONY : cifar10/convert_cifar_data.cpp.s
 
 cpp_classification/classification.o: cpp_classification/classification.cpp.o
@@ -499,7 +499,7 @@ cpp_classification/classification.o: cpp_classification/classification.cpp.o
 
 # target to build an object file
 cpp_classification/classification.cpp.o:
-	cd /home/saa4/Caffe_with_updated_functions/build && $(MAKE) -f examples/CMakeFiles/classification.dir/build.make examples/CMakeFiles/classification.dir/cpp_classification/classification.cpp.o
+	cd /home/kakadinh/caffe_variances/Caffe_with_updated_functions/build && $(MAKE) -f examples/CMakeFiles/classification.dir/build.make examples/CMakeFiles/classification.dir/cpp_classification/classification.cpp.o
 .PHONY : cpp_classification/classification.cpp.o
 
 cpp_classification/classification.i: cpp_classification/classification.cpp.i
@@ -508,7 +508,7 @@ cpp_classification/classification.i: cpp_classification/classification.cpp.i
 
 # target to preprocess a source file
 cpp_classification/classification.cpp.i:
-	cd /home/saa4/Caffe_with_updated_functions/build && $(MAKE) -f examples/CMakeFiles/classification.dir/build.make examples/CMakeFiles/classification.dir/cpp_classification/classification.cpp.i
+	cd /home/kakadinh/caffe_variances/Caffe_with_updated_functions/build && $(MAKE) -f examples/CMakeFiles/classification.dir/build.make examples/CMakeFiles/classification.dir/cpp_classification/classification.cpp.i
 .PHONY : cpp_classification/classification.cpp.i
 
 cpp_classification/classification.s: cpp_classification/classification.cpp.s
@@ -517,7 +517,7 @@ cpp_classification/classification.s: cpp_classification/classification.cpp.s
 
 # target to generate assembly for a file
 cpp_classification/classification.cpp.s:
-	cd /home/saa4/Caffe_with_updated_functions/build && $(MAKE) -f examples/CMakeFiles/classification.dir/build.make examples/CMakeFiles/classification.dir/cpp_classification/classification.cpp.s
+	cd /home/kakadinh/caffe_variances/Caffe_with_updated_functions/build && $(MAKE) -f examples/CMakeFiles/classification.dir/build.make examples/CMakeFiles/classification.dir/cpp_classification/classification.cpp.s
 .PHONY : cpp_classification/classification.cpp.s
 
 mnist/convert_mnist_data.o: mnist/convert_mnist_data.cpp.o
@@ -526,7 +526,7 @@ mnist/convert_mnist_data.o: mnist/convert_mnist_data.cpp.o
 
 # target to build an object file
 mnist/convert_mnist_data.cpp.o:
-	cd /home/saa4/Caffe_with_updated_functions/build && $(MAKE) -f examples/CMakeFiles/convert_mnist_data.dir/build.make examples/CMakeFiles/convert_mnist_data.dir/mnist/convert_mnist_data.cpp.o
+	cd /home/kakadinh/caffe_variances/Caffe_with_updated_functions/build && $(MAKE) -f examples/CMakeFiles/convert_mnist_data.dir/build.make examples/CMakeFiles/convert_mnist_data.dir/mnist/convert_mnist_data.cpp.o
 .PHONY : mnist/convert_mnist_data.cpp.o
 
 mnist/convert_mnist_data.i: mnist/convert_mnist_data.cpp.i
@@ -535,7 +535,7 @@ mnist/convert_mnist_data.i: mnist/convert_mnist_data.cpp.i
 
 # target to preprocess a source file
 mnist/convert_mnist_data.cpp.i:
-	cd /home/saa4/Caffe_with_updated_functions/build && $(MAKE) -f examples/CMakeFiles/convert_mnist_data.dir/build.make examples/CMakeFiles/convert_mnist_data.dir/mnist/convert_mnist_data.cpp.i
+	cd /home/kakadinh/caffe_variances/Caffe_with_updated_functions/build && $(MAKE) -f examples/CMakeFiles/convert_mnist_data.dir/build.make examples/CMakeFiles/convert_mnist_data.dir/mnist/convert_mnist_data.cpp.i
 .PHONY : mnist/convert_mnist_data.cpp.i
 
 mnist/convert_mnist_data.s: mnist/convert_mnist_data.cpp.s
@@ -544,7 +544,7 @@ mnist/convert_mnist_data.s: mnist/convert_mnist_data.cpp.s
 
 # target to generate assembly for a file
 mnist/convert_mnist_data.cpp.s:
-	cd /home/saa4/Caffe_with_updated_functions/build && $(MAKE) -f examples/CMakeFiles/convert_mnist_data.dir/build.make examples/CMakeFiles/convert_mnist_data.dir/mnist/convert_mnist_data.cpp.s
+	cd /home/kakadinh/caffe_variances/Caffe_with_updated_functions/build && $(MAKE) -f examples/CMakeFiles/convert_mnist_data.dir/build.make examples/CMakeFiles/convert_mnist_data.dir/mnist/convert_mnist_data.cpp.s
 .PHONY : mnist/convert_mnist_data.cpp.s
 
 siamese/convert_mnist_siamese_data.o: siamese/convert_mnist_siamese_data.cpp.o
@@ -553,7 +553,7 @@ siamese/convert_mnist_siamese_data.o: siamese/convert_mnist_siamese_data.cpp.o
 
 # target to build an object file
 siamese/convert_mnist_siamese_data.cpp.o:
-	cd /home/saa4/Caffe_with_updated_functions/build && $(MAKE) -f examples/CMakeFiles/convert_mnist_siamese_data.dir/build.make examples/CMakeFiles/convert_mnist_siamese_data.dir/siamese/convert_mnist_siamese_data.cpp.o
+	cd /home/kakadinh/caffe_variances/Caffe_with_updated_functions/build && $(MAKE) -f examples/CMakeFiles/convert_mnist_siamese_data.dir/build.make examples/CMakeFiles/convert_mnist_siamese_data.dir/siamese/convert_mnist_siamese_data.cpp.o
 .PHONY : siamese/convert_mnist_siamese_data.cpp.o
 
 siamese/convert_mnist_siamese_data.i: siamese/convert_mnist_siamese_data.cpp.i
@@ -562,7 +562,7 @@ siamese/convert_mnist_siamese_data.i: siamese/convert_mnist_siamese_data.cpp.i
 
 # target to preprocess a source file
 siamese/convert_mnist_siamese_data.cpp.i:
-	cd /home/saa4/Caffe_with_updated_functions/build && $(MAKE) -f examples/CMakeFiles/convert_mnist_siamese_data.dir/build.make examples/CMakeFiles/convert_mnist_siamese_data.dir/siamese/convert_mnist_siamese_data.cpp.i
+	cd /home/kakadinh/caffe_variances/Caffe_with_updated_functions/build && $(MAKE) -f examples/CMakeFiles/convert_mnist_siamese_data.dir/build.make examples/CMakeFiles/convert_mnist_siamese_data.dir/siamese/convert_mnist_siamese_data.cpp.i
 .PHONY : siamese/convert_mnist_siamese_data.cpp.i
 
 siamese/convert_mnist_siamese_data.s: siamese/convert_mnist_siamese_data.cpp.s
@@ -571,7 +571,7 @@ siamese/convert_mnist_siamese_data.s: siamese/convert_mnist_siamese_data.cpp.s
 
 # target to generate assembly for a file
 siamese/convert_mnist_siamese_data.cpp.s:
-	cd /home/saa4/Caffe_with_updated_functions/build && $(MAKE) -f examples/CMakeFiles/convert_mnist_siamese_data.dir/build.make examples/CMakeFiles/convert_mnist_siamese_data.dir/siamese/convert_mnist_siamese_data.cpp.s
+	cd /home/kakadinh/caffe_variances/Caffe_with_updated_functions/build && $(MAKE) -f examples/CMakeFiles/convert_mnist_siamese_data.dir/build.make examples/CMakeFiles/convert_mnist_siamese_data.dir/siamese/convert_mnist_siamese_data.cpp.s
 .PHONY : siamese/convert_mnist_siamese_data.cpp.s
 
 # Help Target
@@ -581,21 +581,21 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... install"
+	@echo "... test_frcnn"
+	@echo "... convert_mnist_siamese_data"
+	@echo "... rebuild_cache"
+	@echo "... classification"
+	@echo "... truth_test_frcnn"
+	@echo "... edit_cache"
+	@echo "... convert_mnist_data"
+	@echo "... loc_merge_frcnn"
 	@echo "... install/local"
 	@echo "... loc_test_frcnn"
-	@echo "... loc_merge_frcnn"
 	@echo "... list_install_components"
 	@echo "... install/strip"
 	@echo "... test_rpn"
 	@echo "... demo_frcnn_api"
-	@echo "... truth_test_frcnn"
-	@echo "... rebuild_cache"
-	@echo "... classification"
-	@echo "... convert_mnist_siamese_data"
-	@echo "... test_frcnn"
 	@echo "... convert_cifar_data"
-	@echo "... edit_cache"
-	@echo "... convert_mnist_data"
 	@echo "... FRCNN/demo_frcnn_api.o"
 	@echo "... FRCNN/demo_frcnn_api.i"
 	@echo "... FRCNN/demo_frcnn_api.s"
@@ -637,6 +637,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/saa4/Caffe_with_updated_functions/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/kakadinh/caffe_variances/Caffe_with_updated_functions/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

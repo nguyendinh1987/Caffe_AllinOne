@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/saa4/Caffe_with_updated_functions
+CMAKE_SOURCE_DIR = /home/kakadinh/caffe_variances/Caffe_with_updated_functions
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/saa4/Caffe_with_updated_functions/build
+CMAKE_BINARY_DIR = /home/kakadinh/caffe_variances/Caffe_with_updated_functions/build
 
 # Include any dependencies generated for this target.
 include examples/CMakeFiles/test_rpn.dir/depend.make
@@ -59,16 +59,16 @@ include examples/CMakeFiles/test_rpn.dir/flags.make
 
 examples/CMakeFiles/test_rpn.dir/FRCNN/test_rpn.cpp.o: examples/CMakeFiles/test_rpn.dir/flags.make
 examples/CMakeFiles/test_rpn.dir/FRCNN/test_rpn.cpp.o: ../examples/FRCNN/test_rpn.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/saa4/Caffe_with_updated_functions/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object examples/CMakeFiles/test_rpn.dir/FRCNN/test_rpn.cpp.o"
-	cd /home/saa4/Caffe_with_updated_functions/build/examples && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/test_rpn.dir/FRCNN/test_rpn.cpp.o -c /home/saa4/Caffe_with_updated_functions/examples/FRCNN/test_rpn.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kakadinh/caffe_variances/Caffe_with_updated_functions/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object examples/CMakeFiles/test_rpn.dir/FRCNN/test_rpn.cpp.o"
+	cd /home/kakadinh/caffe_variances/Caffe_with_updated_functions/build/examples && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/test_rpn.dir/FRCNN/test_rpn.cpp.o -c /home/kakadinh/caffe_variances/Caffe_with_updated_functions/examples/FRCNN/test_rpn.cpp
 
 examples/CMakeFiles/test_rpn.dir/FRCNN/test_rpn.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/test_rpn.dir/FRCNN/test_rpn.cpp.i"
-	cd /home/saa4/Caffe_with_updated_functions/build/examples && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/saa4/Caffe_with_updated_functions/examples/FRCNN/test_rpn.cpp > CMakeFiles/test_rpn.dir/FRCNN/test_rpn.cpp.i
+	cd /home/kakadinh/caffe_variances/Caffe_with_updated_functions/build/examples && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kakadinh/caffe_variances/Caffe_with_updated_functions/examples/FRCNN/test_rpn.cpp > CMakeFiles/test_rpn.dir/FRCNN/test_rpn.cpp.i
 
 examples/CMakeFiles/test_rpn.dir/FRCNN/test_rpn.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/test_rpn.dir/FRCNN/test_rpn.cpp.s"
-	cd /home/saa4/Caffe_with_updated_functions/build/examples && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/saa4/Caffe_with_updated_functions/examples/FRCNN/test_rpn.cpp -o CMakeFiles/test_rpn.dir/FRCNN/test_rpn.cpp.s
+	cd /home/kakadinh/caffe_variances/Caffe_with_updated_functions/build/examples && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kakadinh/caffe_variances/Caffe_with_updated_functions/examples/FRCNN/test_rpn.cpp -o CMakeFiles/test_rpn.dir/FRCNN/test_rpn.cpp.s
 
 examples/CMakeFiles/test_rpn.dir/FRCNN/test_rpn.cpp.o.requires:
 
@@ -123,7 +123,7 @@ examples/FRCNN/test_rpn: /usr/lib/x86_64-linux-gnu/libleveldb.so
 examples/FRCNN/test_rpn: /usr/local/cuda/lib64/libcudart.so
 examples/FRCNN/test_rpn: /usr/local/cuda/lib64/libcurand.so
 examples/FRCNN/test_rpn: /usr/local/cuda/lib64/libcublas.so
-examples/FRCNN/test_rpn: /usr/lib/x86_64-linux-gnu/libcudnn.so
+examples/FRCNN/test_rpn: /usr/local/cuda/lib64/libcudnn.so
 examples/FRCNN/test_rpn: /usr/local/lib/libopencv_highgui.so.2.4.13
 examples/FRCNN/test_rpn: /usr/local/lib/libopencv_imgproc.so.2.4.13
 examples/FRCNN/test_rpn: /usr/local/lib/libopencv_core.so.2.4.13
@@ -136,9 +136,9 @@ examples/FRCNN/test_rpn: /usr/lib/libcblas.so
 examples/FRCNN/test_rpn: /usr/lib/libatlas.so
 examples/FRCNN/test_rpn: /usr/lib/x86_64-linux-gnu/libboost_python.so
 examples/FRCNN/test_rpn: examples/CMakeFiles/test_rpn.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/saa4/Caffe_with_updated_functions/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable FRCNN/test_rpn"
-	cd /home/saa4/Caffe_with_updated_functions/build/examples && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/test_rpn.dir/link.txt --verbose=$(VERBOSE)
-	cd /home/saa4/Caffe_with_updated_functions/build/examples && ln -sf /home/saa4/Caffe_with_updated_functions/build/examples/FRCNN/test_rpn /home/saa4/Caffe_with_updated_functions/build/examples/FRCNN/test_rpn.bin
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/kakadinh/caffe_variances/Caffe_with_updated_functions/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable FRCNN/test_rpn"
+	cd /home/kakadinh/caffe_variances/Caffe_with_updated_functions/build/examples && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/test_rpn.dir/link.txt --verbose=$(VERBOSE)
+	cd /home/kakadinh/caffe_variances/Caffe_with_updated_functions/build/examples && ln -sf /home/kakadinh/caffe_variances/Caffe_with_updated_functions/build/examples/FRCNN/test_rpn /home/kakadinh/caffe_variances/Caffe_with_updated_functions/build/examples/FRCNN/test_rpn.bin
 
 # Rule to build all files generated by this target.
 examples/CMakeFiles/test_rpn.dir/build: examples/FRCNN/test_rpn
@@ -150,10 +150,10 @@ examples/CMakeFiles/test_rpn.dir/requires: examples/CMakeFiles/test_rpn.dir/FRCN
 .PHONY : examples/CMakeFiles/test_rpn.dir/requires
 
 examples/CMakeFiles/test_rpn.dir/clean:
-	cd /home/saa4/Caffe_with_updated_functions/build/examples && $(CMAKE_COMMAND) -P CMakeFiles/test_rpn.dir/cmake_clean.cmake
+	cd /home/kakadinh/caffe_variances/Caffe_with_updated_functions/build/examples && $(CMAKE_COMMAND) -P CMakeFiles/test_rpn.dir/cmake_clean.cmake
 .PHONY : examples/CMakeFiles/test_rpn.dir/clean
 
 examples/CMakeFiles/test_rpn.dir/depend:
-	cd /home/saa4/Caffe_with_updated_functions/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/saa4/Caffe_with_updated_functions /home/saa4/Caffe_with_updated_functions/examples /home/saa4/Caffe_with_updated_functions/build /home/saa4/Caffe_with_updated_functions/build/examples /home/saa4/Caffe_with_updated_functions/build/examples/CMakeFiles/test_rpn.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/kakadinh/caffe_variances/Caffe_with_updated_functions/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/kakadinh/caffe_variances/Caffe_with_updated_functions /home/kakadinh/caffe_variances/Caffe_with_updated_functions/examples /home/kakadinh/caffe_variances/Caffe_with_updated_functions/build /home/kakadinh/caffe_variances/Caffe_with_updated_functions/build/examples /home/kakadinh/caffe_variances/Caffe_with_updated_functions/build/examples/CMakeFiles/test_rpn.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : examples/CMakeFiles/test_rpn.dir/depend
 

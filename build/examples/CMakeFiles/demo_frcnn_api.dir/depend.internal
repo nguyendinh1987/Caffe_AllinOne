@@ -9,7 +9,22 @@ examples/CMakeFiles/demo_frcnn_api.dir/FRCNN/demo_frcnn_api.cpp.o
  ../include/caffe/FRCNN/util/frcnn_param.hpp
  ../include/caffe/FRCNN/util/frcnn_utils.hpp
  ../include/caffe/FRCNN/util/frcnn_vis.hpp
- /home/saa4/Caffe_with_updated_functions/examples/FRCNN/demo_frcnn_api.cpp
+ ../include/caffe/blob.hpp
+ ../include/caffe/common.hpp
+ ../include/caffe/layer.hpp
+ ../include/caffe/layer_factory.hpp
+ ../include/caffe/net.hpp
+ ../include/caffe/solver.hpp
+ ../include/caffe/solver_factory.hpp
+ ../include/caffe/syncedmem.hpp
+ ../include/caffe/util/benchmark.hpp
+ ../include/caffe/util/cudnn.hpp
+ ../include/caffe/util/device_alternate.hpp
+ ../include/caffe/util/math_functions.hpp
+ ../include/caffe/util/mkl_alternate.hpp
+ ../include/caffe/util/rng.hpp
+ ../include/caffe/util/signal_handler.h
+ /home/kakadinh/caffe_variances/Caffe_with_updated_functions/examples/FRCNN/demo_frcnn_api.cpp
  /usr/include/atlas/cblas.h
  /usr/local/cuda/include/builtin_types.h
  /usr/local/cuda/include/channel_descriptor.h
@@ -25,6 +40,7 @@ examples/CMakeFiles/demo_frcnn_api.dir/FRCNN/demo_frcnn_api.cpp.o
  /usr/local/cuda/include/cuda_runtime_api.h
  /usr/local/cuda/include/cuda_surface_types.h
  /usr/local/cuda/include/cuda_texture_types.h
+ /usr/local/cuda/include/cudnn.h
  /usr/local/cuda/include/curand.h
  /usr/local/cuda/include/device_atomic_functions.h
  /usr/local/cuda/include/device_atomic_functions.hpp
@@ -70,21 +86,6 @@ examples/CMakeFiles/demo_frcnn_api.dir/FRCNN/demo_frcnn_api.cpp.o
  /usr/local/cuda/include/vector_functions.h
  /usr/local/cuda/include/vector_functions.hpp
  /usr/local/cuda/include/vector_types.h
- /usr/local/include/caffe/blob.hpp
- /usr/local/include/caffe/common.hpp
- /usr/local/include/caffe/layer.hpp
- /usr/local/include/caffe/layer_factory.hpp
- /usr/local/include/caffe/net.hpp
- /usr/local/include/caffe/solver.hpp
- /usr/local/include/caffe/solver_factory.hpp
- /usr/local/include/caffe/syncedmem.hpp
- /usr/local/include/caffe/util/benchmark.hpp
- /usr/local/include/caffe/util/cudnn.hpp
- /usr/local/include/caffe/util/device_alternate.hpp
- /usr/local/include/caffe/util/math_functions.hpp
- /usr/local/include/caffe/util/mkl_alternate.hpp
- /usr/local/include/caffe/util/rng.hpp
- /usr/local/include/caffe/util/signal_handler.h
  /usr/local/include/google/protobuf/arena.h
  /usr/local/include/google/protobuf/arena_impl.h
  /usr/local/include/google/protobuf/arenastring.h
@@ -137,25 +138,25 @@ examples/CMakeFiles/demo_frcnn_api.dir/FRCNN/demo_frcnn_api.cpp.o
  /usr/local/include/google/protobuf/unknown_field_set.h
  /usr/local/include/google/protobuf/wire_format_lite.h
  /usr/local/include/google/protobuf/wire_format_lite_inl.h
- /usr/local/include/opencv2/contrib/contrib.hpp
- /usr/local/include/opencv2/contrib/openfabmap.hpp
- /usr/local/include/opencv2/contrib/retina.hpp
- /usr/local/include/opencv2/core.hpp
- /usr/local/include/opencv2/core/core.hpp
- /usr/local/include/opencv2/core/core_c.h
- /usr/local/include/opencv2/core/mat.hpp
- /usr/local/include/opencv2/core/operations.hpp
- /usr/local/include/opencv2/core/types_c.h
- /usr/local/include/opencv2/core/version.hpp
- /usr/local/include/opencv2/features2d/features2d.hpp
- /usr/local/include/opencv2/flann/config.h
- /usr/local/include/opencv2/flann/defines.h
- /usr/local/include/opencv2/flann/miniflann.hpp
- /usr/local/include/opencv2/highgui.hpp
- /usr/local/include/opencv2/highgui/highgui.hpp
- /usr/local/include/opencv2/highgui/highgui_c.h
- /usr/local/include/opencv2/imgproc.hpp
- /usr/local/include/opencv2/imgproc/imgproc.hpp
- /usr/local/include/opencv2/imgproc/types_c.h
- /usr/local/include/opencv2/objdetect/objdetect.hpp
+ /usr/local/include/opencv-2.4.13/opencv2/contrib/contrib.hpp
+ /usr/local/include/opencv-2.4.13/opencv2/contrib/openfabmap.hpp
+ /usr/local/include/opencv-2.4.13/opencv2/contrib/retina.hpp
+ /usr/local/include/opencv-2.4.13/opencv2/core.hpp
+ /usr/local/include/opencv-2.4.13/opencv2/core/core.hpp
+ /usr/local/include/opencv-2.4.13/opencv2/core/core_c.h
+ /usr/local/include/opencv-2.4.13/opencv2/core/mat.hpp
+ /usr/local/include/opencv-2.4.13/opencv2/core/operations.hpp
+ /usr/local/include/opencv-2.4.13/opencv2/core/types_c.h
+ /usr/local/include/opencv-2.4.13/opencv2/core/version.hpp
+ /usr/local/include/opencv-2.4.13/opencv2/features2d/features2d.hpp
+ /usr/local/include/opencv-2.4.13/opencv2/flann/config.h
+ /usr/local/include/opencv-2.4.13/opencv2/flann/defines.h
+ /usr/local/include/opencv-2.4.13/opencv2/flann/miniflann.hpp
+ /usr/local/include/opencv-2.4.13/opencv2/highgui.hpp
+ /usr/local/include/opencv-2.4.13/opencv2/highgui/highgui.hpp
+ /usr/local/include/opencv-2.4.13/opencv2/highgui/highgui_c.h
+ /usr/local/include/opencv-2.4.13/opencv2/imgproc.hpp
+ /usr/local/include/opencv-2.4.13/opencv2/imgproc/imgproc.hpp
+ /usr/local/include/opencv-2.4.13/opencv2/imgproc/types_c.h
+ /usr/local/include/opencv-2.4.13/opencv2/objdetect/objdetect.hpp
  include/caffe/proto/caffe.pb.h

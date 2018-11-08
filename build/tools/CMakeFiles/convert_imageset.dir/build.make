@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/saa4/Caffe_with_updated_functions
+CMAKE_SOURCE_DIR = /home/kakadinh/caffe_variances/Caffe_with_updated_functions
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/saa4/Caffe_with_updated_functions/build
+CMAKE_BINARY_DIR = /home/kakadinh/caffe_variances/Caffe_with_updated_functions/build
 
 # Include any dependencies generated for this target.
 include tools/CMakeFiles/convert_imageset.dir/depend.make
@@ -59,16 +59,16 @@ include tools/CMakeFiles/convert_imageset.dir/flags.make
 
 tools/CMakeFiles/convert_imageset.dir/convert_imageset.cpp.o: tools/CMakeFiles/convert_imageset.dir/flags.make
 tools/CMakeFiles/convert_imageset.dir/convert_imageset.cpp.o: ../tools/convert_imageset.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/saa4/Caffe_with_updated_functions/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object tools/CMakeFiles/convert_imageset.dir/convert_imageset.cpp.o"
-	cd /home/saa4/Caffe_with_updated_functions/build/tools && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/convert_imageset.dir/convert_imageset.cpp.o -c /home/saa4/Caffe_with_updated_functions/tools/convert_imageset.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kakadinh/caffe_variances/Caffe_with_updated_functions/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object tools/CMakeFiles/convert_imageset.dir/convert_imageset.cpp.o"
+	cd /home/kakadinh/caffe_variances/Caffe_with_updated_functions/build/tools && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/convert_imageset.dir/convert_imageset.cpp.o -c /home/kakadinh/caffe_variances/Caffe_with_updated_functions/tools/convert_imageset.cpp
 
 tools/CMakeFiles/convert_imageset.dir/convert_imageset.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/convert_imageset.dir/convert_imageset.cpp.i"
-	cd /home/saa4/Caffe_with_updated_functions/build/tools && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/saa4/Caffe_with_updated_functions/tools/convert_imageset.cpp > CMakeFiles/convert_imageset.dir/convert_imageset.cpp.i
+	cd /home/kakadinh/caffe_variances/Caffe_with_updated_functions/build/tools && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kakadinh/caffe_variances/Caffe_with_updated_functions/tools/convert_imageset.cpp > CMakeFiles/convert_imageset.dir/convert_imageset.cpp.i
 
 tools/CMakeFiles/convert_imageset.dir/convert_imageset.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/convert_imageset.dir/convert_imageset.cpp.s"
-	cd /home/saa4/Caffe_with_updated_functions/build/tools && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/saa4/Caffe_with_updated_functions/tools/convert_imageset.cpp -o CMakeFiles/convert_imageset.dir/convert_imageset.cpp.s
+	cd /home/kakadinh/caffe_variances/Caffe_with_updated_functions/build/tools && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kakadinh/caffe_variances/Caffe_with_updated_functions/tools/convert_imageset.cpp -o CMakeFiles/convert_imageset.dir/convert_imageset.cpp.s
 
 tools/CMakeFiles/convert_imageset.dir/convert_imageset.cpp.o.requires:
 
@@ -122,7 +122,7 @@ tools/convert_imageset: /usr/lib/x86_64-linux-gnu/libleveldb.so
 tools/convert_imageset: /usr/local/cuda/lib64/libcudart.so
 tools/convert_imageset: /usr/local/cuda/lib64/libcurand.so
 tools/convert_imageset: /usr/local/cuda/lib64/libcublas.so
-tools/convert_imageset: /usr/lib/x86_64-linux-gnu/libcudnn.so
+tools/convert_imageset: /usr/local/cuda/lib64/libcudnn.so
 tools/convert_imageset: /usr/local/lib/libopencv_highgui.so.2.4.13
 tools/convert_imageset: /usr/local/lib/libopencv_imgproc.so.2.4.13
 tools/convert_imageset: /usr/local/lib/libopencv_core.so.2.4.13
@@ -135,8 +135,8 @@ tools/convert_imageset: /usr/lib/libcblas.so
 tools/convert_imageset: /usr/lib/libatlas.so
 tools/convert_imageset: /usr/lib/x86_64-linux-gnu/libboost_python.so
 tools/convert_imageset: tools/CMakeFiles/convert_imageset.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/saa4/Caffe_with_updated_functions/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable convert_imageset"
-	cd /home/saa4/Caffe_with_updated_functions/build/tools && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/convert_imageset.dir/link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/kakadinh/caffe_variances/Caffe_with_updated_functions/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable convert_imageset"
+	cd /home/kakadinh/caffe_variances/Caffe_with_updated_functions/build/tools && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/convert_imageset.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 tools/CMakeFiles/convert_imageset.dir/build: tools/convert_imageset
@@ -148,10 +148,10 @@ tools/CMakeFiles/convert_imageset.dir/requires: tools/CMakeFiles/convert_imagese
 .PHONY : tools/CMakeFiles/convert_imageset.dir/requires
 
 tools/CMakeFiles/convert_imageset.dir/clean:
-	cd /home/saa4/Caffe_with_updated_functions/build/tools && $(CMAKE_COMMAND) -P CMakeFiles/convert_imageset.dir/cmake_clean.cmake
+	cd /home/kakadinh/caffe_variances/Caffe_with_updated_functions/build/tools && $(CMAKE_COMMAND) -P CMakeFiles/convert_imageset.dir/cmake_clean.cmake
 .PHONY : tools/CMakeFiles/convert_imageset.dir/clean
 
 tools/CMakeFiles/convert_imageset.dir/depend:
-	cd /home/saa4/Caffe_with_updated_functions/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/saa4/Caffe_with_updated_functions /home/saa4/Caffe_with_updated_functions/tools /home/saa4/Caffe_with_updated_functions/build /home/saa4/Caffe_with_updated_functions/build/tools /home/saa4/Caffe_with_updated_functions/build/tools/CMakeFiles/convert_imageset.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/kakadinh/caffe_variances/Caffe_with_updated_functions/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/kakadinh/caffe_variances/Caffe_with_updated_functions /home/kakadinh/caffe_variances/Caffe_with_updated_functions/tools /home/kakadinh/caffe_variances/Caffe_with_updated_functions/build /home/kakadinh/caffe_variances/Caffe_with_updated_functions/build/tools /home/kakadinh/caffe_variances/Caffe_with_updated_functions/build/tools/CMakeFiles/convert_imageset.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : tools/CMakeFiles/convert_imageset.dir/depend
 

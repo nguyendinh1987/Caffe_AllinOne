@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/saa4/Caffe_with_updated_functions
+CMAKE_SOURCE_DIR = /home/kakadinh/caffe_variances/Caffe_with_updated_functions
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/saa4/Caffe_with_updated_functions/build
+CMAKE_BINARY_DIR = /home/kakadinh/caffe_variances/Caffe_with_updated_functions/build
 
 # Include any dependencies generated for this target.
 include examples/CMakeFiles/convert_mnist_data.dir/depend.make
@@ -59,16 +59,16 @@ include examples/CMakeFiles/convert_mnist_data.dir/flags.make
 
 examples/CMakeFiles/convert_mnist_data.dir/mnist/convert_mnist_data.cpp.o: examples/CMakeFiles/convert_mnist_data.dir/flags.make
 examples/CMakeFiles/convert_mnist_data.dir/mnist/convert_mnist_data.cpp.o: ../examples/mnist/convert_mnist_data.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/saa4/Caffe_with_updated_functions/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object examples/CMakeFiles/convert_mnist_data.dir/mnist/convert_mnist_data.cpp.o"
-	cd /home/saa4/Caffe_with_updated_functions/build/examples && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/convert_mnist_data.dir/mnist/convert_mnist_data.cpp.o -c /home/saa4/Caffe_with_updated_functions/examples/mnist/convert_mnist_data.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kakadinh/caffe_variances/Caffe_with_updated_functions/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object examples/CMakeFiles/convert_mnist_data.dir/mnist/convert_mnist_data.cpp.o"
+	cd /home/kakadinh/caffe_variances/Caffe_with_updated_functions/build/examples && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/convert_mnist_data.dir/mnist/convert_mnist_data.cpp.o -c /home/kakadinh/caffe_variances/Caffe_with_updated_functions/examples/mnist/convert_mnist_data.cpp
 
 examples/CMakeFiles/convert_mnist_data.dir/mnist/convert_mnist_data.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/convert_mnist_data.dir/mnist/convert_mnist_data.cpp.i"
-	cd /home/saa4/Caffe_with_updated_functions/build/examples && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/saa4/Caffe_with_updated_functions/examples/mnist/convert_mnist_data.cpp > CMakeFiles/convert_mnist_data.dir/mnist/convert_mnist_data.cpp.i
+	cd /home/kakadinh/caffe_variances/Caffe_with_updated_functions/build/examples && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kakadinh/caffe_variances/Caffe_with_updated_functions/examples/mnist/convert_mnist_data.cpp > CMakeFiles/convert_mnist_data.dir/mnist/convert_mnist_data.cpp.i
 
 examples/CMakeFiles/convert_mnist_data.dir/mnist/convert_mnist_data.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/convert_mnist_data.dir/mnist/convert_mnist_data.cpp.s"
-	cd /home/saa4/Caffe_with_updated_functions/build/examples && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/saa4/Caffe_with_updated_functions/examples/mnist/convert_mnist_data.cpp -o CMakeFiles/convert_mnist_data.dir/mnist/convert_mnist_data.cpp.s
+	cd /home/kakadinh/caffe_variances/Caffe_with_updated_functions/build/examples && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kakadinh/caffe_variances/Caffe_with_updated_functions/examples/mnist/convert_mnist_data.cpp -o CMakeFiles/convert_mnist_data.dir/mnist/convert_mnist_data.cpp.s
 
 examples/CMakeFiles/convert_mnist_data.dir/mnist/convert_mnist_data.cpp.o.requires:
 
@@ -123,7 +123,7 @@ examples/mnist/convert_mnist_data: /usr/lib/x86_64-linux-gnu/libleveldb.so
 examples/mnist/convert_mnist_data: /usr/local/cuda/lib64/libcudart.so
 examples/mnist/convert_mnist_data: /usr/local/cuda/lib64/libcurand.so
 examples/mnist/convert_mnist_data: /usr/local/cuda/lib64/libcublas.so
-examples/mnist/convert_mnist_data: /usr/lib/x86_64-linux-gnu/libcudnn.so
+examples/mnist/convert_mnist_data: /usr/local/cuda/lib64/libcudnn.so
 examples/mnist/convert_mnist_data: /usr/local/lib/libopencv_highgui.so.2.4.13
 examples/mnist/convert_mnist_data: /usr/local/lib/libopencv_imgproc.so.2.4.13
 examples/mnist/convert_mnist_data: /usr/local/lib/libopencv_core.so.2.4.13
@@ -136,9 +136,9 @@ examples/mnist/convert_mnist_data: /usr/lib/libcblas.so
 examples/mnist/convert_mnist_data: /usr/lib/libatlas.so
 examples/mnist/convert_mnist_data: /usr/lib/x86_64-linux-gnu/libboost_python.so
 examples/mnist/convert_mnist_data: examples/CMakeFiles/convert_mnist_data.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/saa4/Caffe_with_updated_functions/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable mnist/convert_mnist_data"
-	cd /home/saa4/Caffe_with_updated_functions/build/examples && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/convert_mnist_data.dir/link.txt --verbose=$(VERBOSE)
-	cd /home/saa4/Caffe_with_updated_functions/build/examples && ln -sf /home/saa4/Caffe_with_updated_functions/build/examples/mnist/convert_mnist_data /home/saa4/Caffe_with_updated_functions/build/examples/mnist/convert_mnist_data.bin
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/kakadinh/caffe_variances/Caffe_with_updated_functions/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable mnist/convert_mnist_data"
+	cd /home/kakadinh/caffe_variances/Caffe_with_updated_functions/build/examples && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/convert_mnist_data.dir/link.txt --verbose=$(VERBOSE)
+	cd /home/kakadinh/caffe_variances/Caffe_with_updated_functions/build/examples && ln -sf /home/kakadinh/caffe_variances/Caffe_with_updated_functions/build/examples/mnist/convert_mnist_data /home/kakadinh/caffe_variances/Caffe_with_updated_functions/build/examples/mnist/convert_mnist_data.bin
 
 # Rule to build all files generated by this target.
 examples/CMakeFiles/convert_mnist_data.dir/build: examples/mnist/convert_mnist_data
@@ -150,10 +150,10 @@ examples/CMakeFiles/convert_mnist_data.dir/requires: examples/CMakeFiles/convert
 .PHONY : examples/CMakeFiles/convert_mnist_data.dir/requires
 
 examples/CMakeFiles/convert_mnist_data.dir/clean:
-	cd /home/saa4/Caffe_with_updated_functions/build/examples && $(CMAKE_COMMAND) -P CMakeFiles/convert_mnist_data.dir/cmake_clean.cmake
+	cd /home/kakadinh/caffe_variances/Caffe_with_updated_functions/build/examples && $(CMAKE_COMMAND) -P CMakeFiles/convert_mnist_data.dir/cmake_clean.cmake
 .PHONY : examples/CMakeFiles/convert_mnist_data.dir/clean
 
 examples/CMakeFiles/convert_mnist_data.dir/depend:
-	cd /home/saa4/Caffe_with_updated_functions/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/saa4/Caffe_with_updated_functions /home/saa4/Caffe_with_updated_functions/examples /home/saa4/Caffe_with_updated_functions/build /home/saa4/Caffe_with_updated_functions/build/examples /home/saa4/Caffe_with_updated_functions/build/examples/CMakeFiles/convert_mnist_data.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/kakadinh/caffe_variances/Caffe_with_updated_functions/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/kakadinh/caffe_variances/Caffe_with_updated_functions /home/kakadinh/caffe_variances/Caffe_with_updated_functions/examples /home/kakadinh/caffe_variances/Caffe_with_updated_functions/build /home/kakadinh/caffe_variances/Caffe_with_updated_functions/build/examples /home/kakadinh/caffe_variances/Caffe_with_updated_functions/build/examples/CMakeFiles/convert_mnist_data.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : examples/CMakeFiles/convert_mnist_data.dir/depend
 

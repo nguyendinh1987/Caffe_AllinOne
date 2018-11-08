@@ -1,8 +1,8 @@
-# Install script for directory: /home/saa4/Caffe_with_updated_functions/src/gtest
+# Install script for directory: /home/kakadinh/caffe_variances/Caffe_with_updated_functions/src/gtest
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/saa4/Caffe_with_updated_functions/build/install")
+  set(CMAKE_INSTALL_PREFIX "/home/kakadinh/caffe_variances/Caffe_with_updated_functions/build/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 

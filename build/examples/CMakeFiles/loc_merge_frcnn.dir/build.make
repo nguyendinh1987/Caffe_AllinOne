@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/saa4/Caffe_with_updated_functions
+CMAKE_SOURCE_DIR = /home/kakadinh/caffe_variances/Caffe_with_updated_functions
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/saa4/Caffe_with_updated_functions/build
+CMAKE_BINARY_DIR = /home/kakadinh/caffe_variances/Caffe_with_updated_functions/build
 
 # Include any dependencies generated for this target.
 include examples/CMakeFiles/loc_merge_frcnn.dir/depend.make
@@ -59,16 +59,16 @@ include examples/CMakeFiles/loc_merge_frcnn.dir/flags.make
 
 examples/CMakeFiles/loc_merge_frcnn.dir/FRCNN/loc_merge_frcnn.cpp.o: examples/CMakeFiles/loc_merge_frcnn.dir/flags.make
 examples/CMakeFiles/loc_merge_frcnn.dir/FRCNN/loc_merge_frcnn.cpp.o: ../examples/FRCNN/loc_merge_frcnn.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/saa4/Caffe_with_updated_functions/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object examples/CMakeFiles/loc_merge_frcnn.dir/FRCNN/loc_merge_frcnn.cpp.o"
-	cd /home/saa4/Caffe_with_updated_functions/build/examples && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/loc_merge_frcnn.dir/FRCNN/loc_merge_frcnn.cpp.o -c /home/saa4/Caffe_with_updated_functions/examples/FRCNN/loc_merge_frcnn.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kakadinh/caffe_variances/Caffe_with_updated_functions/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object examples/CMakeFiles/loc_merge_frcnn.dir/FRCNN/loc_merge_frcnn.cpp.o"
+	cd /home/kakadinh/caffe_variances/Caffe_with_updated_functions/build/examples && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/loc_merge_frcnn.dir/FRCNN/loc_merge_frcnn.cpp.o -c /home/kakadinh/caffe_variances/Caffe_with_updated_functions/examples/FRCNN/loc_merge_frcnn.cpp
 
 examples/CMakeFiles/loc_merge_frcnn.dir/FRCNN/loc_merge_frcnn.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/loc_merge_frcnn.dir/FRCNN/loc_merge_frcnn.cpp.i"
-	cd /home/saa4/Caffe_with_updated_functions/build/examples && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/saa4/Caffe_with_updated_functions/examples/FRCNN/loc_merge_frcnn.cpp > CMakeFiles/loc_merge_frcnn.dir/FRCNN/loc_merge_frcnn.cpp.i
+	cd /home/kakadinh/caffe_variances/Caffe_with_updated_functions/build/examples && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kakadinh/caffe_variances/Caffe_with_updated_functions/examples/FRCNN/loc_merge_frcnn.cpp > CMakeFiles/loc_merge_frcnn.dir/FRCNN/loc_merge_frcnn.cpp.i
 
 examples/CMakeFiles/loc_merge_frcnn.dir/FRCNN/loc_merge_frcnn.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/loc_merge_frcnn.dir/FRCNN/loc_merge_frcnn.cpp.s"
-	cd /home/saa4/Caffe_with_updated_functions/build/examples && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/saa4/Caffe_with_updated_functions/examples/FRCNN/loc_merge_frcnn.cpp -o CMakeFiles/loc_merge_frcnn.dir/FRCNN/loc_merge_frcnn.cpp.s
+	cd /home/kakadinh/caffe_variances/Caffe_with_updated_functions/build/examples && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kakadinh/caffe_variances/Caffe_with_updated_functions/examples/FRCNN/loc_merge_frcnn.cpp -o CMakeFiles/loc_merge_frcnn.dir/FRCNN/loc_merge_frcnn.cpp.s
 
 examples/CMakeFiles/loc_merge_frcnn.dir/FRCNN/loc_merge_frcnn.cpp.o.requires:
 
@@ -123,7 +123,7 @@ examples/FRCNN/loc_merge_frcnn: /usr/lib/x86_64-linux-gnu/libleveldb.so
 examples/FRCNN/loc_merge_frcnn: /usr/local/cuda/lib64/libcudart.so
 examples/FRCNN/loc_merge_frcnn: /usr/local/cuda/lib64/libcurand.so
 examples/FRCNN/loc_merge_frcnn: /usr/local/cuda/lib64/libcublas.so
-examples/FRCNN/loc_merge_frcnn: /usr/lib/x86_64-linux-gnu/libcudnn.so
+examples/FRCNN/loc_merge_frcnn: /usr/local/cuda/lib64/libcudnn.so
 examples/FRCNN/loc_merge_frcnn: /usr/local/lib/libopencv_highgui.so.2.4.13
 examples/FRCNN/loc_merge_frcnn: /usr/local/lib/libopencv_imgproc.so.2.4.13
 examples/FRCNN/loc_merge_frcnn: /usr/local/lib/libopencv_core.so.2.4.13
@@ -136,9 +136,9 @@ examples/FRCNN/loc_merge_frcnn: /usr/lib/libcblas.so
 examples/FRCNN/loc_merge_frcnn: /usr/lib/libatlas.so
 examples/FRCNN/loc_merge_frcnn: /usr/lib/x86_64-linux-gnu/libboost_python.so
 examples/FRCNN/loc_merge_frcnn: examples/CMakeFiles/loc_merge_frcnn.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/saa4/Caffe_with_updated_functions/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable FRCNN/loc_merge_frcnn"
-	cd /home/saa4/Caffe_with_updated_functions/build/examples && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/loc_merge_frcnn.dir/link.txt --verbose=$(VERBOSE)
-	cd /home/saa4/Caffe_with_updated_functions/build/examples && ln -sf /home/saa4/Caffe_with_updated_functions/build/examples/FRCNN/loc_merge_frcnn /home/saa4/Caffe_with_updated_functions/build/examples/FRCNN/loc_merge_frcnn.bin
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/kakadinh/caffe_variances/Caffe_with_updated_functions/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable FRCNN/loc_merge_frcnn"
+	cd /home/kakadinh/caffe_variances/Caffe_with_updated_functions/build/examples && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/loc_merge_frcnn.dir/link.txt --verbose=$(VERBOSE)
+	cd /home/kakadinh/caffe_variances/Caffe_with_updated_functions/build/examples && ln -sf /home/kakadinh/caffe_variances/Caffe_with_updated_functions/build/examples/FRCNN/loc_merge_frcnn /home/kakadinh/caffe_variances/Caffe_with_updated_functions/build/examples/FRCNN/loc_merge_frcnn.bin
 
 # Rule to build all files generated by this target.
 examples/CMakeFiles/loc_merge_frcnn.dir/build: examples/FRCNN/loc_merge_frcnn
@@ -150,10 +150,10 @@ examples/CMakeFiles/loc_merge_frcnn.dir/requires: examples/CMakeFiles/loc_merge_
 .PHONY : examples/CMakeFiles/loc_merge_frcnn.dir/requires
 
 examples/CMakeFiles/loc_merge_frcnn.dir/clean:
-	cd /home/saa4/Caffe_with_updated_functions/build/examples && $(CMAKE_COMMAND) -P CMakeFiles/loc_merge_frcnn.dir/cmake_clean.cmake
+	cd /home/kakadinh/caffe_variances/Caffe_with_updated_functions/build/examples && $(CMAKE_COMMAND) -P CMakeFiles/loc_merge_frcnn.dir/cmake_clean.cmake
 .PHONY : examples/CMakeFiles/loc_merge_frcnn.dir/clean
 
 examples/CMakeFiles/loc_merge_frcnn.dir/depend:
-	cd /home/saa4/Caffe_with_updated_functions/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/saa4/Caffe_with_updated_functions /home/saa4/Caffe_with_updated_functions/examples /home/saa4/Caffe_with_updated_functions/build /home/saa4/Caffe_with_updated_functions/build/examples /home/saa4/Caffe_with_updated_functions/build/examples/CMakeFiles/loc_merge_frcnn.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/kakadinh/caffe_variances/Caffe_with_updated_functions/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/kakadinh/caffe_variances/Caffe_with_updated_functions /home/kakadinh/caffe_variances/Caffe_with_updated_functions/examples /home/kakadinh/caffe_variances/Caffe_with_updated_functions/build /home/kakadinh/caffe_variances/Caffe_with_updated_functions/build/examples /home/kakadinh/caffe_variances/Caffe_with_updated_functions/build/examples/CMakeFiles/loc_merge_frcnn.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : examples/CMakeFiles/loc_merge_frcnn.dir/depend
 

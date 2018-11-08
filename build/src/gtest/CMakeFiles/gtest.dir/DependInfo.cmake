@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/saa4/Caffe_with_updated_functions/src/gtest/gtest-all.cpp" "/home/saa4/Caffe_with_updated_functions/build/src/gtest/CMakeFiles/gtest.dir/gtest-all.cpp.o"
+  "/home/kakadinh/caffe_variances/Caffe_with_updated_functions/src/gtest/gtest-all.cpp" "/home/kakadinh/caffe_variances/Caffe_with_updated_functions/build/src/gtest/CMakeFiles/gtest.dir/gtest-all.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
@@ -19,8 +19,8 @@ set(CMAKE_TARGET_DEFINITIONS_CXX
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
   "include"
   "/usr/include/hdf5/serial"
-  "/usr/local/include/opencv"
-  "/usr/local/include"
+  "/usr/local/include/opencv-2.4.13/opencv"
+  "/usr/local/include/opencv-2.4.13"
   "."
   "../src"
   )

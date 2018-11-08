@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/saa4/Caffe_with_updated_functions
+CMAKE_SOURCE_DIR = /home/kakadinh/caffe_variances/Caffe_with_updated_functions
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/saa4/Caffe_with_updated_functions/build
+CMAKE_BINARY_DIR = /home/kakadinh/caffe_variances/Caffe_with_updated_functions/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -91,8 +91,8 @@ rebuild_cache/fast: rebuild_cache
 
 # Special rule for the target edit_cache
 edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake cache editor..."
-	/usr/bin/cmake-gui -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
+	/usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -124,9 +124,9 @@ install/strip/fast: install/strip
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/saa4/Caffe_with_updated_functions/build/CMakeFiles /home/saa4/Caffe_with_updated_functions/build/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kakadinh/caffe_variances/Caffe_with_updated_functions/build/CMakeFiles /home/kakadinh/caffe_variances/Caffe_with_updated_functions/build/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/saa4/Caffe_with_updated_functions/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kakadinh/caffe_variances/Caffe_with_updated_functions/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -272,45 +272,6 @@ test.testbin/fast:
 .PHONY : test.testbin/fast
 
 #=============================================================================
-# Target rules for targets named extract_features
-
-# Build rule for target.
-extract_features: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 extract_features
-.PHONY : extract_features
-
-# fast build rule for target.
-extract_features/fast:
-	$(MAKE) -f tools/CMakeFiles/extract_features.dir/build.make tools/CMakeFiles/extract_features.dir/build
-.PHONY : extract_features/fast
-
-#=============================================================================
-# Target rules for targets named upgrade_net_proto_text
-
-# Build rule for target.
-upgrade_net_proto_text: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 upgrade_net_proto_text
-.PHONY : upgrade_net_proto_text
-
-# fast build rule for target.
-upgrade_net_proto_text/fast:
-	$(MAKE) -f tools/CMakeFiles/upgrade_net_proto_text.dir/build.make tools/CMakeFiles/upgrade_net_proto_text.dir/build
-.PHONY : upgrade_net_proto_text/fast
-
-#=============================================================================
-# Target rules for targets named compute_image_mean
-
-# Build rule for target.
-compute_image_mean: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 compute_image_mean
-.PHONY : compute_image_mean
-
-# fast build rule for target.
-compute_image_mean/fast:
-	$(MAKE) -f tools/CMakeFiles/compute_image_mean.dir/build.make tools/CMakeFiles/compute_image_mean.dir/build
-.PHONY : compute_image_mean/fast
-
-#=============================================================================
 # Target rules for targets named convert_imageset
 
 # Build rule for target.
@@ -337,6 +298,19 @@ upgrade_net_proto_binary/fast:
 .PHONY : upgrade_net_proto_binary/fast
 
 #=============================================================================
+# Target rules for targets named compute_image_mean
+
+# Build rule for target.
+compute_image_mean: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 compute_image_mean
+.PHONY : compute_image_mean
+
+# fast build rule for target.
+compute_image_mean/fast:
+	$(MAKE) -f tools/CMakeFiles/compute_image_mean.dir/build.make tools/CMakeFiles/compute_image_mean.dir/build
+.PHONY : compute_image_mean/fast
+
+#=============================================================================
 # Target rules for targets named caffe.bin
 
 # Build rule for target.
@@ -348,6 +322,32 @@ caffe.bin: cmake_check_build_system
 caffe.bin/fast:
 	$(MAKE) -f tools/CMakeFiles/caffe.bin.dir/build.make tools/CMakeFiles/caffe.bin.dir/build
 .PHONY : caffe.bin/fast
+
+#=============================================================================
+# Target rules for targets named extract_features
+
+# Build rule for target.
+extract_features: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 extract_features
+.PHONY : extract_features
+
+# fast build rule for target.
+extract_features/fast:
+	$(MAKE) -f tools/CMakeFiles/extract_features.dir/build.make tools/CMakeFiles/extract_features.dir/build
+.PHONY : extract_features/fast
+
+#=============================================================================
+# Target rules for targets named upgrade_net_proto_text
+
+# Build rule for target.
+upgrade_net_proto_text: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 upgrade_net_proto_text
+.PHONY : upgrade_net_proto_text
+
+# fast build rule for target.
+upgrade_net_proto_text/fast:
+	$(MAKE) -f tools/CMakeFiles/upgrade_net_proto_text.dir/build.make tools/CMakeFiles/upgrade_net_proto_text.dir/build
+.PHONY : upgrade_net_proto_text/fast
 
 #=============================================================================
 # Target rules for targets named upgrade_solver_proto_text
@@ -363,17 +363,69 @@ upgrade_solver_proto_text/fast:
 .PHONY : upgrade_solver_proto_text/fast
 
 #=============================================================================
-# Target rules for targets named loc_test_frcnn
+# Target rules for targets named test_frcnn
 
 # Build rule for target.
-loc_test_frcnn: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 loc_test_frcnn
-.PHONY : loc_test_frcnn
+test_frcnn: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 test_frcnn
+.PHONY : test_frcnn
 
 # fast build rule for target.
-loc_test_frcnn/fast:
-	$(MAKE) -f examples/CMakeFiles/loc_test_frcnn.dir/build.make examples/CMakeFiles/loc_test_frcnn.dir/build
-.PHONY : loc_test_frcnn/fast
+test_frcnn/fast:
+	$(MAKE) -f examples/CMakeFiles/test_frcnn.dir/build.make examples/CMakeFiles/test_frcnn.dir/build
+.PHONY : test_frcnn/fast
+
+#=============================================================================
+# Target rules for targets named convert_mnist_siamese_data
+
+# Build rule for target.
+convert_mnist_siamese_data: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 convert_mnist_siamese_data
+.PHONY : convert_mnist_siamese_data
+
+# fast build rule for target.
+convert_mnist_siamese_data/fast:
+	$(MAKE) -f examples/CMakeFiles/convert_mnist_siamese_data.dir/build.make examples/CMakeFiles/convert_mnist_siamese_data.dir/build
+.PHONY : convert_mnist_siamese_data/fast
+
+#=============================================================================
+# Target rules for targets named classification
+
+# Build rule for target.
+classification: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 classification
+.PHONY : classification
+
+# fast build rule for target.
+classification/fast:
+	$(MAKE) -f examples/CMakeFiles/classification.dir/build.make examples/CMakeFiles/classification.dir/build
+.PHONY : classification/fast
+
+#=============================================================================
+# Target rules for targets named truth_test_frcnn
+
+# Build rule for target.
+truth_test_frcnn: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 truth_test_frcnn
+.PHONY : truth_test_frcnn
+
+# fast build rule for target.
+truth_test_frcnn/fast:
+	$(MAKE) -f examples/CMakeFiles/truth_test_frcnn.dir/build.make examples/CMakeFiles/truth_test_frcnn.dir/build
+.PHONY : truth_test_frcnn/fast
+
+#=============================================================================
+# Target rules for targets named convert_mnist_data
+
+# Build rule for target.
+convert_mnist_data: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 convert_mnist_data
+.PHONY : convert_mnist_data
+
+# fast build rule for target.
+convert_mnist_data/fast:
+	$(MAKE) -f examples/CMakeFiles/convert_mnist_data.dir/build.make examples/CMakeFiles/convert_mnist_data.dir/build
+.PHONY : convert_mnist_data/fast
 
 #=============================================================================
 # Target rules for targets named loc_merge_frcnn
@@ -387,6 +439,19 @@ loc_merge_frcnn: cmake_check_build_system
 loc_merge_frcnn/fast:
 	$(MAKE) -f examples/CMakeFiles/loc_merge_frcnn.dir/build.make examples/CMakeFiles/loc_merge_frcnn.dir/build
 .PHONY : loc_merge_frcnn/fast
+
+#=============================================================================
+# Target rules for targets named loc_test_frcnn
+
+# Build rule for target.
+loc_test_frcnn: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 loc_test_frcnn
+.PHONY : loc_test_frcnn
+
+# fast build rule for target.
+loc_test_frcnn/fast:
+	$(MAKE) -f examples/CMakeFiles/loc_test_frcnn.dir/build.make examples/CMakeFiles/loc_test_frcnn.dir/build
+.PHONY : loc_test_frcnn/fast
 
 #=============================================================================
 # Target rules for targets named test_rpn
@@ -415,58 +480,6 @@ demo_frcnn_api/fast:
 .PHONY : demo_frcnn_api/fast
 
 #=============================================================================
-# Target rules for targets named truth_test_frcnn
-
-# Build rule for target.
-truth_test_frcnn: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 truth_test_frcnn
-.PHONY : truth_test_frcnn
-
-# fast build rule for target.
-truth_test_frcnn/fast:
-	$(MAKE) -f examples/CMakeFiles/truth_test_frcnn.dir/build.make examples/CMakeFiles/truth_test_frcnn.dir/build
-.PHONY : truth_test_frcnn/fast
-
-#=============================================================================
-# Target rules for targets named classification
-
-# Build rule for target.
-classification: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 classification
-.PHONY : classification
-
-# fast build rule for target.
-classification/fast:
-	$(MAKE) -f examples/CMakeFiles/classification.dir/build.make examples/CMakeFiles/classification.dir/build
-.PHONY : classification/fast
-
-#=============================================================================
-# Target rules for targets named convert_mnist_siamese_data
-
-# Build rule for target.
-convert_mnist_siamese_data: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 convert_mnist_siamese_data
-.PHONY : convert_mnist_siamese_data
-
-# fast build rule for target.
-convert_mnist_siamese_data/fast:
-	$(MAKE) -f examples/CMakeFiles/convert_mnist_siamese_data.dir/build.make examples/CMakeFiles/convert_mnist_siamese_data.dir/build
-.PHONY : convert_mnist_siamese_data/fast
-
-#=============================================================================
-# Target rules for targets named test_frcnn
-
-# Build rule for target.
-test_frcnn: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 test_frcnn
-.PHONY : test_frcnn
-
-# fast build rule for target.
-test_frcnn/fast:
-	$(MAKE) -f examples/CMakeFiles/test_frcnn.dir/build.make examples/CMakeFiles/test_frcnn.dir/build
-.PHONY : test_frcnn/fast
-
-#=============================================================================
 # Target rules for targets named convert_cifar_data
 
 # Build rule for target.
@@ -478,19 +491,6 @@ convert_cifar_data: cmake_check_build_system
 convert_cifar_data/fast:
 	$(MAKE) -f examples/CMakeFiles/convert_cifar_data.dir/build.make examples/CMakeFiles/convert_cifar_data.dir/build
 .PHONY : convert_cifar_data/fast
-
-#=============================================================================
-# Target rules for targets named convert_mnist_data
-
-# Build rule for target.
-convert_mnist_data: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 convert_mnist_data
-.PHONY : convert_mnist_data
-
-# fast build rule for target.
-convert_mnist_data/fast:
-	$(MAKE) -f examples/CMakeFiles/convert_mnist_data.dir/build.make examples/CMakeFiles/convert_mnist_data.dir/build
-.PHONY : convert_mnist_data/fast
 
 #=============================================================================
 # Target rules for targets named pycaffe
@@ -539,23 +539,23 @@ help:
 	@echo "... caffe"
 	@echo "... runtest"
 	@echo "... test.testbin"
-	@echo "... extract_features"
-	@echo "... upgrade_net_proto_text"
-	@echo "... compute_image_mean"
 	@echo "... convert_imageset"
 	@echo "... upgrade_net_proto_binary"
+	@echo "... compute_image_mean"
 	@echo "... caffe.bin"
+	@echo "... extract_features"
+	@echo "... upgrade_net_proto_text"
 	@echo "... upgrade_solver_proto_text"
-	@echo "... loc_test_frcnn"
+	@echo "... test_frcnn"
+	@echo "... convert_mnist_siamese_data"
+	@echo "... classification"
+	@echo "... truth_test_frcnn"
+	@echo "... convert_mnist_data"
 	@echo "... loc_merge_frcnn"
+	@echo "... loc_test_frcnn"
 	@echo "... test_rpn"
 	@echo "... demo_frcnn_api"
-	@echo "... truth_test_frcnn"
-	@echo "... classification"
-	@echo "... convert_mnist_siamese_data"
-	@echo "... test_frcnn"
 	@echo "... convert_cifar_data"
-	@echo "... convert_mnist_data"
 	@echo "... pycaffe"
 	@echo "... FRCNN_api"
 .PHONY : help

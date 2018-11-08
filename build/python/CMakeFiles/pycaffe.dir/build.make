@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/saa4/Caffe_with_updated_functions
+CMAKE_SOURCE_DIR = /home/kakadinh/caffe_variances/Caffe_with_updated_functions
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/saa4/Caffe_with_updated_functions/build
+CMAKE_BINARY_DIR = /home/kakadinh/caffe_variances/Caffe_with_updated_functions/build
 
 # Include any dependencies generated for this target.
 include python/CMakeFiles/pycaffe.dir/depend.make
@@ -59,16 +59,16 @@ include python/CMakeFiles/pycaffe.dir/flags.make
 
 python/CMakeFiles/pycaffe.dir/caffe/_caffe.cpp.o: python/CMakeFiles/pycaffe.dir/flags.make
 python/CMakeFiles/pycaffe.dir/caffe/_caffe.cpp.o: ../python/caffe/_caffe.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/saa4/Caffe_with_updated_functions/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object python/CMakeFiles/pycaffe.dir/caffe/_caffe.cpp.o"
-	cd /home/saa4/Caffe_with_updated_functions/build/python && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/pycaffe.dir/caffe/_caffe.cpp.o -c /home/saa4/Caffe_with_updated_functions/python/caffe/_caffe.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kakadinh/caffe_variances/Caffe_with_updated_functions/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object python/CMakeFiles/pycaffe.dir/caffe/_caffe.cpp.o"
+	cd /home/kakadinh/caffe_variances/Caffe_with_updated_functions/build/python && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/pycaffe.dir/caffe/_caffe.cpp.o -c /home/kakadinh/caffe_variances/Caffe_with_updated_functions/python/caffe/_caffe.cpp
 
 python/CMakeFiles/pycaffe.dir/caffe/_caffe.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/pycaffe.dir/caffe/_caffe.cpp.i"
-	cd /home/saa4/Caffe_with_updated_functions/build/python && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/saa4/Caffe_with_updated_functions/python/caffe/_caffe.cpp > CMakeFiles/pycaffe.dir/caffe/_caffe.cpp.i
+	cd /home/kakadinh/caffe_variances/Caffe_with_updated_functions/build/python && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kakadinh/caffe_variances/Caffe_with_updated_functions/python/caffe/_caffe.cpp > CMakeFiles/pycaffe.dir/caffe/_caffe.cpp.i
 
 python/CMakeFiles/pycaffe.dir/caffe/_caffe.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/pycaffe.dir/caffe/_caffe.cpp.s"
-	cd /home/saa4/Caffe_with_updated_functions/build/python && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/saa4/Caffe_with_updated_functions/python/caffe/_caffe.cpp -o CMakeFiles/pycaffe.dir/caffe/_caffe.cpp.s
+	cd /home/kakadinh/caffe_variances/Caffe_with_updated_functions/build/python && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kakadinh/caffe_variances/Caffe_with_updated_functions/python/caffe/_caffe.cpp -o CMakeFiles/pycaffe.dir/caffe/_caffe.cpp.s
 
 python/CMakeFiles/pycaffe.dir/caffe/_caffe.cpp.o.requires:
 
@@ -123,7 +123,7 @@ lib/_caffe.so: /usr/lib/x86_64-linux-gnu/libleveldb.so
 lib/_caffe.so: /usr/local/cuda/lib64/libcudart.so
 lib/_caffe.so: /usr/local/cuda/lib64/libcurand.so
 lib/_caffe.so: /usr/local/cuda/lib64/libcublas.so
-lib/_caffe.so: /usr/lib/x86_64-linux-gnu/libcudnn.so
+lib/_caffe.so: /usr/local/cuda/lib64/libcudnn.so
 lib/_caffe.so: /usr/local/lib/libopencv_highgui.so.2.4.13
 lib/_caffe.so: /usr/local/lib/libopencv_imgproc.so.2.4.13
 lib/_caffe.so: /usr/local/lib/libopencv_core.so.2.4.13
@@ -136,13 +136,13 @@ lib/_caffe.so: /usr/lib/libcblas.so
 lib/_caffe.so: /usr/lib/libatlas.so
 lib/_caffe.so: /usr/lib/x86_64-linux-gnu/libboost_python.so
 lib/_caffe.so: python/CMakeFiles/pycaffe.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/saa4/Caffe_with_updated_functions/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX shared library ../lib/_caffe.so"
-	cd /home/saa4/Caffe_with_updated_functions/build/python && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/pycaffe.dir/link.txt --verbose=$(VERBOSE)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Creating symlink /home/saa4/Caffe_with_updated_functions/python/caffe/_caffe.so -> /home/saa4/Caffe_with_updated_functions/build/lib/_caffe.so"
-	cd /home/saa4/Caffe_with_updated_functions/build/python && ln -sf /home/saa4/Caffe_with_updated_functions/build/lib/_caffe.so /home/saa4/Caffe_with_updated_functions/python/caffe/_caffe.so
-	cd /home/saa4/Caffe_with_updated_functions/build/python && /usr/bin/cmake -E make_directory /home/saa4/Caffe_with_updated_functions/python/caffe/proto
-	cd /home/saa4/Caffe_with_updated_functions/build/python && touch /home/saa4/Caffe_with_updated_functions/python/caffe/proto/__init__.py
-	cd /home/saa4/Caffe_with_updated_functions/build/python && cp /home/saa4/Caffe_with_updated_functions/build/include/caffe/proto/*.py /home/saa4/Caffe_with_updated_functions/python/caffe/proto/
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/kakadinh/caffe_variances/Caffe_with_updated_functions/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX shared library ../lib/_caffe.so"
+	cd /home/kakadinh/caffe_variances/Caffe_with_updated_functions/build/python && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/pycaffe.dir/link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Creating symlink /home/kakadinh/caffe_variances/Caffe_with_updated_functions/python/caffe/_caffe.so -> /home/kakadinh/caffe_variances/Caffe_with_updated_functions/build/lib/_caffe.so"
+	cd /home/kakadinh/caffe_variances/Caffe_with_updated_functions/build/python && ln -sf /home/kakadinh/caffe_variances/Caffe_with_updated_functions/build/lib/_caffe.so /home/kakadinh/caffe_variances/Caffe_with_updated_functions/python/caffe/_caffe.so
+	cd /home/kakadinh/caffe_variances/Caffe_with_updated_functions/build/python && /usr/bin/cmake -E make_directory /home/kakadinh/caffe_variances/Caffe_with_updated_functions/python/caffe/proto
+	cd /home/kakadinh/caffe_variances/Caffe_with_updated_functions/build/python && touch /home/kakadinh/caffe_variances/Caffe_with_updated_functions/python/caffe/proto/__init__.py
+	cd /home/kakadinh/caffe_variances/Caffe_with_updated_functions/build/python && cp /home/kakadinh/caffe_variances/Caffe_with_updated_functions/build/include/caffe/proto/*.py /home/kakadinh/caffe_variances/Caffe_with_updated_functions/python/caffe/proto/
 
 # Rule to build all files generated by this target.
 python/CMakeFiles/pycaffe.dir/build: lib/_caffe.so
@@ -154,10 +154,10 @@ python/CMakeFiles/pycaffe.dir/requires: python/CMakeFiles/pycaffe.dir/caffe/_caf
 .PHONY : python/CMakeFiles/pycaffe.dir/requires
 
 python/CMakeFiles/pycaffe.dir/clean:
-	cd /home/saa4/Caffe_with_updated_functions/build/python && $(CMAKE_COMMAND) -P CMakeFiles/pycaffe.dir/cmake_clean.cmake
+	cd /home/kakadinh/caffe_variances/Caffe_with_updated_functions/build/python && $(CMAKE_COMMAND) -P CMakeFiles/pycaffe.dir/cmake_clean.cmake
 .PHONY : python/CMakeFiles/pycaffe.dir/clean
 
 python/CMakeFiles/pycaffe.dir/depend:
-	cd /home/saa4/Caffe_with_updated_functions/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/saa4/Caffe_with_updated_functions /home/saa4/Caffe_with_updated_functions/python /home/saa4/Caffe_with_updated_functions/build /home/saa4/Caffe_with_updated_functions/build/python /home/saa4/Caffe_with_updated_functions/build/python/CMakeFiles/pycaffe.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/kakadinh/caffe_variances/Caffe_with_updated_functions/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/kakadinh/caffe_variances/Caffe_with_updated_functions /home/kakadinh/caffe_variances/Caffe_with_updated_functions/python /home/kakadinh/caffe_variances/Caffe_with_updated_functions/build /home/kakadinh/caffe_variances/Caffe_with_updated_functions/build/python /home/kakadinh/caffe_variances/Caffe_with_updated_functions/build/python/CMakeFiles/pycaffe.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : python/CMakeFiles/pycaffe.dir/depend
 

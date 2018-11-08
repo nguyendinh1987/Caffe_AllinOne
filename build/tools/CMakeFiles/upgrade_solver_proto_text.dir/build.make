@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/saa4/Caffe_with_updated_functions
+CMAKE_SOURCE_DIR = /home/kakadinh/caffe_variances/Caffe_with_updated_functions
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/saa4/Caffe_with_updated_functions/build
+CMAKE_BINARY_DIR = /home/kakadinh/caffe_variances/Caffe_with_updated_functions/build
 
 # Include any dependencies generated for this target.
 include tools/CMakeFiles/upgrade_solver_proto_text.dir/depend.make
@@ -59,16 +59,16 @@ include tools/CMakeFiles/upgrade_solver_proto_text.dir/flags.make
 
 tools/CMakeFiles/upgrade_solver_proto_text.dir/upgrade_solver_proto_text.cpp.o: tools/CMakeFiles/upgrade_solver_proto_text.dir/flags.make
 tools/CMakeFiles/upgrade_solver_proto_text.dir/upgrade_solver_proto_text.cpp.o: ../tools/upgrade_solver_proto_text.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/saa4/Caffe_with_updated_functions/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object tools/CMakeFiles/upgrade_solver_proto_text.dir/upgrade_solver_proto_text.cpp.o"
-	cd /home/saa4/Caffe_with_updated_functions/build/tools && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/upgrade_solver_proto_text.dir/upgrade_solver_proto_text.cpp.o -c /home/saa4/Caffe_with_updated_functions/tools/upgrade_solver_proto_text.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kakadinh/caffe_variances/Caffe_with_updated_functions/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object tools/CMakeFiles/upgrade_solver_proto_text.dir/upgrade_solver_proto_text.cpp.o"
+	cd /home/kakadinh/caffe_variances/Caffe_with_updated_functions/build/tools && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/upgrade_solver_proto_text.dir/upgrade_solver_proto_text.cpp.o -c /home/kakadinh/caffe_variances/Caffe_with_updated_functions/tools/upgrade_solver_proto_text.cpp
 
 tools/CMakeFiles/upgrade_solver_proto_text.dir/upgrade_solver_proto_text.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/upgrade_solver_proto_text.dir/upgrade_solver_proto_text.cpp.i"
-	cd /home/saa4/Caffe_with_updated_functions/build/tools && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/saa4/Caffe_with_updated_functions/tools/upgrade_solver_proto_text.cpp > CMakeFiles/upgrade_solver_proto_text.dir/upgrade_solver_proto_text.cpp.i
+	cd /home/kakadinh/caffe_variances/Caffe_with_updated_functions/build/tools && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kakadinh/caffe_variances/Caffe_with_updated_functions/tools/upgrade_solver_proto_text.cpp > CMakeFiles/upgrade_solver_proto_text.dir/upgrade_solver_proto_text.cpp.i
 
 tools/CMakeFiles/upgrade_solver_proto_text.dir/upgrade_solver_proto_text.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/upgrade_solver_proto_text.dir/upgrade_solver_proto_text.cpp.s"
-	cd /home/saa4/Caffe_with_updated_functions/build/tools && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/saa4/Caffe_with_updated_functions/tools/upgrade_solver_proto_text.cpp -o CMakeFiles/upgrade_solver_proto_text.dir/upgrade_solver_proto_text.cpp.s
+	cd /home/kakadinh/caffe_variances/Caffe_with_updated_functions/build/tools && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kakadinh/caffe_variances/Caffe_with_updated_functions/tools/upgrade_solver_proto_text.cpp -o CMakeFiles/upgrade_solver_proto_text.dir/upgrade_solver_proto_text.cpp.s
 
 tools/CMakeFiles/upgrade_solver_proto_text.dir/upgrade_solver_proto_text.cpp.o.requires:
 
@@ -122,7 +122,7 @@ tools/upgrade_solver_proto_text: /usr/lib/x86_64-linux-gnu/libleveldb.so
 tools/upgrade_solver_proto_text: /usr/local/cuda/lib64/libcudart.so
 tools/upgrade_solver_proto_text: /usr/local/cuda/lib64/libcurand.so
 tools/upgrade_solver_proto_text: /usr/local/cuda/lib64/libcublas.so
-tools/upgrade_solver_proto_text: /usr/lib/x86_64-linux-gnu/libcudnn.so
+tools/upgrade_solver_proto_text: /usr/local/cuda/lib64/libcudnn.so
 tools/upgrade_solver_proto_text: /usr/local/lib/libopencv_highgui.so.2.4.13
 tools/upgrade_solver_proto_text: /usr/local/lib/libopencv_imgproc.so.2.4.13
 tools/upgrade_solver_proto_text: /usr/local/lib/libopencv_core.so.2.4.13
@@ -135,8 +135,8 @@ tools/upgrade_solver_proto_text: /usr/lib/libcblas.so
 tools/upgrade_solver_proto_text: /usr/lib/libatlas.so
 tools/upgrade_solver_proto_text: /usr/lib/x86_64-linux-gnu/libboost_python.so
 tools/upgrade_solver_proto_text: tools/CMakeFiles/upgrade_solver_proto_text.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/saa4/Caffe_with_updated_functions/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable upgrade_solver_proto_text"
-	cd /home/saa4/Caffe_with_updated_functions/build/tools && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/upgrade_solver_proto_text.dir/link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/kakadinh/caffe_variances/Caffe_with_updated_functions/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable upgrade_solver_proto_text"
+	cd /home/kakadinh/caffe_variances/Caffe_with_updated_functions/build/tools && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/upgrade_solver_proto_text.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 tools/CMakeFiles/upgrade_solver_proto_text.dir/build: tools/upgrade_solver_proto_text
@@ -148,10 +148,10 @@ tools/CMakeFiles/upgrade_solver_proto_text.dir/requires: tools/CMakeFiles/upgrad
 .PHONY : tools/CMakeFiles/upgrade_solver_proto_text.dir/requires
 
 tools/CMakeFiles/upgrade_solver_proto_text.dir/clean:
-	cd /home/saa4/Caffe_with_updated_functions/build/tools && $(CMAKE_COMMAND) -P CMakeFiles/upgrade_solver_proto_text.dir/cmake_clean.cmake
+	cd /home/kakadinh/caffe_variances/Caffe_with_updated_functions/build/tools && $(CMAKE_COMMAND) -P CMakeFiles/upgrade_solver_proto_text.dir/cmake_clean.cmake
 .PHONY : tools/CMakeFiles/upgrade_solver_proto_text.dir/clean
 
 tools/CMakeFiles/upgrade_solver_proto_text.dir/depend:
-	cd /home/saa4/Caffe_with_updated_functions/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/saa4/Caffe_with_updated_functions /home/saa4/Caffe_with_updated_functions/tools /home/saa4/Caffe_with_updated_functions/build /home/saa4/Caffe_with_updated_functions/build/tools /home/saa4/Caffe_with_updated_functions/build/tools/CMakeFiles/upgrade_solver_proto_text.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/kakadinh/caffe_variances/Caffe_with_updated_functions/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/kakadinh/caffe_variances/Caffe_with_updated_functions /home/kakadinh/caffe_variances/Caffe_with_updated_functions/tools /home/kakadinh/caffe_variances/Caffe_with_updated_functions/build /home/kakadinh/caffe_variances/Caffe_with_updated_functions/build/tools /home/kakadinh/caffe_variances/Caffe_with_updated_functions/build/tools/CMakeFiles/upgrade_solver_proto_text.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : tools/CMakeFiles/upgrade_solver_proto_text.dir/depend
 

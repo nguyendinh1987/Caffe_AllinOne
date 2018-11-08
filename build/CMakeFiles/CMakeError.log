@@ -1,24 +1,24 @@
 Determining if the pthread_create exist failed with the following output:
-Change Dir: /home/saa4/Caffe_with_updated_functions/build/CMakeFiles/CMakeTmp
+Change Dir: /home/kakadinh/caffe_variances/Caffe_with_updated_functions/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_38c95/fast"
-/usr/bin/make -f CMakeFiles/cmTC_38c95.dir/build.make CMakeFiles/cmTC_38c95.dir/build
-make[1]: Entering directory '/home/saa4/Caffe_with_updated_functions/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_38c95.dir/CheckSymbolExists.c.o
-/usr/bin/cc     -o CMakeFiles/cmTC_38c95.dir/CheckSymbolExists.c.o   -c /home/saa4/Caffe_with_updated_functions/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
-Linking C executable cmTC_38c95
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_38c95.dir/link.txt --verbose=1
-/usr/bin/cc       CMakeFiles/cmTC_38c95.dir/CheckSymbolExists.c.o  -o cmTC_38c95 -rdynamic 
-CMakeFiles/cmTC_38c95.dir/CheckSymbolExists.c.o: In function `main':
+Run Build Command:"/usr/bin/make" "cmTC_34a30/fast"
+/usr/bin/make -f CMakeFiles/cmTC_34a30.dir/build.make CMakeFiles/cmTC_34a30.dir/build
+make[1]: Entering directory '/home/kakadinh/caffe_variances/Caffe_with_updated_functions/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_34a30.dir/CheckSymbolExists.c.o
+/usr/bin/cc     -o CMakeFiles/cmTC_34a30.dir/CheckSymbolExists.c.o   -c /home/kakadinh/caffe_variances/Caffe_with_updated_functions/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_34a30
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_34a30.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTC_34a30.dir/CheckSymbolExists.c.o  -o cmTC_34a30 -rdynamic 
+CMakeFiles/cmTC_34a30.dir/CheckSymbolExists.c.o: In function `main':
 CheckSymbolExists.c:(.text+0x16): undefined reference to `pthread_create'
 collect2: error: ld returned 1 exit status
-CMakeFiles/cmTC_38c95.dir/build.make:97: recipe for target 'cmTC_38c95' failed
-make[1]: *** [cmTC_38c95] Error 1
-make[1]: Leaving directory '/home/saa4/Caffe_with_updated_functions/build/CMakeFiles/CMakeTmp'
-Makefile:126: recipe for target 'cmTC_38c95/fast' failed
-make: *** [cmTC_38c95/fast] Error 2
+CMakeFiles/cmTC_34a30.dir/build.make:97: recipe for target 'cmTC_34a30' failed
+make[1]: *** [cmTC_34a30] Error 1
+make[1]: Leaving directory '/home/kakadinh/caffe_variances/Caffe_with_updated_functions/build/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_34a30/fast' failed
+make: *** [cmTC_34a30/fast] Error 2
 
-File /home/saa4/Caffe_with_updated_functions/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+File /home/kakadinh/caffe_variances/Caffe_with_updated_functions/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
 /* */
 #include <pthread.h>
 
@@ -34,22 +34,22 @@ int main(int argc, char** argv)
 }
 
 Determining if the function pthread_create exists in the pthreads failed with the following output:
-Change Dir: /home/saa4/Caffe_with_updated_functions/build/CMakeFiles/CMakeTmp
+Change Dir: /home/kakadinh/caffe_variances/Caffe_with_updated_functions/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_a329c/fast"
-/usr/bin/make -f CMakeFiles/cmTC_a329c.dir/build.make CMakeFiles/cmTC_a329c.dir/build
-make[1]: Entering directory '/home/saa4/Caffe_with_updated_functions/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_a329c.dir/CheckFunctionExists.c.o
-/usr/bin/cc    -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_a329c.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
-Linking C executable cmTC_a329c
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_a329c.dir/link.txt --verbose=1
-/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_a329c.dir/CheckFunctionExists.c.o  -o cmTC_a329c -rdynamic -lpthreads 
+Run Build Command:"/usr/bin/make" "cmTC_f08ba/fast"
+/usr/bin/make -f CMakeFiles/cmTC_f08ba.dir/build.make CMakeFiles/cmTC_f08ba.dir/build
+make[1]: Entering directory '/home/kakadinh/caffe_variances/Caffe_with_updated_functions/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_f08ba.dir/CheckFunctionExists.c.o
+/usr/bin/cc    -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_f08ba.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
+Linking C executable cmTC_f08ba
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_f08ba.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_f08ba.dir/CheckFunctionExists.c.o  -o cmTC_f08ba -rdynamic -lpthreads 
 /usr/bin/ld: cannot find -lpthreads
 collect2: error: ld returned 1 exit status
-CMakeFiles/cmTC_a329c.dir/build.make:97: recipe for target 'cmTC_a329c' failed
-make[1]: *** [cmTC_a329c] Error 1
-make[1]: Leaving directory '/home/saa4/Caffe_with_updated_functions/build/CMakeFiles/CMakeTmp'
-Makefile:126: recipe for target 'cmTC_a329c/fast' failed
-make: *** [cmTC_a329c/fast] Error 2
+CMakeFiles/cmTC_f08ba.dir/build.make:97: recipe for target 'cmTC_f08ba' failed
+make[1]: *** [cmTC_f08ba] Error 1
+make[1]: Leaving directory '/home/kakadinh/caffe_variances/Caffe_with_updated_functions/build/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_f08ba/fast' failed
+make: *** [cmTC_f08ba/fast] Error 2
 
 

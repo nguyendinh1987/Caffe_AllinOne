@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/saa4/Caffe_with_updated_functions/examples/mnist/convert_mnist_data.cpp" "/home/saa4/Caffe_with_updated_functions/build/examples/CMakeFiles/convert_mnist_data.dir/mnist/convert_mnist_data.cpp.o"
+  "/home/kakadinh/caffe_variances/Caffe_with_updated_functions/examples/mnist/convert_mnist_data.cpp" "/home/kakadinh/caffe_variances/Caffe_with_updated_functions/build/examples/CMakeFiles/convert_mnist_data.dir/mnist/convert_mnist_data.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
@@ -22,9 +22,10 @@ set(CMAKE_TARGET_DEFINITIONS_CXX
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
   "include"
   "/usr/include/hdf5/serial"
-  "/usr/local/include/opencv"
-  "/usr/local/include"
+  "/usr/local/include/opencv-2.4.13/opencv"
+  "/usr/local/include/opencv-2.4.13"
   "."
+  "/usr/local/include"
   "/usr/local/cuda/include"
   "/usr/include/atlas"
   "../include"
@@ -32,9 +33,9 @@ set(CMAKE_CXX_TARGET_INCLUDE_PATH
 
 # Targets to which this target links.
 set(CMAKE_TARGET_LINKED_INFO_FILES
-  "/home/saa4/Caffe_with_updated_functions/build/src/api/FRCNN/CMakeFiles/FRCNN_api.dir/DependInfo.cmake"
-  "/home/saa4/Caffe_with_updated_functions/build/src/caffe/CMakeFiles/caffe.dir/DependInfo.cmake"
-  "/home/saa4/Caffe_with_updated_functions/build/src/caffe/CMakeFiles/caffeproto.dir/DependInfo.cmake"
+  "/home/kakadinh/caffe_variances/Caffe_with_updated_functions/build/src/api/FRCNN/CMakeFiles/FRCNN_api.dir/DependInfo.cmake"
+  "/home/kakadinh/caffe_variances/Caffe_with_updated_functions/build/src/caffe/CMakeFiles/caffe.dir/DependInfo.cmake"
+  "/home/kakadinh/caffe_variances/Caffe_with_updated_functions/build/src/caffe/CMakeFiles/caffeproto.dir/DependInfo.cmake"
   )
 
 # Fortran module output directory.
