@@ -7,6 +7,7 @@ This is a modified version of caffe which includes a lot of additional functions
 - Add on-fly data argumentation for improving training process
 - Add YoLo implementation (planing)
 - Add SSD implementation (planing)
+- Add layers for flownet (planing)
 - continue
 
 ## Modified
