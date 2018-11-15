@@ -39,6 +39,18 @@ message Datum {
   // If true data contains an encoded image that need to be decoded
   optional bool encoded = 7 [default = false];
 }
+// For C3D
+message VolumeDatum {
+  optional int32 channels = 1;
+  optional int32 length = 2 [default = 1];
+  optional int32 height = 3;
+  optional int32 width = 4;
+  // the actual image data, in bytes
+  optional bytes data = 5;
+  optional int32 label = 6;
+  // Optionally, the datum could also hold float data.
+  repeated float float_data = 7;
+}
 
 message FillerParameter {
   // The filler type.
@@ -425,11 +437,49 @@ message LayerParameter {
   optional ROIPoolingParameter roi_pooling_param = 201;
   optional SmoothL1LossParameter smooth_l1_loss_param = 202;
   optional VideoDataParameter video_data_param = 203;
-  optional ROIMaskPoolingParameter roi_mask_pooling_param = 204;
+  optional VideoDataFBParameter video_data_fb_param = 204;
+  optional ROIMaskPoolingParameter roi_mask_pooling_param = 205;
   // Dinh Add for BN layer
-  optional BNParameter bn_param = 205;
+  optional BNParameter bn_param = 206;
+  // Add for C3D layer
+  optional Convolution3DParameter convolution3d_param = 207;
+  // Add for P3D layer
+  optional Pooling3DParameter pooling3d_param = 208;
 }
-//----
+//----------------------------------------------------------------------------------------------------------
+// C3D layer:
+message Convolution3DParameter {
+  optional uint32 num_output = 1; // The number of outputs for the layer
+  optional bool bias_term = 2 [default = true]; // whether to have bias terms
+  optional uint32 pad = 3 [default = 0]; // The padding size
+  optional uint32 kernel_size = 4; // The kernel size
+  optional uint32 group = 5 [default = 1]; // The group size for group conv
+  optional uint32 kernel_depth = 6; // The kernel size
+  optional uint32 stride = 7 [default = 1]; // The stride
+  optional uint32 temporal_stride = 8 [default = 1]; // The stride for temporal
+  optional FillerParameter weight_filler = 9; // The filler for the weight
+  optional FillerParameter bias_filler = 10; // The filler for the bias
+  optional uint32 filter_group = 11 [default = 1]; // divide filters into groups to reduce memory consumption
+  optional uint32 temporal_pad = 12 [default = 0]; // padding size for temporal
+}
+
+// P3D layer
+// Message that stores parameters used by PoolingLayer
+message Pooling3DParameter {
+  enum PoolMethod {
+    MAX = 0;
+    AVE = 1;
+    STOCHASTIC = 2;
+  }
+  optional PoolMethod pool = 1 [default = MAX]; // The pooling method
+  optional uint32 kernel_size = 2; // The kernel size
+  optional uint32 stride = 3 [default = 1]; // The stride
+  // The padding size -- currently implemented only for average pooling.
+  optional uint32 pad = 4 [default = 0];
+  optional uint32 kernel_depth = 5;
+  optional uint32 temporal_stride = 6 [default = 1]; // The stride
+}
+
 // Dinh Add
 message BNParameter {
   optional FillerParameter slope_filler = 1;
@@ -483,6 +533,45 @@ message VideoDataParameter{
   }
   optional Modality modality = 13 [default = FLOW];
 }
+message VideoDataFBParameter {
+  // Specify the data source.
+  optional string source = 1;
+  // Specify the batch size.
+  optional uint32 batch_size = 4 [default = 1];
+  // The rand_skip variable is for the data layer to skip a few data points
+  // to avoid all asynchronous sgd clients to start at the same point. The skip
+  // point would be set as rand_skip * rand(0,1). Note that rand_skip should not
+  // be larger than the number of keys in the database.
+  optional uint32 rand_skip = 7 [default = 0];
+  // Whether or not ImageLayer should shuffle the list of files at every epoch.
+  optional bool shuffle = 8 [default = false];
+  // It will also resize images if new_height or new_width are not zero.
+  optional uint32 new_height = 9 [default = 0];
+  optional uint32 new_width = 10 [default = 0];
+  optional uint32 new_length = 13;
+  // Specify if the images are color or gray
+  optional bool is_color = 11 [default = true];
+  // DEPRECATED. See TransformationParameter. For data pre-processing, we can do
+  // simple scaling and subtracting the data mean, if provided. Note that the
+  // mean subtraction is always carried out before scaling.
+  optional float scale = 2 [default = 1];
+  optional string mean_file = 3;
+  // DEPRECATED. See TransformationParameter. Specify if we would like to randomly
+  // crop an image.
+  optional uint32 crop_size = 5 [default = 0];
+  // DEPRECATED. See TransformationParameter. Specify if we want to randomly mirror
+  // data.
+  optional bool mirror = 6 [default = false];
+  optional string root_folder = 12 [default = ""];
+  optional bool show_data = 14 [default = false];
+  optional bool use_image = 15 [default = false];
+  optional bool use_temporal_jitter = 16 [default = false];
+  optional uint32 sampling_rate = 17 [default = 1];
+  optional uint32 max_sampling_rate = 18 [default = 1];
+  optional bool use_sampling_rate_jitter = 19 [default = false];
+  optional bool use_multiple_label = 20 [default = false];
+  optional uint32 num_of_labels = 21 [default = 1];
+}
 
 // Xuanyi Add.2016.04.01
 message ROIPoolingParameter {
@@ -512,7 +601,7 @@ message SmoothL1LossParameter {
   //   |x| - 0.5 / sigma / sigma -- otherwise
   optional float sigma = 1 [default = 1];
 }
-//----
+//----------------------------------------------------------------------------------------------------------------------------
 // Message that stores parameters used to apply transformation
 // to the data layer's data
 message TransformationParameter {

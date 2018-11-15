@@ -103,7 +103,21 @@ class DataTransformer {
    *    Datum containing the data to be transformed.
    */
   vector<int> InferBlobShape(const Datum& datum);
+
+  //----- For VolumeDatum-----------------------------------------------------------------------------
   /**
+   * @brief Infers the shape of transformed_blob will have when
+   *    the transformation is applied to the data.
+   *
+   * @param VolumeDatum
+   *    Datum containing the data to be transformed.
+   */
+  vector<int> InferBlobShape(const VolumeDatum& datum);
+  void VideoTransform(const VolumeDatum& datum, Blob<Dtype>* transformed_blob);
+  void VideoTransform(const VolumeDatum& datum, Dtype* transformed_data);
+  //--------------------------------------------------------------------------------------------------
+  
+   /**
    * @brief Infers the shape of transformed_blob will have when
    *    the transformation is applied to the data.
    *    It uses the first element to infer the shape of the blob.
