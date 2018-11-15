@@ -5,6 +5,7 @@ This is a modified version of caffe which includes a lot of additional functions
 - Add Video loader layers
 - Add BN Layer
 - Add on-fly data argumentation for improving training process
+- Add C3D (3D convolution), 3D pooling, video layer from facebook [source](https://github.com/facebook/C3D)
 - Add YoLo implementation (planing)
 - Add SSD implementation (planing)
 - continue
