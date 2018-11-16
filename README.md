@@ -6,6 +6,7 @@ This is a modified version of caffe which includes a lot of additional functions
 - Add BN Layer
 - Add on-fly data argumentation for improving training process
 - Add C3D (3D convolution), 3D pooling, video layer from facebook
+- Add RoiAlignment layer for mask rcnn [source](https://github.com/jasjeetIM/Mask-RCNN)
 - Add YoLo implementation (planing)
 - Add SSD implementation (planing)
 - continue
