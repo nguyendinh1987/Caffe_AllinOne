@@ -1,4 +1,4 @@
-# Caffe_with_updated_functions
+# Caffe_All_in_One (All developed deep learning layers in caffe)
 This is a modified version of caffe which includes a lot of additional functions supporting for FCNN, video loader, data agumentation and so on. Some of modifications are inheritated from other developers in github (Thank for sharing)
 ## Targets:
 - Add FRCNN layers
@@ -38,6 +38,7 @@ This is a modified version of caffe which includes a lot of additional functions
 	
 - Add RoiAlign layer for Mask-RCNN  
   [source](https://github.com/jasjeetIM/Mask-RCNN)
+  
 ## How to install
 - Check "Dependencies_installation_guide" to install dependent libraries of caffe
 - Move to project folder and run:  
@@ -45,3 +46,6 @@ This is a modified version of caffe which includes a lot of additional functions
   >> make -j12  
   >> make install  
 - All distributed packaged is in /build/install. Give this directory to your any package finding function to look for your caffe lib  
+
+## How to use  
+Please take a look at "sample_protos" for examples of using added layers
