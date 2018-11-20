@@ -29,7 +29,7 @@ template <typename Dtype>
 class FrcnnProposalLayer : public Layer<Dtype> {
  public:
   explicit FrcnnProposalLayer(const LayerParameter& param)
-      : Layer<Dtype>(param) {}
+      : Layer<Dtype>(param), anchors_(NULL), transform_bbox_(NULL), mask_(NULL), selected_flags_(NULL), gpu_keep_indices_(NULL)  {}
   virtual void LayerSetUp(const vector<Blob<Dtype>*>& bottom,
       const vector<Blob<Dtype>*>& top);
   virtual void Reshape(const vector<Blob<Dtype>*>& bottom,

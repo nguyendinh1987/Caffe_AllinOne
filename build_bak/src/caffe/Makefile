@@ -238,6 +238,87 @@ BN_LAYER/bn_layer.cpp.s:
 	cd /home/kakadinh/caffe_variances/Caffe_with_updated_functions/build && $(MAKE) -f src/caffe/CMakeFiles/caffe.dir/build.make src/caffe/CMakeFiles/caffe.dir/BN_LAYER/bn_layer.cpp.s
 .PHONY : BN_LAYER/bn_layer.cpp.s
 
+C3D/convolution3d_layer.o: C3D/convolution3d_layer.cpp.o
+
+.PHONY : C3D/convolution3d_layer.o
+
+# target to build an object file
+C3D/convolution3d_layer.cpp.o:
+	cd /home/kakadinh/caffe_variances/Caffe_with_updated_functions/build && $(MAKE) -f src/caffe/CMakeFiles/caffe.dir/build.make src/caffe/CMakeFiles/caffe.dir/C3D/convolution3d_layer.cpp.o
+.PHONY : C3D/convolution3d_layer.cpp.o
+
+C3D/convolution3d_layer.i: C3D/convolution3d_layer.cpp.i
+
+.PHONY : C3D/convolution3d_layer.i
+
+# target to preprocess a source file
+C3D/convolution3d_layer.cpp.i:
+	cd /home/kakadinh/caffe_variances/Caffe_with_updated_functions/build && $(MAKE) -f src/caffe/CMakeFiles/caffe.dir/build.make src/caffe/CMakeFiles/caffe.dir/C3D/convolution3d_layer.cpp.i
+.PHONY : C3D/convolution3d_layer.cpp.i
+
+C3D/convolution3d_layer.s: C3D/convolution3d_layer.cpp.s
+
+.PHONY : C3D/convolution3d_layer.s
+
+# target to generate assembly for a file
+C3D/convolution3d_layer.cpp.s:
+	cd /home/kakadinh/caffe_variances/Caffe_with_updated_functions/build && $(MAKE) -f src/caffe/CMakeFiles/caffe.dir/build.make src/caffe/CMakeFiles/caffe.dir/C3D/convolution3d_layer.cpp.s
+.PHONY : C3D/convolution3d_layer.cpp.s
+
+C3D/deconvolution3d_layer.o: C3D/deconvolution3d_layer.cpp.o
+
+.PHONY : C3D/deconvolution3d_layer.o
+
+# target to build an object file
+C3D/deconvolution3d_layer.cpp.o:
+	cd /home/kakadinh/caffe_variances/Caffe_with_updated_functions/build && $(MAKE) -f src/caffe/CMakeFiles/caffe.dir/build.make src/caffe/CMakeFiles/caffe.dir/C3D/deconvolution3d_layer.cpp.o
+.PHONY : C3D/deconvolution3d_layer.cpp.o
+
+C3D/deconvolution3d_layer.i: C3D/deconvolution3d_layer.cpp.i
+
+.PHONY : C3D/deconvolution3d_layer.i
+
+# target to preprocess a source file
+C3D/deconvolution3d_layer.cpp.i:
+	cd /home/kakadinh/caffe_variances/Caffe_with_updated_functions/build && $(MAKE) -f src/caffe/CMakeFiles/caffe.dir/build.make src/caffe/CMakeFiles/caffe.dir/C3D/deconvolution3d_layer.cpp.i
+.PHONY : C3D/deconvolution3d_layer.cpp.i
+
+C3D/deconvolution3d_layer.s: C3D/deconvolution3d_layer.cpp.s
+
+.PHONY : C3D/deconvolution3d_layer.s
+
+# target to generate assembly for a file
+C3D/deconvolution3d_layer.cpp.s:
+	cd /home/kakadinh/caffe_variances/Caffe_with_updated_functions/build && $(MAKE) -f src/caffe/CMakeFiles/caffe.dir/build.make src/caffe/CMakeFiles/caffe.dir/C3D/deconvolution3d_layer.cpp.s
+.PHONY : C3D/deconvolution3d_layer.cpp.s
+
+C3D/vol2col.o: C3D/vol2col.cpp.o
+
+.PHONY : C3D/vol2col.o
+
+# target to build an object file
+C3D/vol2col.cpp.o:
+	cd /home/kakadinh/caffe_variances/Caffe_with_updated_functions/build && $(MAKE) -f src/caffe/CMakeFiles/caffe.dir/build.make src/caffe/CMakeFiles/caffe.dir/C3D/vol2col.cpp.o
+.PHONY : C3D/vol2col.cpp.o
+
+C3D/vol2col.i: C3D/vol2col.cpp.i
+
+.PHONY : C3D/vol2col.i
+
+# target to preprocess a source file
+C3D/vol2col.cpp.i:
+	cd /home/kakadinh/caffe_variances/Caffe_with_updated_functions/build && $(MAKE) -f src/caffe/CMakeFiles/caffe.dir/build.make src/caffe/CMakeFiles/caffe.dir/C3D/vol2col.cpp.i
+.PHONY : C3D/vol2col.cpp.i
+
+C3D/vol2col.s: C3D/vol2col.cpp.s
+
+.PHONY : C3D/vol2col.s
+
+# target to generate assembly for a file
+C3D/vol2col.cpp.s:
+	cd /home/kakadinh/caffe_variances/Caffe_with_updated_functions/build && $(MAKE) -f src/caffe/CMakeFiles/caffe.dir/build.make src/caffe/CMakeFiles/caffe.dir/C3D/vol2col.cpp.s
+.PHONY : C3D/vol2col.cpp.s
+
 FRCNN/frcnn_anchor_target_layer.o: FRCNN/frcnn_anchor_target_layer.cpp.o
 
 .PHONY : FRCNN/frcnn_anchor_target_layer.o
@@ -615,6 +696,60 @@ FRCNN/util/frcnn_vis.s: FRCNN/util/frcnn_vis.cpp.s
 FRCNN/util/frcnn_vis.cpp.s:
 	cd /home/kakadinh/caffe_variances/Caffe_with_updated_functions/build && $(MAKE) -f src/caffe/CMakeFiles/caffe.dir/build.make src/caffe/CMakeFiles/caffe.dir/FRCNN/util/frcnn_vis.cpp.s
 .PHONY : FRCNN/util/frcnn_vis.cpp.s
+
+Pool3D/pool3d_layer.o: Pool3D/pool3d_layer.cpp.o
+
+.PHONY : Pool3D/pool3d_layer.o
+
+# target to build an object file
+Pool3D/pool3d_layer.cpp.o:
+	cd /home/kakadinh/caffe_variances/Caffe_with_updated_functions/build && $(MAKE) -f src/caffe/CMakeFiles/caffe.dir/build.make src/caffe/CMakeFiles/caffe.dir/Pool3D/pool3d_layer.cpp.o
+.PHONY : Pool3D/pool3d_layer.cpp.o
+
+Pool3D/pool3d_layer.i: Pool3D/pool3d_layer.cpp.i
+
+.PHONY : Pool3D/pool3d_layer.i
+
+# target to preprocess a source file
+Pool3D/pool3d_layer.cpp.i:
+	cd /home/kakadinh/caffe_variances/Caffe_with_updated_functions/build && $(MAKE) -f src/caffe/CMakeFiles/caffe.dir/build.make src/caffe/CMakeFiles/caffe.dir/Pool3D/pool3d_layer.cpp.i
+.PHONY : Pool3D/pool3d_layer.cpp.i
+
+Pool3D/pool3d_layer.s: Pool3D/pool3d_layer.cpp.s
+
+.PHONY : Pool3D/pool3d_layer.s
+
+# target to generate assembly for a file
+Pool3D/pool3d_layer.cpp.s:
+	cd /home/kakadinh/caffe_variances/Caffe_with_updated_functions/build && $(MAKE) -f src/caffe/CMakeFiles/caffe.dir/build.make src/caffe/CMakeFiles/caffe.dir/Pool3D/pool3d_layer.cpp.s
+.PHONY : Pool3D/pool3d_layer.cpp.s
+
+VIDEO_LAYER_FB/video_data_layer_fb.o: VIDEO_LAYER_FB/video_data_layer_fb.cpp.o
+
+.PHONY : VIDEO_LAYER_FB/video_data_layer_fb.o
+
+# target to build an object file
+VIDEO_LAYER_FB/video_data_layer_fb.cpp.o:
+	cd /home/kakadinh/caffe_variances/Caffe_with_updated_functions/build && $(MAKE) -f src/caffe/CMakeFiles/caffe.dir/build.make src/caffe/CMakeFiles/caffe.dir/VIDEO_LAYER_FB/video_data_layer_fb.cpp.o
+.PHONY : VIDEO_LAYER_FB/video_data_layer_fb.cpp.o
+
+VIDEO_LAYER_FB/video_data_layer_fb.i: VIDEO_LAYER_FB/video_data_layer_fb.cpp.i
+
+.PHONY : VIDEO_LAYER_FB/video_data_layer_fb.i
+
+# target to preprocess a source file
+VIDEO_LAYER_FB/video_data_layer_fb.cpp.i:
+	cd /home/kakadinh/caffe_variances/Caffe_with_updated_functions/build && $(MAKE) -f src/caffe/CMakeFiles/caffe.dir/build.make src/caffe/CMakeFiles/caffe.dir/VIDEO_LAYER_FB/video_data_layer_fb.cpp.i
+.PHONY : VIDEO_LAYER_FB/video_data_layer_fb.cpp.i
+
+VIDEO_LAYER_FB/video_data_layer_fb.s: VIDEO_LAYER_FB/video_data_layer_fb.cpp.s
+
+.PHONY : VIDEO_LAYER_FB/video_data_layer_fb.s
+
+# target to generate assembly for a file
+VIDEO_LAYER_FB/video_data_layer_fb.cpp.s:
+	cd /home/kakadinh/caffe_variances/Caffe_with_updated_functions/build && $(MAKE) -f src/caffe/CMakeFiles/caffe.dir/build.make src/caffe/CMakeFiles/caffe.dir/VIDEO_LAYER_FB/video_data_layer_fb.cpp.s
+.PHONY : VIDEO_LAYER_FB/video_data_layer_fb.cpp.s
 
 __/__/include/caffe/proto/caffe.pb.o: __/__/include/caffe/proto/caffe.pb.cc.o
 
@@ -3289,6 +3424,33 @@ util/im2col.cpp.s:
 	cd /home/kakadinh/caffe_variances/Caffe_with_updated_functions/build && $(MAKE) -f src/caffe/CMakeFiles/caffe.dir/build.make src/caffe/CMakeFiles/caffe.dir/util/im2col.cpp.s
 .PHONY : util/im2col.cpp.s
 
+util/image_io_fb.o: util/image_io_fb.cpp.o
+
+.PHONY : util/image_io_fb.o
+
+# target to build an object file
+util/image_io_fb.cpp.o:
+	cd /home/kakadinh/caffe_variances/Caffe_with_updated_functions/build && $(MAKE) -f src/caffe/CMakeFiles/caffe.dir/build.make src/caffe/CMakeFiles/caffe.dir/util/image_io_fb.cpp.o
+.PHONY : util/image_io_fb.cpp.o
+
+util/image_io_fb.i: util/image_io_fb.cpp.i
+
+.PHONY : util/image_io_fb.i
+
+# target to preprocess a source file
+util/image_io_fb.cpp.i:
+	cd /home/kakadinh/caffe_variances/Caffe_with_updated_functions/build && $(MAKE) -f src/caffe/CMakeFiles/caffe.dir/build.make src/caffe/CMakeFiles/caffe.dir/util/image_io_fb.cpp.i
+.PHONY : util/image_io_fb.cpp.i
+
+util/image_io_fb.s: util/image_io_fb.cpp.s
+
+.PHONY : util/image_io_fb.s
+
+# target to generate assembly for a file
+util/image_io_fb.cpp.s:
+	cd /home/kakadinh/caffe_variances/Caffe_with_updated_functions/build && $(MAKE) -f src/caffe/CMakeFiles/caffe.dir/build.make src/caffe/CMakeFiles/caffe.dir/util/image_io_fb.cpp.s
+.PHONY : util/image_io_fb.cpp.s
+
 util/insert_splits.o: util/insert_splits.cpp.o
 
 .PHONY : util/insert_splits.o
@@ -3444,6 +3606,15 @@ help:
 	@echo "... BN_LAYER/bn_layer.o"
 	@echo "... BN_LAYER/bn_layer.i"
 	@echo "... BN_LAYER/bn_layer.s"
+	@echo "... C3D/convolution3d_layer.o"
+	@echo "... C3D/convolution3d_layer.i"
+	@echo "... C3D/convolution3d_layer.s"
+	@echo "... C3D/deconvolution3d_layer.o"
+	@echo "... C3D/deconvolution3d_layer.i"
+	@echo "... C3D/deconvolution3d_layer.s"
+	@echo "... C3D/vol2col.o"
+	@echo "... C3D/vol2col.i"
+	@echo "... C3D/vol2col.s"
 	@echo "... FRCNN/frcnn_anchor_target_layer.o"
 	@echo "... FRCNN/frcnn_anchor_target_layer.i"
 	@echo "... FRCNN/frcnn_anchor_target_layer.s"
@@ -3486,6 +3657,12 @@ help:
 	@echo "... FRCNN/util/frcnn_vis.o"
 	@echo "... FRCNN/util/frcnn_vis.i"
 	@echo "... FRCNN/util/frcnn_vis.s"
+	@echo "... Pool3D/pool3d_layer.o"
+	@echo "... Pool3D/pool3d_layer.i"
+	@echo "... Pool3D/pool3d_layer.s"
+	@echo "... VIDEO_LAYER_FB/video_data_layer_fb.o"
+	@echo "... VIDEO_LAYER_FB/video_data_layer_fb.i"
+	@echo "... VIDEO_LAYER_FB/video_data_layer_fb.s"
 	@echo "... __/__/include/caffe/proto/caffe.pb.o"
 	@echo "... __/__/include/caffe/proto/caffe.pb.i"
 	@echo "... __/__/include/caffe/proto/caffe.pb.s"
@@ -3783,6 +3960,9 @@ help:
 	@echo "... util/im2col.o"
 	@echo "... util/im2col.i"
 	@echo "... util/im2col.s"
+	@echo "... util/image_io_fb.o"
+	@echo "... util/image_io_fb.i"
+	@echo "... util/image_io_fb.s"
 	@echo "... util/insert_splits.o"
 	@echo "... util/insert_splits.i"
 	@echo "... util/insert_splits.s"

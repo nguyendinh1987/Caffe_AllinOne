@@ -445,6 +445,8 @@ message LayerParameter {
   optional Convolution3DParameter convolution3d_param = 207;
   // Add for P3D layer
   optional Pooling3DParameter pooling3d_param = 208;
+  // Add for Mask-RCNN
+  optional ROIAlignParameter roi_align_param = 209;
 }
 //----------------------------------------------------------------------------------------------------------
 // C3D layer:
@@ -572,7 +574,16 @@ message VideoDataFBParameter {
   optional bool use_multiple_label = 20 [default = false];
   optional uint32 num_of_labels = 21 [default = 1];
 }
-
+// Add for Mask-RCNN
+message ROIAlignParameter {
+  // Pad, kernel size, and stride are all given as a single value for equal
+  // dimensions in height and width or as Y, X pairs.
+  optional uint32 pooled_h = 1 [default = 0]; // The pooled output height
+  optional uint32 pooled_w = 2 [default = 0]; // The pooled output width
+  // Multiplicative spatial scale factor to translate ROI coords from their
+  // input scale to the scale used when pooling
+  optional float spatial_scale = 3 [default = 1];
+}
 // Xuanyi Add.2016.04.01
 message ROIPoolingParameter {
   // Pad, kernel size, and stride are all given as a single value for equal

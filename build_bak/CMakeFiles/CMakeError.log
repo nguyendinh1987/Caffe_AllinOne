@@ -1,22 +1,22 @@
 Determining if the pthread_create exist failed with the following output:
 Change Dir: /home/kakadinh/caffe_variances/Caffe_with_updated_functions/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_78630/fast"
-/usr/bin/make -f CMakeFiles/cmTC_78630.dir/build.make CMakeFiles/cmTC_78630.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_3881f/fast"
+/usr/bin/make -f CMakeFiles/cmTC_3881f.dir/build.make CMakeFiles/cmTC_3881f.dir/build
 make[1]: Entering directory '/home/kakadinh/caffe_variances/Caffe_with_updated_functions/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_78630.dir/CheckSymbolExists.c.o
-/usr/bin/cc     -o CMakeFiles/cmTC_78630.dir/CheckSymbolExists.c.o   -c /home/kakadinh/caffe_variances/Caffe_with_updated_functions/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
-Linking C executable cmTC_78630
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_78630.dir/link.txt --verbose=1
-/usr/bin/cc       CMakeFiles/cmTC_78630.dir/CheckSymbolExists.c.o  -o cmTC_78630 -rdynamic 
-CMakeFiles/cmTC_78630.dir/CheckSymbolExists.c.o: In function `main':
+Building C object CMakeFiles/cmTC_3881f.dir/CheckSymbolExists.c.o
+/usr/bin/cc     -o CMakeFiles/cmTC_3881f.dir/CheckSymbolExists.c.o   -c /home/kakadinh/caffe_variances/Caffe_with_updated_functions/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_3881f
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_3881f.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTC_3881f.dir/CheckSymbolExists.c.o  -o cmTC_3881f -rdynamic 
+CMakeFiles/cmTC_3881f.dir/CheckSymbolExists.c.o: In function `main':
 CheckSymbolExists.c:(.text+0x16): undefined reference to `pthread_create'
 collect2: error: ld returned 1 exit status
-CMakeFiles/cmTC_78630.dir/build.make:97: recipe for target 'cmTC_78630' failed
-make[1]: *** [cmTC_78630] Error 1
+CMakeFiles/cmTC_3881f.dir/build.make:97: recipe for target 'cmTC_3881f' failed
+make[1]: *** [cmTC_3881f] Error 1
 make[1]: Leaving directory '/home/kakadinh/caffe_variances/Caffe_with_updated_functions/build/CMakeFiles/CMakeTmp'
-Makefile:126: recipe for target 'cmTC_78630/fast' failed
-make: *** [cmTC_78630/fast] Error 2
+Makefile:126: recipe for target 'cmTC_3881f/fast' failed
+make: *** [cmTC_3881f/fast] Error 2
 
 File /home/kakadinh/caffe_variances/Caffe_with_updated_functions/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
 /* */
@@ -36,20 +36,20 @@ int main(int argc, char** argv)
 Determining if the function pthread_create exists in the pthreads failed with the following output:
 Change Dir: /home/kakadinh/caffe_variances/Caffe_with_updated_functions/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_830bf/fast"
-/usr/bin/make -f CMakeFiles/cmTC_830bf.dir/build.make CMakeFiles/cmTC_830bf.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_73ecd/fast"
+/usr/bin/make -f CMakeFiles/cmTC_73ecd.dir/build.make CMakeFiles/cmTC_73ecd.dir/build
 make[1]: Entering directory '/home/kakadinh/caffe_variances/Caffe_with_updated_functions/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_830bf.dir/CheckFunctionExists.c.o
-/usr/bin/cc    -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_830bf.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
-Linking C executable cmTC_830bf
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_830bf.dir/link.txt --verbose=1
-/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_830bf.dir/CheckFunctionExists.c.o  -o cmTC_830bf -rdynamic -lpthreads 
+Building C object CMakeFiles/cmTC_73ecd.dir/CheckFunctionExists.c.o
+/usr/bin/cc    -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_73ecd.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
+Linking C executable cmTC_73ecd
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_73ecd.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_73ecd.dir/CheckFunctionExists.c.o  -o cmTC_73ecd -rdynamic -lpthreads 
 /usr/bin/ld: cannot find -lpthreads
 collect2: error: ld returned 1 exit status
-CMakeFiles/cmTC_830bf.dir/build.make:97: recipe for target 'cmTC_830bf' failed
-make[1]: *** [cmTC_830bf] Error 1
+CMakeFiles/cmTC_73ecd.dir/build.make:97: recipe for target 'cmTC_73ecd' failed
+make[1]: *** [cmTC_73ecd] Error 1
 make[1]: Leaving directory '/home/kakadinh/caffe_variances/Caffe_with_updated_functions/build/CMakeFiles/CMakeTmp'
-Makefile:126: recipe for target 'cmTC_830bf/fast' failed
-make: *** [cmTC_830bf/fast] Error 2
+Makefile:126: recipe for target 'cmTC_73ecd/fast' failed
+make: *** [cmTC_73ecd/fast] Error 2
 
 

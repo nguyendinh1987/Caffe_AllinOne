@@ -36,9 +36,9 @@ def parse_args():
 if __name__ == '__main__':
     args = parse_args()
     config_file = open(args.config_file, 'r')
-    config = config_file.read();
+    config = config_file.read()
     config = config.replace('\n','')
-    config_file.close();
+    config_file.close()
 
     dict = json.loads(config)
 

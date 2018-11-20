@@ -5,6 +5,9 @@
 bb8e5e0b7eec232486866c60e69ac35e CMakeFiles/uninstall
 d28246a4e440bab6e9f8a6f7feb9f95d include/caffe/proto/caffe.pb.cc
 2b9dc1d0f06ece6adcdc345f730c9980 src/caffe/CMakeFiles/cuda_compile.dir/BN_LAYER/cuda_compile_generated_bn_layer.cu.o
+3fc943f5aca565670dde183a4ee28070 src/caffe/CMakeFiles/cuda_compile.dir/C3D/cuda_compile_generated_convolution3d_layer.cu.o
+f19de10ef4168fcf224c9f77a87d4918 src/caffe/CMakeFiles/cuda_compile.dir/C3D/cuda_compile_generated_deconvolution3d_layer.cu.o
+a4fc17c8027b4f68c81807fd4478fab8 src/caffe/CMakeFiles/cuda_compile.dir/C3D/cuda_compile_generated_vol2col.cu.o
 876a14bf00effbca027d21c866a3d58c src/caffe/CMakeFiles/cuda_compile.dir/FRCNN/cuda_compile_generated_frcnn_anchor_target_layer.cu.o
 0c9ff6089f69e63824cce2038994946a src/caffe/CMakeFiles/cuda_compile.dir/FRCNN/cuda_compile_generated_frcnn_proposal_layer.cu.o
 79391c0aa1ba3b53f7f9006b6cd1326e src/caffe/CMakeFiles/cuda_compile.dir/FRCNN/cuda_compile_generated_frcnn_proposal_target_layer.cu.o
@@ -14,6 +17,7 @@ d28246a4e440bab6e9f8a6f7feb9f95d include/caffe/proto/caffe.pb.cc
 823b99be0de7bd2d165ac6483b1218e8 src/caffe/CMakeFiles/cuda_compile.dir/FRCNN/cuda_compile_generated_roi_pooling_layer.cu.o
 7284657fd6024bad54266471db7c3414 src/caffe/CMakeFiles/cuda_compile.dir/FRCNN/cuda_compile_generated_smooth_L1_loss_layer.cu.o
 59b3b9543962dab327597879d863c08b src/caffe/CMakeFiles/cuda_compile.dir/FRCNN/util/cuda_compile_generated_frcnn_nms_kernel.cu.o
+2d014fa7cb461ac6e5d7f8c10e979f41 src/caffe/CMakeFiles/cuda_compile.dir/Pool3D/cuda_compile_generated_pool3d_layer.cu.o
 e7147d622e0eb3200d6c682efd6617a1 src/caffe/CMakeFiles/cuda_compile.dir/layers/cuda_compile_generated_absval_layer.cu.o
 83922d9993d880e67c984707d9b88c13 src/caffe/CMakeFiles/cuda_compile.dir/layers/cuda_compile_generated_accuracy_layer.cu.o
 d938e1e773e9aa5ed2187b338818949e src/caffe/CMakeFiles/cuda_compile.dir/layers/cuda_compile_generated_base_data_layer.cu.o
