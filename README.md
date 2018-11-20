@@ -6,7 +6,7 @@ This is a modified version of caffe which includes a lot of additional functions
 - Add BN Layer
 - Add on-fly data argumentation for improving training process
 - Add C3D (3D convolution), 3D pooling, video layer from facebook
-- Add RoiAlignment layer for mask rcnn [source](https://github.com/jasjeetIM/Mask-RCNN)
+- Add RoiAlignment layer for mask rcnn
 - Add YoLo implementation (planing)
 - Add SSD implementation (planing)
 - continue
@@ -35,6 +35,9 @@ This is a modified version of caffe which includes a lot of additional functions
   [Source 2](https://github.com/kevinlin311tw/caffe-augmentation) Add "contrast_adjustment, smooth_filtering"  
   Other augmentation: Add noise  
   Modified function: void DataTransformer::Transform(const cv::Mat& cv_img, Blob* transformed_blob)
+	
+- Add RoiAlign layer for Mask-RCNN  
+  [source](https://github.com/jasjeetIM/Mask-RCNN)
 ## How to install
 - Check "Dependencies_installation_guide" to install dependent libraries of caffe
 - Move to project folder and run:  
