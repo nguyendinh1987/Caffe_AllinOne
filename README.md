@@ -38,4 +38,4 @@ This is a modified version of caffe which includes a lot of additional functions
 - All distributed packaged is in /build/install. Give this directory to your any package finding function to look for your caffe lib  
 
 ## Updated package:  
-Please see the branch version_1.0 for updated version. I am working on this version and will merger to master later after checking all states. Thank you !!!!!
+Please see the branch version_1.0 for the updated version. I am working on this version and will merger to the branch master later after checking all states. Thank you !!!!!
