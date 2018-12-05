@@ -61,6 +61,8 @@ The RecallEval layer has two params as IoUs and Npps where IoUs refers to Inters
       repeated float IoUs = 1; // Intersection over Union  
       repeated int32 Npp = 2; // Number of object for evaluation  
     }
-- Step 2: Add the header file (.hpp) of your own layer in "include/caffe/<your path>/<your file>" (inlcude/caffe/FRCNN/frcnn_proposal_recall_eval_layer.hpp)
-- Step 3: Add the source files (.cpp and .cu) of your own layer in "src/caffe/<your path>/<your file>" (src/caffe/FRCNN/frcnn_proposal_recall_eval_layer.cpp; src/caffe/FRCNN/frcnn_proposal_recall_eval_layer.cu)
+- Step 2: Add the header file (.hpp) of your own layer in "include/caffe/<your path>/<your file>"  
+>> I edited the file as "inlcude/caffe/FRCNN/frcnn_proposal_recall_eval_layer.hpp"
+- Step 3: Add the source files (.cpp and .cu) of your own layer in "src/caffe/<your path>/<your file>"  
+>> I edited two files as  "src/caffe/FRCNN/frcnn_proposal_recall_eval_layer.cpp" and "src/caffe/FRCNN/frcnn_proposal_recall_eval_layer.cu"
 - Mandatory contents of header and source file:
