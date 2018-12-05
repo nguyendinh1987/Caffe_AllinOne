@@ -49,3 +49,11 @@ This is a modified version of caffe which includes a lot of additional functions
 
 ## How to use  
 Please take a look at "sample_protos" for examples of using added layers
+
+##[Advance] If you want to design new layer  
+(Let me used RecallEval layer for an example)  
+The RecallEval layer has two params as IoUs and Npps where IoUs refers to Intersection over Union threshold and Npps refers to number of proposals selected for evaluation. The IoUs and Npps will be assigned by users by net proto file.  
+- Step 1: Modify caffe.proto file
+- Step 2: Add the header file (.hpp) of your own layer in "include/caffe/<your path>/<your file>" (inlcude/caffe/FRCNN/frcnn_proposal_recall_eval_layer.hpp)
+- Step 3: Add the source files (.cpp and .cu) of your own layer in "src/caffe/<your path>/<your file>" (src/caffe/FRCNN/frcnn_proposal_recall_eval_layer.cpp; src/caffe/FRCNN/frcnn_proposal_recall_eval_layer.cu)
+- Mandatory contents of header and source file:
