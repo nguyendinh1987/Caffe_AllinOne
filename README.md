@@ -65,4 +65,18 @@ The RecallEval layer has two params as IoUs and Npps where IoUs refers to Inters
 >> I edited the file as "inlcude/caffe/FRCNN/frcnn_proposal_recall_eval_layer.hpp"
 - Step 3: Add the source files (.cpp and .cu) of your own layer in "src/caffe/<your path>/<your file>"  
 >> I edited two files as  "src/caffe/FRCNN/frcnn_proposal_recall_eval_layer.cpp" and "src/caffe/FRCNN/frcnn_proposal_recall_eval_layer.cu"
-- Mandatory contents of header and source file:
+- Mandatory functions for the new layer:
+>> LayerSetUp
+>> Reshape
+>> type() // for defining layer name which will be used in the network proto file
+>> Forward_cpu
+>> Backward_cpu	
+>> Forward_gpu
+>> Backward_gpu  
+If these functions have not been programmed yet, you only need defile the function and add there content as "NOT_IMPLEMENTED". Please take a look at function "Backward_cpu" for an example.  
+Functions relating to gpu such as *_gpu should be edited in *.cu file.  
+In the cpu source file (.cpp), you have to add below two lines for registering your layer into caffe framework  
+>> INSTANTIATE_CLASS(RecallEvalLayer);
+>> REGISTER_LAYER_CLASS(RecallEval);  
+In the gpu source file (.cu), you have to add below line for registering your layer
+>> INSTANTIATE_LAYER_GPU_FUNCS(RecallEvalLayer);
