@@ -73,10 +73,10 @@ The RecallEval layer has two params as IoUs and Npps where IoUs refers to Inters
 >> Backward_cpu  	
 >> Forward_gpu  
 >> Backward_gpu    
--- If these functions have not been programmed yet, you only need defile the function and add there content as "NOT_IMPLEMENTED". Please take a look at function "Backward_cpu" for an example.    
--- Functions relating to gpu such as *_gpu should be edited in *.cu file.    
--- In the cpu source file (.cpp), you have to add below two lines for registering your layer into caffe framework    
+--1 If these functions have not been programmed yet, you only need defile the function and add there content as "NOT_IMPLEMENTED". Please take a look at function "Backward_cpu" for an example.    
+--2 Functions relating to gpu such as *_gpu should be edited in *.cu file.    
+--3 In the cpu source file (.cpp), you have to add below two lines for registering your layer into caffe framework    
 >> INSTANTIATE_CLASS(RecallEvalLayer);  
 >> REGISTER_LAYER_CLASS(RecallEval);    
-In the gpu source file (.cu), you have to add below line for registering your layer  
+--4 In the gpu source file (.cu), you have to add below line for registering your layer  
 >> INSTANTIATE_LAYER_GPU_FUNCS(RecallEvalLayer);
