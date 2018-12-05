@@ -55,7 +55,7 @@ Please take a look at "sample_protos" for examples of using added layers
 The RecallEval layer has two params as IoUs and Npps where IoUs refers to Intersection over Union threshold and Npps refers to number of proposals selected for evaluation. The IoUs and Npps will be assigned by users by net proto file.  
 - Step 1: Modify caffe.proto file  
 * Provide definition of your layer parameter under the message "LayerParameter":  
-    optional RecallEvalParameter recall_based_eval_param = 210;  
+    <span style="color:blue"> optional RecallEvalParameter recall_based_eval_param = 210;</span>  
 * Provide definition of your layer parameter components follow message format:  
     message RecallEvalParameter {  
       repeated float IoUs = 1; // Intersection over Union  
