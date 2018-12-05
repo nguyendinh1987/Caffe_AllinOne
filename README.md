@@ -50,7 +50,7 @@ This is a modified version of caffe which includes a lot of additional functions
 ## How to use  
 Please take a look at "sample_protos" for examples of using added layers
 
-##[Advance] If you want to design new layer  
+## [Advance] If you want to design new layer  
 (Let me used RecallEval layer for an example)  
 The RecallEval layer has two params as IoUs and Npps where IoUs refers to Intersection over Union threshold and Npps refers to number of proposals selected for evaluation. The IoUs and Npps will be assigned by users by net proto file.  
 - Step 1: Modify caffe.proto file
