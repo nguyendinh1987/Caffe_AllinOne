@@ -40,8 +40,8 @@ This is a modified version of caffe which includes a lot of additional functions
 ## Updated package:  
 Please see the branch version_1.0 for the updated version. I am working on this version and will merger to the branch master later after checking all states. Thank you !!!!!
 - Updated layers in version_1.0: 
-> 3D convolution 
-> 3D pooling
-> video layer from FB
-> AlignROIpooling for mask_RCNN
-> RecallEval layer for on-fly evaluating RPN network
+> 3D convolution   
+> 3D pooling  
+> video layer from FB  
+> AlignROIpooling for mask_RCNN  
+> RecallEval layer for on-fly evaluating RPN network  
