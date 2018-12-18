@@ -17,6 +17,7 @@ a4fc17c8027b4f68c81807fd4478fab8 src/caffe/CMakeFiles/cuda_compile.dir/C3D/cuda_
 823b99be0de7bd2d165ac6483b1218e8 src/caffe/CMakeFiles/cuda_compile.dir/FRCNN/cuda_compile_generated_roi_pooling_layer.cu.o
 7284657fd6024bad54266471db7c3414 src/caffe/CMakeFiles/cuda_compile.dir/FRCNN/cuda_compile_generated_smooth_L1_loss_layer.cu.o
 59b3b9543962dab327597879d863c08b src/caffe/CMakeFiles/cuda_compile.dir/FRCNN/util/cuda_compile_generated_frcnn_nms_kernel.cu.o
+b8a7f33c7a9d87a1ea1f555fcbe87763 src/caffe/CMakeFiles/cuda_compile.dir/Mask_RCNN/cuda_compile_generated_roi_align_layer.cu.o
 2d014fa7cb461ac6e5d7f8c10e979f41 src/caffe/CMakeFiles/cuda_compile.dir/Pool3D/cuda_compile_generated_pool3d_layer.cu.o
 e7147d622e0eb3200d6c682efd6617a1 src/caffe/CMakeFiles/cuda_compile.dir/layers/cuda_compile_generated_absval_layer.cu.o
 83922d9993d880e67c984707d9b88c13 src/caffe/CMakeFiles/cuda_compile.dir/layers/cuda_compile_generated_accuracy_layer.cu.o

@@ -110,6 +110,11 @@ class VideoDataFBParameterDefaultTypeInternal {
   ::google::protobuf::internal::ExplicitlyConstructed<VideoDataFBParameter>
       _instance;
 } _VideoDataFBParameter_default_instance_;
+class ROIAlignParameterDefaultTypeInternal {
+ public:
+  ::google::protobuf::internal::ExplicitlyConstructed<ROIAlignParameter>
+      _instance;
+} _ROIAlignParameter_default_instance_;
 class ROIPoolingParameterDefaultTypeInternal {
  public:
   ::google::protobuf::internal::ExplicitlyConstructed<ROIPoolingParameter>
@@ -723,6 +728,7 @@ void InitDefaultsLayerParameterImpl() {
   protobuf_caffe_2eproto::InitDefaultsBNParameter();
   protobuf_caffe_2eproto::InitDefaultsConvolution3DParameter();
   protobuf_caffe_2eproto::InitDefaultsPooling3DParameter();
+  protobuf_caffe_2eproto::InitDefaultsROIAlignParameter();
   {
     void* ptr = &::caffe::_LayerParameter_default_instance_;
     new (ptr) ::caffe::LayerParameter();
@@ -841,6 +847,27 @@ void InitDefaultsVideoDataFBParameterImpl() {
 void InitDefaultsVideoDataFBParameter() {
   static GOOGLE_PROTOBUF_DECLARE_ONCE(once);
   ::google::protobuf::GoogleOnceInit(&once, &InitDefaultsVideoDataFBParameterImpl);
+}
+
+void InitDefaultsROIAlignParameterImpl() {
+  GOOGLE_PROTOBUF_VERIFY_VERSION;
+
+#ifdef GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
+  ::google::protobuf::internal::InitProtobufDefaultsForceUnique();
+#else
+  ::google::protobuf::internal::InitProtobufDefaults();
+#endif  // GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
+  {
+    void* ptr = &::caffe::_ROIAlignParameter_default_instance_;
+    new (ptr) ::caffe::ROIAlignParameter();
+    ::google::protobuf::internal::OnShutdownDestroyMessage(ptr);
+  }
+  ::caffe::ROIAlignParameter::InitAsDefaultInstance();
+}
+
+void InitDefaultsROIAlignParameter() {
+  static GOOGLE_PROTOBUF_DECLARE_ONCE(once);
+  ::google::protobuf::GoogleOnceInit(&once, &InitDefaultsROIAlignParameterImpl);
 }
 
 void InitDefaultsROIPoolingParameterImpl() {
@@ -2033,7 +2060,7 @@ void InitDefaultsPReLUParameter() {
   ::google::protobuf::GoogleOnceInit(&once, &InitDefaultsPReLUParameterImpl);
 }
 
-::google::protobuf::Metadata file_level_metadata[72];
+::google::protobuf::Metadata file_level_metadata[73];
 const ::google::protobuf::EnumDescriptor* file_level_enum_descriptors[29];
 
 const ::google::protobuf::uint32 TableStruct::offsets[] GOOGLE_PROTOBUF_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
@@ -2370,11 +2397,12 @@ const ::google::protobuf::uint32 TableStruct::offsets[] GOOGLE_PROTOBUF_ATTRIBUT
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::caffe::LayerParameter, bn_param_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::caffe::LayerParameter, convolution3d_param_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::caffe::LayerParameter, pooling3d_param_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::caffe::LayerParameter, roi_align_param_),
   0,
   1,
   ~0u,
   ~0u,
-  59,
+  60,
   ~0u,
   ~0u,
   ~0u,
@@ -2438,6 +2466,7 @@ const ::google::protobuf::uint32 TableStruct::offsets[] GOOGLE_PROTOBUF_ATTRIBUT
   56,
   57,
   58,
+  59,
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::caffe::Convolution3DParameter, _has_bits_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::caffe::Convolution3DParameter, _internal_metadata_),
   ~0u,  // no _extensions_
@@ -2579,6 +2608,17 @@ const ::google::protobuf::uint32 TableStruct::offsets[] GOOGLE_PROTOBUF_ATTRIBUT
   13,
   14,
   20,
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::caffe::ROIAlignParameter, _has_bits_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::caffe::ROIAlignParameter, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::caffe::ROIAlignParameter, pooled_h_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::caffe::ROIAlignParameter, pooled_w_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::caffe::ROIAlignParameter, spatial_scale_),
+  0,
+  1,
+  2,
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::caffe::ROIPoolingParameter, _has_bits_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::caffe::ROIPoolingParameter, _internal_metadata_),
   ~0u,  // no _extensions_
@@ -3471,66 +3511,67 @@ static const ::google::protobuf::internal::MigrationSchema schemas[] GOOGLE_PROT
   { 221, 229, sizeof(::caffe::NetState)},
   { 232, 242, sizeof(::caffe::NetStateRule)},
   { 247, 256, sizeof(::caffe::ParamSpec)},
-  { 260, 333, sizeof(::caffe::LayerParameter)},
-  { 401, 418, sizeof(::caffe::Convolution3DParameter)},
-  { 430, 441, sizeof(::caffe::Pooling3DParameter)},
-  { 447, 458, sizeof(::caffe::BNParameter)},
-  { 464, 482, sizeof(::caffe::VideoDataParameter)},
-  { 495, 521, sizeof(::caffe::VideoDataFBParameter)},
-  { 542, 550, sizeof(::caffe::ROIPoolingParameter)},
-  { 553, 564, sizeof(::caffe::ROIMaskPoolingParameter)},
-  { 570, 576, sizeof(::caffe::SmoothL1LossParameter)},
-  { 577, 612, sizeof(::caffe::TransformationParameter)},
-  { 642, 650, sizeof(::caffe::LossParameter)},
-  { 653, 661, sizeof(::caffe::AccuracyParameter)},
-  { 664, 672, sizeof(::caffe::ArgMaxParameter)},
-  { 675, 682, sizeof(::caffe::ClipParameter)},
-  { 684, 691, sizeof(::caffe::ConcatParameter)},
-  { 693, 701, sizeof(::caffe::BatchNormParameter)},
-  { 704, 712, sizeof(::caffe::BiasParameter)},
-  { 715, 722, sizeof(::caffe::ContrastiveLossParameter)},
-  { 724, 747, sizeof(::caffe::ConvolutionParameter)},
-  { 765, 772, sizeof(::caffe::CropParameter)},
-  { 774, 789, sizeof(::caffe::DataParameter)},
-  { 799, 805, sizeof(::caffe::DropoutParameter)},
-  { 806, 817, sizeof(::caffe::DummyDataParameter)},
-  { 823, 831, sizeof(::caffe::EltwiseParameter)},
-  { 834, 840, sizeof(::caffe::ELUParameter)},
-  { 841, 851, sizeof(::caffe::EmbedParameter)},
-  { 856, 864, sizeof(::caffe::ExpParameter)},
-  { 867, 874, sizeof(::caffe::FlattenParameter)},
-  { 876, 884, sizeof(::caffe::HDF5DataParameter)},
-  { 887, 893, sizeof(::caffe::HDF5OutputParameter)},
-  { 894, 900, sizeof(::caffe::HingeLossParameter)},
-  { 901, 918, sizeof(::caffe::ImageDataParameter)},
-  { 930, 937, sizeof(::caffe::InfogainLossParameter)},
-  { 939, 950, sizeof(::caffe::InnerProductParameter)},
-  { 956, 962, sizeof(::caffe::InputParameter)},
-  { 963, 971, sizeof(::caffe::LogParameter)},
-  { 974, 985, sizeof(::caffe::LRNParameter)},
-  { 991, 1000, sizeof(::caffe::MemoryDataParameter)},
-  { 1004, 1012, sizeof(::caffe::MVNParameter)},
-  { 1015, 1021, sizeof(::caffe::ParameterParameter)},
-  { 1022, 1040, sizeof(::caffe::PoolingParameter)},
-  { 1053, 1061, sizeof(::caffe::PowerParameter)},
-  { 1064, 1073, sizeof(::caffe::PythonParameter)},
-  { 1077, 1087, sizeof(::caffe::RecurrentParameter)},
-  { 1092, 1100, sizeof(::caffe::ReductionParameter)},
-  { 1103, 1110, sizeof(::caffe::ReLUParameter)},
-  { 1112, 1120, sizeof(::caffe::ReshapeParameter)},
-  { 1123, 1133, sizeof(::caffe::ScaleParameter)},
-  { 1138, 1144, sizeof(::caffe::SigmoidParameter)},
-  { 1145, 1153, sizeof(::caffe::SliceParameter)},
-  { 1156, 1163, sizeof(::caffe::SoftmaxParameter)},
-  { 1165, 1171, sizeof(::caffe::SwishParameter)},
-  { 1172, 1178, sizeof(::caffe::TanHParameter)},
-  { 1179, 1186, sizeof(::caffe::TileParameter)},
-  { 1188, 1194, sizeof(::caffe::ThresholdParameter)},
-  { 1195, 1214, sizeof(::caffe::WindowDataParameter)},
-  { 1228, 1236, sizeof(::caffe::SPPParameter)},
-  { 1239, 1287, sizeof(::caffe::V1LayerParameter)},
-  { 1330, 1373, sizeof(::caffe::V0LayerParameter)},
-  { 1411, 1418, sizeof(::caffe::PReLUParameter)},
+  { 260, 334, sizeof(::caffe::LayerParameter)},
+  { 403, 420, sizeof(::caffe::Convolution3DParameter)},
+  { 432, 443, sizeof(::caffe::Pooling3DParameter)},
+  { 449, 460, sizeof(::caffe::BNParameter)},
+  { 466, 484, sizeof(::caffe::VideoDataParameter)},
+  { 497, 523, sizeof(::caffe::VideoDataFBParameter)},
+  { 544, 552, sizeof(::caffe::ROIAlignParameter)},
+  { 555, 563, sizeof(::caffe::ROIPoolingParameter)},
+  { 566, 577, sizeof(::caffe::ROIMaskPoolingParameter)},
+  { 583, 589, sizeof(::caffe::SmoothL1LossParameter)},
+  { 590, 625, sizeof(::caffe::TransformationParameter)},
+  { 655, 663, sizeof(::caffe::LossParameter)},
+  { 666, 674, sizeof(::caffe::AccuracyParameter)},
+  { 677, 685, sizeof(::caffe::ArgMaxParameter)},
+  { 688, 695, sizeof(::caffe::ClipParameter)},
+  { 697, 704, sizeof(::caffe::ConcatParameter)},
+  { 706, 714, sizeof(::caffe::BatchNormParameter)},
+  { 717, 725, sizeof(::caffe::BiasParameter)},
+  { 728, 735, sizeof(::caffe::ContrastiveLossParameter)},
+  { 737, 760, sizeof(::caffe::ConvolutionParameter)},
+  { 778, 785, sizeof(::caffe::CropParameter)},
+  { 787, 802, sizeof(::caffe::DataParameter)},
+  { 812, 818, sizeof(::caffe::DropoutParameter)},
+  { 819, 830, sizeof(::caffe::DummyDataParameter)},
+  { 836, 844, sizeof(::caffe::EltwiseParameter)},
+  { 847, 853, sizeof(::caffe::ELUParameter)},
+  { 854, 864, sizeof(::caffe::EmbedParameter)},
+  { 869, 877, sizeof(::caffe::ExpParameter)},
+  { 880, 887, sizeof(::caffe::FlattenParameter)},
+  { 889, 897, sizeof(::caffe::HDF5DataParameter)},
+  { 900, 906, sizeof(::caffe::HDF5OutputParameter)},
+  { 907, 913, sizeof(::caffe::HingeLossParameter)},
+  { 914, 931, sizeof(::caffe::ImageDataParameter)},
+  { 943, 950, sizeof(::caffe::InfogainLossParameter)},
+  { 952, 963, sizeof(::caffe::InnerProductParameter)},
+  { 969, 975, sizeof(::caffe::InputParameter)},
+  { 976, 984, sizeof(::caffe::LogParameter)},
+  { 987, 998, sizeof(::caffe::LRNParameter)},
+  { 1004, 1013, sizeof(::caffe::MemoryDataParameter)},
+  { 1017, 1025, sizeof(::caffe::MVNParameter)},
+  { 1028, 1034, sizeof(::caffe::ParameterParameter)},
+  { 1035, 1053, sizeof(::caffe::PoolingParameter)},
+  { 1066, 1074, sizeof(::caffe::PowerParameter)},
+  { 1077, 1086, sizeof(::caffe::PythonParameter)},
+  { 1090, 1100, sizeof(::caffe::RecurrentParameter)},
+  { 1105, 1113, sizeof(::caffe::ReductionParameter)},
+  { 1116, 1123, sizeof(::caffe::ReLUParameter)},
+  { 1125, 1133, sizeof(::caffe::ReshapeParameter)},
+  { 1136, 1146, sizeof(::caffe::ScaleParameter)},
+  { 1151, 1157, sizeof(::caffe::SigmoidParameter)},
+  { 1158, 1166, sizeof(::caffe::SliceParameter)},
+  { 1169, 1176, sizeof(::caffe::SoftmaxParameter)},
+  { 1178, 1184, sizeof(::caffe::SwishParameter)},
+  { 1185, 1191, sizeof(::caffe::TanHParameter)},
+  { 1192, 1199, sizeof(::caffe::TileParameter)},
+  { 1201, 1207, sizeof(::caffe::ThresholdParameter)},
+  { 1208, 1227, sizeof(::caffe::WindowDataParameter)},
+  { 1241, 1249, sizeof(::caffe::SPPParameter)},
+  { 1252, 1300, sizeof(::caffe::V1LayerParameter)},
+  { 1343, 1386, sizeof(::caffe::V0LayerParameter)},
+  { 1424, 1431, sizeof(::caffe::PReLUParameter)},
 };
 
 static ::google::protobuf::Message const * const file_default_instances[] = {
@@ -3552,6 +3593,7 @@ static ::google::protobuf::Message const * const file_default_instances[] = {
   reinterpret_cast<const ::google::protobuf::Message*>(&::caffe::_BNParameter_default_instance_),
   reinterpret_cast<const ::google::protobuf::Message*>(&::caffe::_VideoDataParameter_default_instance_),
   reinterpret_cast<const ::google::protobuf::Message*>(&::caffe::_VideoDataFBParameter_default_instance_),
+  reinterpret_cast<const ::google::protobuf::Message*>(&::caffe::_ROIAlignParameter_default_instance_),
   reinterpret_cast<const ::google::protobuf::Message*>(&::caffe::_ROIPoolingParameter_default_instance_),
   reinterpret_cast<const ::google::protobuf::Message*>(&::caffe::_ROIMaskPoolingParameter_default_instance_),
   reinterpret_cast<const ::google::protobuf::Message*>(&::caffe::_SmoothL1LossParameter_default_instance_),
@@ -3624,7 +3666,7 @@ void protobuf_AssignDescriptorsOnce() {
 void protobuf_RegisterTypes(const ::std::string&) GOOGLE_PROTOBUF_ATTRIBUTE_COLD;
 void protobuf_RegisterTypes(const ::std::string&) {
   protobuf_AssignDescriptorsOnce();
-  ::google::protobuf::internal::RegisterAllTypes(file_level_metadata, 72);
+  ::google::protobuf::internal::RegisterAllTypes(file_level_metadata, 73);
 }
 
 void AddDescriptorsImpl() {
@@ -3703,7 +3745,7 @@ void AddDescriptorsImpl() {
       "Spec\022\014\n\004name\030\001 \001(\t\0221\n\nshare_mode\030\002 \001(\0162\035"
       ".caffe.ParamSpec.DimCheckMode\022\022\n\007lr_mult"
       "\030\003 \001(\002:\0011\022\025\n\ndecay_mult\030\004 \001(\002:\0011\"*\n\014DimC"
-      "heckMode\022\n\n\006STRICT\020\000\022\016\n\nPERMISSIVE\020\001\"\232\030\n"
+      "heckMode\022\n\n\006STRICT\020\000\022\016\n\nPERMISSIVE\020\001\"\316\030\n"
       "\016LayerParameter\022\014\n\004name\030\001 \001(\t\022\014\n\004type\030\002 "
       "\001(\t\022\016\n\006bottom\030\003 \003(\t\022\013\n\003top\030\004 \003(\t\022\033\n\005phas"
       "e\030\n \001(\0162\014.caffe.Phase\022\023\n\013loss_weight\030\005 \003"
@@ -3781,334 +3823,337 @@ void AddDescriptorsImpl() {
       "\001(\0132\022.caffe.BNParameter\022;\n\023convolution3d"
       "_param\030\317\001 \001(\0132\035.caffe.Convolution3DParam"
       "eter\0223\n\017pooling3d_param\030\320\001 \001(\0132\031.caffe.P"
-      "ooling3DParameter\"\317\002\n\026Convolution3DParam"
-      "eter\022\022\n\nnum_output\030\001 \001(\r\022\027\n\tbias_term\030\002 "
-      "\001(\010:\004true\022\016\n\003pad\030\003 \001(\r:\0010\022\023\n\013kernel_size"
-      "\030\004 \001(\r\022\020\n\005group\030\005 \001(\r:\0011\022\024\n\014kernel_depth"
-      "\030\006 \001(\r\022\021\n\006stride\030\007 \001(\r:\0011\022\032\n\017temporal_st"
-      "ride\030\010 \001(\r:\0011\022-\n\rweight_filler\030\t \001(\0132\026.c"
-      "affe.FillerParameter\022+\n\013bias_filler\030\n \001("
-      "\0132\026.caffe.FillerParameter\022\027\n\014filter_grou"
-      "p\030\013 \001(\r:\0011\022\027\n\014temporal_pad\030\014 \001(\r:\0010\"\347\001\n\022"
-      "Pooling3DParameter\0227\n\004pool\030\001 \001(\0162$.caffe"
-      ".Pooling3DParameter.PoolMethod:\003MAX\022\023\n\013k"
-      "ernel_size\030\002 \001(\r\022\021\n\006stride\030\003 \001(\r:\0011\022\016\n\003p"
-      "ad\030\004 \001(\r:\0010\022\024\n\014kernel_depth\030\005 \001(\r\022\032\n\017tem"
-      "poral_stride\030\006 \001(\r:\0011\".\n\nPoolMethod\022\007\n\003M"
-      "AX\020\000\022\007\n\003AVE\020\001\022\016\n\nSTOCHASTIC\020\002\"\213\002\n\013BNPara"
-      "meter\022,\n\014slope_filler\030\001 \001(\0132\026.caffe.Fill"
-      "erParameter\022+\n\013bias_filler\030\002 \001(\0132\026.caffe"
-      ".FillerParameter\022\025\n\010momentum\030\003 \001(\002:\0030.9\022"
-      "\022\n\003eps\030\004 \001(\002:\0051e-05\022\025\n\006frozen\030\005 \001(\010:\005fal"
-      "se\0222\n\006engine\030\006 \001(\0162\031.caffe.BNParameter.E"
-      "ngine:\007DEFAULT\"+\n\006Engine\022\013\n\007DEFAULT\020\000\022\t\n"
-      "\005CAFFE\020\001\022\t\n\005CUDNN\020\002\"\360\002\n\022VideoDataParamet"
-      "er\022\016\n\006source\030\001 \001(\t\022\022\n\nbatch_size\030\004 \001(\r\022\024"
-      "\n\trand_skip\030\007 \001(\r:\0010\022\026\n\007shuffle\030\010 \001(\010:\005f"
-      "alse\022\025\n\nnew_height\030\t \001(\r:\0010\022\024\n\tnew_width"
-      "\030\n \001(\r:\0010\022\025\n\nnew_length\030\013 \001(\r:\0011\022\027\n\014num_"
-      "segments\030\014 \001(\r:\0011\022\020\n\005scale\030\002 \001(\002:\0011\022\021\n\tm"
-      "ean_file\030\003 \001(\t\022\024\n\tcrop_size\030\005 \001(\r:\0010\022\025\n\006"
-      "mirror\030\006 \001(\010:\005false\022:\n\010modality\030\r \001(\0162\"."
-      "caffe.VideoDataParameter.Modality:\004FLOW\""
-      "\035\n\010Modality\022\007\n\003RGB\020\000\022\010\n\004FLOW\020\001\"\243\004\n\024Video"
-      "DataFBParameter\022\016\n\006source\030\001 \001(\t\022\025\n\nbatch"
-      "_size\030\004 \001(\r:\0011\022\024\n\trand_skip\030\007 \001(\r:\0010\022\026\n\007"
-      "shuffle\030\010 \001(\010:\005false\022\025\n\nnew_height\030\t \001(\r"
-      ":\0010\022\024\n\tnew_width\030\n \001(\r:\0010\022\022\n\nnew_length\030"
-      "\r \001(\r\022\026\n\010is_color\030\013 \001(\010:\004true\022\020\n\005scale\030\002"
+      "ooling3DParameter\0222\n\017roi_align_param\030\321\001 "
+      "\001(\0132\030.caffe.ROIAlignParameter\"\317\002\n\026Convol"
+      "ution3DParameter\022\022\n\nnum_output\030\001 \001(\r\022\027\n\t"
+      "bias_term\030\002 \001(\010:\004true\022\016\n\003pad\030\003 \001(\r:\0010\022\023\n"
+      "\013kernel_size\030\004 \001(\r\022\020\n\005group\030\005 \001(\r:\0011\022\024\n\014"
+      "kernel_depth\030\006 \001(\r\022\021\n\006stride\030\007 \001(\r:\0011\022\032\n"
+      "\017temporal_stride\030\010 \001(\r:\0011\022-\n\rweight_fill"
+      "er\030\t \001(\0132\026.caffe.FillerParameter\022+\n\013bias"
+      "_filler\030\n \001(\0132\026.caffe.FillerParameter\022\027\n"
+      "\014filter_group\030\013 \001(\r:\0011\022\027\n\014temporal_pad\030\014"
+      " \001(\r:\0010\"\347\001\n\022Pooling3DParameter\0227\n\004pool\030\001"
+      " \001(\0162$.caffe.Pooling3DParameter.PoolMeth"
+      "od:\003MAX\022\023\n\013kernel_size\030\002 \001(\r\022\021\n\006stride\030\003"
+      " \001(\r:\0011\022\016\n\003pad\030\004 \001(\r:\0010\022\024\n\014kernel_depth\030"
+      "\005 \001(\r\022\032\n\017temporal_stride\030\006 \001(\r:\0011\".\n\nPoo"
+      "lMethod\022\007\n\003MAX\020\000\022\007\n\003AVE\020\001\022\016\n\nSTOCHASTIC\020"
+      "\002\"\213\002\n\013BNParameter\022,\n\014slope_filler\030\001 \001(\0132"
+      "\026.caffe.FillerParameter\022+\n\013bias_filler\030\002"
+      " \001(\0132\026.caffe.FillerParameter\022\025\n\010momentum"
+      "\030\003 \001(\002:\0030.9\022\022\n\003eps\030\004 \001(\002:\0051e-05\022\025\n\006froze"
+      "n\030\005 \001(\010:\005false\0222\n\006engine\030\006 \001(\0162\031.caffe.B"
+      "NParameter.Engine:\007DEFAULT\"+\n\006Engine\022\013\n\007"
+      "DEFAULT\020\000\022\t\n\005CAFFE\020\001\022\t\n\005CUDNN\020\002\"\360\002\n\022Vide"
+      "oDataParameter\022\016\n\006source\030\001 \001(\t\022\022\n\nbatch_"
+      "size\030\004 \001(\r\022\024\n\trand_skip\030\007 \001(\r:\0010\022\026\n\007shuf"
+      "fle\030\010 \001(\010:\005false\022\025\n\nnew_height\030\t \001(\r:\0010\022"
+      "\024\n\tnew_width\030\n \001(\r:\0010\022\025\n\nnew_length\030\013 \001("
+      "\r:\0011\022\027\n\014num_segments\030\014 \001(\r:\0011\022\020\n\005scale\030\002"
+      " \001(\002:\0011\022\021\n\tmean_file\030\003 \001(\t\022\024\n\tcrop_size\030"
+      "\005 \001(\r:\0010\022\025\n\006mirror\030\006 \001(\010:\005false\022:\n\010modal"
+      "ity\030\r \001(\0162\".caffe.VideoDataParameter.Mod"
+      "ality:\004FLOW\"\035\n\010Modality\022\007\n\003RGB\020\000\022\010\n\004FLOW"
+      "\020\001\"\243\004\n\024VideoDataFBParameter\022\016\n\006source\030\001 "
+      "\001(\t\022\025\n\nbatch_size\030\004 \001(\r:\0011\022\024\n\trand_skip\030"
+      "\007 \001(\r:\0010\022\026\n\007shuffle\030\010 \001(\010:\005false\022\025\n\nnew_"
+      "height\030\t \001(\r:\0010\022\024\n\tnew_width\030\n \001(\r:\0010\022\022\n"
+      "\nnew_length\030\r \001(\r\022\026\n\010is_color\030\013 \001(\010:\004tru"
+      "e\022\020\n\005scale\030\002 \001(\002:\0011\022\021\n\tmean_file\030\003 \001(\t\022\024"
+      "\n\tcrop_size\030\005 \001(\r:\0010\022\025\n\006mirror\030\006 \001(\010:\005fa"
+      "lse\022\025\n\013root_folder\030\014 \001(\t:\000\022\030\n\tshow_data\030"
+      "\016 \001(\010:\005false\022\030\n\tuse_image\030\017 \001(\010:\005false\022\""
+      "\n\023use_temporal_jitter\030\020 \001(\010:\005false\022\030\n\rsa"
+      "mpling_rate\030\021 \001(\r:\0011\022\034\n\021max_sampling_rat"
+      "e\030\022 \001(\r:\0011\022\'\n\030use_sampling_rate_jitter\030\023"
+      " \001(\010:\005false\022!\n\022use_multiple_label\030\024 \001(\010:"
+      "\005false\022\030\n\rnum_of_labels\030\025 \001(\r:\0011\"W\n\021ROIA"
+      "lignParameter\022\023\n\010pooled_h\030\001 \001(\r:\0010\022\023\n\010po"
+      "oled_w\030\002 \001(\r:\0010\022\030\n\rspatial_scale\030\003 \001(\002:\001"
+      "1\"Y\n\023ROIPoolingParameter\022\023\n\010pooled_h\030\001 \001"
+      "(\r:\0010\022\023\n\010pooled_w\030\002 \001(\r:\0010\022\030\n\rspatial_sc"
+      "ale\030\003 \001(\002:\0011\"\240\001\n\027ROIMaskPoolingParameter"
+      "\022\023\n\010pooled_h\030\001 \001(\r:\0010\022\023\n\010pooled_w\030\002 \001(\r:"
+      "\0010\022\030\n\rspatial_scale\030\003 \001(\002:\0011\022\024\n\thalf_par"
+      "t\030\004 \001(\005:\0010\022\024\n\troi_scale\030\005 \001(\002:\0011\022\025\n\nmask"
+      "_scale\030\006 \001(\002:\0010\")\n\025SmoothL1LossParameter"
+      "\022\020\n\005sigma\030\001 \001(\002:\0011\"\266\006\n\027TransformationPar"
+      "ameter\022\020\n\005scale\030\001 \001(\002:\0011\022\025\n\006mirror\030\002 \001(\010"
+      ":\005false\022\024\n\tcrop_size\030\003 \001(\r:\0010\022\021\n\tmean_fi"
+      "le\030\004 \001(\t\022\022\n\nmean_value\030\005 \003(\002\022\032\n\013force_co"
+      "lor\030\006 \001(\010:\005false\022\031\n\nforce_gray\030\007 \001(\010:\005fa"
+      "lse\022 \n\022min_scaling_factor\030\010 \001(\002:\0040.75\022\037\n"
+      "\022max_scaling_factor\030\t \001(\002:\0031.5\022\"\n\027rotati"
+      "on_angle_interval\030\n \001(\002:\0011\022\"\n\023contrast_a"
+      "djustment\030\013 \001(\010:\005false\022\037\n\020smooth_filteri"
+      "ng\030\014 \001(\010:\005false\022\037\n\020jpeg_compression\030\r \001("
+      "\010:\005false\022\026\n\007display\030\016 \001(\010:\005false\022\027\n\010fix_"
+      "crop\030\017 \001(\010:\005false\022\034\n\rmore_fix_crop\030\020 \001(\010"
+      ":\005false\022\032\n\013multi_scale\030\021 \001(\010:\005false\022\024\n\014s"
+      "cale_ratios\030\022 \003(\002\022\026\n\013max_distort\030\023 \001(\005:\001"
+      "1\022\026\n\007is_flow\030\024 \001(\010:\005false\022\035\n\016original_im"
+      "age\030\025 \001(\010:\005false\022\021\n\006stride\030\026 \001(\005:\0011\022\022\n\nu"
+      "pper_size\030\027 \001(\005\022\024\n\014upper_height\030\030 \001(\005\022\023\n"
+      "\013upper_width\030\031 \001(\005\022\036\n\017normalize_input\030\032 "
+      "\001(\010:\005false\022\036\n\020global_normalize\030\033 \001(\010:\004tr"
+      "ue\022\032\n\013on_fly_mean\030\034 \001(\010:\005false\022\031\n\013global"
+      "_mean\030\035 \001(\010:\004true\022\030\n\tadd_noise\030\036 \001(\010:\005fa"
+      "lse\"\302\001\n\rLossParameter\022\024\n\014ignore_label\030\001 "
+      "\001(\005\022D\n\rnormalization\030\003 \001(\0162&.caffe.LossP"
+      "arameter.NormalizationMode:\005VALID\022\021\n\tnor"
+      "malize\030\002 \001(\010\"B\n\021NormalizationMode\022\010\n\004FUL"
+      "L\020\000\022\t\n\005VALID\020\001\022\016\n\nBATCH_SIZE\020\002\022\010\n\004NONE\020\003"
+      "\"L\n\021AccuracyParameter\022\020\n\005top_k\030\001 \001(\r:\0011\022"
+      "\017\n\004axis\030\002 \001(\005:\0011\022\024\n\014ignore_label\030\003 \001(\005\"M"
+      "\n\017ArgMaxParameter\022\032\n\013out_max_val\030\001 \001(\010:\005"
+      "false\022\020\n\005top_k\030\002 \001(\r:\0011\022\014\n\004axis\030\003 \001(\005\")\n"
+      "\rClipParameter\022\013\n\003min\030\001 \002(\002\022\013\n\003max\030\002 \002(\002"
+      "\"9\n\017ConcatParameter\022\017\n\004axis\030\002 \001(\005:\0011\022\025\n\n"
+      "concat_dim\030\001 \001(\r:\0011\"j\n\022BatchNormParamete"
+      "r\022\030\n\020use_global_stats\030\001 \001(\010\022&\n\027moving_av"
+      "erage_fraction\030\002 \001(\002:\0050.999\022\022\n\003eps\030\003 \001(\002"
+      ":\0051e-05\"]\n\rBiasParameter\022\017\n\004axis\030\001 \001(\005:\001"
+      "1\022\023\n\010num_axes\030\002 \001(\005:\0011\022&\n\006filler\030\003 \001(\0132\026"
+      ".caffe.FillerParameter\"L\n\030ContrastiveLos"
+      "sParameter\022\021\n\006margin\030\001 \001(\002:\0011\022\035\n\016legacy_"
+      "version\030\002 \001(\010:\005false\"\374\003\n\024ConvolutionPara"
+      "meter\022\022\n\nnum_output\030\001 \001(\r\022\027\n\tbias_term\030\002"
+      " \001(\010:\004true\022\013\n\003pad\030\003 \003(\r\022\023\n\013kernel_size\030\004"
+      " \003(\r\022\016\n\006stride\030\006 \003(\r\022\020\n\010dilation\030\022 \003(\r\022\020"
+      "\n\005pad_h\030\t \001(\r:\0010\022\020\n\005pad_w\030\n \001(\r:\0010\022\020\n\010ke"
+      "rnel_h\030\013 \001(\r\022\020\n\010kernel_w\030\014 \001(\r\022\020\n\010stride"
+      "_h\030\r \001(\r\022\020\n\010stride_w\030\016 \001(\r\022\020\n\005group\030\005 \001("
+      "\r:\0011\022-\n\rweight_filler\030\007 \001(\0132\026.caffe.Fill"
+      "erParameter\022+\n\013bias_filler\030\010 \001(\0132\026.caffe"
+      ".FillerParameter\022;\n\006engine\030\017 \001(\0162\".caffe"
+      ".ConvolutionParameter.Engine:\007DEFAULT\022\017\n"
+      "\004axis\030\020 \001(\005:\0011\022\036\n\017force_nd_im2col\030\021 \001(\010:"
+      "\005false\"+\n\006Engine\022\013\n\007DEFAULT\020\000\022\t\n\005CAFFE\020\001"
+      "\022\t\n\005CUDNN\020\002\"0\n\rCropParameter\022\017\n\004axis\030\001 \001"
+      "(\005:\0012\022\016\n\006offset\030\002 \003(\r\"\244\002\n\rDataParameter\022"
+      "\016\n\006source\030\001 \001(\t\022\022\n\nbatch_size\030\004 \001(\r\022\024\n\tr"
+      "and_skip\030\007 \001(\r:\0010\0221\n\007backend\030\010 \001(\0162\027.caf"
+      "fe.DataParameter.DB:\007LEVELDB\022\020\n\005scale\030\002 "
+      "\001(\002:\0011\022\021\n\tmean_file\030\003 \001(\t\022\024\n\tcrop_size\030\005"
+      " \001(\r:\0010\022\025\n\006mirror\030\006 \001(\010:\005false\022\"\n\023force_"
+      "encoded_color\030\t \001(\010:\005false\022\023\n\010prefetch\030\n"
+      " \001(\r:\0014\"\033\n\002DB\022\013\n\007LEVELDB\020\000\022\010\n\004LMDB\020\001\".\n\020"
+      "DropoutParameter\022\032\n\rdropout_ratio\030\001 \001(\002:"
+      "\0030.5\"\240\001\n\022DummyDataParameter\022+\n\013data_fill"
+      "er\030\001 \003(\0132\026.caffe.FillerParameter\022\037\n\005shap"
+      "e\030\006 \003(\0132\020.caffe.BlobShape\022\013\n\003num\030\002 \003(\r\022\020"
+      "\n\010channels\030\003 \003(\r\022\016\n\006height\030\004 \003(\r\022\r\n\005widt"
+      "h\030\005 \003(\r\"\245\001\n\020EltwiseParameter\0229\n\toperatio"
+      "n\030\001 \001(\0162!.caffe.EltwiseParameter.Eltwise"
+      "Op:\003SUM\022\r\n\005coeff\030\002 \003(\002\022\036\n\020stable_prod_gr"
+      "ad\030\003 \001(\010:\004true\"\'\n\tEltwiseOp\022\010\n\004PROD\020\000\022\007\n"
+      "\003SUM\020\001\022\007\n\003MAX\020\002\" \n\014ELUParameter\022\020\n\005alpha"
+      "\030\001 \001(\002:\0011\"\254\001\n\016EmbedParameter\022\022\n\nnum_outp"
+      "ut\030\001 \001(\r\022\021\n\tinput_dim\030\002 \001(\r\022\027\n\tbias_term"
+      "\030\003 \001(\010:\004true\022-\n\rweight_filler\030\004 \001(\0132\026.ca"
+      "ffe.FillerParameter\022+\n\013bias_filler\030\005 \001(\013"
+      "2\026.caffe.FillerParameter\"D\n\014ExpParameter"
+      "\022\020\n\004base\030\001 \001(\002:\002-1\022\020\n\005scale\030\002 \001(\002:\0011\022\020\n\005"
+      "shift\030\003 \001(\002:\0010\"9\n\020FlattenParameter\022\017\n\004ax"
+      "is\030\001 \001(\005:\0011\022\024\n\010end_axis\030\002 \001(\005:\002-1\"O\n\021HDF"
+      "5DataParameter\022\016\n\006source\030\001 \001(\t\022\022\n\nbatch_"
+      "size\030\002 \001(\r\022\026\n\007shuffle\030\003 \001(\010:\005false\"(\n\023HD"
+      "F5OutputParameter\022\021\n\tfile_name\030\001 \001(\t\"^\n\022"
+      "HingeLossParameter\0220\n\004norm\030\001 \001(\0162\036.caffe"
+      ".HingeLossParameter.Norm:\002L1\"\026\n\004Norm\022\006\n\002"
+      "L1\020\001\022\006\n\002L2\020\002\"\227\002\n\022ImageDataParameter\022\016\n\006s"
+      "ource\030\001 \001(\t\022\025\n\nbatch_size\030\004 \001(\r:\0011\022\024\n\tra"
+      "nd_skip\030\007 \001(\r:\0010\022\026\n\007shuffle\030\010 \001(\010:\005false"
+      "\022\025\n\nnew_height\030\t \001(\r:\0010\022\024\n\tnew_width\030\n \001"
+      "(\r:\0010\022\026\n\010is_color\030\013 \001(\010:\004true\022\020\n\005scale\030\002"
       " \001(\002:\0011\022\021\n\tmean_file\030\003 \001(\t\022\024\n\tcrop_size\030"
       "\005 \001(\r:\0010\022\025\n\006mirror\030\006 \001(\010:\005false\022\025\n\013root_"
-      "folder\030\014 \001(\t:\000\022\030\n\tshow_data\030\016 \001(\010:\005false"
-      "\022\030\n\tuse_image\030\017 \001(\010:\005false\022\"\n\023use_tempor"
-      "al_jitter\030\020 \001(\010:\005false\022\030\n\rsampling_rate\030"
-      "\021 \001(\r:\0011\022\034\n\021max_sampling_rate\030\022 \001(\r:\0011\022\'"
-      "\n\030use_sampling_rate_jitter\030\023 \001(\010:\005false\022"
-      "!\n\022use_multiple_label\030\024 \001(\010:\005false\022\030\n\rnu"
-      "m_of_labels\030\025 \001(\r:\0011\"Y\n\023ROIPoolingParame"
-      "ter\022\023\n\010pooled_h\030\001 \001(\r:\0010\022\023\n\010pooled_w\030\002 \001"
-      "(\r:\0010\022\030\n\rspatial_scale\030\003 \001(\002:\0011\"\240\001\n\027ROIM"
-      "askPoolingParameter\022\023\n\010pooled_h\030\001 \001(\r:\0010"
-      "\022\023\n\010pooled_w\030\002 \001(\r:\0010\022\030\n\rspatial_scale\030\003"
-      " \001(\002:\0011\022\024\n\thalf_part\030\004 \001(\005:\0010\022\024\n\troi_sca"
-      "le\030\005 \001(\002:\0011\022\025\n\nmask_scale\030\006 \001(\002:\0010\")\n\025Sm"
-      "oothL1LossParameter\022\020\n\005sigma\030\001 \001(\002:\0011\"\266\006"
-      "\n\027TransformationParameter\022\020\n\005scale\030\001 \001(\002"
-      ":\0011\022\025\n\006mirror\030\002 \001(\010:\005false\022\024\n\tcrop_size\030"
-      "\003 \001(\r:\0010\022\021\n\tmean_file\030\004 \001(\t\022\022\n\nmean_valu"
-      "e\030\005 \003(\002\022\032\n\013force_color\030\006 \001(\010:\005false\022\031\n\nf"
-      "orce_gray\030\007 \001(\010:\005false\022 \n\022min_scaling_fa"
-      "ctor\030\010 \001(\002:\0040.75\022\037\n\022max_scaling_factor\030\t"
-      " \001(\002:\0031.5\022\"\n\027rotation_angle_interval\030\n \001"
-      "(\002:\0011\022\"\n\023contrast_adjustment\030\013 \001(\010:\005fals"
-      "e\022\037\n\020smooth_filtering\030\014 \001(\010:\005false\022\037\n\020jp"
-      "eg_compression\030\r \001(\010:\005false\022\026\n\007display\030\016"
-      " \001(\010:\005false\022\027\n\010fix_crop\030\017 \001(\010:\005false\022\034\n\r"
-      "more_fix_crop\030\020 \001(\010:\005false\022\032\n\013multi_scal"
-      "e\030\021 \001(\010:\005false\022\024\n\014scale_ratios\030\022 \003(\002\022\026\n\013"
-      "max_distort\030\023 \001(\005:\0011\022\026\n\007is_flow\030\024 \001(\010:\005f"
-      "alse\022\035\n\016original_image\030\025 \001(\010:\005false\022\021\n\006s"
-      "tride\030\026 \001(\005:\0011\022\022\n\nupper_size\030\027 \001(\005\022\024\n\014up"
-      "per_height\030\030 \001(\005\022\023\n\013upper_width\030\031 \001(\005\022\036\n"
-      "\017normalize_input\030\032 \001(\010:\005false\022\036\n\020global_"
-      "normalize\030\033 \001(\010:\004true\022\032\n\013on_fly_mean\030\034 \001"
-      "(\010:\005false\022\031\n\013global_mean\030\035 \001(\010:\004true\022\030\n\t"
-      "add_noise\030\036 \001(\010:\005false\"\302\001\n\rLossParameter"
-      "\022\024\n\014ignore_label\030\001 \001(\005\022D\n\rnormalization\030"
-      "\003 \001(\0162&.caffe.LossParameter.Normalizatio"
-      "nMode:\005VALID\022\021\n\tnormalize\030\002 \001(\010\"B\n\021Norma"
-      "lizationMode\022\010\n\004FULL\020\000\022\t\n\005VALID\020\001\022\016\n\nBAT"
-      "CH_SIZE\020\002\022\010\n\004NONE\020\003\"L\n\021AccuracyParameter"
-      "\022\020\n\005top_k\030\001 \001(\r:\0011\022\017\n\004axis\030\002 \001(\005:\0011\022\024\n\014i"
-      "gnore_label\030\003 \001(\005\"M\n\017ArgMaxParameter\022\032\n\013"
-      "out_max_val\030\001 \001(\010:\005false\022\020\n\005top_k\030\002 \001(\r:"
-      "\0011\022\014\n\004axis\030\003 \001(\005\")\n\rClipParameter\022\013\n\003min"
-      "\030\001 \002(\002\022\013\n\003max\030\002 \002(\002\"9\n\017ConcatParameter\022\017"
-      "\n\004axis\030\002 \001(\005:\0011\022\025\n\nconcat_dim\030\001 \001(\r:\0011\"j"
-      "\n\022BatchNormParameter\022\030\n\020use_global_stats"
-      "\030\001 \001(\010\022&\n\027moving_average_fraction\030\002 \001(\002:"
-      "\0050.999\022\022\n\003eps\030\003 \001(\002:\0051e-05\"]\n\rBiasParame"
-      "ter\022\017\n\004axis\030\001 \001(\005:\0011\022\023\n\010num_axes\030\002 \001(\005:\001"
-      "1\022&\n\006filler\030\003 \001(\0132\026.caffe.FillerParamete"
-      "r\"L\n\030ContrastiveLossParameter\022\021\n\006margin\030"
-      "\001 \001(\002:\0011\022\035\n\016legacy_version\030\002 \001(\010:\005false\""
-      "\374\003\n\024ConvolutionParameter\022\022\n\nnum_output\030\001"
-      " \001(\r\022\027\n\tbias_term\030\002 \001(\010:\004true\022\013\n\003pad\030\003 \003"
-      "(\r\022\023\n\013kernel_size\030\004 \003(\r\022\016\n\006stride\030\006 \003(\r\022"
-      "\020\n\010dilation\030\022 \003(\r\022\020\n\005pad_h\030\t \001(\r:\0010\022\020\n\005p"
-      "ad_w\030\n \001(\r:\0010\022\020\n\010kernel_h\030\013 \001(\r\022\020\n\010kerne"
-      "l_w\030\014 \001(\r\022\020\n\010stride_h\030\r \001(\r\022\020\n\010stride_w\030"
-      "\016 \001(\r\022\020\n\005group\030\005 \001(\r:\0011\022-\n\rweight_filler"
-      "\030\007 \001(\0132\026.caffe.FillerParameter\022+\n\013bias_f"
-      "iller\030\010 \001(\0132\026.caffe.FillerParameter\022;\n\006e"
-      "ngine\030\017 \001(\0162\".caffe.ConvolutionParameter"
-      ".Engine:\007DEFAULT\022\017\n\004axis\030\020 \001(\005:\0011\022\036\n\017for"
-      "ce_nd_im2col\030\021 \001(\010:\005false\"+\n\006Engine\022\013\n\007D"
-      "EFAULT\020\000\022\t\n\005CAFFE\020\001\022\t\n\005CUDNN\020\002\"0\n\rCropPa"
-      "rameter\022\017\n\004axis\030\001 \001(\005:\0012\022\016\n\006offset\030\002 \003(\r"
-      "\"\244\002\n\rDataParameter\022\016\n\006source\030\001 \001(\t\022\022\n\nba"
-      "tch_size\030\004 \001(\r\022\024\n\trand_skip\030\007 \001(\r:\0010\0221\n\007"
-      "backend\030\010 \001(\0162\027.caffe.DataParameter.DB:\007"
-      "LEVELDB\022\020\n\005scale\030\002 \001(\002:\0011\022\021\n\tmean_file\030\003"
-      " \001(\t\022\024\n\tcrop_size\030\005 \001(\r:\0010\022\025\n\006mirror\030\006 \001"
-      "(\010:\005false\022\"\n\023force_encoded_color\030\t \001(\010:\005"
-      "false\022\023\n\010prefetch\030\n \001(\r:\0014\"\033\n\002DB\022\013\n\007LEVE"
-      "LDB\020\000\022\010\n\004LMDB\020\001\".\n\020DropoutParameter\022\032\n\rd"
-      "ropout_ratio\030\001 \001(\002:\0030.5\"\240\001\n\022DummyDataPar"
-      "ameter\022+\n\013data_filler\030\001 \003(\0132\026.caffe.Fill"
-      "erParameter\022\037\n\005shape\030\006 \003(\0132\020.caffe.BlobS"
-      "hape\022\013\n\003num\030\002 \003(\r\022\020\n\010channels\030\003 \003(\r\022\016\n\006h"
-      "eight\030\004 \003(\r\022\r\n\005width\030\005 \003(\r\"\245\001\n\020EltwisePa"
-      "rameter\0229\n\toperation\030\001 \001(\0162!.caffe.Eltwi"
-      "seParameter.EltwiseOp:\003SUM\022\r\n\005coeff\030\002 \003("
-      "\002\022\036\n\020stable_prod_grad\030\003 \001(\010:\004true\"\'\n\tElt"
-      "wiseOp\022\010\n\004PROD\020\000\022\007\n\003SUM\020\001\022\007\n\003MAX\020\002\" \n\014EL"
-      "UParameter\022\020\n\005alpha\030\001 \001(\002:\0011\"\254\001\n\016EmbedPa"
-      "rameter\022\022\n\nnum_output\030\001 \001(\r\022\021\n\tinput_dim"
-      "\030\002 \001(\r\022\027\n\tbias_term\030\003 \001(\010:\004true\022-\n\rweigh"
-      "t_filler\030\004 \001(\0132\026.caffe.FillerParameter\022+"
-      "\n\013bias_filler\030\005 \001(\0132\026.caffe.FillerParame"
-      "ter\"D\n\014ExpParameter\022\020\n\004base\030\001 \001(\002:\002-1\022\020\n"
-      "\005scale\030\002 \001(\002:\0011\022\020\n\005shift\030\003 \001(\002:\0010\"9\n\020Fla"
-      "ttenParameter\022\017\n\004axis\030\001 \001(\005:\0011\022\024\n\010end_ax"
-      "is\030\002 \001(\005:\002-1\"O\n\021HDF5DataParameter\022\016\n\006sou"
-      "rce\030\001 \001(\t\022\022\n\nbatch_size\030\002 \001(\r\022\026\n\007shuffle"
-      "\030\003 \001(\010:\005false\"(\n\023HDF5OutputParameter\022\021\n\t"
-      "file_name\030\001 \001(\t\"^\n\022HingeLossParameter\0220\n"
-      "\004norm\030\001 \001(\0162\036.caffe.HingeLossParameter.N"
-      "orm:\002L1\"\026\n\004Norm\022\006\n\002L1\020\001\022\006\n\002L2\020\002\"\227\002\n\022Imag"
-      "eDataParameter\022\016\n\006source\030\001 \001(\t\022\025\n\nbatch_"
-      "size\030\004 \001(\r:\0011\022\024\n\trand_skip\030\007 \001(\r:\0010\022\026\n\007s"
-      "huffle\030\010 \001(\010:\005false\022\025\n\nnew_height\030\t \001(\r:"
-      "\0010\022\024\n\tnew_width\030\n \001(\r:\0010\022\026\n\010is_color\030\013 \001"
-      "(\010:\004true\022\020\n\005scale\030\002 \001(\002:\0011\022\021\n\tmean_file\030"
-      "\003 \001(\t\022\024\n\tcrop_size\030\005 \001(\r:\0010\022\025\n\006mirror\030\006 "
-      "\001(\010:\005false\022\025\n\013root_folder\030\014 \001(\t:\000\"8\n\025Inf"
-      "ogainLossParameter\022\016\n\006source\030\001 \001(\t\022\017\n\004ax"
-      "is\030\002 \001(\005:\0011\"\313\001\n\025InnerProductParameter\022\022\n"
-      "\nnum_output\030\001 \001(\r\022\027\n\tbias_term\030\002 \001(\010:\004tr"
-      "ue\022-\n\rweight_filler\030\003 \001(\0132\026.caffe.Filler"
-      "Parameter\022+\n\013bias_filler\030\004 \001(\0132\026.caffe.F"
-      "illerParameter\022\017\n\004axis\030\005 \001(\005:\0011\022\030\n\ttrans"
-      "pose\030\006 \001(\010:\005false\"1\n\016InputParameter\022\037\n\005s"
-      "hape\030\001 \003(\0132\020.caffe.BlobShape\"D\n\014LogParam"
-      "eter\022\020\n\004base\030\001 \001(\002:\002-1\022\020\n\005scale\030\002 \001(\002:\0011"
-      "\022\020\n\005shift\030\003 \001(\002:\0010\"\270\002\n\014LRNParameter\022\025\n\nl"
-      "ocal_size\030\001 \001(\r:\0015\022\020\n\005alpha\030\002 \001(\002:\0011\022\022\n\004"
-      "beta\030\003 \001(\002:\0040.75\022D\n\013norm_region\030\004 \001(\0162\036."
-      "caffe.LRNParameter.NormRegion:\017ACROSS_CH"
-      "ANNELS\022\014\n\001k\030\005 \001(\002:\0011\0223\n\006engine\030\006 \001(\0162\032.c"
-      "affe.LRNParameter.Engine:\007DEFAULT\"5\n\nNor"
-      "mRegion\022\023\n\017ACROSS_CHANNELS\020\000\022\022\n\016WITHIN_C"
-      "HANNEL\020\001\"+\n\006Engine\022\013\n\007DEFAULT\020\000\022\t\n\005CAFFE"
-      "\020\001\022\t\n\005CUDNN\020\002\"Z\n\023MemoryDataParameter\022\022\n\n"
-      "batch_size\030\001 \001(\r\022\020\n\010channels\030\002 \001(\r\022\016\n\006he"
-      "ight\030\003 \001(\r\022\r\n\005width\030\004 \001(\r\"d\n\014MVNParamete"
-      "r\022 \n\022normalize_variance\030\001 \001(\010:\004true\022\036\n\017a"
-      "cross_channels\030\002 \001(\010:\005false\022\022\n\003eps\030\003 \001(\002"
-      ":\0051e-09\"5\n\022ParameterParameter\022\037\n\005shape\030\001"
-      " \001(\0132\020.caffe.BlobShape\"\201\004\n\020PoolingParame"
-      "ter\0225\n\004pool\030\001 \001(\0162\".caffe.PoolingParamet"
-      "er.PoolMethod:\003MAX\022\016\n\003pad\030\004 \001(\r:\0010\022\020\n\005pa"
-      "d_h\030\t \001(\r:\0010\022\020\n\005pad_w\030\n \001(\r:\0010\022\023\n\013kernel"
-      "_size\030\002 \001(\r\022\020\n\010kernel_h\030\005 \001(\r\022\020\n\010kernel_"
-      "w\030\006 \001(\r\022\021\n\006stride\030\003 \001(\r:\0011\022\020\n\010stride_h\030\007"
-      " \001(\r\022\020\n\010stride_w\030\010 \001(\r\0227\n\006engine\030\013 \001(\0162\036"
-      ".caffe.PoolingParameter.Engine:\007DEFAULT\022"
-      "\035\n\016global_pooling\030\014 \001(\010:\005false\022;\n\nround_"
-      "mode\030\r \001(\0162!.caffe.PoolingParameter.Roun"
-      "dMode:\004CEIL\".\n\nPoolMethod\022\007\n\003MAX\020\000\022\007\n\003AV"
-      "E\020\001\022\016\n\nSTOCHASTIC\020\002\"+\n\006Engine\022\013\n\007DEFAULT"
-      "\020\000\022\t\n\005CAFFE\020\001\022\t\n\005CUDNN\020\002\" \n\tRoundMode\022\010\n"
-      "\004CEIL\020\000\022\t\n\005FLOOR\020\001\"F\n\016PowerParameter\022\020\n\005"
-      "power\030\001 \001(\002:\0011\022\020\n\005scale\030\002 \001(\002:\0011\022\020\n\005shif"
-      "t\030\003 \001(\002:\0010\"g\n\017PythonParameter\022\016\n\006module\030"
-      "\001 \001(\t\022\r\n\005layer\030\002 \001(\t\022\023\n\tparam_str\030\003 \001(\t:"
-      "\000\022 \n\021share_in_parallel\030\004 \001(\010:\005false\"\300\001\n\022"
-      "RecurrentParameter\022\025\n\nnum_output\030\001 \001(\r:\001"
-      "0\022-\n\rweight_filler\030\002 \001(\0132\026.caffe.FillerP"
-      "arameter\022+\n\013bias_filler\030\003 \001(\0132\026.caffe.Fi"
-      "llerParameter\022\031\n\ndebug_info\030\004 \001(\010:\005false"
-      "\022\034\n\rexpose_hidden\030\005 \001(\010:\005false\"\255\001\n\022Reduc"
-      "tionParameter\022=\n\toperation\030\001 \001(\0162%.caffe"
-      ".ReductionParameter.ReductionOp:\003SUM\022\017\n\004"
-      "axis\030\002 \001(\005:\0010\022\020\n\005coeff\030\003 \001(\002:\0011\"5\n\013Reduc"
-      "tionOp\022\007\n\003SUM\020\001\022\010\n\004ASUM\020\002\022\t\n\005SUMSQ\020\003\022\010\n\004"
-      "MEAN\020\004\"\215\001\n\rReLUParameter\022\031\n\016negative_slo"
-      "pe\030\001 \001(\002:\0010\0224\n\006engine\030\002 \001(\0162\033.caffe.ReLU"
-      "Parameter.Engine:\007DEFAULT\"+\n\006Engine\022\013\n\007D"
-      "EFAULT\020\000\022\t\n\005CAFFE\020\001\022\t\n\005CUDNN\020\002\"Z\n\020Reshap"
-      "eParameter\022\037\n\005shape\030\001 \001(\0132\020.caffe.BlobSh"
-      "ape\022\017\n\004axis\030\002 \001(\005:\0010\022\024\n\010num_axes\030\003 \001(\005:\002"
-      "-1\"\245\001\n\016ScaleParameter\022\017\n\004axis\030\001 \001(\005:\0011\022\023"
-      "\n\010num_axes\030\002 \001(\005:\0011\022&\n\006filler\030\003 \001(\0132\026.ca"
-      "ffe.FillerParameter\022\030\n\tbias_term\030\004 \001(\010:\005"
-      "false\022+\n\013bias_filler\030\005 \001(\0132\026.caffe.Fille"
-      "rParameter\"x\n\020SigmoidParameter\0227\n\006engine"
-      "\030\001 \001(\0162\036.caffe.SigmoidParameter.Engine:\007"
-      "DEFAULT\"+\n\006Engine\022\013\n\007DEFAULT\020\000\022\t\n\005CAFFE\020"
-      "\001\022\t\n\005CUDNN\020\002\"L\n\016SliceParameter\022\017\n\004axis\030\003"
-      " \001(\005:\0011\022\023\n\013slice_point\030\002 \003(\r\022\024\n\tslice_di"
-      "m\030\001 \001(\r:\0011\"\211\001\n\020SoftmaxParameter\0227\n\006engin"
-      "e\030\001 \001(\0162\036.caffe.SoftmaxParameter.Engine:"
-      "\007DEFAULT\022\017\n\004axis\030\002 \001(\005:\0011\"+\n\006Engine\022\013\n\007D"
-      "EFAULT\020\000\022\t\n\005CAFFE\020\001\022\t\n\005CUDNN\020\002\"!\n\016SwishP"
-      "arameter\022\017\n\004beta\030\001 \001(\002:\0011\"r\n\rTanHParamet"
-      "er\0224\n\006engine\030\001 \001(\0162\033.caffe.TanHParameter"
-      ".Engine:\007DEFAULT\"+\n\006Engine\022\013\n\007DEFAULT\020\000\022"
-      "\t\n\005CAFFE\020\001\022\t\n\005CUDNN\020\002\"/\n\rTileParameter\022\017"
-      "\n\004axis\030\001 \001(\005:\0011\022\r\n\005tiles\030\002 \001(\005\"*\n\022Thresh"
-      "oldParameter\022\024\n\tthreshold\030\001 \001(\002:\0010\"\323\002\n\023W"
-      "indowDataParameter\022\016\n\006source\030\001 \001(\t\022\020\n\005sc"
-      "ale\030\002 \001(\002:\0011\022\021\n\tmean_file\030\003 \001(\t\022\022\n\nbatch"
-      "_size\030\004 \001(\r\022\024\n\tcrop_size\030\005 \001(\r:\0010\022\025\n\006mir"
-      "ror\030\006 \001(\010:\005false\022\031\n\014fg_threshold\030\007 \001(\002:\003"
-      "0.5\022\031\n\014bg_threshold\030\010 \001(\002:\0030.5\022\031\n\013fg_fra"
-      "ction\030\t \001(\002:\0040.25\022\026\n\013context_pad\030\n \001(\r:\001"
-      "0\022\027\n\tcrop_mode\030\013 \001(\t:\004warp\022\033\n\014cache_imag"
-      "es\030\014 \001(\010:\005false\022\025\n\013root_folder\030\r \001(\t:\000\022\020"
-      "\n\006config\030\024 \001(\t:\000\"\353\001\n\014SPPParameter\022\026\n\016pyr"
-      "amid_height\030\001 \001(\r\0221\n\004pool\030\002 \001(\0162\036.caffe."
-      "SPPParameter.PoolMethod:\003MAX\0223\n\006engine\030\006"
-      " \001(\0162\032.caffe.SPPParameter.Engine:\007DEFAUL"
-      "T\".\n\nPoolMethod\022\007\n\003MAX\020\000\022\007\n\003AVE\020\001\022\016\n\nSTO"
-      "CHASTIC\020\002\"+\n\006Engine\022\013\n\007DEFAULT\020\000\022\t\n\005CAFF"
-      "E\020\001\022\t\n\005CUDNN\020\002\"\340\023\n\020V1LayerParameter\022\016\n\006b"
-      "ottom\030\002 \003(\t\022\013\n\003top\030\003 \003(\t\022\014\n\004name\030\004 \001(\t\022$"
-      "\n\007include\030  \003(\0132\023.caffe.NetStateRule\022$\n\007"
-      "exclude\030! \003(\0132\023.caffe.NetStateRule\022/\n\004ty"
-      "pe\030\005 \001(\0162!.caffe.V1LayerParameter.LayerT"
-      "ype\022\037\n\005blobs\030\006 \003(\0132\020.caffe.BlobProto\022\016\n\005"
-      "param\030\351\007 \003(\t\022>\n\017blob_share_mode\030\352\007 \003(\0162$"
-      ".caffe.V1LayerParameter.DimCheckMode\022\020\n\010"
-      "blobs_lr\030\007 \003(\002\022\024\n\014weight_decay\030\010 \003(\002\022\023\n\013"
-      "loss_weight\030# \003(\002\0220\n\016accuracy_param\030\033 \001("
-      "\0132\030.caffe.AccuracyParameter\022,\n\014argmax_pa"
-      "ram\030\027 \001(\0132\026.caffe.ArgMaxParameter\022,\n\014con"
-      "cat_param\030\t \001(\0132\026.caffe.ConcatParameter\022"
-      "\?\n\026contrastive_loss_param\030( \001(\0132\037.caffe."
-      "ContrastiveLossParameter\0226\n\021convolution_"
-      "param\030\n \001(\0132\033.caffe.ConvolutionParameter"
-      "\022(\n\ndata_param\030\013 \001(\0132\024.caffe.DataParamet"
-      "er\022.\n\rdropout_param\030\014 \001(\0132\027.caffe.Dropou"
-      "tParameter\0223\n\020dummy_data_param\030\032 \001(\0132\031.c"
-      "affe.DummyDataParameter\022.\n\reltwise_param"
-      "\030\030 \001(\0132\027.caffe.EltwiseParameter\022&\n\texp_p"
-      "aram\030) \001(\0132\023.caffe.ExpParameter\0221\n\017hdf5_"
-      "data_param\030\r \001(\0132\030.caffe.HDF5DataParamet"
-      "er\0225\n\021hdf5_output_param\030\016 \001(\0132\032.caffe.HD"
-      "F5OutputParameter\0223\n\020hinge_loss_param\030\035 "
-      "\001(\0132\031.caffe.HingeLossParameter\0223\n\020image_"
-      "data_param\030\017 \001(\0132\031.caffe.ImageDataParame"
-      "ter\0229\n\023infogain_loss_param\030\020 \001(\0132\034.caffe"
-      ".InfogainLossParameter\0229\n\023inner_product_"
-      "param\030\021 \001(\0132\034.caffe.InnerProductParamete"
-      "r\022&\n\tlrn_param\030\022 \001(\0132\023.caffe.LRNParamete"
-      "r\0225\n\021memory_data_param\030\026 \001(\0132\032.caffe.Mem"
-      "oryDataParameter\022&\n\tmvn_param\030\" \001(\0132\023.ca"
-      "ffe.MVNParameter\022.\n\rpooling_param\030\023 \001(\0132"
-      "\027.caffe.PoolingParameter\022*\n\013power_param\030"
-      "\025 \001(\0132\025.caffe.PowerParameter\022(\n\nrelu_par"
-      "am\030\036 \001(\0132\024.caffe.ReLUParameter\022.\n\rsigmoi"
-      "d_param\030& \001(\0132\027.caffe.SigmoidParameter\022."
-      "\n\rsoftmax_param\030\' \001(\0132\027.caffe.SoftmaxPar"
-      "ameter\022*\n\013slice_param\030\037 \001(\0132\025.caffe.Slic"
-      "eParameter\022(\n\ntanh_param\030% \001(\0132\024.caffe.T"
-      "anHParameter\0222\n\017threshold_param\030\031 \001(\0132\031."
-      "caffe.ThresholdParameter\0225\n\021window_data_"
-      "param\030\024 \001(\0132\032.caffe.WindowDataParameter\022"
-      "7\n\017transform_param\030$ \001(\0132\036.caffe.Transfo"
-      "rmationParameter\022(\n\nloss_param\030* \001(\0132\024.c"
-      "affe.LossParameter\022&\n\005layer\030\001 \001(\0132\027.caff"
-      "e.V0LayerParameter\"\330\004\n\tLayerType\022\010\n\004NONE"
-      "\020\000\022\n\n\006ABSVAL\020#\022\014\n\010ACCURACY\020\001\022\n\n\006ARGMAX\020\036"
-      "\022\010\n\004BNLL\020\002\022\n\n\006CONCAT\020\003\022\024\n\020CONTRASTIVE_LO"
-      "SS\020%\022\017\n\013CONVOLUTION\020\004\022\010\n\004DATA\020\005\022\021\n\rDECON"
-      "VOLUTION\020\'\022\013\n\007DROPOUT\020\006\022\016\n\nDUMMY_DATA\020 \022"
-      "\022\n\016EUCLIDEAN_LOSS\020\007\022\013\n\007ELTWISE\020\031\022\007\n\003EXP\020"
-      "&\022\013\n\007FLATTEN\020\010\022\r\n\tHDF5_DATA\020\t\022\017\n\013HDF5_OU"
-      "TPUT\020\n\022\016\n\nHINGE_LOSS\020\034\022\n\n\006IM2COL\020\013\022\016\n\nIM"
-      "AGE_DATA\020\014\022\021\n\rINFOGAIN_LOSS\020\r\022\021\n\rINNER_P"
-      "RODUCT\020\016\022\007\n\003LRN\020\017\022\017\n\013MEMORY_DATA\020\035\022\035\n\031MU"
-      "LTINOMIAL_LOGISTIC_LOSS\020\020\022\007\n\003MVN\020\"\022\013\n\007PO"
-      "OLING\020\021\022\t\n\005POWER\020\032\022\010\n\004RELU\020\022\022\013\n\007SIGMOID\020"
-      "\023\022\036\n\032SIGMOID_CROSS_ENTROPY_LOSS\020\033\022\013\n\007SIL"
-      "ENCE\020$\022\013\n\007SOFTMAX\020\024\022\020\n\014SOFTMAX_LOSS\020\025\022\t\n"
-      "\005SPLIT\020\026\022\t\n\005SLICE\020!\022\010\n\004TANH\020\027\022\017\n\013WINDOW_"
-      "DATA\020\030\022\r\n\tTHRESHOLD\020\037\"*\n\014DimCheckMode\022\n\n"
-      "\006STRICT\020\000\022\016\n\nPERMISSIVE\020\001\"\375\007\n\020V0LayerPar"
-      "ameter\022\014\n\004name\030\001 \001(\t\022\014\n\004type\030\002 \001(\t\022\022\n\nnu"
-      "m_output\030\003 \001(\r\022\026\n\010biasterm\030\004 \001(\010:\004true\022-"
-      "\n\rweight_filler\030\005 \001(\0132\026.caffe.FillerPara"
-      "meter\022+\n\013bias_filler\030\006 \001(\0132\026.caffe.Fille"
-      "rParameter\022\016\n\003pad\030\007 \001(\r:\0010\022\022\n\nkernelsize"
-      "\030\010 \001(\r\022\020\n\005group\030\t \001(\r:\0011\022\021\n\006stride\030\n \001(\r"
-      ":\0011\0225\n\004pool\030\013 \001(\0162\".caffe.V0LayerParamet"
-      "er.PoolMethod:\003MAX\022\032\n\rdropout_ratio\030\014 \001("
-      "\002:\0030.5\022\025\n\nlocal_size\030\r \001(\r:\0015\022\020\n\005alpha\030\016"
-      " \001(\002:\0011\022\022\n\004beta\030\017 \001(\002:\0040.75\022\014\n\001k\030\026 \001(\002:\001"
-      "1\022\016\n\006source\030\020 \001(\t\022\020\n\005scale\030\021 \001(\002:\0011\022\020\n\010m"
-      "eanfile\030\022 \001(\t\022\021\n\tbatchsize\030\023 \001(\r\022\023\n\010crop"
-      "size\030\024 \001(\r:\0010\022\025\n\006mirror\030\025 \001(\010:\005false\022\037\n\005"
-      "blobs\0302 \003(\0132\020.caffe.BlobProto\022\020\n\010blobs_l"
-      "r\0303 \003(\002\022\024\n\014weight_decay\0304 \003(\002\022\024\n\trand_sk"
-      "ip\0305 \001(\r:\0010\022\035\n\020det_fg_threshold\0306 \001(\002:\0030"
-      ".5\022\035\n\020det_bg_threshold\0307 \001(\002:\0030.5\022\035\n\017det"
-      "_fg_fraction\0308 \001(\002:\0040.25\022\032\n\017det_context_"
-      "pad\030: \001(\r:\0010\022\033\n\rdet_crop_mode\030; \001(\t:\004war"
-      "p\022\022\n\007new_num\030< \001(\005:\0010\022\027\n\014new_channels\030= "
-      "\001(\005:\0010\022\025\n\nnew_height\030> \001(\005:\0010\022\024\n\tnew_wid"
-      "th\030\? \001(\005:\0010\022\035\n\016shuffle_images\030@ \001(\010:\005fal"
-      "se\022\025\n\nconcat_dim\030A \001(\r:\0011\0226\n\021hdf5_output"
-      "_param\030\351\007 \001(\0132\032.caffe.HDF5OutputParamete"
-      "r\".\n\nPoolMethod\022\007\n\003MAX\020\000\022\007\n\003AVE\020\001\022\016\n\nSTO"
-      "CHASTIC\020\002\"W\n\016PReLUParameter\022&\n\006filler\030\001 "
-      "\001(\0132\026.caffe.FillerParameter\022\035\n\016channel_s"
-      "hared\030\002 \001(\010:\005false*\034\n\005Phase\022\t\n\005TRAIN\020\000\022\010"
-      "\n\004TEST\020\001"
+      "folder\030\014 \001(\t:\000\"8\n\025InfogainLossParameter\022"
+      "\016\n\006source\030\001 \001(\t\022\017\n\004axis\030\002 \001(\005:\0011\"\313\001\n\025Inn"
+      "erProductParameter\022\022\n\nnum_output\030\001 \001(\r\022\027"
+      "\n\tbias_term\030\002 \001(\010:\004true\022-\n\rweight_filler"
+      "\030\003 \001(\0132\026.caffe.FillerParameter\022+\n\013bias_f"
+      "iller\030\004 \001(\0132\026.caffe.FillerParameter\022\017\n\004a"
+      "xis\030\005 \001(\005:\0011\022\030\n\ttranspose\030\006 \001(\010:\005false\"1"
+      "\n\016InputParameter\022\037\n\005shape\030\001 \003(\0132\020.caffe."
+      "BlobShape\"D\n\014LogParameter\022\020\n\004base\030\001 \001(\002:"
+      "\002-1\022\020\n\005scale\030\002 \001(\002:\0011\022\020\n\005shift\030\003 \001(\002:\0010\""
+      "\270\002\n\014LRNParameter\022\025\n\nlocal_size\030\001 \001(\r:\0015\022"
+      "\020\n\005alpha\030\002 \001(\002:\0011\022\022\n\004beta\030\003 \001(\002:\0040.75\022D\n"
+      "\013norm_region\030\004 \001(\0162\036.caffe.LRNParameter."
+      "NormRegion:\017ACROSS_CHANNELS\022\014\n\001k\030\005 \001(\002:\001"
+      "1\0223\n\006engine\030\006 \001(\0162\032.caffe.LRNParameter.E"
+      "ngine:\007DEFAULT\"5\n\nNormRegion\022\023\n\017ACROSS_C"
+      "HANNELS\020\000\022\022\n\016WITHIN_CHANNEL\020\001\"+\n\006Engine\022"
+      "\013\n\007DEFAULT\020\000\022\t\n\005CAFFE\020\001\022\t\n\005CUDNN\020\002\"Z\n\023Me"
+      "moryDataParameter\022\022\n\nbatch_size\030\001 \001(\r\022\020\n"
+      "\010channels\030\002 \001(\r\022\016\n\006height\030\003 \001(\r\022\r\n\005width"
+      "\030\004 \001(\r\"d\n\014MVNParameter\022 \n\022normalize_vari"
+      "ance\030\001 \001(\010:\004true\022\036\n\017across_channels\030\002 \001("
+      "\010:\005false\022\022\n\003eps\030\003 \001(\002:\0051e-09\"5\n\022Paramete"
+      "rParameter\022\037\n\005shape\030\001 \001(\0132\020.caffe.BlobSh"
+      "ape\"\201\004\n\020PoolingParameter\0225\n\004pool\030\001 \001(\0162\""
+      ".caffe.PoolingParameter.PoolMethod:\003MAX\022"
+      "\016\n\003pad\030\004 \001(\r:\0010\022\020\n\005pad_h\030\t \001(\r:\0010\022\020\n\005pad"
+      "_w\030\n \001(\r:\0010\022\023\n\013kernel_size\030\002 \001(\r\022\020\n\010kern"
+      "el_h\030\005 \001(\r\022\020\n\010kernel_w\030\006 \001(\r\022\021\n\006stride\030\003"
+      " \001(\r:\0011\022\020\n\010stride_h\030\007 \001(\r\022\020\n\010stride_w\030\010 "
+      "\001(\r\0227\n\006engine\030\013 \001(\0162\036.caffe.PoolingParam"
+      "eter.Engine:\007DEFAULT\022\035\n\016global_pooling\030\014"
+      " \001(\010:\005false\022;\n\nround_mode\030\r \001(\0162!.caffe."
+      "PoolingParameter.RoundMode:\004CEIL\".\n\nPool"
+      "Method\022\007\n\003MAX\020\000\022\007\n\003AVE\020\001\022\016\n\nSTOCHASTIC\020\002"
+      "\"+\n\006Engine\022\013\n\007DEFAULT\020\000\022\t\n\005CAFFE\020\001\022\t\n\005CU"
+      "DNN\020\002\" \n\tRoundMode\022\010\n\004CEIL\020\000\022\t\n\005FLOOR\020\001\""
+      "F\n\016PowerParameter\022\020\n\005power\030\001 \001(\002:\0011\022\020\n\005s"
+      "cale\030\002 \001(\002:\0011\022\020\n\005shift\030\003 \001(\002:\0010\"g\n\017Pytho"
+      "nParameter\022\016\n\006module\030\001 \001(\t\022\r\n\005layer\030\002 \001("
+      "\t\022\023\n\tparam_str\030\003 \001(\t:\000\022 \n\021share_in_paral"
+      "lel\030\004 \001(\010:\005false\"\300\001\n\022RecurrentParameter\022"
+      "\025\n\nnum_output\030\001 \001(\r:\0010\022-\n\rweight_filler\030"
+      "\002 \001(\0132\026.caffe.FillerParameter\022+\n\013bias_fi"
+      "ller\030\003 \001(\0132\026.caffe.FillerParameter\022\031\n\nde"
+      "bug_info\030\004 \001(\010:\005false\022\034\n\rexpose_hidden\030\005"
+      " \001(\010:\005false\"\255\001\n\022ReductionParameter\022=\n\top"
+      "eration\030\001 \001(\0162%.caffe.ReductionParameter"
+      ".ReductionOp:\003SUM\022\017\n\004axis\030\002 \001(\005:\0010\022\020\n\005co"
+      "eff\030\003 \001(\002:\0011\"5\n\013ReductionOp\022\007\n\003SUM\020\001\022\010\n\004"
+      "ASUM\020\002\022\t\n\005SUMSQ\020\003\022\010\n\004MEAN\020\004\"\215\001\n\rReLUPara"
+      "meter\022\031\n\016negative_slope\030\001 \001(\002:\0010\0224\n\006engi"
+      "ne\030\002 \001(\0162\033.caffe.ReLUParameter.Engine:\007D"
+      "EFAULT\"+\n\006Engine\022\013\n\007DEFAULT\020\000\022\t\n\005CAFFE\020\001"
+      "\022\t\n\005CUDNN\020\002\"Z\n\020ReshapeParameter\022\037\n\005shape"
+      "\030\001 \001(\0132\020.caffe.BlobShape\022\017\n\004axis\030\002 \001(\005:\001"
+      "0\022\024\n\010num_axes\030\003 \001(\005:\002-1\"\245\001\n\016ScaleParamet"
+      "er\022\017\n\004axis\030\001 \001(\005:\0011\022\023\n\010num_axes\030\002 \001(\005:\0011"
+      "\022&\n\006filler\030\003 \001(\0132\026.caffe.FillerParameter"
+      "\022\030\n\tbias_term\030\004 \001(\010:\005false\022+\n\013bias_fille"
+      "r\030\005 \001(\0132\026.caffe.FillerParameter\"x\n\020Sigmo"
+      "idParameter\0227\n\006engine\030\001 \001(\0162\036.caffe.Sigm"
+      "oidParameter.Engine:\007DEFAULT\"+\n\006Engine\022\013"
+      "\n\007DEFAULT\020\000\022\t\n\005CAFFE\020\001\022\t\n\005CUDNN\020\002\"L\n\016Sli"
+      "ceParameter\022\017\n\004axis\030\003 \001(\005:\0011\022\023\n\013slice_po"
+      "int\030\002 \003(\r\022\024\n\tslice_dim\030\001 \001(\r:\0011\"\211\001\n\020Soft"
+      "maxParameter\0227\n\006engine\030\001 \001(\0162\036.caffe.Sof"
+      "tmaxParameter.Engine:\007DEFAULT\022\017\n\004axis\030\002 "
+      "\001(\005:\0011\"+\n\006Engine\022\013\n\007DEFAULT\020\000\022\t\n\005CAFFE\020\001"
+      "\022\t\n\005CUDNN\020\002\"!\n\016SwishParameter\022\017\n\004beta\030\001 "
+      "\001(\002:\0011\"r\n\rTanHParameter\0224\n\006engine\030\001 \001(\0162"
+      "\033.caffe.TanHParameter.Engine:\007DEFAULT\"+\n"
+      "\006Engine\022\013\n\007DEFAULT\020\000\022\t\n\005CAFFE\020\001\022\t\n\005CUDNN"
+      "\020\002\"/\n\rTileParameter\022\017\n\004axis\030\001 \001(\005:\0011\022\r\n\005"
+      "tiles\030\002 \001(\005\"*\n\022ThresholdParameter\022\024\n\tthr"
+      "eshold\030\001 \001(\002:\0010\"\323\002\n\023WindowDataParameter\022"
+      "\016\n\006source\030\001 \001(\t\022\020\n\005scale\030\002 \001(\002:\0011\022\021\n\tmea"
+      "n_file\030\003 \001(\t\022\022\n\nbatch_size\030\004 \001(\r\022\024\n\tcrop"
+      "_size\030\005 \001(\r:\0010\022\025\n\006mirror\030\006 \001(\010:\005false\022\031\n"
+      "\014fg_threshold\030\007 \001(\002:\0030.5\022\031\n\014bg_threshold"
+      "\030\010 \001(\002:\0030.5\022\031\n\013fg_fraction\030\t \001(\002:\0040.25\022\026"
+      "\n\013context_pad\030\n \001(\r:\0010\022\027\n\tcrop_mode\030\013 \001("
+      "\t:\004warp\022\033\n\014cache_images\030\014 \001(\010:\005false\022\025\n\013"
+      "root_folder\030\r \001(\t:\000\022\020\n\006config\030\024 \001(\t:\000\"\353\001"
+      "\n\014SPPParameter\022\026\n\016pyramid_height\030\001 \001(\r\0221"
+      "\n\004pool\030\002 \001(\0162\036.caffe.SPPParameter.PoolMe"
+      "thod:\003MAX\0223\n\006engine\030\006 \001(\0162\032.caffe.SPPPar"
+      "ameter.Engine:\007DEFAULT\".\n\nPoolMethod\022\007\n\003"
+      "MAX\020\000\022\007\n\003AVE\020\001\022\016\n\nSTOCHASTIC\020\002\"+\n\006Engine"
+      "\022\013\n\007DEFAULT\020\000\022\t\n\005CAFFE\020\001\022\t\n\005CUDNN\020\002\"\340\023\n\020"
+      "V1LayerParameter\022\016\n\006bottom\030\002 \003(\t\022\013\n\003top\030"
+      "\003 \003(\t\022\014\n\004name\030\004 \001(\t\022$\n\007include\030  \003(\0132\023.c"
+      "affe.NetStateRule\022$\n\007exclude\030! \003(\0132\023.caf"
+      "fe.NetStateRule\022/\n\004type\030\005 \001(\0162!.caffe.V1"
+      "LayerParameter.LayerType\022\037\n\005blobs\030\006 \003(\0132"
+      "\020.caffe.BlobProto\022\016\n\005param\030\351\007 \003(\t\022>\n\017blo"
+      "b_share_mode\030\352\007 \003(\0162$.caffe.V1LayerParam"
+      "eter.DimCheckMode\022\020\n\010blobs_lr\030\007 \003(\002\022\024\n\014w"
+      "eight_decay\030\010 \003(\002\022\023\n\013loss_weight\030# \003(\002\0220"
+      "\n\016accuracy_param\030\033 \001(\0132\030.caffe.AccuracyP"
+      "arameter\022,\n\014argmax_param\030\027 \001(\0132\026.caffe.A"
+      "rgMaxParameter\022,\n\014concat_param\030\t \001(\0132\026.c"
+      "affe.ConcatParameter\022\?\n\026contrastive_loss"
+      "_param\030( \001(\0132\037.caffe.ContrastiveLossPara"
+      "meter\0226\n\021convolution_param\030\n \001(\0132\033.caffe"
+      ".ConvolutionParameter\022(\n\ndata_param\030\013 \001("
+      "\0132\024.caffe.DataParameter\022.\n\rdropout_param"
+      "\030\014 \001(\0132\027.caffe.DropoutParameter\0223\n\020dummy"
+      "_data_param\030\032 \001(\0132\031.caffe.DummyDataParam"
+      "eter\022.\n\reltwise_param\030\030 \001(\0132\027.caffe.Eltw"
+      "iseParameter\022&\n\texp_param\030) \001(\0132\023.caffe."
+      "ExpParameter\0221\n\017hdf5_data_param\030\r \001(\0132\030."
+      "caffe.HDF5DataParameter\0225\n\021hdf5_output_p"
+      "aram\030\016 \001(\0132\032.caffe.HDF5OutputParameter\0223"
+      "\n\020hinge_loss_param\030\035 \001(\0132\031.caffe.HingeLo"
+      "ssParameter\0223\n\020image_data_param\030\017 \001(\0132\031."
+      "caffe.ImageDataParameter\0229\n\023infogain_los"
+      "s_param\030\020 \001(\0132\034.caffe.InfogainLossParame"
+      "ter\0229\n\023inner_product_param\030\021 \001(\0132\034.caffe"
+      ".InnerProductParameter\022&\n\tlrn_param\030\022 \001("
+      "\0132\023.caffe.LRNParameter\0225\n\021memory_data_pa"
+      "ram\030\026 \001(\0132\032.caffe.MemoryDataParameter\022&\n"
+      "\tmvn_param\030\" \001(\0132\023.caffe.MVNParameter\022.\n"
+      "\rpooling_param\030\023 \001(\0132\027.caffe.PoolingPara"
+      "meter\022*\n\013power_param\030\025 \001(\0132\025.caffe.Power"
+      "Parameter\022(\n\nrelu_param\030\036 \001(\0132\024.caffe.Re"
+      "LUParameter\022.\n\rsigmoid_param\030& \001(\0132\027.caf"
+      "fe.SigmoidParameter\022.\n\rsoftmax_param\030\' \001"
+      "(\0132\027.caffe.SoftmaxParameter\022*\n\013slice_par"
+      "am\030\037 \001(\0132\025.caffe.SliceParameter\022(\n\ntanh_"
+      "param\030% \001(\0132\024.caffe.TanHParameter\0222\n\017thr"
+      "eshold_param\030\031 \001(\0132\031.caffe.ThresholdPara"
+      "meter\0225\n\021window_data_param\030\024 \001(\0132\032.caffe"
+      ".WindowDataParameter\0227\n\017transform_param\030"
+      "$ \001(\0132\036.caffe.TransformationParameter\022(\n"
+      "\nloss_param\030* \001(\0132\024.caffe.LossParameter\022"
+      "&\n\005layer\030\001 \001(\0132\027.caffe.V0LayerParameter\""
+      "\330\004\n\tLayerType\022\010\n\004NONE\020\000\022\n\n\006ABSVAL\020#\022\014\n\010A"
+      "CCURACY\020\001\022\n\n\006ARGMAX\020\036\022\010\n\004BNLL\020\002\022\n\n\006CONCA"
+      "T\020\003\022\024\n\020CONTRASTIVE_LOSS\020%\022\017\n\013CONVOLUTION"
+      "\020\004\022\010\n\004DATA\020\005\022\021\n\rDECONVOLUTION\020\'\022\013\n\007DROPO"
+      "UT\020\006\022\016\n\nDUMMY_DATA\020 \022\022\n\016EUCLIDEAN_LOSS\020\007"
+      "\022\013\n\007ELTWISE\020\031\022\007\n\003EXP\020&\022\013\n\007FLATTEN\020\010\022\r\n\tH"
+      "DF5_DATA\020\t\022\017\n\013HDF5_OUTPUT\020\n\022\016\n\nHINGE_LOS"
+      "S\020\034\022\n\n\006IM2COL\020\013\022\016\n\nIMAGE_DATA\020\014\022\021\n\rINFOG"
+      "AIN_LOSS\020\r\022\021\n\rINNER_PRODUCT\020\016\022\007\n\003LRN\020\017\022\017"
+      "\n\013MEMORY_DATA\020\035\022\035\n\031MULTINOMIAL_LOGISTIC_"
+      "LOSS\020\020\022\007\n\003MVN\020\"\022\013\n\007POOLING\020\021\022\t\n\005POWER\020\032\022"
+      "\010\n\004RELU\020\022\022\013\n\007SIGMOID\020\023\022\036\n\032SIGMOID_CROSS_"
+      "ENTROPY_LOSS\020\033\022\013\n\007SILENCE\020$\022\013\n\007SOFTMAX\020\024"
+      "\022\020\n\014SOFTMAX_LOSS\020\025\022\t\n\005SPLIT\020\026\022\t\n\005SLICE\020!"
+      "\022\010\n\004TANH\020\027\022\017\n\013WINDOW_DATA\020\030\022\r\n\tTHRESHOLD"
+      "\020\037\"*\n\014DimCheckMode\022\n\n\006STRICT\020\000\022\016\n\nPERMIS"
+      "SIVE\020\001\"\375\007\n\020V0LayerParameter\022\014\n\004name\030\001 \001("
+      "\t\022\014\n\004type\030\002 \001(\t\022\022\n\nnum_output\030\003 \001(\r\022\026\n\010b"
+      "iasterm\030\004 \001(\010:\004true\022-\n\rweight_filler\030\005 \001"
+      "(\0132\026.caffe.FillerParameter\022+\n\013bias_fille"
+      "r\030\006 \001(\0132\026.caffe.FillerParameter\022\016\n\003pad\030\007"
+      " \001(\r:\0010\022\022\n\nkernelsize\030\010 \001(\r\022\020\n\005group\030\t \001"
+      "(\r:\0011\022\021\n\006stride\030\n \001(\r:\0011\0225\n\004pool\030\013 \001(\0162\""
+      ".caffe.V0LayerParameter.PoolMethod:\003MAX\022"
+      "\032\n\rdropout_ratio\030\014 \001(\002:\0030.5\022\025\n\nlocal_siz"
+      "e\030\r \001(\r:\0015\022\020\n\005alpha\030\016 \001(\002:\0011\022\022\n\004beta\030\017 \001"
+      "(\002:\0040.75\022\014\n\001k\030\026 \001(\002:\0011\022\016\n\006source\030\020 \001(\t\022\020"
+      "\n\005scale\030\021 \001(\002:\0011\022\020\n\010meanfile\030\022 \001(\t\022\021\n\tba"
+      "tchsize\030\023 \001(\r\022\023\n\010cropsize\030\024 \001(\r:\0010\022\025\n\006mi"
+      "rror\030\025 \001(\010:\005false\022\037\n\005blobs\0302 \003(\0132\020.caffe"
+      ".BlobProto\022\020\n\010blobs_lr\0303 \003(\002\022\024\n\014weight_d"
+      "ecay\0304 \003(\002\022\024\n\trand_skip\0305 \001(\r:\0010\022\035\n\020det_"
+      "fg_threshold\0306 \001(\002:\0030.5\022\035\n\020det_bg_thresh"
+      "old\0307 \001(\002:\0030.5\022\035\n\017det_fg_fraction\0308 \001(\002:"
+      "\0040.25\022\032\n\017det_context_pad\030: \001(\r:\0010\022\033\n\rdet"
+      "_crop_mode\030; \001(\t:\004warp\022\022\n\007new_num\030< \001(\005:"
+      "\0010\022\027\n\014new_channels\030= \001(\005:\0010\022\025\n\nnew_heigh"
+      "t\030> \001(\005:\0010\022\024\n\tnew_width\030\? \001(\005:\0010\022\035\n\016shuf"
+      "fle_images\030@ \001(\010:\005false\022\025\n\nconcat_dim\030A "
+      "\001(\r:\0011\0226\n\021hdf5_output_param\030\351\007 \001(\0132\032.caf"
+      "fe.HDF5OutputParameter\".\n\nPoolMethod\022\007\n\003"
+      "MAX\020\000\022\007\n\003AVE\020\001\022\016\n\nSTOCHASTIC\020\002\"W\n\016PReLUP"
+      "arameter\022&\n\006filler\030\001 \001(\0132\026.caffe.FillerP"
+      "arameter\022\035\n\016channel_shared\030\002 \001(\010:\005false*"
+      "\034\n\005Phase\022\t\n\005TRAIN\020\000\022\010\n\004TEST\020\001"
   };
   ::google::protobuf::DescriptorPool::InternalAddGeneratedFile(
-      descriptor, 19008);
+      descriptor, 19149);
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedFile(
     "caffe.proto", &protobuf_RegisterTypes);
 }
@@ -11890,6 +11935,8 @@ void LayerParameter::InitAsDefaultInstance() {
       ::caffe::Convolution3DParameter::internal_default_instance());
   ::caffe::_LayerParameter_default_instance_._instance.get_mutable()->pooling3d_param_ = const_cast< ::caffe::Pooling3DParameter*>(
       ::caffe::Pooling3DParameter::internal_default_instance());
+  ::caffe::_LayerParameter_default_instance_._instance.get_mutable()->roi_align_param_ = const_cast< ::caffe::ROIAlignParameter*>(
+      ::caffe::ROIAlignParameter::internal_default_instance());
 }
 #if !defined(_MSC_VER) || _MSC_VER >= 1900
 const int LayerParameter::kNameFieldNumber;
@@ -11960,6 +12007,7 @@ const int LayerParameter::kRoiMaskPoolingParamFieldNumber;
 const int LayerParameter::kBnParamFieldNumber;
 const int LayerParameter::kConvolution3DParamFieldNumber;
 const int LayerParameter::kPooling3DParamFieldNumber;
+const int LayerParameter::kRoiAlignParamFieldNumber;
 #endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
 
 LayerParameter::LayerParameter()
@@ -12277,6 +12325,11 @@ LayerParameter::LayerParameter(const LayerParameter& from)
   } else {
     pooling3d_param_ = NULL;
   }
+  if (from.has_roi_align_param()) {
+    roi_align_param_ = new ::caffe::ROIAlignParameter(*from.roi_align_param_);
+  } else {
+    roi_align_param_ = NULL;
+  }
   phase_ = from.phase_;
   // @@protoc_insertion_point(copy_constructor:caffe.LayerParameter)
 }
@@ -12355,6 +12408,7 @@ void LayerParameter::SharedDtor() {
   if (this != internal_default_instance()) delete bn_param_;
   if (this != internal_default_instance()) delete convolution3d_param_;
   if (this != internal_default_instance()) delete pooling3d_param_;
+  if (this != internal_default_instance()) delete roi_align_param_;
 }
 
 void LayerParameter::SetCachedSize(int size) const {
@@ -12634,7 +12688,7 @@ void LayerParameter::Clear() {
       roi_mask_pooling_param_->Clear();
     }
   }
-  if (cached_has_bits & 117440512u) {
+  if (cached_has_bits & 251658240u) {
     if (cached_has_bits & 0x01000000u) {
       GOOGLE_DCHECK(bn_param_ != NULL);
       bn_param_->Clear();
@@ -12646,6 +12700,10 @@ void LayerParameter::Clear() {
     if (cached_has_bits & 0x04000000u) {
       GOOGLE_DCHECK(pooling3d_param_ != NULL);
       pooling3d_param_->Clear();
+    }
+    if (cached_has_bits & 0x08000000u) {
+      GOOGLE_DCHECK(roi_align_param_ != NULL);
+      roi_align_param_->Clear();
     }
   }
   phase_ = 0;
@@ -13515,6 +13573,18 @@ bool LayerParameter::MergePartialFromCodedStream(
         break;
       }
 
+      // optional .caffe.ROIAlignParameter roi_align_param = 209;
+      case 209: {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(138u /* 1674 & 0xFF */)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+               input, mutable_roi_align_param()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
       default: {
       handle_unusual:
         if (tag == 0) {
@@ -13618,7 +13688,7 @@ void LayerParameter::SerializeWithCachedSizes(
 
   cached_has_bits = _has_bits_[1];
   // optional .caffe.Phase phase = 10;
-  if (cached_has_bits & 0x08000000u) {
+  if (cached_has_bits & 0x10000000u) {
     ::google::protobuf::internal::WireFormatLite::WriteEnum(
       10, this->phase(), output);
   }
@@ -13973,6 +14043,12 @@ void LayerParameter::SerializeWithCachedSizes(
       208, *this->pooling3d_param_, output);
   }
 
+  // optional .caffe.ROIAlignParameter roi_align_param = 209;
+  if (cached_has_bits & 0x08000000u) {
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      209, *this->roi_align_param_, output);
+  }
+
   if (_internal_metadata_.have_unknown_fields()) {
     ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
         _internal_metadata_.unknown_fields(), output);
@@ -14068,7 +14144,7 @@ void LayerParameter::SerializeWithCachedSizes(
 
   cached_has_bits = _has_bits_[1];
   // optional .caffe.Phase phase = 10;
-  if (cached_has_bits & 0x08000000u) {
+  if (cached_has_bits & 0x10000000u) {
     target = ::google::protobuf::internal::WireFormatLite::WriteEnumToArray(
       10, this->phase(), target);
   }
@@ -14476,6 +14552,13 @@ void LayerParameter::SerializeWithCachedSizes(
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageToArray(
         208, *this->pooling3d_param_, deterministic, target);
+  }
+
+  // optional .caffe.ROIAlignParameter roi_align_param = 209;
+  if (cached_has_bits & 0x08000000u) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      InternalWriteMessageToArray(
+        209, *this->roi_align_param_, deterministic, target);
   }
 
   if (_internal_metadata_.have_unknown_fields()) {
@@ -14979,7 +15062,7 @@ size_t LayerParameter::ByteSizeLong() const {
     }
 
   }
-  if (_has_bits_[56 / 32] & 251658240u) {
+  if (_has_bits_[56 / 32] & 520093696u) {
     // optional .caffe.BNParameter bn_param = 206;
     if (has_bn_param()) {
       total_size += 2 +
@@ -14999,6 +15082,13 @@ size_t LayerParameter::ByteSizeLong() const {
       total_size += 2 +
         ::google::protobuf::internal::WireFormatLite::MessageSize(
           *this->pooling3d_param_);
+    }
+
+    // optional .caffe.ROIAlignParameter roi_align_param = 209;
+    if (has_roi_align_param()) {
+      total_size += 2 +
+        ::google::protobuf::internal::WireFormatLite::MessageSize(
+          *this->roi_align_param_);
     }
 
     // optional .caffe.Phase phase = 10;
@@ -15231,7 +15321,7 @@ void LayerParameter::MergeFrom(const LayerParameter& from) {
       mutable_roi_mask_pooling_param()->::caffe::ROIMaskPoolingParameter::MergeFrom(from.roi_mask_pooling_param());
     }
   }
-  if (cached_has_bits & 251658240u) {
+  if (cached_has_bits & 520093696u) {
     if (cached_has_bits & 0x01000000u) {
       mutable_bn_param()->::caffe::BNParameter::MergeFrom(from.bn_param());
     }
@@ -15242,6 +15332,9 @@ void LayerParameter::MergeFrom(const LayerParameter& from) {
       mutable_pooling3d_param()->::caffe::Pooling3DParameter::MergeFrom(from.pooling3d_param());
     }
     if (cached_has_bits & 0x08000000u) {
+      mutable_roi_align_param()->::caffe::ROIAlignParameter::MergeFrom(from.roi_align_param());
+    }
+    if (cached_has_bits & 0x10000000u) {
       phase_ = from.phase_;
     }
     _has_bits_[1] |= cached_has_bits;
@@ -15342,6 +15435,7 @@ void LayerParameter::InternalSwap(LayerParameter* other) {
   swap(bn_param_, other->bn_param_);
   swap(convolution3d_param_, other->convolution3d_param_);
   swap(pooling3d_param_, other->pooling3d_param_);
+  swap(roi_align_param_, other->roi_align_param_);
   swap(phase_, other->phase_);
   swap(_has_bits_[0], other->_has_bits_[0]);
   swap(_has_bits_[1], other->_has_bits_[1]);
@@ -18787,6 +18881,336 @@ void VideoDataFBParameter::InternalSwap(VideoDataFBParameter* other) {
 }
 
 ::google::protobuf::Metadata VideoDataFBParameter::GetMetadata() const {
+  protobuf_caffe_2eproto::protobuf_AssignDescriptorsOnce();
+  return ::protobuf_caffe_2eproto::file_level_metadata[kIndexInFileMessages];
+}
+
+
+// ===================================================================
+
+void ROIAlignParameter::InitAsDefaultInstance() {
+}
+#if !defined(_MSC_VER) || _MSC_VER >= 1900
+const int ROIAlignParameter::kPooledHFieldNumber;
+const int ROIAlignParameter::kPooledWFieldNumber;
+const int ROIAlignParameter::kSpatialScaleFieldNumber;
+#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
+
+ROIAlignParameter::ROIAlignParameter()
+  : ::google::protobuf::Message(), _internal_metadata_(NULL) {
+  if (GOOGLE_PREDICT_TRUE(this != internal_default_instance())) {
+    ::protobuf_caffe_2eproto::InitDefaultsROIAlignParameter();
+  }
+  SharedCtor();
+  // @@protoc_insertion_point(constructor:caffe.ROIAlignParameter)
+}
+ROIAlignParameter::ROIAlignParameter(const ROIAlignParameter& from)
+  : ::google::protobuf::Message(),
+      _internal_metadata_(NULL),
+      _has_bits_(from._has_bits_),
+      _cached_size_(0) {
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  ::memcpy(&pooled_h_, &from.pooled_h_,
+    static_cast<size_t>(reinterpret_cast<char*>(&spatial_scale_) -
+    reinterpret_cast<char*>(&pooled_h_)) + sizeof(spatial_scale_));
+  // @@protoc_insertion_point(copy_constructor:caffe.ROIAlignParameter)
+}
+
+void ROIAlignParameter::SharedCtor() {
+  _cached_size_ = 0;
+  ::memset(&pooled_h_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&pooled_w_) -
+      reinterpret_cast<char*>(&pooled_h_)) + sizeof(pooled_w_));
+  spatial_scale_ = 1;
+}
+
+ROIAlignParameter::~ROIAlignParameter() {
+  // @@protoc_insertion_point(destructor:caffe.ROIAlignParameter)
+  SharedDtor();
+}
+
+void ROIAlignParameter::SharedDtor() {
+}
+
+void ROIAlignParameter::SetCachedSize(int size) const {
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+}
+const ::google::protobuf::Descriptor* ROIAlignParameter::descriptor() {
+  ::protobuf_caffe_2eproto::protobuf_AssignDescriptorsOnce();
+  return ::protobuf_caffe_2eproto::file_level_metadata[kIndexInFileMessages].descriptor;
+}
+
+const ROIAlignParameter& ROIAlignParameter::default_instance() {
+  ::protobuf_caffe_2eproto::InitDefaultsROIAlignParameter();
+  return *internal_default_instance();
+}
+
+ROIAlignParameter* ROIAlignParameter::New(::google::protobuf::Arena* arena) const {
+  ROIAlignParameter* n = new ROIAlignParameter;
+  if (arena != NULL) {
+    arena->Own(n);
+  }
+  return n;
+}
+
+void ROIAlignParameter::Clear() {
+// @@protoc_insertion_point(message_clear_start:caffe.ROIAlignParameter)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  cached_has_bits = _has_bits_[0];
+  if (cached_has_bits & 7u) {
+    ::memset(&pooled_h_, 0, static_cast<size_t>(
+        reinterpret_cast<char*>(&pooled_w_) -
+        reinterpret_cast<char*>(&pooled_h_)) + sizeof(pooled_w_));
+    spatial_scale_ = 1;
+  }
+  _has_bits_.Clear();
+  _internal_metadata_.Clear();
+}
+
+bool ROIAlignParameter::MergePartialFromCodedStream(
+    ::google::protobuf::io::CodedInputStream* input) {
+#define DO_(EXPRESSION) if (!GOOGLE_PREDICT_TRUE(EXPRESSION)) goto failure
+  ::google::protobuf::uint32 tag;
+  // @@protoc_insertion_point(parse_start:caffe.ROIAlignParameter)
+  for (;;) {
+    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
+    tag = p.first;
+    if (!p.second) goto handle_unusual;
+    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
+      // optional uint32 pooled_h = 1 [default = 0];
+      case 1: {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(8u /* 8 & 0xFF */)) {
+          set_has_pooled_h();
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   ::google::protobuf::uint32, ::google::protobuf::internal::WireFormatLite::TYPE_UINT32>(
+                 input, &pooled_h_)));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // optional uint32 pooled_w = 2 [default = 0];
+      case 2: {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(16u /* 16 & 0xFF */)) {
+          set_has_pooled_w();
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   ::google::protobuf::uint32, ::google::protobuf::internal::WireFormatLite::TYPE_UINT32>(
+                 input, &pooled_w_)));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // optional float spatial_scale = 3 [default = 1];
+      case 3: {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(29u /* 29 & 0xFF */)) {
+          set_has_spatial_scale();
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   float, ::google::protobuf::internal::WireFormatLite::TYPE_FLOAT>(
+                 input, &spatial_scale_)));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      default: {
+      handle_unusual:
+        if (tag == 0) {
+          goto success;
+        }
+        DO_(::google::protobuf::internal::WireFormat::SkipField(
+              input, tag, _internal_metadata_.mutable_unknown_fields()));
+        break;
+      }
+    }
+  }
+success:
+  // @@protoc_insertion_point(parse_success:caffe.ROIAlignParameter)
+  return true;
+failure:
+  // @@protoc_insertion_point(parse_failure:caffe.ROIAlignParameter)
+  return false;
+#undef DO_
+}
+
+void ROIAlignParameter::SerializeWithCachedSizes(
+    ::google::protobuf::io::CodedOutputStream* output) const {
+  // @@protoc_insertion_point(serialize_start:caffe.ROIAlignParameter)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  cached_has_bits = _has_bits_[0];
+  // optional uint32 pooled_h = 1 [default = 0];
+  if (cached_has_bits & 0x00000001u) {
+    ::google::protobuf::internal::WireFormatLite::WriteUInt32(1, this->pooled_h(), output);
+  }
+
+  // optional uint32 pooled_w = 2 [default = 0];
+  if (cached_has_bits & 0x00000002u) {
+    ::google::protobuf::internal::WireFormatLite::WriteUInt32(2, this->pooled_w(), output);
+  }
+
+  // optional float spatial_scale = 3 [default = 1];
+  if (cached_has_bits & 0x00000004u) {
+    ::google::protobuf::internal::WireFormatLite::WriteFloat(3, this->spatial_scale(), output);
+  }
+
+  if (_internal_metadata_.have_unknown_fields()) {
+    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
+        _internal_metadata_.unknown_fields(), output);
+  }
+  // @@protoc_insertion_point(serialize_end:caffe.ROIAlignParameter)
+}
+
+::google::protobuf::uint8* ROIAlignParameter::InternalSerializeWithCachedSizesToArray(
+    bool deterministic, ::google::protobuf::uint8* target) const {
+  (void)deterministic; // Unused
+  // @@protoc_insertion_point(serialize_to_array_start:caffe.ROIAlignParameter)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  cached_has_bits = _has_bits_[0];
+  // optional uint32 pooled_h = 1 [default = 0];
+  if (cached_has_bits & 0x00000001u) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteUInt32ToArray(1, this->pooled_h(), target);
+  }
+
+  // optional uint32 pooled_w = 2 [default = 0];
+  if (cached_has_bits & 0x00000002u) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteUInt32ToArray(2, this->pooled_w(), target);
+  }
+
+  // optional float spatial_scale = 3 [default = 1];
+  if (cached_has_bits & 0x00000004u) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteFloatToArray(3, this->spatial_scale(), target);
+  }
+
+  if (_internal_metadata_.have_unknown_fields()) {
+    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields(), target);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:caffe.ROIAlignParameter)
+  return target;
+}
+
+size_t ROIAlignParameter::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:caffe.ROIAlignParameter)
+  size_t total_size = 0;
+
+  if (_internal_metadata_.have_unknown_fields()) {
+    total_size +=
+      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
+        _internal_metadata_.unknown_fields());
+  }
+  if (_has_bits_[0 / 32] & 7u) {
+    // optional uint32 pooled_h = 1 [default = 0];
+    if (has_pooled_h()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::UInt32Size(
+          this->pooled_h());
+    }
+
+    // optional uint32 pooled_w = 2 [default = 0];
+    if (has_pooled_w()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::UInt32Size(
+          this->pooled_w());
+    }
+
+    // optional float spatial_scale = 3 [default = 1];
+    if (has_spatial_scale()) {
+      total_size += 1 + 4;
+    }
+
+  }
+  int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = cached_size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  return total_size;
+}
+
+void ROIAlignParameter::MergeFrom(const ::google::protobuf::Message& from) {
+// @@protoc_insertion_point(generalized_merge_from_start:caffe.ROIAlignParameter)
+  GOOGLE_DCHECK_NE(&from, this);
+  const ROIAlignParameter* source =
+      ::google::protobuf::internal::DynamicCastToGenerated<const ROIAlignParameter>(
+          &from);
+  if (source == NULL) {
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:caffe.ROIAlignParameter)
+    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
+  } else {
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:caffe.ROIAlignParameter)
+    MergeFrom(*source);
+  }
+}
+
+void ROIAlignParameter::MergeFrom(const ROIAlignParameter& from) {
+// @@protoc_insertion_point(class_specific_merge_from_start:caffe.ROIAlignParameter)
+  GOOGLE_DCHECK_NE(&from, this);
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  cached_has_bits = from._has_bits_[0];
+  if (cached_has_bits & 7u) {
+    if (cached_has_bits & 0x00000001u) {
+      pooled_h_ = from.pooled_h_;
+    }
+    if (cached_has_bits & 0x00000002u) {
+      pooled_w_ = from.pooled_w_;
+    }
+    if (cached_has_bits & 0x00000004u) {
+      spatial_scale_ = from.spatial_scale_;
+    }
+    _has_bits_[0] |= cached_has_bits;
+  }
+}
+
+void ROIAlignParameter::CopyFrom(const ::google::protobuf::Message& from) {
+// @@protoc_insertion_point(generalized_copy_from_start:caffe.ROIAlignParameter)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+void ROIAlignParameter::CopyFrom(const ROIAlignParameter& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:caffe.ROIAlignParameter)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool ROIAlignParameter::IsInitialized() const {
+  return true;
+}
+
+void ROIAlignParameter::Swap(ROIAlignParameter* other) {
+  if (other == this) return;
+  InternalSwap(other);
+}
+void ROIAlignParameter::InternalSwap(ROIAlignParameter* other) {
+  using std::swap;
+  swap(pooled_h_, other->pooled_h_);
+  swap(pooled_w_, other->pooled_w_);
+  swap(spatial_scale_, other->spatial_scale_);
+  swap(_has_bits_[0], other->_has_bits_[0]);
+  _internal_metadata_.Swap(&other->_internal_metadata_);
+  swap(_cached_size_, other->_cached_size_);
+}
+
+::google::protobuf::Metadata ROIAlignParameter::GetMetadata() const {
   protobuf_caffe_2eproto::protobuf_AssignDescriptorsOnce();
   return ::protobuf_caffe_2eproto::file_level_metadata[kIndexInFileMessages];
 }

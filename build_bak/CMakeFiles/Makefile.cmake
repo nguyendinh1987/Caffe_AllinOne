@@ -24,6 +24,7 @@ set(CMAKE_MAKEFILE_DEPENDS
   "src/caffe/CMakeFiles/cuda_compile.dir/FRCNN/cuda_compile_generated_roi_pooling_layer.cu.o.depend"
   "src/caffe/CMakeFiles/cuda_compile.dir/FRCNN/cuda_compile_generated_smooth_L1_loss_layer.cu.o.depend"
   "src/caffe/CMakeFiles/cuda_compile.dir/FRCNN/util/cuda_compile_generated_frcnn_nms_kernel.cu.o.depend"
+  "src/caffe/CMakeFiles/cuda_compile.dir/Mask_RCNN/cuda_compile_generated_roi_align_layer.cu.o.depend"
   "src/caffe/CMakeFiles/cuda_compile.dir/Pool3D/cuda_compile_generated_pool3d_layer.cu.o.depend"
   "src/caffe/CMakeFiles/cuda_compile.dir/layers/cuda_compile_generated_absval_layer.cu.o.depend"
   "src/caffe/CMakeFiles/cuda_compile.dir/layers/cuda_compile_generated_accuracy_layer.cu.o.depend"

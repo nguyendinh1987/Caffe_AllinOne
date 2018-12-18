@@ -697,6 +697,33 @@ FRCNN/util/frcnn_vis.cpp.s:
 	cd /home/kakadinh/caffe_variances/Caffe_with_updated_functions/build && $(MAKE) -f src/caffe/CMakeFiles/caffe.dir/build.make src/caffe/CMakeFiles/caffe.dir/FRCNN/util/frcnn_vis.cpp.s
 .PHONY : FRCNN/util/frcnn_vis.cpp.s
 
+Mask_RCNN/roi_align_layer.o: Mask_RCNN/roi_align_layer.cpp.o
+
+.PHONY : Mask_RCNN/roi_align_layer.o
+
+# target to build an object file
+Mask_RCNN/roi_align_layer.cpp.o:
+	cd /home/kakadinh/caffe_variances/Caffe_with_updated_functions/build && $(MAKE) -f src/caffe/CMakeFiles/caffe.dir/build.make src/caffe/CMakeFiles/caffe.dir/Mask_RCNN/roi_align_layer.cpp.o
+.PHONY : Mask_RCNN/roi_align_layer.cpp.o
+
+Mask_RCNN/roi_align_layer.i: Mask_RCNN/roi_align_layer.cpp.i
+
+.PHONY : Mask_RCNN/roi_align_layer.i
+
+# target to preprocess a source file
+Mask_RCNN/roi_align_layer.cpp.i:
+	cd /home/kakadinh/caffe_variances/Caffe_with_updated_functions/build && $(MAKE) -f src/caffe/CMakeFiles/caffe.dir/build.make src/caffe/CMakeFiles/caffe.dir/Mask_RCNN/roi_align_layer.cpp.i
+.PHONY : Mask_RCNN/roi_align_layer.cpp.i
+
+Mask_RCNN/roi_align_layer.s: Mask_RCNN/roi_align_layer.cpp.s
+
+.PHONY : Mask_RCNN/roi_align_layer.s
+
+# target to generate assembly for a file
+Mask_RCNN/roi_align_layer.cpp.s:
+	cd /home/kakadinh/caffe_variances/Caffe_with_updated_functions/build && $(MAKE) -f src/caffe/CMakeFiles/caffe.dir/build.make src/caffe/CMakeFiles/caffe.dir/Mask_RCNN/roi_align_layer.cpp.s
+.PHONY : Mask_RCNN/roi_align_layer.cpp.s
+
 Pool3D/pool3d_layer.o: Pool3D/pool3d_layer.cpp.o
 
 .PHONY : Pool3D/pool3d_layer.o
@@ -3657,6 +3684,9 @@ help:
 	@echo "... FRCNN/util/frcnn_vis.o"
 	@echo "... FRCNN/util/frcnn_vis.i"
 	@echo "... FRCNN/util/frcnn_vis.s"
+	@echo "... Mask_RCNN/roi_align_layer.o"
+	@echo "... Mask_RCNN/roi_align_layer.i"
+	@echo "... Mask_RCNN/roi_align_layer.s"
 	@echo "... Pool3D/pool3d_layer.o"
 	@echo "... Pool3D/pool3d_layer.i"
 	@echo "... Pool3D/pool3d_layer.s"

@@ -330,6 +330,28 @@ caffe/FRCNN/util/frcnn_param.hpp
 caffe/FRCNN/util/frcnn_utils.hpp
 ../include/caffe/FRCNN/util/caffe/FRCNN/util/frcnn_utils.hpp
 
+../include/caffe/Mask_RCNN/roi_align_layers.hpp
+cfloat
+-
+algorithm
+-
+stdlib.h
+-
+string
+-
+utility
+-
+vector
+-
+caffe/blob.hpp
+../include/caffe/Mask_RCNN/caffe/blob.hpp
+caffe/common.hpp
+../include/caffe/Mask_RCNN/caffe/common.hpp
+caffe/layer.hpp
+../include/caffe/Mask_RCNN/caffe/layer.hpp
+caffe/proto/caffe.pb.h
+../include/caffe/Mask_RCNN/caffe/proto/caffe.pb.h
+
 ../include/caffe/Pool3D/pool3d_layer.hpp
 string
 -
@@ -1915,6 +1937,10 @@ sstream
 -
 caffe/FRCNN/util/frcnn_vis.hpp
 /home/kakadinh/caffe_variances/Caffe_with_updated_functions/src/caffe/FRCNN/util/caffe/FRCNN/util/frcnn_vis.hpp
+
+/home/kakadinh/caffe_variances/Caffe_with_updated_functions/src/caffe/Mask_RCNN/roi_align_layer.cpp
+caffe/Mask_RCNN/roi_align_layers.hpp
+/home/kakadinh/caffe_variances/Caffe_with_updated_functions/src/caffe/Mask_RCNN/caffe/Mask_RCNN/roi_align_layers.hpp
 
 /home/kakadinh/caffe_variances/Caffe_with_updated_functions/src/caffe/Pool3D/pool3d_layer.cpp
 algorithm

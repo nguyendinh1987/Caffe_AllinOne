@@ -37,7 +37,7 @@ namespace protobuf_caffe_2eproto {
 struct TableStruct {
   static const ::google::protobuf::internal::ParseTableField entries[];
   static const ::google::protobuf::internal::AuxillaryParseTableField aux[];
-  static const ::google::protobuf::internal::ParseTable schema[72];
+  static const ::google::protobuf::internal::ParseTable schema[73];
   static const ::google::protobuf::internal::FieldMetadata field_metadata[];
   static const ::google::protobuf::internal::SerializationTable serialization_table[];
   static const ::google::protobuf::uint32 offsets[];
@@ -79,6 +79,8 @@ void InitDefaultsVideoDataParameterImpl();
 void InitDefaultsVideoDataParameter();
 void InitDefaultsVideoDataFBParameterImpl();
 void InitDefaultsVideoDataFBParameter();
+void InitDefaultsROIAlignParameterImpl();
+void InitDefaultsROIAlignParameter();
 void InitDefaultsROIPoolingParameterImpl();
 void InitDefaultsROIPoolingParameter();
 void InitDefaultsROIMaskPoolingParameterImpl();
@@ -206,6 +208,7 @@ inline void InitDefaults() {
   InitDefaultsBNParameter();
   InitDefaultsVideoDataParameter();
   InitDefaultsVideoDataFBParameter();
+  InitDefaultsROIAlignParameter();
   InitDefaultsROIPoolingParameter();
   InitDefaultsROIMaskPoolingParameter();
   InitDefaultsSmoothL1LossParameter();
@@ -404,6 +407,9 @@ extern PowerParameterDefaultTypeInternal _PowerParameter_default_instance_;
 class PythonParameter;
 class PythonParameterDefaultTypeInternal;
 extern PythonParameterDefaultTypeInternal _PythonParameter_default_instance_;
+class ROIAlignParameter;
+class ROIAlignParameterDefaultTypeInternal;
+extern ROIAlignParameterDefaultTypeInternal _ROIAlignParameter_default_instance_;
 class ROIMaskPoolingParameter;
 class ROIMaskPoolingParameterDefaultTypeInternal;
 extern ROIMaskPoolingParameterDefaultTypeInternal _ROIMaskPoolingParameter_default_instance_;
@@ -4427,6 +4433,15 @@ class LayerParameter : public ::google::protobuf::Message /* @@protoc_insertion_
   ::caffe::Pooling3DParameter* mutable_pooling3d_param();
   void set_allocated_pooling3d_param(::caffe::Pooling3DParameter* pooling3d_param);
 
+  // optional .caffe.ROIAlignParameter roi_align_param = 209;
+  bool has_roi_align_param() const;
+  void clear_roi_align_param();
+  static const int kRoiAlignParamFieldNumber = 209;
+  const ::caffe::ROIAlignParameter& roi_align_param() const;
+  ::caffe::ROIAlignParameter* release_roi_align_param();
+  ::caffe::ROIAlignParameter* mutable_roi_align_param();
+  void set_allocated_roi_align_param(::caffe::ROIAlignParameter* roi_align_param);
+
   // optional .caffe.Phase phase = 10;
   bool has_phase() const;
   void clear_phase();
@@ -4556,6 +4571,8 @@ class LayerParameter : public ::google::protobuf::Message /* @@protoc_insertion_
   void clear_has_convolution3d_param();
   void set_has_pooling3d_param();
   void clear_has_pooling3d_param();
+  void set_has_roi_align_param();
+  void clear_has_roi_align_param();
 
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
   ::google::protobuf::internal::HasBits<2> _has_bits_;
@@ -4626,6 +4643,7 @@ class LayerParameter : public ::google::protobuf::Message /* @@protoc_insertion_
   ::caffe::BNParameter* bn_param_;
   ::caffe::Convolution3DParameter* convolution3d_param_;
   ::caffe::Pooling3DParameter* pooling3d_param_;
+  ::caffe::ROIAlignParameter* roi_align_param_;
   int phase_;
   mutable int _cached_size_;
   friend struct ::protobuf_caffe_2eproto::TableStruct;
@@ -5843,6 +5861,136 @@ class VideoDataFBParameter : public ::google::protobuf::Message /* @@protoc_inse
 };
 // -------------------------------------------------------------------
 
+class ROIAlignParameter : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:caffe.ROIAlignParameter) */ {
+ public:
+  ROIAlignParameter();
+  virtual ~ROIAlignParameter();
+
+  ROIAlignParameter(const ROIAlignParameter& from);
+
+  inline ROIAlignParameter& operator=(const ROIAlignParameter& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  #if LANG_CXX11
+  ROIAlignParameter(ROIAlignParameter&& from) noexcept
+    : ROIAlignParameter() {
+    *this = ::std::move(from);
+  }
+
+  inline ROIAlignParameter& operator=(ROIAlignParameter&& from) noexcept {
+    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+  #endif
+  inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const {
+    return _internal_metadata_.unknown_fields();
+  }
+  inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields();
+  }
+
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const ROIAlignParameter& default_instance();
+
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const ROIAlignParameter* internal_default_instance() {
+    return reinterpret_cast<const ROIAlignParameter*>(
+               &_ROIAlignParameter_default_instance_);
+  }
+  static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
+    18;
+
+  void Swap(ROIAlignParameter* other);
+  friend void swap(ROIAlignParameter& a, ROIAlignParameter& b) {
+    a.Swap(&b);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline ROIAlignParameter* New() const PROTOBUF_FINAL { return New(NULL); }
+
+  ROIAlignParameter* New(::google::protobuf::Arena* arena) const PROTOBUF_FINAL;
+  void CopyFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
+  void MergeFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
+  void CopyFrom(const ROIAlignParameter& from);
+  void MergeFrom(const ROIAlignParameter& from);
+  void Clear() PROTOBUF_FINAL;
+  bool IsInitialized() const PROTOBUF_FINAL;
+
+  size_t ByteSizeLong() const PROTOBUF_FINAL;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input) PROTOBUF_FINAL;
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const PROTOBUF_FINAL;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* target) const PROTOBUF_FINAL;
+  int GetCachedSize() const PROTOBUF_FINAL { return _cached_size_; }
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const PROTOBUF_FINAL;
+  void InternalSwap(ROIAlignParameter* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return NULL;
+  }
+  inline void* MaybeArenaPtr() const {
+    return NULL;
+  }
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const PROTOBUF_FINAL;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // optional uint32 pooled_h = 1 [default = 0];
+  bool has_pooled_h() const;
+  void clear_pooled_h();
+  static const int kPooledHFieldNumber = 1;
+  ::google::protobuf::uint32 pooled_h() const;
+  void set_pooled_h(::google::protobuf::uint32 value);
+
+  // optional uint32 pooled_w = 2 [default = 0];
+  bool has_pooled_w() const;
+  void clear_pooled_w();
+  static const int kPooledWFieldNumber = 2;
+  ::google::protobuf::uint32 pooled_w() const;
+  void set_pooled_w(::google::protobuf::uint32 value);
+
+  // optional float spatial_scale = 3 [default = 1];
+  bool has_spatial_scale() const;
+  void clear_spatial_scale();
+  static const int kSpatialScaleFieldNumber = 3;
+  float spatial_scale() const;
+  void set_spatial_scale(float value);
+
+  // @@protoc_insertion_point(class_scope:caffe.ROIAlignParameter)
+ private:
+  void set_has_pooled_h();
+  void clear_has_pooled_h();
+  void set_has_pooled_w();
+  void clear_has_pooled_w();
+  void set_has_spatial_scale();
+  void clear_has_spatial_scale();
+
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  ::google::protobuf::internal::HasBits<1> _has_bits_;
+  mutable int _cached_size_;
+  ::google::protobuf::uint32 pooled_h_;
+  ::google::protobuf::uint32 pooled_w_;
+  float spatial_scale_;
+  friend struct ::protobuf_caffe_2eproto::TableStruct;
+  friend void ::protobuf_caffe_2eproto::InitDefaultsROIAlignParameterImpl();
+};
+// -------------------------------------------------------------------
+
 class ROIPoolingParameter : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:caffe.ROIPoolingParameter) */ {
  public:
   ROIPoolingParameter();
@@ -5885,7 +6033,7 @@ class ROIPoolingParameter : public ::google::protobuf::Message /* @@protoc_inser
                &_ROIPoolingParameter_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    18;
+    19;
 
   void Swap(ROIPoolingParameter* other);
   friend void swap(ROIPoolingParameter& a, ROIPoolingParameter& b) {
@@ -6015,7 +6163,7 @@ class ROIMaskPoolingParameter : public ::google::protobuf::Message /* @@protoc_i
                &_ROIMaskPoolingParameter_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    19;
+    20;
 
   void Swap(ROIMaskPoolingParameter* other);
   friend void swap(ROIMaskPoolingParameter& a, ROIMaskPoolingParameter& b) {
@@ -6175,7 +6323,7 @@ class SmoothL1LossParameter : public ::google::protobuf::Message /* @@protoc_ins
                &_SmoothL1LossParameter_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    20;
+    21;
 
   void Swap(SmoothL1LossParameter* other);
   friend void swap(SmoothL1LossParameter& a, SmoothL1LossParameter& b) {
@@ -6285,7 +6433,7 @@ class TransformationParameter : public ::google::protobuf::Message /* @@protoc_i
                &_TransformationParameter_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    21;
+    22;
 
   void Swap(TransformationParameter* other);
   friend void swap(TransformationParameter& a, TransformationParameter& b) {
@@ -6699,7 +6847,7 @@ class LossParameter : public ::google::protobuf::Message /* @@protoc_insertion_p
                &_LossParameter_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    22;
+    23;
 
   void Swap(LossParameter* other);
   friend void swap(LossParameter& a, LossParameter& b) {
@@ -6859,7 +7007,7 @@ class AccuracyParameter : public ::google::protobuf::Message /* @@protoc_inserti
                &_AccuracyParameter_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    23;
+    24;
 
   void Swap(AccuracyParameter* other);
   friend void swap(AccuracyParameter& a, AccuracyParameter& b) {
@@ -6989,7 +7137,7 @@ class ArgMaxParameter : public ::google::protobuf::Message /* @@protoc_insertion
                &_ArgMaxParameter_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    24;
+    25;
 
   void Swap(ArgMaxParameter* other);
   friend void swap(ArgMaxParameter& a, ArgMaxParameter& b) {
@@ -7119,7 +7267,7 @@ class ClipParameter : public ::google::protobuf::Message /* @@protoc_insertion_p
                &_ClipParameter_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    25;
+    26;
 
   void Swap(ClipParameter* other);
   friend void swap(ClipParameter& a, ClipParameter& b) {
@@ -7242,7 +7390,7 @@ class ConcatParameter : public ::google::protobuf::Message /* @@protoc_insertion
                &_ConcatParameter_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    26;
+    27;
 
   void Swap(ConcatParameter* other);
   friend void swap(ConcatParameter& a, ConcatParameter& b) {
@@ -7362,7 +7510,7 @@ class BatchNormParameter : public ::google::protobuf::Message /* @@protoc_insert
                &_BatchNormParameter_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    27;
+    28;
 
   void Swap(BatchNormParameter* other);
   friend void swap(BatchNormParameter& a, BatchNormParameter& b) {
@@ -7492,7 +7640,7 @@ class BiasParameter : public ::google::protobuf::Message /* @@protoc_insertion_p
                &_BiasParameter_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    28;
+    29;
 
   void Swap(BiasParameter* other);
   friend void swap(BiasParameter& a, BiasParameter& b) {
@@ -7624,7 +7772,7 @@ class ContrastiveLossParameter : public ::google::protobuf::Message /* @@protoc_
                &_ContrastiveLossParameter_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    29;
+    30;
 
   void Swap(ContrastiveLossParameter* other);
   friend void swap(ContrastiveLossParameter& a, ContrastiveLossParameter& b) {
@@ -7744,7 +7892,7 @@ class ConvolutionParameter : public ::google::protobuf::Message /* @@protoc_inse
                &_ConvolutionParameter_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    30;
+    31;
 
   void Swap(ConvolutionParameter* other);
   friend void swap(ConvolutionParameter& a, ConvolutionParameter& b) {
@@ -8068,7 +8216,7 @@ class CropParameter : public ::google::protobuf::Message /* @@protoc_insertion_p
                &_CropParameter_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    31;
+    32;
 
   void Swap(CropParameter* other);
   friend void swap(CropParameter& a, CropParameter& b) {
@@ -8191,7 +8339,7 @@ class DataParameter : public ::google::protobuf::Message /* @@protoc_insertion_p
                &_DataParameter_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    32;
+    33;
 
   void Swap(DataParameter* other);
   friend void swap(DataParameter& a, DataParameter& b) {
@@ -8433,7 +8581,7 @@ class DropoutParameter : public ::google::protobuf::Message /* @@protoc_insertio
                &_DropoutParameter_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    33;
+    34;
 
   void Swap(DropoutParameter* other);
   friend void swap(DropoutParameter& a, DropoutParameter& b) {
@@ -8543,7 +8691,7 @@ class DummyDataParameter : public ::google::protobuf::Message /* @@protoc_insert
                &_DummyDataParameter_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    34;
+    35;
 
   void Swap(DummyDataParameter* other);
   friend void swap(DummyDataParameter& a, DummyDataParameter& b) {
@@ -8721,7 +8869,7 @@ class EltwiseParameter : public ::google::protobuf::Message /* @@protoc_insertio
                &_EltwiseParameter_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    35;
+    36;
 
   void Swap(EltwiseParameter* other);
   friend void swap(EltwiseParameter& a, EltwiseParameter& b) {
@@ -8882,7 +9030,7 @@ class ELUParameter : public ::google::protobuf::Message /* @@protoc_insertion_po
                &_ELUParameter_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    36;
+    37;
 
   void Swap(ELUParameter* other);
   friend void swap(ELUParameter& a, ELUParameter& b) {
@@ -8992,7 +9140,7 @@ class EmbedParameter : public ::google::protobuf::Message /* @@protoc_insertion_
                &_EmbedParameter_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    37;
+    38;
 
   void Swap(EmbedParameter* other);
   friend void swap(EmbedParameter& a, EmbedParameter& b) {
@@ -9146,7 +9294,7 @@ class ExpParameter : public ::google::protobuf::Message /* @@protoc_insertion_po
                &_ExpParameter_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    38;
+    39;
 
   void Swap(ExpParameter* other);
   friend void swap(ExpParameter& a, ExpParameter& b) {
@@ -9276,7 +9424,7 @@ class FlattenParameter : public ::google::protobuf::Message /* @@protoc_insertio
                &_FlattenParameter_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    39;
+    40;
 
   void Swap(FlattenParameter* other);
   friend void swap(FlattenParameter& a, FlattenParameter& b) {
@@ -9396,7 +9544,7 @@ class HDF5DataParameter : public ::google::protobuf::Message /* @@protoc_inserti
                &_HDF5DataParameter_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    40;
+    41;
 
   void Swap(HDF5DataParameter* other);
   friend void swap(HDF5DataParameter& a, HDF5DataParameter& b) {
@@ -9534,7 +9682,7 @@ class HDF5OutputParameter : public ::google::protobuf::Message /* @@protoc_inser
                &_HDF5OutputParameter_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    41;
+    42;
 
   void Swap(HDF5OutputParameter* other);
   friend void swap(HDF5OutputParameter& a, HDF5OutputParameter& b) {
@@ -9652,7 +9800,7 @@ class HingeLossParameter : public ::google::protobuf::Message /* @@protoc_insert
                &_HingeLossParameter_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    42;
+    43;
 
   void Swap(HingeLossParameter* other);
   friend void swap(HingeLossParameter& a, HingeLossParameter& b) {
@@ -9788,7 +9936,7 @@ class ImageDataParameter : public ::google::protobuf::Message /* @@protoc_insert
                &_ImageDataParameter_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    43;
+    44;
 
   void Swap(ImageDataParameter* other);
   friend void swap(ImageDataParameter& a, ImageDataParameter& b) {
@@ -10032,7 +10180,7 @@ class InfogainLossParameter : public ::google::protobuf::Message /* @@protoc_ins
                &_InfogainLossParameter_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    44;
+    45;
 
   void Swap(InfogainLossParameter* other);
   friend void swap(InfogainLossParameter& a, InfogainLossParameter& b) {
@@ -10160,7 +10308,7 @@ class InnerProductParameter : public ::google::protobuf::Message /* @@protoc_ins
                &_InnerProductParameter_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    45;
+    46;
 
   void Swap(InnerProductParameter* other);
   friend void swap(InnerProductParameter& a, InnerProductParameter& b) {
@@ -10324,7 +10472,7 @@ class InputParameter : public ::google::protobuf::Message /* @@protoc_insertion_
                &_InputParameter_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    46;
+    47;
 
   void Swap(InputParameter* other);
   friend void swap(InputParameter& a, InputParameter& b) {
@@ -10437,7 +10585,7 @@ class LogParameter : public ::google::protobuf::Message /* @@protoc_insertion_po
                &_LogParameter_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    47;
+    48;
 
   void Swap(LogParameter* other);
   friend void swap(LogParameter& a, LogParameter& b) {
@@ -10567,7 +10715,7 @@ class LRNParameter : public ::google::protobuf::Message /* @@protoc_insertion_po
                &_LRNParameter_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    48;
+    49;
 
   void Swap(LRNParameter* other);
   friend void swap(LRNParameter& a, LRNParameter& b) {
@@ -10781,7 +10929,7 @@ class MemoryDataParameter : public ::google::protobuf::Message /* @@protoc_inser
                &_MemoryDataParameter_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    49;
+    50;
 
   void Swap(MemoryDataParameter* other);
   friend void swap(MemoryDataParameter& a, MemoryDataParameter& b) {
@@ -10921,7 +11069,7 @@ class MVNParameter : public ::google::protobuf::Message /* @@protoc_insertion_po
                &_MVNParameter_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    50;
+    51;
 
   void Swap(MVNParameter* other);
   friend void swap(MVNParameter& a, MVNParameter& b) {
@@ -11051,7 +11199,7 @@ class ParameterParameter : public ::google::protobuf::Message /* @@protoc_insert
                &_ParameterParameter_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    51;
+    52;
 
   void Swap(ParameterParameter* other);
   friend void swap(ParameterParameter& a, ParameterParameter& b) {
@@ -11163,7 +11311,7 @@ class PoolingParameter : public ::google::protobuf::Message /* @@protoc_insertio
                &_PoolingParameter_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    52;
+    53;
 
   void Swap(PoolingParameter* other);
   friend void swap(PoolingParameter& a, PoolingParameter& b) {
@@ -11475,7 +11623,7 @@ class PowerParameter : public ::google::protobuf::Message /* @@protoc_insertion_
                &_PowerParameter_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    53;
+    54;
 
   void Swap(PowerParameter* other);
   friend void swap(PowerParameter& a, PowerParameter& b) {
@@ -11605,7 +11753,7 @@ class PythonParameter : public ::google::protobuf::Message /* @@protoc_insertion
                &_PythonParameter_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    54;
+    55;
 
   void Swap(PythonParameter* other);
   friend void swap(PythonParameter& a, PythonParameter& b) {
@@ -11769,7 +11917,7 @@ class RecurrentParameter : public ::google::protobuf::Message /* @@protoc_insert
                &_RecurrentParameter_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    55;
+    56;
 
   void Swap(RecurrentParameter* other);
   friend void swap(RecurrentParameter& a, RecurrentParameter& b) {
@@ -11923,7 +12071,7 @@ class ReductionParameter : public ::google::protobuf::Message /* @@protoc_insert
                &_ReductionParameter_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    56;
+    57;
 
   void Swap(ReductionParameter* other);
   friend void swap(ReductionParameter& a, ReductionParameter& b) {
@@ -12083,7 +12231,7 @@ class ReLUParameter : public ::google::protobuf::Message /* @@protoc_insertion_p
                &_ReLUParameter_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    57;
+    58;
 
   void Swap(ReLUParameter* other);
   friend void swap(ReLUParameter& a, ReLUParameter& b) {
@@ -12231,7 +12379,7 @@ class ReshapeParameter : public ::google::protobuf::Message /* @@protoc_insertio
                &_ReshapeParameter_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    58;
+    59;
 
   void Swap(ReshapeParameter* other);
   friend void swap(ReshapeParameter& a, ReshapeParameter& b) {
@@ -12363,7 +12511,7 @@ class ScaleParameter : public ::google::protobuf::Message /* @@protoc_insertion_
                &_ScaleParameter_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    59;
+    60;
 
   void Swap(ScaleParameter* other);
   friend void swap(ScaleParameter& a, ScaleParameter& b) {
@@ -12517,7 +12665,7 @@ class SigmoidParameter : public ::google::protobuf::Message /* @@protoc_insertio
                &_SigmoidParameter_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    60;
+    61;
 
   void Swap(SigmoidParameter* other);
   friend void swap(SigmoidParameter& a, SigmoidParameter& b) {
@@ -12655,7 +12803,7 @@ class SliceParameter : public ::google::protobuf::Message /* @@protoc_insertion_
                &_SliceParameter_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    61;
+    62;
 
   void Swap(SliceParameter* other);
   friend void swap(SliceParameter& a, SliceParameter& b) {
@@ -12788,7 +12936,7 @@ class SoftmaxParameter : public ::google::protobuf::Message /* @@protoc_insertio
                &_SoftmaxParameter_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    62;
+    63;
 
   void Swap(SoftmaxParameter* other);
   friend void swap(SoftmaxParameter& a, SoftmaxParameter& b) {
@@ -12936,7 +13084,7 @@ class SwishParameter : public ::google::protobuf::Message /* @@protoc_insertion_
                &_SwishParameter_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    63;
+    64;
 
   void Swap(SwishParameter* other);
   friend void swap(SwishParameter& a, SwishParameter& b) {
@@ -13046,7 +13194,7 @@ class TanHParameter : public ::google::protobuf::Message /* @@protoc_insertion_p
                &_TanHParameter_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    64;
+    65;
 
   void Swap(TanHParameter* other);
   friend void swap(TanHParameter& a, TanHParameter& b) {
@@ -13184,7 +13332,7 @@ class TileParameter : public ::google::protobuf::Message /* @@protoc_insertion_p
                &_TileParameter_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    65;
+    66;
 
   void Swap(TileParameter* other);
   friend void swap(TileParameter& a, TileParameter& b) {
@@ -13304,7 +13452,7 @@ class ThresholdParameter : public ::google::protobuf::Message /* @@protoc_insert
                &_ThresholdParameter_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    66;
+    67;
 
   void Swap(ThresholdParameter* other);
   friend void swap(ThresholdParameter& a, ThresholdParameter& b) {
@@ -13414,7 +13562,7 @@ class WindowDataParameter : public ::google::protobuf::Message /* @@protoc_inser
                &_WindowDataParameter_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    67;
+    68;
 
   void Swap(WindowDataParameter* other);
   friend void swap(WindowDataParameter& a, WindowDataParameter& b) {
@@ -13695,7 +13843,7 @@ class SPPParameter : public ::google::protobuf::Message /* @@protoc_insertion_po
                &_SPPParameter_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    68;
+    69;
 
   void Swap(SPPParameter* other);
   friend void swap(SPPParameter& a, SPPParameter& b) {
@@ -13881,7 +14029,7 @@ class V1LayerParameter : public ::google::protobuf::Message /* @@protoc_insertio
                &_V1LayerParameter_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    69;
+    70;
 
   void Swap(V1LayerParameter* other);
   friend void swap(V1LayerParameter& a, V1LayerParameter& b) {
@@ -14667,7 +14815,7 @@ class V0LayerParameter : public ::google::protobuf::Message /* @@protoc_insertio
                &_V0LayerParameter_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    70;
+    71;
 
   void Swap(V0LayerParameter* other);
   friend void swap(V0LayerParameter& a, V0LayerParameter& b) {
@@ -15231,7 +15379,7 @@ class PReLUParameter : public ::google::protobuf::Message /* @@protoc_insertion_
                &_PReLUParameter_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    71;
+    72;
 
   void Swap(PReLUParameter* other);
   friend void swap(PReLUParameter& a, PReLUParameter& b) {
@@ -19031,13 +19179,13 @@ LayerParameter::mutable_top() {
 
 // optional .caffe.Phase phase = 10;
 inline bool LayerParameter::has_phase() const {
-  return (_has_bits_[1] & 0x08000000u) != 0;
+  return (_has_bits_[1] & 0x10000000u) != 0;
 }
 inline void LayerParameter::set_has_phase() {
-  _has_bits_[1] |= 0x08000000u;
+  _has_bits_[1] |= 0x10000000u;
 }
 inline void LayerParameter::clear_has_phase() {
-  _has_bits_[1] &= ~0x08000000u;
+  _has_bits_[1] &= ~0x10000000u;
 }
 inline void LayerParameter::clear_phase() {
   phase_ = 0;
@@ -22312,6 +22460,60 @@ inline void LayerParameter::set_allocated_pooling3d_param(::caffe::Pooling3DPara
   // @@protoc_insertion_point(field_set_allocated:caffe.LayerParameter.pooling3d_param)
 }
 
+// optional .caffe.ROIAlignParameter roi_align_param = 209;
+inline bool LayerParameter::has_roi_align_param() const {
+  return (_has_bits_[1] & 0x08000000u) != 0;
+}
+inline void LayerParameter::set_has_roi_align_param() {
+  _has_bits_[1] |= 0x08000000u;
+}
+inline void LayerParameter::clear_has_roi_align_param() {
+  _has_bits_[1] &= ~0x08000000u;
+}
+inline void LayerParameter::clear_roi_align_param() {
+  if (roi_align_param_ != NULL) roi_align_param_->Clear();
+  clear_has_roi_align_param();
+}
+inline const ::caffe::ROIAlignParameter& LayerParameter::roi_align_param() const {
+  const ::caffe::ROIAlignParameter* p = roi_align_param_;
+  // @@protoc_insertion_point(field_get:caffe.LayerParameter.roi_align_param)
+  return p != NULL ? *p : *reinterpret_cast<const ::caffe::ROIAlignParameter*>(
+      &::caffe::_ROIAlignParameter_default_instance_);
+}
+inline ::caffe::ROIAlignParameter* LayerParameter::release_roi_align_param() {
+  // @@protoc_insertion_point(field_release:caffe.LayerParameter.roi_align_param)
+  clear_has_roi_align_param();
+  ::caffe::ROIAlignParameter* temp = roi_align_param_;
+  roi_align_param_ = NULL;
+  return temp;
+}
+inline ::caffe::ROIAlignParameter* LayerParameter::mutable_roi_align_param() {
+  set_has_roi_align_param();
+  if (roi_align_param_ == NULL) {
+    roi_align_param_ = new ::caffe::ROIAlignParameter;
+  }
+  // @@protoc_insertion_point(field_mutable:caffe.LayerParameter.roi_align_param)
+  return roi_align_param_;
+}
+inline void LayerParameter::set_allocated_roi_align_param(::caffe::ROIAlignParameter* roi_align_param) {
+  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
+  if (message_arena == NULL) {
+    delete roi_align_param_;
+  }
+  if (roi_align_param) {
+    ::google::protobuf::Arena* submessage_arena = NULL;
+    if (message_arena != submessage_arena) {
+      roi_align_param = ::google::protobuf::internal::GetOwnedMessage(
+          message_arena, roi_align_param, submessage_arena);
+    }
+    set_has_roi_align_param();
+  } else {
+    clear_has_roi_align_param();
+  }
+  roi_align_param_ = roi_align_param;
+  // @@protoc_insertion_point(field_set_allocated:caffe.LayerParameter.roi_align_param)
+}
+
 // -------------------------------------------------------------------
 
 // Convolution3DParameter
@@ -24040,6 +24242,82 @@ inline void VideoDataFBParameter::set_num_of_labels(::google::protobuf::uint32 v
   set_has_num_of_labels();
   num_of_labels_ = value;
   // @@protoc_insertion_point(field_set:caffe.VideoDataFBParameter.num_of_labels)
+}
+
+// -------------------------------------------------------------------
+
+// ROIAlignParameter
+
+// optional uint32 pooled_h = 1 [default = 0];
+inline bool ROIAlignParameter::has_pooled_h() const {
+  return (_has_bits_[0] & 0x00000001u) != 0;
+}
+inline void ROIAlignParameter::set_has_pooled_h() {
+  _has_bits_[0] |= 0x00000001u;
+}
+inline void ROIAlignParameter::clear_has_pooled_h() {
+  _has_bits_[0] &= ~0x00000001u;
+}
+inline void ROIAlignParameter::clear_pooled_h() {
+  pooled_h_ = 0u;
+  clear_has_pooled_h();
+}
+inline ::google::protobuf::uint32 ROIAlignParameter::pooled_h() const {
+  // @@protoc_insertion_point(field_get:caffe.ROIAlignParameter.pooled_h)
+  return pooled_h_;
+}
+inline void ROIAlignParameter::set_pooled_h(::google::protobuf::uint32 value) {
+  set_has_pooled_h();
+  pooled_h_ = value;
+  // @@protoc_insertion_point(field_set:caffe.ROIAlignParameter.pooled_h)
+}
+
+// optional uint32 pooled_w = 2 [default = 0];
+inline bool ROIAlignParameter::has_pooled_w() const {
+  return (_has_bits_[0] & 0x00000002u) != 0;
+}
+inline void ROIAlignParameter::set_has_pooled_w() {
+  _has_bits_[0] |= 0x00000002u;
+}
+inline void ROIAlignParameter::clear_has_pooled_w() {
+  _has_bits_[0] &= ~0x00000002u;
+}
+inline void ROIAlignParameter::clear_pooled_w() {
+  pooled_w_ = 0u;
+  clear_has_pooled_w();
+}
+inline ::google::protobuf::uint32 ROIAlignParameter::pooled_w() const {
+  // @@protoc_insertion_point(field_get:caffe.ROIAlignParameter.pooled_w)
+  return pooled_w_;
+}
+inline void ROIAlignParameter::set_pooled_w(::google::protobuf::uint32 value) {
+  set_has_pooled_w();
+  pooled_w_ = value;
+  // @@protoc_insertion_point(field_set:caffe.ROIAlignParameter.pooled_w)
+}
+
+// optional float spatial_scale = 3 [default = 1];
+inline bool ROIAlignParameter::has_spatial_scale() const {
+  return (_has_bits_[0] & 0x00000004u) != 0;
+}
+inline void ROIAlignParameter::set_has_spatial_scale() {
+  _has_bits_[0] |= 0x00000004u;
+}
+inline void ROIAlignParameter::clear_has_spatial_scale() {
+  _has_bits_[0] &= ~0x00000004u;
+}
+inline void ROIAlignParameter::clear_spatial_scale() {
+  spatial_scale_ = 1;
+  clear_has_spatial_scale();
+}
+inline float ROIAlignParameter::spatial_scale() const {
+  // @@protoc_insertion_point(field_get:caffe.ROIAlignParameter.spatial_scale)
+  return spatial_scale_;
+}
+inline void ROIAlignParameter::set_spatial_scale(float value) {
+  set_has_spatial_scale();
+  spatial_scale_ = value;
+  // @@protoc_insertion_point(field_set:caffe.ROIAlignParameter.spatial_scale)
 }
 
 // -------------------------------------------------------------------
@@ -34206,6 +34484,8 @@ inline void PReLUParameter::set_channel_shared(bool value) {
 #ifdef __GNUC__
   #pragma GCC diagnostic pop
 #endif  // __GNUC__
+// -------------------------------------------------------------------
+
 // -------------------------------------------------------------------
 
 // -------------------------------------------------------------------

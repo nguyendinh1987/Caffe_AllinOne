@@ -439,6 +439,8 @@ message LayerParameter {
   optional VideoDataParameter video_data_param = 203;
   optional VideoDataFBParameter video_data_fb_param = 204;
   optional ROIMaskPoolingParameter roi_mask_pooling_param = 205;
+  ////Dinh for evaluate predicted boxes based on recall
+  optional RecallEvalParameter recall_based_eval_param = 210;
   // Dinh Add for BN layer
   optional BNParameter bn_param = 206;
   // Add for C3D layer
@@ -448,6 +450,12 @@ message LayerParameter {
   // Add for Mask-RCNN
   optional ROIAlignParameter roi_align_param = 209;
 }
+//-----------DINH------------------------------------------------------
+message RecallEvalParameter {
+  repeated float IoUs = 1; // Intersection over Union
+  repeated int32 Npp = 2; // Number of object for evaluation
+}
+//---------------------------------------------------------------------
 //----------------------------------------------------------------------------------------------------------
 // C3D layer:
 message Convolution3DParameter {

@@ -26,6 +26,7 @@
 /home/kakadinh/caffe_variances/Caffe_with_updated_functions/build/install/include/caffe/FRCNN/frcnn_roi_data_layer.hpp
 /home/kakadinh/caffe_variances/Caffe_with_updated_functions/build/install/include/caffe/solver.hpp
 /home/kakadinh/caffe_variances/Caffe_with_updated_functions/build/install/include/caffe/filler.hpp
+/home/kakadinh/caffe_variances/Caffe_with_updated_functions/build/install/include/caffe/Mask_RCNN/roi_align_layers.hpp
 /home/kakadinh/caffe_variances/Caffe_with_updated_functions/build/install/include/caffe/layers/bias_layer.hpp
 /home/kakadinh/caffe_variances/Caffe_with_updated_functions/build/install/include/caffe/layers/relu_layer.hpp
 /home/kakadinh/caffe_variances/Caffe_with_updated_functions/build/install/include/caffe/layers/mvn_layer.hpp
