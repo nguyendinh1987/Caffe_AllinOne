@@ -8,7 +8,7 @@ This is a modified version of caffe which includes a lot of additional functions
 - Add C3D (3D convolution), 3D pooling, video layer from facebook
 - Add RoiAlignment layer for mask rcnn
 - Add YoLo implementation (planing)
-- Add SSD implementation (planing)
+- Add SSD implementation (planing) [source](https://github.com/chuanqi305/ssd)
 - continue
 
 ## Modified
