@@ -8,7 +8,7 @@ This is a modified version of caffe which includes a lot of additional functions
 - Add C3D (3D convolution), 3D pooling, video layer from facebook
 - Add RoiAlignment layer for mask rcnn
 - Add YoLo implementation (planing)
-- Add SSD implementation (planing) [source](https://github.com/chuanqi305/ssd)
+- Add SSD implementation
 - continue
 
 ## Modified
@@ -39,6 +39,10 @@ This is a modified version of caffe which includes a lot of additional functions
 - Add RoiAlign layer for Mask-RCNN  
   [source](https://github.com/jasjeetIM/Mask-RCNN)
   
+- Add SSD layers and implementation:
+  [source](https://github.com/chuanqi305/ssd)  
+  Please take a look at Readme.md in folder src/caffe/SSD for more information
+
 ## How to install
 - Check "Dependencies_installation_guide" to install dependent libraries of caffe
 - Move to project folder and run:  
