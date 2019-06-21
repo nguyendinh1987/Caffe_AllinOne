@@ -183,7 +183,7 @@ void FrcnnAnchorTargetLayer<Dtype>::Forward_cpu(
   DLOG(ERROR) << "label == -1 : " << std::count(labels.begin(), labels.end(),-1);
   DLOG(ERROR) << "debug_for_highest_over : " << debug_for_highest_over;
 
-  // subsample positive labels if we have too many
+  // subsample positive labels if we have too many ----> It is subsample randomly, we can improve by subsample based on IoU (smallest IoU anchors will be removed)
   int num_fg = float(FrcnnParam::rpn_fg_fraction) * FrcnnParam::rpn_batchsize;
   const int fg_inds_size = std::count(labels.begin(), labels.end(), 1);
   DLOG(ERROR) << "========== supress_positive labels";
@@ -195,7 +195,7 @@ void FrcnnAnchorTargetLayer<Dtype>::Forward_cpu(
     std::set<int> ind_set;
     while (ind_set.size() < fg_inds.size() - num_fg) {
       int tmp_idx = caffe::caffe_rng_rand() % fg_inds.size();
-      ind_set.insert(fg_inds[tmp_idx]);
+      ind_set.insert(fg_inds[tmp_idx]);// It can have duplicate idx --> can improve from here
     }
     for (std::set<int>::iterator it = ind_set.begin(); it != ind_set.end(); it++) {
       labels[*it] = -1;
@@ -205,6 +205,11 @@ void FrcnnAnchorTargetLayer<Dtype>::Forward_cpu(
 
   DLOG(ERROR) << "========== supress negative labels";
   // subsample negative labels if we have too many
+  // // Dinh -------
+  // int fg_inds_size_n = std::count(labels.begin(), labels.end(), 1);
+  // int num_bg = float(fg_inds_size_n) * (1- FrcnnParam::rpn_fg_fraction) / FrcnnParam::rpn_fg_fraction;
+  // // if remove this part, pls deactivate comment at the below num_bg definition
+  // // End: Dinh---
   int num_bg = FrcnnParam::rpn_batchsize - std::count(labels.begin(), labels.end(), 1);
   const int bg_inds_size = std::count(labels.begin(), labels.end(), 0);
   if (bg_inds_size > num_bg) {
@@ -215,7 +220,7 @@ void FrcnnAnchorTargetLayer<Dtype>::Forward_cpu(
     std::set<int> ind_set;
     while (ind_set.size() < bg_inds.size() - num_bg) {
       int tmp_idx = caffe::caffe_rng_rand() % bg_inds.size();
-      ind_set.insert(bg_inds[tmp_idx]);
+      ind_set.insert(bg_inds[tmp_idx]);// It can have duplicate idx --> can improve from here
     }
     for (std::set<int>::iterator it = ind_set.begin(); it != ind_set.end(); it++) {
       labels[*it] = -1;

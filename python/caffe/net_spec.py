@@ -87,6 +87,13 @@ class Top(object):
         self.fn = fn
         self.n = n
 
+#---From SSD------------------------------------------------------------------------
+# ----------------------------------------------------------------------------------
+    def _update(self, params):
+        self.fn._update(params)
+# ----------------------------------------------------------------------------------
+# ----------------------------------------------------------------------------------        
+
     def to_proto(self):
         """Generate a NetParameter that contains all layers needed to compute
         this top."""
@@ -126,6 +133,11 @@ class Function(object):
             names[self] = self.type_name + str(autonames[self.type_name])
         return names[self]
 
+#From SSD-----------------------------------------------------------------------------------
+#-------------------------------------------------------------------------------------------
+    def _update(self, params):
+        self.params.update(params)
+#-------------------------------------------------------------------------------------------
     def _get_top_name(self, top, names, autonames):
         if top not in names:
             autonames[top.fn.type_name] += 1
@@ -184,7 +196,23 @@ class NetSpec(object):
 
     def __getitem__(self, item):
         return self.__getattr__(item)
+# For SSD ----------------------------------------------------------------------------
+#-------------------------------------------------------------------------------------
+    def keys(self):
+        keys = [k for k, v in six.iteritems(self.tops)]
+        return keys
 
+    def vals(self):
+        vals = [v for k, v in six.iteritems(self.tops)]
+        return vals
+
+    def update(self, name, params):
+        self.tops[name]._update(params)
+
+    def __delitem__(self, name):
+        del self.tops[name]
+# -----------------------------------------------------------------------------------
+#------------------------------------------------------------------------------------
     def to_proto(self):
         names = {v: k for k, v in six.iteritems(self.tops)}
         autonames = Counter()
