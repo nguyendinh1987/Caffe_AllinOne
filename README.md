@@ -3,7 +3,7 @@ This is a modified version of caffe which includes a lot of additional functions
 ## Targets:
 - Add FRCNN layers
 - Add Video loader layers
-- Add BN Layer
+- Add BN Layer from TSN
 - Add on-fly data argumentation for improving training process
 - Add C3D (3D convolution), 3D pooling, video layer from facebook
 - Add RoiAlignment layer for mask rcnn
