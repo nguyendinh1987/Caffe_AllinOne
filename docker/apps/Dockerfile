@@ -23,6 +23,12 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
         python-scipy && \
     rm -rf /var/lib/apt/lists/*
 
+RUN     pip install --upgrade pip && \
+	python -m pip install scikit-image protobuf
+RUN     python -m pip install opencv-python==3.1.0.0
+
+# Need install ffmpeg lib to support opencv read video
+
 WORKDIR /opt
 RUN git clone https://github.com/nguyendinh1987/Caffe_AllinOne.git
 RUN cd Caffe_AllinOne && \
@@ -32,17 +38,20 @@ RUN cd Caffe_AllinOne && \
        make -j20 && \
        make install
 
-ENV CAFFE_ROOT=/opt/va/Caffe_AllinOne/build/install
+ENV CAFFE_ROOT=/opt/Caffe_AllinOne/build/install
 ENV PYCAFFE_ROOT $CAFFE_ROOT/python
 ENV PYTHONPATH $PYCAFFE_ROOT:$PYTHONPATH
-ENV PATH $PYCAFFE_ROOT/bin:$PATH
+ENV PATH $CAFFE_ROOT/bin:$PATH
 RUN echo "$CAFFE_ROOT/lib" >> /etc/ld.so.conf.d/caffe.conf && ldconfig
 
-# vnc
-RUN    apt-get install x11vnc xvfb firefox \
-	&& apt-get autoclean -y \
-    	&& apt-get autoremove -y \
-	&& rm -rf /var/lib/apt/lists/*
-# Setup a password
-RUN     x11vnc -storepasswd 1234 root/.vnc/passwd
+#FROM ubuntu:16.04
+## vnc
+#RUN    apt-get update \
+#       &&apt-get install -y x11vnc xvfb firefox \
+#       && apt-get autoclean -y \
+#       && apt-get autoremove -y \
+#       && rm -rf /var/lib/apt/lists/*
+#RUN    mkdir /root/.vnc
+## Setup a password
+#RUN     x11vnc -storepasswd 1234 root/.vnc/passwd
 

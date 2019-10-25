@@ -1,1 +1,1 @@
-docker build -t caffe_allinone apps/
+docker build -t cuda_caffe_dinh apps/
