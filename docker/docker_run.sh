@@ -6,5 +6,6 @@ docker run \
        -p 5900:5900 \
        -e HOME=/ \
        -v /opt/share:/opt/share \
-       cuda_caffe_dinh
+       -v /opt/localmedia:/media/kakadinh \
+       cuda_caffe_dinh x11vnc -forever -create -rfbauth /root/.vnc/passwd
 
