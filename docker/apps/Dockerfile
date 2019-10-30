@@ -81,3 +81,11 @@ ENV PYCAFFE_ROOT $CAFFE_ROOT/python
 ENV PYTHONPATH $PYCAFFE_ROOT:$PYTHONPATH
 ENV PATH $CAFFE_ROOT/bin:$PATH
 RUN echo "$CAFFE_ROOT/lib" >> /etc/ld.so.conf.d/caffe.conf && ldconfig
+
+# setup fluxbox
+## move this path into one install command
+RUN     apt-get install -y fluxbox
+WORKDIR /root/home
+RUN     mkdir .startx
+COPY entrypoint.sh .startx
+ENTRYPOINT [".startx/entrypoint.sh"]
