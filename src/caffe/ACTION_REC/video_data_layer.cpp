@@ -24,6 +24,7 @@ void VideoDataLayer<Dtype>:: DataLayerSetUp(const vector<Blob<Dtype>*>& bottom, 
     const int new_width  = this->layer_param_.video_data_param().new_width();
     const int new_length  = this->layer_param_.video_data_param().new_length();
     const int num_segments = this->layer_param_.video_data_param().num_segments();
+    const bool is_color = this->layer_param_.video_data_param().is_color();
     CHECK_GT( num_segments , 0 );
     const string& source = this->layer_param_.video_data_param().source();
 
@@ -64,7 +65,7 @@ void VideoDataLayer<Dtype>:: DataLayerSetUp(const vector<Blob<Dtype>*>& bottom, 
     if (this->layer_param_.video_data_param().modality() == VideoDataParameter_Modality_FLOW)
         CHECK(ReadSegmentFlowToDatum(lines_[lines_id_].first, lines_[lines_id_].second, offsets, new_height, new_width, new_length, &datum));
     else
-        CHECK(ReadSegmentRGBToDatum(lines_[lines_id_].first, lines_[lines_id_].second, offsets, new_height, new_width, new_length, &datum, true));
+        CHECK(ReadSegmentRGBToDatum(lines_[lines_id_].first, lines_[lines_id_].second, offsets, new_height, new_width, new_length, &datum, is_color));
     const int crop_size = this->layer_param_.transform_param().crop_size();
     const int batch_size = this->layer_param_.video_data_param().batch_size();
     if (crop_size > 0){
@@ -111,6 +112,7 @@ void VideoDataLayer<Dtype>::load_batch(Batch<Dtype>* batch){
     const int new_width = video_data_param.new_width();
     const int new_length = video_data_param.new_length();
     const int num_segments = video_data_param.num_segments();
+    const bool is_color = video_data_param.is_color();
     const int lines_size = lines_.size();
 
     for (int item_id = 0; item_id < batch_size; ++item_id){
@@ -141,7 +143,7 @@ void VideoDataLayer<Dtype>::load_batch(Batch<Dtype>* batch){
                 continue;
             }
         } else{
-            if(!ReadSegmentRGBToDatum(lines_[lines_id_].first, lines_[lines_id_].second, offsets, new_height, new_width, new_length, &datum, true)) {
+            if(!ReadSegmentRGBToDatum(lines_[lines_id_].first, lines_[lines_id_].second, offsets, new_height, new_width, new_length, &datum, is_color)) {
                 LOG(WARNING) << "Load RGB Data Failed, " << item_id << "/" << batch_size << " batch : ( " << lines_[lines_id_].first << " ) [" << lines_[lines_id_].second << "]" 
                     << std::endl << "    Num_of_Segment(" << offsets.size() << ") " << offsets[0] << " ::: Length: " << new_length ;
                 item_id --;
