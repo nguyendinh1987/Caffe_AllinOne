@@ -60,7 +60,7 @@ void VideoDataLayer<Dtype>:: DataLayerSetUp(const vector<Blob<Dtype>*>& bottom, 
     if (average_duration < new_length){
         int subduration = (int) (lines_duration_[lines_id_]-new_length-1)/num_segments;
         int startp = 0;
-        for (int i = 0; i<num_segments;++i){
+        for (i = 0; i<num_segments;++i){
             offsets.push_back(startp+i*subduration);
         }
     }else{
@@ -129,7 +129,7 @@ void VideoDataLayer<Dtype>::load_batch(Batch<Dtype>* batch){
         vector<int> offsets;
         int average_duration = (int) lines_duration_[lines_id_] / num_segments;
         while (average_duration == 0){
-            // LOG(WARNING) << "VideoData : load_batch [] " << item_id << " / " << batch_size << "  .. num_segments : " << num_segments << ",  ave : " << average_duration << " = " << lines_[lines_id_].first;
+            LOG(WARNING) << "VideoData : load_batch [] " << item_id << " / " << batch_size << "  .. num_segments : " << num_segments << ",  ave : " << average_duration << " = " << lines_[lines_id_].first;
             Next_Line_Id();
             average_duration = (int) lines_duration_[lines_id_] / num_segments;
         }
@@ -137,23 +137,20 @@ void VideoDataLayer<Dtype>::load_batch(Batch<Dtype>* batch){
         if (average_duration < new_length){
             int subduration = (int) (lines_duration_[lines_id_]-new_length-1)/num_segments;
             int startp = 0;
-            for (int i = 0; i<num_segments;++i){
+            for (i = 0; i<num_segments;++i){
                 offsets.push_back(startp+i*subduration);
             }
-            // LOG(ERROR) << "VideoData : load_batch [] subduration : " << subduration << ", newlength: " << new_length;
         }else{
             for (int i = 0; i < num_segments; ++i){
                 if (this->phase_==TRAIN){
                     caffe::rng_t* frame_rng = static_cast<caffe::rng_t*>(frame_prefetch_rng_->generator());
                     int offset = (*frame_rng)() % (average_duration - new_length + 1);
+                    //LOG(ERROR) << "VideoData : load_batch [] offset : " << offset << ", average_duration : " << average_duration << ", " << new_length;
                     offsets.push_back(offset+i*average_duration);
-                    // LOG(ERROR) << "VideoData : load_batch [] offset : " << offset << ", average_duration : " << average_duration << ", newlength: " << new_length;
                 } else{
                     offsets.push_back(int((average_duration-new_length+1)/2 + i*average_duration));
                 }
             }
-            // LOG(ERROR) << "VideoData : load_batch [] average_duration : " << average_duration << ", newlength: " << new_length;
-
         }
 
         
